@@ -1,0 +1,126 @@
+// MIXINS
+.inline-block() {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.box-sizing(@s){
+    -webkit-box-sizing:@s;
+       -moz-box-sizing:@s;
+        -ms-box-sizing:@s;
+            box-sizing:@s;
+}
+.min-height(@height) {
+    min-height: @height;
+    height: auto !important;
+    height: @height;
+}
+.min-width(@width) {
+    min-width: @width;
+    width: auto !important;
+    width: @width;
+}
+.border-radius(@radius: 3px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;
+            background-clip: padding-box;
+}
+ 
+ // usar apenas para IE < 9
+.opacity(@alpha: 1) {
+    opacity: @alpha;
+    @ms: @alpha * 100;
+    filter: "alpha(opacity=@{ms})";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ms})";
+}
+ 
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+.animation(@_) {
+    -webkit-animation:@arguments;
+       -moz-animation:@arguments;
+            animation:@arguments;
+}
+.animation-delay(@_){
+    -webkit-animation-delay:@arguments;
+       -moz-animation-delay:@arguments;
+            animation-delay:@arguments;
+}
+
+.transition(@trans) {
+    -webkit-transition: @trans;
+       -moz-transition: @trans;
+         -o-transition: @trans;
+            transition: @trans;
+}
+
+.transform(@trans) {
+    -webkit-transform: @trans;
+       -moz-transform: @trans;
+        -ms-transform: @trans;
+         -o-transform: @trans;
+            transform: @trans;
+}
+
+.linear-gradient(@from, @to){
+    background-color: lighten(@from + @to, 40);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: -webkit-linear-gradient(top, @from, @to);
+    background-image:    -moz-linear-gradient(top, @from, @to);
+    background-image:     -ms-linear-gradient(top, @from, @to);
+    background-image:      -o-linear-gradient(top, @from, @to);
+    background-image:         linear-gradient(top, @from, @to);
+    background-repeat: no-repeat;
+}
+
+.linear-gradient-three(@startColor, @midColor, @colorStop: 50%, @endColor){
+    background-color: lighten(@midColor + @endColor, 30);
+    //background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image:    -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+    background-image:     -ms-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image:      -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image:         linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+}
+ 
+.columns(@count, @gap:20px) {
+    -webkit-column-count:@count;
+       -moz-column-count:@count;
+            column-count:@count;
+    -webkit-column-gap:@gap;
+       -moz-column-gap:@gap;
+            column-gap:@gap;
+}
+
+.user-select(@val){
+    -webkit-user-select:@val;
+       -moz-user-select:@val;
+            user-select:@val;
+}
+
+// ver .IR em reset.css
+.IR(@width, @height) {
+    .IR;
+    width: @width;
+    height: @height;
+}
+
+.IR(@width, @height, @bg, @xy:0 0) {
+    .IR;
+    width: @width;
+    height: @height;
+    background:@bg no-repeat @xy;
+}
+ 
+// definir @x e @y base antes de usar
+.sprite(@posX:0, @posY:0) {
+    background-position: (@x * @posX) (@y * @posY);
+}

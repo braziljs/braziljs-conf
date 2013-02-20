@@ -1,0 +1,290 @@
+@import "reset";
+@import "mixins";
+
+//# variables
+@pagewidth: 980px;
+@family1: "League Gothic", sans-serif;
+
+@offwhite: #e6fffd;
+@lightgreen: #c5f17f;
+@green:#97df66;
+@dark:#324340;
+
+.striped() {
+    background:url(../images/bg-lines.png);
+}
+
+//# fonts
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/League_Gothic-webfont.eot');
+    src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/League_Gothic-webfont.woff') format('woff'),
+         url('../fonts/League_Gothic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//# user styles
+html, body {
+    min-height:100%;
+}
+
+html {
+    height:100%;
+    background:url(../images/porto-alegre.jpg) no-repeat fixed center top;
+    background-size:cover;
+    min-width:320px;
+}
+
+@headerpad: 35px;
+@headerheight: 640px;
+
+body {
+    max-width:980px;
+    margin:0 auto;
+    color:@dark;
+    font-family:@family1;
+    text-align:center;
+    color:@offwhite;
+    text-shadow:0 1px 6px rgba(0,0,0,0.1);
+}
+
+a {
+    text-decoration:none;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family:@family1;
+    font-weight:400;
+    text-transform:uppercase;
+}
+
+@-webkit-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-o-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.header {
+    position:relative;
+    z-index:50;
+    margin-top:6%;
+    .animation(fadein 3s);
+    h1 {
+        margin:0 auto;
+    }
+    h2 {
+        font-size:60px;
+        text-transform:uppercase;
+        font-weight:400;
+        line-height:1.1;
+        b {
+            color:@lightgreen;
+            font-weight:400;
+        }
+    }
+}
+
+.text {
+    position:absolute;
+    top:65%;
+    width:100%;
+    max-width:980px;
+    text-align:center;
+    font-size:42px;
+    line-height:1;
+    .animation(fadein 3s);
+    z-index:50;
+}
+.line, .where {
+    .inline-block();
+    width:330px;
+    vertical-align:top;
+}
+.line {
+    text-align:right;
+    padding-right:17px;
+    color:@lightgreen;
+    text-transform:uppercase;
+}
+.where {
+    text-align:left;
+    padding-left:17px;
+}
+
+.share {
+    clear:both;
+    margin:20px auto 0;
+    z-index:50;
+    text-align:center;
+    padding-left:32px;
+    li {
+        width:114px;
+        display:inline-block;
+    }
+    .twitter a {
+        font-size:20px;
+        color:@offwhite;
+    }
+}
+
+.not-found {
+    position:absolute;
+    z-index:99;
+    top:50%;
+    left:50%;
+    font:24px/1 @family1;
+    letter-spacing:1px;
+    color:@offwhite;
+    text-transform:uppercase;
+    text-align:center;
+    width:300px;
+    margin-left:-150px;
+    background:rgba(0,0,0,0.6);
+    padding:7px 10px 5px 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        img { width:80%; }
+        h2 { font-size:32px; }
+    }
+    .line, .where {
+        font-size:24px;
+    }
+}
+@media only screen and (max-width:700px) {
+    .text {
+        top:62%;
+    }
+    .line, .where {
+        text-align:center;
+        padding:0;
+        margin-bottom:20px;
+        display:block;
+        margin:0 auto 20px;
+        font-size:36px;
+    }
+}
+@media only screen and (min-width: 980px) {
+    .header {
+        h2 { font-size:60px; }
+    }
+    html, body {
+        overflow-x:hidden;
+    }
+}
+@media only screen and (max-device-width:480px) {
+    .header {
+        img { width:60%; }
+        h2 { font-size:24px; }
+    }
+    .text {
+        top:60%;
+    }
+    .line, .where {
+        font-size:20px;
+        display:inline-block;
+        margin:0;
+        width:auto;
+    }
+    .line {
+        text-align:right;
+        padding-left:10px;
+    }
+    .where {
+        text-align:left;
+        padding-right:10px;
+    }
+    .share {
+        margin-top:10px;
+    }
+}
+// landscape
+
+@media only screen and (min-width:321px) and (max-device-width:480px) {
+    .header {
+        img { width:40%; }
+        h2 { font-size:20px; }
+    }
+    .text {
+        top:58%;
+    }
+    .line, .where {
+        font-size:18px;
+    }
+    .share {
+        margin-top:0;
+    }
+}
+
+.bg {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:9;
+    overflow:hidden;
+}
+
+.porto {
+    position:absolute;
+    left:0;
+    width:100%;
+    z-index:10;
+    background-size:auto 100%;
+    background-repeat:repeat-x;
+    display:none;
+}
+
+@multiplier: 1.2;
+
+.p0 {
+    background-image:url(../images/sky.jpg);
+    top:0;
+    height:62%;
+    z-index:1;
+}
+.p1 {
+    background-image:url(../images/skyline.png);
+    background-position:center center;
+    top:0;
+    height:66%;
+    z-index:6;
+}
+.p2 {
+    background-image:url(../images/water1.jpg);
+    top:55%;
+    height:10%;
+    z-index:4;
+}
+.p3 {
+    background-image:url(../images/water2.jpg);
+    top:63%;
+    height:16%;
+    z-index:3;
+}
+.p4 {
+    background-image:url(../images/water.jpg);
+    top:78%;
+    height:23%;
+    z-index:2;
+}
