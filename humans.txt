@@ -1,0 +1,29 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Design and UX: Amanda Muller Reche
+	Twitter: @amandaerre
+	Linkedin: http://br.linkedin.com/pub/amanda-reche/50/4bb/390	
+	From: Porto Alegre, Brazil	
+
+	Front End Engineer: Bruno Nogueira Azevedo
+	Linkedin: http://www.linkedin.com/pub/bruno-nogueira-azevedo/64/78/b22
+	From: Porto Alegre, Brazil
+
+# THANKS
+
+    Brazil JS Co founder: Jaydson Gomes
+    Twitter: @jaydson
+    From: Porto Alegre, Brazil
+    
+    Brazil JS Co founder: Felipe Moura
+    Twitter: @felipenmoura
+    From: Porto Alegre, Brazil
+
+# TECHNOLOGY COLOPHON
+
+    Standards: HTML5, CSS3, Schema
+    Components: Normalize.css, HTML5 boilerplate
+	Software: Aptana Studio 3, Adobe Fireworks CS6
