@@ -183,7 +183,7 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	.header-wrapper .keynote-container .info { opacity:1; top:-194px; left:122px; padding:8px 9px; width:160px; height:53px; }
 	.header-wrapper .keynote-container .info .name { font-size:12px; font-weight:bold; line-height:120%; color:rgb(255,255,255); }
 	.header-wrapper .keynote-container .info .alias { font-size:9px; }
-	.header-wrapper .keynote-container .info .company { font-size:9px; }
+	.header-wrapper .keynote-container .info .company { display:block; font-size:9px; }
 	
 	/* MAIN CONTENT */
 	main { margin-bottom:13px; }
