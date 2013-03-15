@@ -156,10 +156,15 @@ main .disclaimer a { color:#A6A4A5; text-decoration:none; }
 /* FOOTER */
 footer { margin:auto; width:1000px; text-align:center; }
 footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; font-weight:800; color:#B81E1A; }
-#social-networks { position:relative; padding:33px 0 0 17px; margin:auto auto 150px auto; width:300px; height:150px; }
+.social-container { margin:auto; width:500px; }
+#social-networks { position:relative; float:left; padding:33px 0 0 17px; margin:auto auto 150px auto; width:300px; height:150px; }
 #social-networks .share-this { position:absolute; bottom:14px; left:30px; height:54px; width:139px; }
 #social-networks ul { padding:0; margin:0; }
 #social-networks ul li { display:inline-block; margin-right:10px; vertical-align:top; }
+.ticket-container { position:relative; float:right; padding-top:13px; }
+.ticket-container .ticket { display:block; width:161px; height:94px; background-position:0 -126px; -webkit-transition:-webkit-transform 0.5s ease; -moz-transition:-moz-transform 0.5s ease; -o-transition:-o-transform 0.5s ease; -ms-transition:-ms-transform 0.5s ease; transition:transform 0.5s ease; }
+.ticket-container .ticket:hover { -webkit-transform:rotate(-4deg); -moz-transform:rotate(-4deg); -o-transform:rotate(-4deg); -ms-transform:rotate(-4deg); transform:rotate(-4deg); }
+.ticket-container .buy-the-ticket { position:absolute; right:-35px; bottom:-36px; width:131px; height:66px; background-position:0 -58px; }
 
 /* MOBILE */
 @media (min-width: 0) and (max-width: 500px) {
@@ -191,9 +196,13 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	
 	/* FOOTER */
 	footer { width:auto; }
-	footer .in-this-summer { margin-bottom:28px; font-size:30px; letter-spacing:0; }
-	#social-networks { padding-top:40px; border-top:1px dashed #fff; }
+	footer .in-this-summer { margin-bottom:28px; font-size:28px; letter-spacing:0; }
+	.social-container { display:inline-block; padding-top:40px; width:300px; border-top:1px dashed #fff; }
 	#social-networks .share-this { position:absolute; bottom:5px; left:31px; height:54px; width:139px; }
+	.ticket-container { float:none; margin:auto; width:235px; height:71px; border-top:1px solid rgba(92,97,121,0.5); border-bottom:1px solid rgba(17,15,16,0.5); background-color:rgb(64,68,91); -webkit-box-shadow:3px 2px 4px rgba(0,0,0,0.65); box-shadow:3px 2px 4px rgba(0,0,0,0.65); }
+	.ticket-container .ticket { margin:5px 0 0 24px; height:40px; width:190px; background-position:-5px -62px; }
+	.ticket-container .buy-the-ticket.ico-general { background:none; background-image:-webkit-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-moz-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-o-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-ms-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); }
+	.ticket-container .buy-the-ticket { bottom:0; right:0; width:235px; height:36px; }
 
 }
 
