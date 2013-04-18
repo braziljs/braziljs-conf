@@ -20,7 +20,7 @@
 .speaker-info .info-container { float:left; margin-bottom:82px; }
 .speaker-info .info-container .name { margin:0 0 5px; color:#B81E1C; font-size:46px; line-height:46px; font-weight:800; font-family:'Arial'; text-transform:uppercase; }
 .speaker-info .info-container .company { color:#FFF; font-size:20px; line-height:20px; font-weight:normal; font-family:'Arial'; }
-.speaker-info #social-networks { float:right; margin-bottom:0; padding:0; width:202px; }
+.speaker-info #social-networks { float:right; margin-bottom:0; padding:0; width:209px; }
 .speaker-info #social-networks .like-it { position:absolute; bottom:40px; right:-14px; width:84px; height:64px; background:url('../img/ico-general.png') 0 -49px no-repeat; }
 .speaker-info .description { clear:both; margin:0; font-size:16px; line-height:20px; font-family:'Arial'; color:#898787; }
 .speaker-info .find-me { margin:42px 0 6px; color:#FFF; font-size:16px; font-weight:normal; }
