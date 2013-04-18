@@ -1,0 +1,50 @@
+#speakers { padding-top:159px; background:url('../img/bgr-speaker.jpg') repeat-x; }
+#speakers .speakers-wrapper { top:-101px; height:300px; }
+#speakers .burst { position:absolute; left:-251px; top:-128px; width:1528px; height:582px; background:url('../img/bg-speakers.jpg') center center no-repeat; }
+#speakers .speakers-wrapper .speaker { position:absolute; left:-21px; margin:0; width:431px; height:433px; z-index:5; }
+.douglas #speakers .speakers-wrapper .speaker { background:url('../img/douglas.png') no-repeat; }
+.stoyan #speakers .speakers-wrapper .speaker { background:url('../img/stoyan.png') no-repeat; }
+.marcel #speakers .speakers-wrapper .speaker { top:42px; background:url('../img/marcel.png') no-repeat; }
+.robert #speakers .speakers-wrapper .speaker { background:url('../img/robert.png') no-repeat; }
+.angus #speakers .speakers-wrapper .speaker { top:16px; background:url('../img/angus.png') no-repeat; }
+.thibault #speakers .speakers-wrapper .speaker { left:-20px; top:10px; background:url('../img/thibault.png') no-repeat; }
+#speakers .speakers-wrapper .ballons { position:relative; top:-24px; left:270px; width:224px; height:212px; background:url('../img/ballons.png') no-repeat; }
+#speakers .speakers-wrapper .ballons .calling { position:absolute; font-size:16px; color:#FFF; width:127px; font-family:"Comic Sans MS", 'arial'; text-transform:uppercase; text-align:center; -webkit-transform:rotate(-22deg); -moz-transform:rotate(-22deg); -o-transform:rotate(-22deg); -ms-transform:rotate(-22deg); transform:rotate(-22deg); }
+#speakers .speakers-wrapper .ballons .calling.what { left:5px; top:22px; }
+#speakers .speakers-wrapper .ballons .calling.where { width:119px; left:90px; top:117px; }
+#speakers .speakers-wrapper .logo { position:relative; left:-18px; top:-183px; float:right; width:406px; height:186px; background:url('../../img/BrazilJS-logo.png') no-repeat; z-index:5; }
+#speakers .cities { bottom:-3px; }
+
+/* SPEAKERS INFO */
+.speaker-info { position:relative; margin:-83px auto 30px auto; padding:0 63px; width:1000px; z-index:2; }
+.speaker-info .info-container { float:left; margin-bottom:82px; }
+.speaker-info .info-container .name { margin:0 0 5px; color:#B81E1C; font-size:46px; line-height:46px; font-weight:800; font-family:'Arial'; text-transform:uppercase; }
+.speaker-info .info-container .company { color:#FFF; font-size:20px; line-height:20px; font-weight:normal; font-family:'Arial'; }
+.speaker-info #social-networks { float:right; margin-bottom:0; padding:0; width:202px; }
+.speaker-info #social-networks .like-it { position:absolute; bottom:40px; right:-14px; width:84px; height:64px; background:url('../img/ico-general.png') 0 -49px no-repeat; }
+.speaker-info .description { clear:both; margin:0; font-size:16px; line-height:20px; font-family:'Arial'; color:#898787; }
+.speaker-info .find-me { margin:42px 0 6px; color:#FFF; font-size:16px; font-weight:normal; }
+.speaker-info .my-social-links { margin:0 0 76px; padding:0; }
+.speaker-info .my-social-links li { position:relative; bottom:0; list-style:none; display:inline-block; transition: bottom 0.3s ease; }
+.speaker-info .my-social-links li:hover { bottom:4px; }
+.speaker-info .my-social-links li a { display:block; width:37px; height:39px; background:url('../img/ico-general.png') no-repeat; text-indent:-9999px; }
+.speaker-info .my-social-links li a.twitter { background-position:-41px 0 }
+.speaker-info .my-social-links li a.facebook { background-position:-81px 0}
+.speaker-info .my-social-links li a.blog { background-position:-120px 0 } 
+.speaker-info .home-container { display:block; margin:auto; width:375px; height:71px; border-top:1px solid rgba(92,97,121,0.5); border-bottom:1px solid rgba(17,15,16,0.5); background-color:rgb(64,68,91); -webkit-box-shadow:3px 2px 4px rgba(0,0,0,0.65); box-shadow:3px 2px 4px rgba(0,0,0,0.65); }
+.speaker-info .home-container .home { display:block; margin:5px auto auto; width:330px; height:52px; background:url('../img/ttl-general.png') no-repeat; }
+.speaker-info .home-container .inner-shadow { position:relative; display:block; top:-9px; width:100%; background-image:-webkit-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-moz-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-o-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-ms-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); text-indent:-9999px; }
+
+/* FOOTER */
+.footer-container { width:100%; height:275px; background-image:-moz-linear-gradient(50% 14% -180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image:linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); }
+.footer-container .gradient { position:relative; top:-285px; display:block; height:281px; width:100%; background-image: -webkit-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image: -moz-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image: -o-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image: -ms-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image:linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); }
+.footer-container .cities { display:block; height:278px; width:100%; background:url('../img/bg-header-transparent.png') repeat-x center center; }
+.footer-container .debug { margin:auto; width:1000px; }
+.footer-container .debug .coins { width:200px; height:51px; position:relative; background:url('../img/debug.png') no-repeat; }
+
+@media (min-width: 0) and (max-width: 500px) {
+
+	#speakers .speakers-wrapper { width:1000px; }
+	#speakers .cities { position:absolute; display:inline; height:278px; background: url("../../img/bg-header.png") repeat-x center center; }
+
+}
