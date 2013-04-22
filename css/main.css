@@ -133,7 +133,7 @@ body { background-color:#201C1D; }
 /* SPEAKERS */
 #speakers { width:100%; position:relative; background-color:#D3D3D1; overflow:hidden; background-image: -webkit-linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); background-image:-moz-linear-gradient(50% 0% -90deg,rgb(207,208,205) 0%,rgba(207,208,205,0) 25%); background-image: -o-linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); background-image: -ms-linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); background-image:linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); }
 #speakers .speakers-wrapper { position:relative; margin:auto; height:605px; width:1000px; }
-#speakers .speakers-wrapper .shadows { position:absolute; left:-220px; width:1333px; height:619px; background:url('../img/shadows.jpg') no-repeat center center; }
+#speakers .speakers-wrapper .shadows { position:absolute; left:-176px; width:1333px; height:590px; background:url('../img/shadows.jpg') no-repeat center center; }
 #speakers .cities { position:absolute; bottom:-71px; height:278px; width:100%; background:url('../img/bg-header.png') repeat-x center center; z-index:2; }
 
 /* HEADER */
