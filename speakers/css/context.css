@@ -4,7 +4,7 @@
 #speakers .speakers-wrapper .speaker { position:absolute; left:-21px; margin:0; width:431px; height:433px; z-index:5; }
 .douglas #speakers .speakers-wrapper .speaker { background:url('../img/douglas.png') no-repeat; }
 .stoyan #speakers .speakers-wrapper .speaker { background:url('../img/stoyan.png') no-repeat; }
-.marcel #speakers .speakers-wrapper .speaker { top:42px; background:url('../img/marcel.png') no-repeat; }
+.marcel #speakers .speakers-wrapper .speaker { top:82px; background:url('../img/angus-marcel.png') no-repeat; }
 .robert #speakers .speakers-wrapper .speaker { background:url('../img/robert.png') no-repeat; }
 .angus #speakers .speakers-wrapper .speaker { top:16px; background:url('../img/angus.png') no-repeat; }
 .thibault #speakers .speakers-wrapper .speaker { left:-20px; top:10px; background:url('../img/thibault.png') no-repeat; }
@@ -21,12 +21,14 @@
 .speaker-info { position:relative; margin:-83px auto 30px auto; padding:0 63px; width:1000px; z-index:2; }
 .speaker-info .info-container { float:left; margin-bottom:82px; }
 .speaker-info .info-container .name { margin:0 0 5px; color:#B81E1C; font-size:46px; line-height:46px; font-weight:800; font-family:'Arial'; text-transform:uppercase; }
+.marcel .speaker-info .info-container .name { width:500px; }
 .speaker-info .info-container .company { color:#FFF; font-size:20px; line-height:20px; font-weight:normal; font-family:'Arial'; }
 .speaker-info #social-networks { float:right; margin-bottom:0; padding:0; width:209px; }
 .speaker-info #social-networks .like-it { position:absolute; bottom:40px; right:-14px; width:84px; height:64px; background:url('../img/ico-general.png') 0 -49px no-repeat; }
 .speaker-info .description { clear:both; margin:0; font-size:16px; line-height:20px; font-family:'Arial'; color:#898787; }
 .speaker-info .find-me { margin:42px 0 6px; color:#FFF; font-size:16px; font-weight:normal; }
 .speaker-info .my-social-links { margin:0 0 76px; padding:0; }
+.marcel .speaker-info .my-social-links { margin-bottom:20px; }
 .speaker-info .my-social-links li { position:relative; bottom:0; list-style:none; display:inline-block; transition: bottom 0.3s ease; }
 .speaker-info .my-social-links li:hover { bottom:4px; }
 .speaker-info .my-social-links li a { display:block; width:37px; height:39px; background:url('../img/ico-general.png') no-repeat; text-indent:-9999px; }
@@ -55,7 +57,7 @@
 	.thibault #speakers .speakers-wrapper .speaker { left:-48px; top:48px; width:238px; background:url('../img/mobile/thibault.png') no-repeat; }
 	.stoyan  #speakers .speakers-wrapper .speaker { left:-29px; top:58px; background:url('../img/mobile/stoyan.png') no-repeat; }
 	.angus  #speakers .speakers-wrapper .speaker { left:-3px; top:79px; background:url('../img/mobile/angus.png') no-repeat; }
-	.marcel  #speakers .speakers-wrapper .speaker { left:-3px; top:79px; background:url('../img/mobile/marcel.png') no-repeat; }
+	.marcel  #speakers .speakers-wrapper .speaker { width:286px; height:211px; left:-59px; top:139px; background:url('../img/mobile/angus-marcel.png') no-repeat; }
 	.caridy  #speakers .speakers-wrapper .speaker { left:-2px; top:34px; background:url('../img/mobile/caridy.png') no-repeat; }
 	.renato  #speakers .speakers-wrapper .speaker { left:-7px; top:50px; width:212px; background:url('../img/mobile/renato.png') no-repeat; }
 	#speakers .speakers-wrapper .logo { float:none; display:block; left:128px; top:-109px; width:178px; height:82px; background:url('../img/mobile/logo.png') no-repeat; }
@@ -66,6 +68,7 @@
 	.speaker-info { margin:auto; padding:0 15px; width:320px; }
 	.speaker-info .info-container { margin-bottom:20px; }
 	.speaker-info .info-container .name { font-size:26px; line-height:26px; }
+	.marcel .speaker-info .info-container .name { width:390px; }
 	.speaker-info .info-container .company { font-size:16px; line-height:16px; }
 	.speaker-info #social-networks { float:left; left:-115px; margin-bottom:20px; padding:43px 150px; width:550px; height:182px; background-color:#161414; }
 	.speaker-info #social-networks .like-it { bottom:29px; left:127px; width:90px; height:61px; background:url('../img/mobile/ico-general.png') no-repeat; }

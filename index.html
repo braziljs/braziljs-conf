@@ -2,7 +2,8 @@
 <!--[if lt ie 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" lang="pt-BR"> <![endif]-->
 <!--[if ie 7]>         <html class="lt-ie9 lt-ie8" lang="pt-BR"> <![endif]-->
 <!--[if ie 8]>         <html class="lt-ie9" lang="pt-BR"> <![endif]-->
-<!--[if gt ie 8]><!--> <html lang="pt-BR" itemscope itemtype="http://schema.org/Event"> <!--<![endif]-->
+<!--[if ie 9]>         <html class="ie9" lang="pt-BR"> <![endif]-->
+<!--[if gt ie 9]><!--> <html lang="pt-BR" itemscope itemtype="http://schema.org/Event"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -35,13 +36,38 @@
     <body>
     	<div class="wrapper">
     		<span id="modal"></span>
+    		<nav id="menu">
+    			<span class="menu-switch ico-general">&nbsp;</span>
+    			<ul class="chapters-list">
+    				<li class="speakers">
+    					<a href="#heroes" title="Ir para a área de palestrantes"><span class="ir ico-general sign">Palestrantes</span></a>
+    					<span class="extended-menu">palestrantes</span>
+    				</li>
+    				<li class="schedule">
+    					<a href="#schedule" title="Ir para a área de programação"><span class="ir ico-general sign">Programação</span></a>
+    					<span class="extended-menu">programação</span>
+    				</li>
+    				<li class="local">
+    					<a href="#locale" title="Ir para a área do local do evento"><span class="ir ico-general sign">Local</span></a>
+    					<span class="extended-menu">local</span>
+    				</li>
+    				<li class="ticket">
+    					<a href="#tickets" title="Ir para a área de inscrições"><span class="ir ico-general sign">Inscrições</span></a>
+    					<span class="extended-menu">inscrições</span>
+    				</li>    	
+    				<!--li class="manifest">
+    					<a href="#manifest" title="Ir para a área de do manifesto"><span class="ir ico-general sign">Manifesto</span></a>
+    					<span class="extended-menu">manifesto</span>
+    				</li-->    	    							    				
+    			</ul>
+    		</nav>
     		<div id="speakers">
 		    	<div class="speakers-wrapper">
 		    		<span class="shadows">&nbsp;</span>
 		    	</div>
     			<span class="cities">&nbsp;</span>
     		</div>
-	    	<div id="main-wrapper">
+	    	<div id="main-wrapper" class="clearfix">
 	    		<header class="header-wrapper">
 	    			<div class="keynote-container">
 		    			<h1 class="title ir" itemprop="name">BrazilJS Conf 2013</h1>
@@ -52,12 +78,9 @@
 			    			<em class="company">PAYPAL</em>
 			    		</div>
 	    			</div>
-	    		</header>
-	    		<main role='main'>
-	    			<p class="disclaimer"><span itemprop="location">PORTO ALEGRE </span> · AGOSTO 2013 · BRAZIL JS · A CONFERÊNCIA · TEATRO DO BOURBON COUNTRY · BROUGHT TO YOU BY BRAZIL JS FOUNDATION · <span itemprop="description">A MAIOR CONFERÊNCIA DE JAVASCRIPT DO UNIVERSO</span> · <a href="http://www.braziljs.com.br" itemprop="url" title="BrazilJS Conf 2013">WWW.BRAZILJS.COM.BR</a></p>
-	    		</main>
-	    		<footer>
-					<time class="in-this-summer" datetime="2013-08-22" itemprop="startDate">22 E 23 DE AGOSTO</time>
+	    		</header>	    		
+				<div class="social-wrapper">
+					<span class="social-bg">&nbsp;</span>
 					<div class="social-container">
 						<div class="ticket-container">
 							<a href="http://eventick.com.br/braziljs-2013" target='_blank' title="Compre seu ingresso aqui!" class="ir ico-general ticket">Adquira o ingresso para a BrazilJS Conf 2013</a>
@@ -71,33 +94,512 @@
 								<li><div class="g-plusone" data-size="tall"></div></li>
 							</ul>
 						</div>						
+					</div>					
+				</div>
+				<main role="main" class="clearfix">
+					<strong class="what" itemprop="description">A maior conferência de javascript do universo!</strong>
+					<strong class="where">23 E 24 DE AGOSTO <br/> TEATRO DO BOURBON COUNTRY PORTO ALEGRE/RS</strong>						
+				</main>
+				<section id="heroes">
+					<div class="heroes-wrapper">
+						<span class="burst">&nbsp;</span>
+						<h2 class="title ttl-general ir">Palestrantes</h2>
+						<ul class="heroes-list">
+							<li>
+								<span class="angle">&nbsp;</span>
+								<a class="douglas-crockford hero" href="#douglas-crockford" title="Saiba mais sobre o palestrante Douglas Crockford" data-layer='1'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name">Douglas Crockford</strong>
+										<em class="hero-company">PayPal</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>
+							<li>
+								<div class="AB hero">
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="hero LV">
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="hero thibault-imbert" href="#thibault" title="Saiba mais sobre o palestrante Thibault Imbert" data-layer='2'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name" itemprop="attendee">Thibault Imbert</strong>
+										<em class="hero-company">adobe</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>
+							<li>
+								<a class="hero robert-nyman" href="#robert" title="Saiba mais sobre o palestrante Robert Nyman" data-layer='3'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name" itemprop="attendee">Robert Nyman</strong>
+										<em class="hero-company">mozilla</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>
+							<li>
+								<div class="hero JG">									
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="hero marcel-angus" href="#marcel-angus" title="Saiba mais sobre os palestrantes Marcel Duran e Angus Croll" data-layer='4'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name">angus croll &amp;&amp; marcel duran</strong>
+										<em class="hero-company">twitter</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>
+							<li>
+								<div class="hero PI">
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="hero JW">									
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="hero stoyan-stefanov" href="#stoyan" title="Saiba mais sobre o palestrante Stoyan Stefanov" data-layer='5'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name" itemprop="attendee">Stoyan Stefanov</strong>
+										<em class="hero-company">facebook</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>
+							<li>
+								<a class="hero caridy-patino" href="#caridy" title="Saiba mais sobre o palestrante Caridy Patino" data-layer='6'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name" itemprop="attendee">Caridy Patino</strong>
+										<em class="hero-company">yahoo!</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>
+							<li>
+								<div class="hero AR">									
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="hero BW">
+									<div class="info">
+										<strong class="hero-name">???</strong>
+										<em class="hero-company">???</em>										
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="hero renato-mangini" href="#renato" title="Saiba mais sobre o palestrante Renato Mangini" data-layer='7'>
+									<span class="spikes">&nbsp;</span>
+									<div class="info">
+										<strong class="hero-name" itemprop="attendee">Renato Mangini</strong>
+										<em class="hero-company">google</em>										
+									</div>
+									<span class="photo">&nbsp;</span>
+								</a>
+							</li>																												
+						</ul>						
 					</div>
-	    		</footer>
+					<div id="heroes-overlay" class="visuallyhidden">
+						<button class="previous ir ico-general">ir para o palestrante anterior<span class="sign ico-general">&nbsp;</span></button>
+						<ul class="speakers-list sequence-canvas">
+							<li id="douglas-crockford" class="animate-in" itemscope itemtype="http://schema.org/Person">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/douglas.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/douglas.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/douglas.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name" itemprop="name">Douglas Crockford</h3>
+										<em class="company" itemprop="worksFor">Paypal</em>
+										<div class="information" itemprop="description">
+											<span class="spacer">&nbsp;</span>
+											<p>Doug estava lá durante o nascimento desta midia que conquista a nossa atenção e tempo, desde então, se tornou um dos precursores e líderes no JavaScript, a linguagem de programação mais popular do mundo.</p>
+											<p>Foi o descobridor do do formato JSON (JavaScript Object Notation) enquanto era o CTO de State Software, criou a ferramenta JSLint e é o autor do referenciado JavaScript: The Good Parts.</p>
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/douglascrockford" title="Acesse o gitHub de Douglas Crockford">linkedin</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" itemprop="url" href="http://www.crockford.com/" title="crockford.com">crockford.com</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li id="thibault" itemscope itemtype="http://schema.org/Person">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/thibault.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/thibault.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/thibault.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name" itemprop="name">Thibault Imbert</h3>
+										<em class="company" itemprop="worksFor">Adobe</em>
+										<div class="information" itemprop="description">
+											<span class="spacer">&nbsp;</span>
+											<p>Thibault Imbert gerencia um grupo de produtos para plataforma web focado em gráficos, JavaScript e Adobe Scout, a próxima geração de ferramentas de profiling para tecnologias web.</p>
+											<p>Liderando o time Scout da Adobe, tem o objetivo de mudar a forma como desenvolvedores criam profiles para conteúdos web.</p>
+											<p>Além disso, escreveu um emulador Intel 8080 em ActionScript, e o traduziu para JavaScript.</p>
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/thibaultimbert/" title="Acesse o github de Thibault Imbert">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="https://twitter.com/thibault_imbert" title="Acesse o Twitter de Thibault">Twitter</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" href="http://typedarray.org/" title="Acesse o site de Thibault" itemprop="url">http://typedarray.org/</a>
+										</li>
+									</ul>
+								</div>																
+							</li>
+							<li id="robert" itemscope itemtype="http://schema.org/Person">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/robert.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/robert.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/robert.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name" itemprop="name">Robert Nyman</h3>
+										<em class="company" itemprop="worksFor">Mozilla</em>
+										<div class="information" itemprop="description">
+											<span class="spacer">&nbsp;</span>
+											<p>Robert é <span itemprop="jobTitle">Technical Evangelist</span> na Mozilla e editor do Mozilla Hacks. Ele é um entusiasta da Open Web e do HTML5.</p>
+											<p>Trabalha desde 1999 com desenvolvimento Front End - na Suécia e em Nova Iorque.</p>
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/robnyman" title="Acesse o github de Robert">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="https://twitter.com/robertnyman" title="Acesse o Twitter de Robert">Twitter</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" href="http://robertnyman.com/" title="Acesse o site de Robert" itemprop="url">robertnyman.com</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li id="angus-marcel">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/angus.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/angus.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/angus.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name">Angus Croll &amp;&amp; Marcel Duran</h3>
+										<em class="company">Twitter</em>
+										<div class="information">
+											<span class="spacer">&nbsp;</span>
+												<p>Angus, trabalha no core team do Twitter e é autor do Blog JavaScript, JavaScript...</p>
+												<p>Já Marcel Duran é engenheiro Front End no Twitter Inc. Anteriormente, ele trabalhou com otimização da performance no desenvolvimento web de websites de grande tráficos na Yahoo! Front Page, e times de Search.</p>
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/angus-c" title="Acesse o github de Angus">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="https://twitter.com/angustweets" title="Acesse o Twitter de Angus">Twitter</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" href="http://anguscroll.com/" title="Acesse o site de Angus" itemprop="url">anguscroll.com</a>
+										</li>
+									</ul>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/marcelduran" title="Acesse o github de Marcel">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="https://twitter.com/marcelduran" title="Acesse o Twitter de Marcel">Twitter</a>
+										</li>
+									</ul>									
+								</div>																
+							</li>							
+							<li id="stoyan" itemscope itemtype="http://schema.org/Person">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/robert.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/robert.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/robert.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name" itemprop="name">Stoyan Stefanov</h3>
+										<em class="company" itemprop="worksFor">Facebook</em>
+										<div class="information" itemprop="description">
+											<span class="spacer">&nbsp;</span>
+											<p>Stoyan Stefanov é <span itemprop="jobTitle">engenheiro</span> no Facebook. Ex-Yahoo, onde atuou como arquiteto da ferramenta de performance YSlow 2.0. Também foi o criador da ferramenta de otimização de imagens smush.it!</p>
+											<p>Ele é autor dos livros JavaScript Patterns (O'Reilly), Object-Oriented JavaScript (Packt Publishing), The Book of Speed (online), e contribuiu para o lançamento dos livros High-Performance JavaScript (O'Reilly) e Even Faster Web Sites (O'Reilly).</p>											
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/stoyan" title="Acesse o github de Stoyan">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="https://twitter.com/stoyanstefanov" title="Acesse o Twitter de Stoyan">Twitter</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" href="http://www.phpied.com" title="Acesse o site de Stoyan" itemprop="url">phpied.com</a>
+										</li>
+									</ul>
+								</div>																
+							</li>
+							<li id="caridy" itemscope itemtype="http://schema.org/Person">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/caridy.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/caridy.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/caridy.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name" itemprop="name">Caridy Patino</h3>
+										<em class="company" itemprop="worksFor">Yahoo!</em>
+										<div class="information" itemprop="description">
+											<span class="spacer">&nbsp;</span>
+											<p>Principal <span itemprop="jobTitle">desenvolvedor front-end</span> no Yahoo!, membro do core team da biblioteca YUI com extensiva experiência em end-to-end design e arquitetura de aplicações web performáticas e escaláveis.</p>
+											<p>No momento, Caridy esta focado nas plataformas SSJS/NodeJS e Yahoo! Cocktails.</p>
+											<p>Caridy é palestrante, mentor e professor.</p>
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="https://github.com/caridy" title="Acesse o github de Caridy">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="https://twitter.com/caridy" title="Acesse o Twitter de Caridy">Twitter</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" href="http://caridy.name" title="Acesse o site de Caridy" itemprop="url">http://caridy.name</a>
+										</li>
+									</ul>
+								</div>																
+							</li>
+							<li id="renato" itemscope itemtype="http://schema.org/Person">
+								<div class="portrait">
+									<span class="photo">&nbsp;</span>
+									<ul class="share">
+										<li><div class="fb-like" data-href="http://braziljs.com.br/speakers/renato.html" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/speakers/renato.html" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+										<li><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/speakers/renato.html"></div></li>
+									</ul>
+								</div>
+								<div class="speaker">
+									<div class="info">
+										<h3 class="name" itemprop="name">Renato Mangini</h3>
+										<em class="company" itemprop="worksFor">Google</em>
+										<div class="information" itemprop="description">
+											<span class="spacer">&nbsp;</span>
+											<p>Renato Mangini é <span itemprop="jobTitle">engenheiro de software</span> da equipe de Developer Relations do Google Chrome, empreendedor, geek, mountain biker e corredor amador nas horas vagas.</p>
+										</div>
+									</div>
+									<ul class="social-networks">
+										<li>
+											<a class="github ir ico-general" href="http://github.com/mangini" title="Acesse o github de Renato">github</a>
+										</li>
+										<li class="twitter">
+											<a class="twitter ir ico-general" href="http://twitter.com/renatomangini" title="Acesse o Twitter de Renato">Twitter</a>
+										</li>
+										<li class="blog">
+											<a class="blog ir ico-general" href="http://www.renatomangini.com/" title="Acesse o site de Renato" itemprop="url">renatomangini.com/</a>
+										</li>
+									</ul>
+								</div>																
+							</li>																																			
+						</ul>					
+						<button class="next ir ico-general">ir para o próximo palestrante<span class="sign ico-general">&nbsp;</span></button>
+						<button class="close ir ttl-general">fechar a overlay</button>
+					</div>
+				</section>
+				<section id="schedule">
+					<div class="schedule-wrapper">
+						<h2 class="title ir ttl-general">Programação</h2>
+						<span class="burst">&nbsp;</span>
+						<span class="thunder">&nbsp;</span>						
+						<table class="thursday">
+							<caption>23 de agosto <span class="weekday">quinta-feira</span></caption>
+							<thead class="visuallyhidden">
+								<td>Horário</td>
+								<td>Palestrante</td>
+							</thead>
+							<tbody>
+								<tr class="event">
+									<td class="hour">08:00</td>
+									<td class="speaker">Credenciais / Check-in</td>
+								</tr>
+								<tr class="event">
+									<td class="hour">09:00</td>
+									<td class="speaker">A definir</td>
+								</tr>															
+							</tbody>
+						</table>
+						<table class="thursday">
+							<caption>24 de agosto <span class="weekday">sexta-feira</span></caption>
+							<thead class="visuallyhidden">
+								<td>Horário</td>
+								<td>Palestrante</td>
+							</thead>
+							<tbody>
+								<tr class="event">
+									<td class="hour">08:00</td>
+									<td class="speaker">Credenciais / Check-in</td>
+								</tr>
+								<tr class="event">
+									<td class="hour">09:00</td>
+									<td class="speaker">A definir</td>
+								</tr>
+							</tbody>
+						</table>						
+					</div>
+				</section>
+				<section id="locale">
+					<div class="locale-wrapper">
+						<span class="burst">&nbsp;</span>						
+						<div class="photo-container">
+							<span class="photo-1">&nbsp;</span>
+							<span class="photo-2">&nbsp;</span>							
+						</div>
+						<div class="info-container">
+							<h2 class="title ir ttl-general">Local</h2>	
+							<p itemprop="location" itemscope itemtype="http://schema.org/Place">
+								<span class="ttl-general how-to" itemprop="name">Teatro do Boubon Country</span>
+								<address class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+									<span class="street" itemprop="streetAddress">Avenida Tulio de Rose, 80</span>
+									<span class="neighborhood">Passo da Areia</span>
+									<span class="city" itemprop="addressLocality">Porto Alegre</span>
+									<span class="cep" itemprop="postalCode">91340-110</span>
+									<a class="theater-link" itemprop="url" href="http://www.teatrodobourboncountry.com.br/" title="Saiba mais sobre o teatro do Bourbon Country" rel="external">› ir para o site</a>									
+								</address>
+							</p>
+						</div>												
+					</div>
+					<div id="map">&nbsp;</div>
+				</section>
+				<section id="tickets">
+					<div class="tickets-wrapper">
+						<span class="burst">&nbsp;</span>
+						<h2 class="title ttl-general ir">Inscrições</h2>
+						<span class="ballons">&nbsp;</span>
+						<span class="pigies pig-1">&nbsp;</span>
+						<span class="pigies pig-2">&nbsp;</span>
+						<span class="pigies pig-3">&nbsp;</span>
+						<p class="disclaimer">Garanta já o seu ingresso para a maior conferência de JavaScript do universo. Conteúdo inédito, palestrantes renomados e um networking enriquecedor.</p>
+						<a href="http://eventick.com.br/braziljs-2013" class="buy" title="Compre seu ingresso aqui!" rel="external">
+							<strong class="ttl-general ir">Garanta já o seu ingresso</strong>
+						</a>
+						<span class="corner-shadow">&nbsp;</span>
+						<p class="gogogo ir ttl-general">Faça parte deste grande evento. A BrazilJS Conf 2013 será imperdível!</p>
+					</div>
+				</section>
+				<section id="the-guys">
+					<div class="the-guys-container">
+						<h3 class="title ttl-general ir">Curadores: Esses dois são os resposáveis pelo evento!</h3>
+						<div class="jaydson curator" itemscope itemtype="http://schema.org/Person">
+							<strong class="name" itemprop="name">Jaydson Gomes</strong>
+							<p class="resume">Entusiasta JavaScript, <span itemprop="jobTitle">Analista de Desenvolvimento Sênior</span> no <span itemprop="worksFor">Terra Networks</span>, possui 8 anos de experiência em desenvolvimento Web, curador do BrazilJS e do RSJS.</p>
+							<ul class="social-networks">
+								<li>
+									<a class="github ir ico-general" href="https://github.com/jaydson" title="Acesse o gitHub de Jaydson Gomes" rel="external">gitHub</a>
+								</li>
+								<li class="twitter">
+									<a class="twitter ir ico-general" href="https://twitter.com/jaydson" title="Acesse o twitter de Jaydson Gomes" rel="external">twitter</a>
+								</li>
+								<li class="blog">
+									<a class="blog ir ico-general" href="http://jaydson.org" title="Acesse o Blog do Jaydson" rel="external">jaydson.org</a>
+								</li>
+							</ul>
+							<span class="photo">&nbsp;</span>
+						</div>
+						<div class="felipe curator" itemscope itemtype="http://schema.org/Person">
+							<strong class="name" itemprop="name">Felipe N. Moura</strong>
+							<p class="resume"><span itemprop="jobTitle">Analista de Desenvolvimento Sênior</span> no <span itemprop="worksFor">Terra Networks</span>, entusiasta de tecnologias web, trabalha há cerca de 8 anos com desenvolvimento e é bastante envolvido em projetos open source, além de ser curador do BrazilJS e do RSJS.</p>
+							<ul class="social-networks">
+								<li>
+									<a class="github ir ico-general" href="https://github.com/felipenmoura" rel="external" title="Acesse o gitHub de Felipe Moura">gitHub</a>
+								</li>
+								<li class="twitter">
+									<a class="twitter ir ico-general" href="https://twitter.com/felipenmoura" rel="external" title="Acesse o twitter de Felipe Moura">twitter</a>
+								</li>
+								<li class="blog">
+									<a class="blog ir ico-general" href="http://felipenmoura.org" rel="external" title="Acesse o Blog do Felipe">felipenmoura.org</a>
+								</li>
+							</ul>
+							<span class="photo">&nbsp;</span>
+						</div>						
+					</div>
+				</section>
+				<footer class="directed-by">
+					<div class="directed-by-wrapper">
+						<a class="ico-general ir brazil-js-logo" href="http://braziljs.org/" rel="external" title="Conheça a BrazilJS Foundation!">BrazilJS Foundation</a>
+						<p class="copyright">&copy; 2013. Conteúdo disponível sob a licença <a rel="external" href="http://creativecommons.org/licenses/by/3.0/br/" title="Sobre a licença Creative Commons">Creative Commons</a>.</p>
+						<p class="developed-by">desenvolvido por:</p><a href="http://facebook.com/marimbondo.me" title="Desenvolvido por marimbondo - web com gominho" class="ico-general ir marimbondo-logo" rel="author">marimbondo - web com gominho</a>
+					</div>
+				</footer>
 	    	</div>
 	    </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=136223956547034";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		<script type="text/javascript">
-		  (function() {
-		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-		    po.src = 'https://apis.google.com/js/plusone.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		  })();
-		</script>
-        <script>
-            var _gaq=[['_setAccount','UA-32119524-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+        <script src="js/require.js" data-main="js/main"></script>
     </body>
 </html>
