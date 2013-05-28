@@ -228,7 +228,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes .heroes-list .renato-mangini .hero-company { text-align:right; }
 
 /* HEROES OVERLAY */
-#heroes-overlay { position:fixed; top:50%; left:50%; overflow:hidden; margin:-275px 0 0 -450px; width:936px; height:554px; background:url('../img/bg-overlay.png') no-repeat; z-index:1000; }
+#heroes-overlay { position:fixed; top:50%; left:50%; margin:-275px 0 0 -450px; width:936px; height:554px; background:url('../img/bg-overlay.png') no-repeat; z-index:1000; }
 #heroes-overlay .previous { position:absolute; left:10px; top:50%; width:30px; height:38px; background-position:0 -370px; cursor:pointer; z-index:10; color:transparent; }
 #heroes-overlay .previous .sign { position:absolute; top:1px; left:7px; width:14px; height:30px; background-position:0 -420px; }
 #heroes-overlay .next { position:absolute; right:10px; top:50%; width:30px; height:38px; background-position:-153px -370px; cursor:pointer; z-index:10; color:transparent; }
