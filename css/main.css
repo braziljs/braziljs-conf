@@ -468,7 +468,7 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#heroes .heroes-list .renato-mangini .photo { top:0; right:-7px; width:145px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
 	
 	/* HEROES OVERLAY */	
-	#heroes-overlay { overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:url('../img/mobile/bg-overlay.png') no-repeat rgb(17,17,17); }
+	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:url('../img/mobile/bg-overlay.png') no-repeat rgb(17,17,17); }
 	#heroes-overlay ul { padding:0; }
 	#heroes-overlay .previous { left:auto; top:47px; right:50px; height:30px; width:31px; background-position:0 -301px; }
 	#heroes-overlay .previous .sign { display:none; }
