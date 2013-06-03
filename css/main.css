@@ -136,7 +136,6 @@ body { background-color:#201C1D; }
 /* NAVIGATION */
 #menu { position:fixed; left:0px; height:100%; width:60px; background-color:#1B1819; z-index:8; transition:left 0.7s ease; }
 #menu .menu-switch { display:none; }
-/*#menu.show { left:0; }*/
 #menu .chapters-list { margin:0; padding:0; position:relative; top:33%; list-style:none; }
 #menu .chapters-list li { position:relative; display:block; border-bottom:1px solid #464B4D; }
 #menu .chapters-list li:first-child { border-top:1px solid #464B4D; }
@@ -148,7 +147,7 @@ body { background-color:#201C1D; }
 #menu .chapters-list li.local a .sign { bottom:17px; left:17px; width:26px; height:26px; background-position:-99px -592px; }
 #menu .chapters-list li.ticket a .sign { bottom:14px; left:12px; width:35px; height:31px; background-position:-145px -592px; }
 #menu .chapters-list li.manifest a .sign { bottom:17px; left:17px; width:21px; height:26px; background-position:-200px -592px; }
-#menu .chapters-list li .extended-menu { opacity:0; transition:all 0.5s ease; position:absolute; left:80px; top:0; padding:22px 25px 20px; background-color:#DB6E0E; color:#FFF; font-size:16px; font-weight:bold; text-transform:uppercase; }
+#menu .chapters-list li .extended-menu { opacity:0; transition:all 0.5s ease; position:absolute; left:80px; top:0; padding:22px 25px 20px; background-color:#DB6E0E; color:#FFF; font-size:16px; font-weight:bold; text-transform:uppercase; pointer-events:none; }
 #menu .chapters-list a:hover + .extended-menu { opacity:1; left:60px; }
 #menu .chapters-list li .extended-menu:before { content:''; position:absolute; left:-7px; width:14px; height:14px; background:url('../img/ico-general.png') 0 -637px no-repeat; }
 
@@ -243,13 +242,13 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay .speaker { opacity:0; left:200px; -webkit-transition:left 1s ease; -moz-transition:left 1s ease; -o-transition:left 1s ease; -ms-transition:all 1s ease; transition:left 1s ease; }
 #heroes-overlay .animate-in .speaker { opacity:1; left:350px; transition:all 1s ease; }
 #heroes-overlay .animate-out .speaker { opacity:0; transition:all 1s ease; }
-#heroes-overlay .portrait .share { position:absolute; top:400px; margin:46px 0 0 31px; padding:0; }
+#heroes-overlay .portrait .share { position:absolute; top:400px; margin:26px 0 0 31px; padding:0; }
 #heroes-overlay .portrait .second { top:300px; }
 #heroes-overlay .portrait { position:relative; float:left; width:350px; }
 #heroes-overlay .portrait .share li { display:inline-block; margin-right:10px; vertical-align:top; }
 #heroes-overlay .close { position:absolute; bottom:9px; right:31px; display:block; width:73px; height:43px; background-position:0 -887px; color:transparent; cursor:pointer; }
 #heroes-overlay ul { margin:0; list-style:none; }
-#heroes-overlay .photo:before { content:''; position:absolute; top:80px; left:-227px; width:495px; height:256px; background:url('../img/speaker-gradient.png') no-repeat; }
+#heroes-overlay .photo:before { content:''; position:absolute; top:80px; left:-51px; width:495px; height:256px; background:url('../img/speaker-gradient-2.png') no-repeat; }
 #heroes-overlay .photo:after { content:''; position:absolute; top:194px; left:-81px; width:495px; height:256px; background:url('../img/speaker-gradient.png') no-repeat; }
 #heroes-overlay .speaker { float:left; padding-top:99px; width:510px; }
 #heroes-overlay .speaker .name { margin:0; font-family:"Arial Black", Gadget, sans-serif; font-size:40px; font-weight:900; line-height:40px; color:rgb(255,255,255); text-shadow:-2px -2px 0 rgb(92,206,247), 2px -2px 0 rgb(92,206,247), -2px 2px 0 rgb(92,206,247), 2px 2px 0 rgb(92,206,247); text-transform:lowercase; }
@@ -268,10 +267,14 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay .photo { position:absolute; opacity:0; left:7px; top:62px; display:block; width:265px; height:412px; background:url('../img/overlay-caridy.png') no-repeat; }
 #heroes-overlay #renato .photo { left:-9px; top:31px; width:315px; height:422px; background:url('../img/overlay-renato.png') no-repeat; }
 #heroes-overlay #stoyan .photo { left:-29px; top:47px; width:284px; height:398px; background:url('../img/overlay-stoyan.png') no-repeat; }
+#heroes-overlay #stoyan .photo:before { left:-31px; }
 #heroes-overlay #thibault .photo { left:-59px; top:40px; width:319px; height:412px; background:url('../img/overlay-thibault.png') no-repeat; }
+#heroes-overlay #thibault .photo:before { left:-1px; }
 #heroes-overlay #robert .photo { left:-9px; top:30px; width:257px; height:421px; background:url('../img/overlay-robert.png') no-repeat; }
 #heroes-overlay #douglas-crockford .photo { left:-9px; top:30px; width:257px; height:421px; background:url('../img/overlay-douglas.png') no-repeat; }
 #heroes-overlay #angus-marcel .photo { left:-61px; top:100px; width:432px; height:321px; background:url('../img/overlay-angus-marcel.png') no-repeat; }
+#heroes-overlay #angus-marcel .photo:before { left:1px; }
+#heroes-overlay #caridy .photo:before { left:-67px; }
 
 /* SCHEDULE */
 #schedule { display:inline-block; clear:both; margin-top:60px; width:100%; }
@@ -322,11 +325,10 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #tickets .tickets-wrapper .title { position:relative; margin-bottom:2px; width:548px; height:175px; background-position:0 -284px; }
 #tickets .tickets-wrapper .burst { position:absolute; top:-73px; left:-15px; display:block; width:1174px; height:397px; background:url('../img/bg-tickets.png') no-repeat; }
 #tickets .tickets-wrapper .ballons { position:absolute; top:1px; left:18px; display:block; width:180px; height:140px; background:url('../img/ballons.png') no-repeat; }
-#tickets .tickets-wrapper .pigies { /*transition:all 1s ease;*/  position:absolute; top:0; right:0; display:block; width:159px; height:134px; background:url('../img/piggie.png') no-repeat; } 
-#tickets .tickets-wrapper .pigies.pig-1 { right:-106px; top:84px; }
-#tickets .tickets-wrapper .pigies.pig-2 { right:-130px; top:194px; }
-#tickets .tickets-wrapper .pigies.pig-3 { right:-3px; top:140px; }
-#tickets .tickets-wrapper .pigies:hover { -webkit-animation:piggies .8s infinite steps(4,end); -moz-animation:piggies .8s infinite steps(4,end); -ms-animation:piggies .8s infinite steps(4,end); -o-animation:piggies .8s infinite steps(4,end); animation:piggies .8s infinite steps(4,end); }
+#tickets .tickets-wrapper .pigies { /*transition:all 1s ease;*/  position:absolute; top:0; right:0; display:block; width:159px; height:134px; background:url('../img/piggie.png') no-repeat; -webkit-animation:piggies .6s infinite steps(4,end); -moz-animation:piggies .6s infinite steps(4,end); -ms-animation:piggies .6s infinite steps(4,end); -o-animation:piggies .6s infinite steps(4,end); animation:piggies .6s infinite steps(4,end); } 
+#tickets .tickets-wrapper .pigies.pig-1 { right:-106px; top:84px; -moz-animation-delay:0.5s; }
+#tickets .tickets-wrapper .pigies.pig-2 { right:-130px; top:178px; -moz-animation-delay:0.7s; z-index:5; }
+#tickets .tickets-wrapper .pigies.pig-3 { right:-3px; top:140px;  -moz-animation-delay:0.9s; }
 #tickets .tickets-wrapper .buy { position:relative; display:inline-block; width:539px; height:102px; background-color:rgb(64,68,91); background-image:-moz-linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-webkit-gradient(linear,color-stop(0, rgba(0,0,0,0)),color-stop(1, rgba(0,0,0,0.5))); background-image:-webkit-linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-ms-linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#0000000,endColorstr=#7f000000)"; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0000000,endColorstr=#7f000000); z-index:2; } 
 #tickets .tickets-wrapper .buy strong { display:inline-block; margin:30px 0 0 51px; width:425px; height:58px; background-position:0 -651px; } 
 #tickets .tickets-wrapper .corner-shadow { position:relative; bottom:19px; left:397px; display:block; width:548px; height:26px; background:url('../img/buyShadow.png') no-repeat; z-index:1; }
@@ -356,23 +358,23 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #the-guys .the-guys-container .curator .social-networks li a.github { background-position:0 -313px; }
 #the-guys .the-guys-container .curator .social-networks li a.twitter { background-position:-41px -313px; }
 #the-guys .the-guys-container .curator .social-networks li a.blog { background-position:-120px -313px; }
-#the-guys .the-guys-container .curator .photo { position:absolute; display:block; }
+#the-guys .the-guys-container .curator .photo { position:absolute; display:block; z-index:3; }
 #the-guys .the-guys-container .curator.jaydson .photo { top:26px; left:193px; width:243px; height:503px; background:url('../img/jay.png') no-repeat; }
 #the-guys .the-guys-container .curator.felipe { float:right; text-align:right; }
 #the-guys .the-guys-container .curator.felipe .photo { top:0; right:200px; width:282px; height:529px; background:url('../img/felipe.png') no-repeat; }
 
 /* DIRECTED BY */
-.directed-by { clear:both; margin-top:260px; width:100%; background-color:#2A2C39; } 
+.directed-by { position:relative; clear:both; margin-top:260px; width:100%; background-color:#2A2C39; }
+.directed-by:before { content:''; position:absolute; top:-239px; left:0; right:0; height:239px; width:100%; background:url('../img/bg-footer-cities.png'); z-index:2; } 
 .directed-by .directed-by-wrapper { position:relative; padding:15px 20px 0; margin:auto; width:980px; text-align:left; }
 .directed-by .directed-by-wrapper .brazil-js-logo { display:inline-block; width:60px; height:20px; background-position:0 -517px; }
 .directed-by .directed-by-wrapper .copyright { display:inline-block; margin:0 320px 0 0; padding-top:3px; vertical-align:top; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:120%; color:rgb(255,255,255); }
 .directed-by .directed-by-wrapper .copyright a { color:rgb(255,204,0); text-decoration:none; }
 .directed-by .directed-by-wrapper .developed-by { display:inline-block; margin:0 5px 0 0; padding-top:3px; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:120%; color:rgba(255,255,255,0.5); vertical-align:top; }
+.directed-by .directed-by-wrapper .developed-by:before { content:''; position:absolute; top:-51px; right:0; width:200px; height:51px; background:url('../img/ico-general.png') no-repeat 0 -672px; z-index:3; }
 .directed-by .directed-by-wrapper .marimbondo-logo { display:inline-block; width:131px; height:15px; background-position:0 -557px; vertical-align:top; }
 
-/* FOOTER */
-footer { margin:auto; width:1000px; text-align:center; }
-footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; font-weight:800; color:#B81E1A; }
+/* SOCIAL */
 .social-container { margin:auto; width:500px; }
 #social-networks { position:relative; float:left; padding:33px 0 0 17px; margin:auto auto 150px auto; width:300px; height:150px; }
 #social-networks .share-this { position:absolute; bottom:14px; left:30px; height:54px; width:139px; }
@@ -384,7 +386,7 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 .ticket-container .buy-the-ticket { position:absolute; right:-35px; bottom:-36px; width:131px; height:66px; background-position:0 -58px; }
 
 /* MOBILE */
-@media (min-width: 0) and (max-width: 600px) {
+@media (min-width: 0) and (max-width: 767px) {
 	
 	#modal { display:none; }
 	
@@ -468,7 +470,8 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#heroes .heroes-list .renato-mangini .photo { top:0; right:-7px; width:145px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
 	
 	/* HEROES OVERLAY */	
-	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:url('../img/mobile/bg-overlay.png') no-repeat rgb(17,17,17); }
+	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:none; background-color:#111111; }
+	#heroes-overlay:before { content:''; position:absolute; right:0; left:0; width:100%; height:421px; background:url('../img/mobile/bg-overlay.png') no-repeat rgb(17,17,17); }
 	#heroes-overlay ul { padding:0; }
 	#heroes-overlay .previous { left:auto; top:47px; right:50px; height:30px; width:31px; background-position:0 -301px; }
 	#heroes-overlay .previous .sign { display:none; }
@@ -505,11 +508,10 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#heroes-overlay #angus-marcel .photo { left:0; width:286px; height:211px; background:url('../img/mobile/hero-angus-marcel.png') no-repeat; }	
 	#heroes-overlay #renato .photo { top:21px; left:0; width:199px; height:317px; background:url('../img/mobile/hero-renato.png') no-repeat; }	
 	#heroes-overlay .close { right:5px; top:281px; height:32px; width:73px; background-position:0 -270px; z-index:10; }
-	#heroes-overlay #angus-marcel .speaker .name { width:360px; }
-	
+	#heroes-overlay #angus-marcel .speaker .name { width:360px; }	
 	
 	/* SCHEDULE */
-	#schedule { margin:0; }
+	#schedule { margin:30px 0 0; }
 	#schedule .schedule-wrapper { padding:0 10px; width:320px; }
 	#schedule .schedule-wrapper .title { position:static; margin:0 0 20px; width:183px; height:44px; background-position:0 -51px; }
 	#schedule .schedule-wrapper .burst { display:none; }
@@ -528,12 +530,12 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#schedule table tbody td .expand { background-position:0 -105px; }
 	
 	/* LOCALE */
-	#locale { margin:0 0 260px 0; }
+	#locale { margin:60px 0 260px 0; }
 	#locale .locale-wrapper { padding:0 10px; width:320px; }
 	#locale .locale-wrapper .burst { display:none; }
 	#locale .locale-wrapper .info-container { float:none; margin:0; }
 	#locale .locale-wrapper .title { margin:0; height:32px; margin:0; width:71px; background-position:0 -113px; }
-	#locale .locale-wrapper .photo-container .photo-1 { margin-top:190px; width:300px; background:url('../img/mobile/bourbon-small.jpg') no-repeat; }
+	#locale .locale-wrapper .photo-container .photo-1 { margin-top:160px; width:300px; background:url('../img/mobile/bourbon-small.jpg') no-repeat; }
 	#locale .locale-wrapper .photo-container .photo-2 { display:none; }
 	#locale .locale-wrapper .how-to { position:static; height:auto; width:auto; text-indent:0; color:#FFF; text-transform:uppercase; }
 	
@@ -549,7 +551,7 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#locale #map { display:none; }
 	
 	/* TICKETS */
-	#tickets { margin:0 0 40px 0; }
+	#tickets { margin:50px 0 40px 0; }
 	#tickets .tickets-wrapper { padding:0 10px; width:320px; }
 	#tickets .tickets-wrapper .burst { display:none; }
 	#tickets .tickets-wrapper .title { margin:0; height:40px; margin:0; width:141px; background-position:0 -164px; }
@@ -557,12 +559,12 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#tickets .tickets-wrapper .pigies { display:none; }
 	#tickets .tickets-wrapper .corner-shadow { display:none; }
 	#tickets .tickets-wrapper .disclaimer { width:290px; font-size:14px; }
-	#tickets .tickets-wrapper .buy { margin:0 0 43px 31px; width:235px; height:71px; border-top:1px solid rgba(92,97,121,0.5); border-bottom:1px solid rgba(17,15,16,0.5); background-color:rgb(64,68,91); -webkit-box-shadow:3px 2px 4px rgba(0,0,0,0.65); box-shadow:3px 2px 4px rgba(0,0,0,0.65); }
+	#tickets .tickets-wrapper .buy { margin:7px 0 43px 31px; width:235px; height:71px; border-top:1px solid rgba(92,97,121,0.5); border-bottom:1px solid rgba(17,15,16,0.5); background-color:rgb(64,68,91); -webkit-box-shadow:3px 2px 4px rgba(0,0,0,0.65); box-shadow:3px 2px 4px rgba(0,0,0,0.65); }
 	#tickets .tickets-wrapper .buy strong { margin:16px 0 0 24px; height:40px; width:190px; background:url('../img/mobile/ico-general.png') -5px -62px no-repeat; }
 	#tickets .tickets-wrapper .gogogo { margin:0; height:53px; background-position:0 -315px; }
 	
 	/* THE GUYS */
-	#the-guys { margin:0; }
+	#the-guys { margin:80px 0 0; }
 	#the-guys .the-guys-container { padding:0 10px; width:320px; }
 	#the-guys .the-guys-container .title { margin:0 0 300px 0; height:31px; width:141px; background-position:0 -229px; }
 	#the-guys .the-guys-container .curator { margin:20px 0 10px; }
@@ -577,17 +579,167 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	.directed-by .directed-by-wrapper .marimbondo-logo { background-position:0 -225px; }
 	
 	/* DIRECTED BY */
-	.directed-by { margin:0; }
+	.directed-by { margin:140px 0 0; }
+	.directed-by:after, 
+	.directed-by:before { content:none; }
 	.directed-by .directed-by-wrapper { padding:10px 10px 0; width:320px; }
 	.directed-by .directed-by-wrapper .brazil-js-logo { margin-right:10px; background-position:0 -202px; }
 	.directed-by .directed-by-wrapper .copyright { padding:0; margin:0 0 20px; width:200px; }
 	.directed-by .directed-by-wrapper .developed-by { margin-left:30px; }
+	.directed-by .directed-by-wrapper .developed-by:before { content:none; }
 }
 
 /* TABLET */
-@media (min-width : 601px) and (max-width : 768px) {
+@media (min-width : 768px) and (max-width : 1023px) {
+	
+    /* HELPERS */
+    .ico-general { display:block; background:url('../img/tablet/ico-general.png') no-repeat; }
+    .ttl-general { display:block; background:url('../img/tablet/ttl-general.png') no-repeat; }	
 	
 	#modal { display:none; }    
+	
+	/* SPEAKERS */
+	#speakers {  }
+	#speakers .speakers-wrapper { width:768px; margin:auto; }
+	#speakers .speakers-wrapper .shadows { left:-149px; width:1023px; height:451px; background:url('../img/tablet/shadows.jpg') no-repeat; }
+	#speakers .cities { bottom:-11px; }
+	.social-bg { top:-103px; height:103px; }
+	
+    /* HEADER */
+	.header-wrapper { height:22px; } 
+	.header-wrapper .keynote-container .title { top:-34px; }
+	.header-wrapper .keynote-container .the-ruler { height:448px; }
+	.ticket-container .ticket { background-position:0 -150px; }
+	.ticket-container .buy-the-ticket { right:-23px; bottom:-25px; width:115px; height:57px; background-position:0 -364px; pointer-events:none; }
+	#social-networks .share-this { bottom:17px; left:-10px; height:47px; background-position:0 -258px; }
+	
+	/* MAIN */
+	main .what { width:240px; font-size:20px; }
+	main .where { width:300px; font-size:20px; }
+	
+	/* HEROES */
+	#heroes .heroes-wrapper { padding:0 20px; width:768px; }
+	#heroes .heroes-wrapper .burst { top:-162px; }
+	#heroes .title { margin:0; width:339px; height:101px; background-position:0 0; }
+	#heroes .heroes-list { padding:0; }
+	#heroes .heroes-list .spikes { width:480px; height:201px; background:url('../img/tablet/default-spikes.png') no-repeat; }
+	#heroes .heroes-list .angle { left:-20px; width:506px; }
+	#heroes .heroes-list .hero-name { font-size:22px; }
+	#heroes .heroes-list .hero-company { font-size:18px; }
+	#heroes .heroes-list .douglas-crockford { width:479px; height:289px; }
+	#heroes .heroes-list .douglas-crockford .spikes { top:20px; height:267px; }
+	#heroes .heroes-list .douglas-crockford .hero-name { font-size:40px; }
+	#heroes .heroes-list .douglas-crockford .photo { top:1px; width:253px; height:288px; background:url('../img/tablet/hero-douglas.png') no-repeat; }
+	#heroes .heroes-list .AB { margin-top:138px; width:229px; height:410px; background:url('../img/tablet/hero-AB.jpg') no-repeat; }
+	#heroes .heroes-list .LV { margin-top:-240px; width:229px; height:241px; background:url('../img/tablet/hero-LV.jpg') no-repeat; }
+	#heroes .heroes-list .thibault-imbert { margin-top:-241px; width:229px; height:241px; }
+	#heroes .heroes-list .thibault-imbert .hero-name { font-size:22px; }
+	#heroes .heroes-list .thibault-imbert .photo { left:0; width:187px; height:239px; background:url('../img/tablet/hero-thibault.png') no-repeat; }
+	#heroes .heroes-list .thibault-imbert .spikes { width:229px; }
+	#heroes .heroes-list .robert-nyman { width:728px; height:118px; }
+	#heroes .heroes-list .robert-nyman .photo { width:431px; height:118px; background:url('../img/tablet/hero-robert.png') no-repeat; }
+	#heroes .heroes-list .robert-nyman .spikes { width:728px; height:118px; }
+	#heroes .heroes-list .JG { width:229px; height:438px; background:url('../img/tablet/hero-JG.jpg') no-repeat; }
+	#heroes .heroes-list .marcel-angus { width:479px; height:209px; }
+	#heroes .heroes-list .marcel-angus .spikes { width:478px; height:211px; background:url('../img/tablet/special-spikes.png') no-repeat; }
+	#heroes .heroes-list .marcel-angus .photo { bottom:0; width:325px; height:214px; background:url('../img/tablet/hero-angus-marcel.png') no-repeat; }
+	#heroes .heroes-list .PI { width:479px; height:209px; background:url('../img/tablet/hero-PI.jpg') no-repeat; }
+	#heroes .heroes-list .JW { width:354px; height:179px; background:url('../img/tablet/hero-JW.jpg') no-repeat; }
+	#heroes .heroes-list .stoyan-stefanov { width:354px; height:179px; }	
+	#heroes .heroes-list .stoyan-stefanov .spikes { height:120px; width:354px; }
+	#heroes .heroes-list .stoyan-stefanov .photo { width:159px; height:179px; background:url('../img/tablet/hero-stoyan.png') no-repeat; }
+	#heroes .heroes-list .caridy-patino { width:475px; height:201px; }
+	#heroes .heroes-list .caridy-patino .spikes { background:url('../img/tablet/special-spikes.png') no-repeat; }
+	#heroes .heroes-list .caridy-patino .photo { width:168px; height:199px; background:url('../img/tablet/hero-caridy.png') no-repeat; }
+	#heroes .heroes-list .AR { width:229px; height:337px; background:url('../img/tablet/hero-AR.jpg') no-repeat; }
+	#heroes .heroes-list .BW { margin-top:-114px; width:229px; height:179px; background:url('../img/tablet/hero-BW.jpg') no-repeat; }
+	#heroes .heroes-list .renato-mangini { margin-top:-114px; width:229px; height:179px; }
+	#heroes .heroes-list .renato-mangini .spikes { width:229px; height:180px; }
+	#heroes .heroes-list .renato-mangini .photo { width:154px; height:179px; background:url('../img/tablet/hero-renato.png') no-repeat; }
+	
+	/* HEROES OVERLAY */
+	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:none; background-color:#0E0300; }
+	#heroes-overlay:before { content:''; position:absolute; right:0; left:0; width:100%; height:421px; background:url('../img/tablet/bg-overlay.jpg') no-repeat rgb(17,17,17); }
+	#heroes-overlay .next .sign,
+	#heroes-overlay .previous .sign { display:none; }
+	#heroes-overlay .previous { top:20px; left:auto; right:54px; background-position:0 -477px; }
+	#heroes-overlay .next { top:20px; right:20px; background-position:-34px -477px; }
+	#heroes-overlay .close { top:321px; right:21px; height:32px; background-position:0 -817px; }
+	#heroes-overlay .photo:before { content:none; }
+    #heroes-overlay .photo:after { content:none; }
+    #heroes-overlay .sequence-canvas { margin:auto; width:768px; }
+    #heroes-overlay .speaker .info { padding:0 0 0 20px; }
+    #heroes-overlay .speaker .information { width:666px; padding:0; }
+    #heroes-overlay .speaker .social-networks { padding-left:20px; }
+    #heroes-overlay .portrait .share { top:320px; right:-327px; margin:-104px 0 0 -109px; }
+    #heroes-overlay .speaker .social-networks li a.github { background-position:0 -316px; }
+    #heroes-overlay .speaker .social-networks li a.twitter { background-position:-40px -316px; }
+    #heroes-overlay .speaker .social-networks li a.blog { background-position:-119px -316px; }
+    #heroes-overlay .speaker { padding-top:419px; margin-left:-371px; }
+    #heroes-overlay .speaker .info:before { content:''; position:absolute; right:0; left:-130px; top:352px; display:block; width:1024px; height:150px; background:url('../img/tablet/bg-social-overlay.png') no-repeat; z-index:-1; }
+	#heroes-overlay #douglas-crockford .photo { left:-69px; top:-1px; height:391px; width:257px; }
+	#heroes-overlay #angus-marcel .photo { top:70px; left:-81px; }
+	#heroes-overlay #stoyan .photo { top:10px; left:-69px; height:381px; }
+	#heroes-overlay #caridy .photo { left:-63px; top:0; height:392px; }	
+	#heroes-overlay #robert .photo { top:0; left:-69px; }
+	#heroes-overlay #renato .photo { left:-79px; top:1px; height:391px; }
+	#heroes-overlay #thibault .photo { top:0; left:-80px; width:319px; height:390px; background:url('../img/overlay-thibault.png') no-repeat; }
+	
+	/* SCHEDULE */
+	#schedule { margin-top:100px; }
+	#schedule .schedule-wrapper { padding:0 20px; width:768px; }
+	#schedule .schedule-wrapper .title { top:62px; left:200px; width:369px; height:123px; background-position:0 -115px; }
+	#schedule .schedule-wrapper .thunder { left:-35px; top:-109px; width:838px; height:348px; background:url('../img/tablet/bg-thunder.png') no-repeat; }
+	#schedule .schedule-wrapper .burst { display:none; } 
+	#schedule table caption { font-size:24px; }
+	#schedule table caption .weekday { margin-top:8px; font-size:16px; }
+	#schedule table { width:354px; }
+	#schedule table.friday { margin-right:0; }
+	#schedule table tbody td.speaker { padding-left:0; }
+	
+	/* VENUE */
+	#locale { margin-top:200px; }
+	#locale .locale-wrapper { padding:0 20px; width:768px; }
+	#locale .locale-wrapper .title { width:400px; height:72px; background-position:0 -253px; }
+	#locale .locale-wrapper .photo-container .photo-1 { height:280px; width:435px; background:url('../img/tablet/teatro-bourbon-1.jpg') no-repeat; }
+	#locale .locale-wrapper .photo-container .photo-2 { height:280px; width:434px; background:url('../img/tablet/teatro-bourbon-2.jpg') no-repeat; }
+	#locale .locale-wrapper .info-container { width:206px; }
+	#locale .locale-wrapper .how-to { left:-232px; width:277px; height:167px; background-position:0 -592px; }
+	#locale #map { margin-top:405px; }
+
+    /* TICKETS */
+	#tickets { margin-top:130px; }
+	#tickets .tickets-wrapper { padding:0 20px; width:768px; }
+	#tickets .tickets-wrapper .burst { left:-105px; top:-163px; }
+	#tickets .tickets-wrapper .ballons { left:31px; top:-88px; width:172px; height:123px; background:url('../img/tablet/ballons.png') no-repeat; }
+	#tickets .tickets-wrapper .title { margin-bottom:10px; width:278px; height:108px; background-position:0 -335px; }
+	#tickets .tickets-wrapper .disclaimer { margin-right:35px; width:211px; }
+	#tickets .tickets-wrapper .buy { top:-29px; width:474px; }
+	#tickets .tickets-wrapper .buy strong { width:377px; height:47px; background-position:0 -768px; }
+	#tickets .tickets-wrapper .pigies.pig-1 { right:-36px; top:-44px; }
+    #tickets .tickets-wrapper .pigies.pig-2 { right:-100px; top:44px; }
+    #tickets .tickets-wrapper .pigies.pig-3 { right:37px; top:10px; }
+    #tickets .tickets-wrapper .corner-shadow { left:246px; bottom:40px; width:479px; height:16px; background:url('../img/tablet/buyShadow.png') no-repeat; }
+    #tickets .tickets-wrapper .gogogo { height:41px; width:427px; background-position:0 -539px; }
+	
+	/* THE GUYS */
+	#the-guys { padding-bottom:479px; }
+	#the-guys .the-guys-container { padding:0 20px; width:768px; }
+	#the-guys .the-guys-container .title { height:75px; width:344px; background-position:0 -454px; }
+	#the-guys .the-guys-container .curator .resume { width:350px; }
+	#the-guys .the-guys-container .curator .social-networks li a.github { background-position:0 0; }
+	#the-guys .the-guys-container .curator .social-networks li a.twitter { background-position:-41px 0; }
+    #the-guys .the-guys-container .curator .social-networks li a.blog { background-position:-120px 0; }
+    #the-guys .the-guys-container .curator.jaydson .photo { left:113px; top:176px; }
+    #the-guys .the-guys-container .curator.felipe .photo { right:100px; top:150px; }	
+	
+	/* DIRECTED BY */
+	.directed-by .directed-by-wrapper { padding:10px 20px 0; width:768px; }
+	.directed-by:before { content:''; position:absolute; top:-183px; left:0; right:0; height:183px; width:100%; background:url('../img/tablet/bg-footer-cities.png'); z-index:2; }
+	.directed-by .directed-by-wrapper .copyright { margin-right:120px; }
+	.directed-by .directed-by-wrapper .brazil-js-logo { background-position:0 -48px; }
+	.directed-by .directed-by-wrapper .developed-by:before { content:''; position:absolute; top:-51px; right:0; width:200px; height:51px; background:url('../img/tablet/ico-general.png') no-repeat 0 -518px; z-index:3; }
+	.directed-by .directed-by-wrapper .marimbondo-logo { background-position:0 -78px; }
 	
 	/* MENU */ 
 	#menu { top:0; display:block; height:auto; width:100%; z-index:101; }
@@ -605,9 +757,6 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	#menu .chapters-list li.manifest a .sign { bottom:12px; left:16px; width:15px; height:18px; background-position:-120px -270px; }
 	#menu .chapters-list li .extended-menu:before { content:none; }
 	#menu .chapters-list li .extended-menu { top:10px; left:55px; background:none; display:block; opacity:1; padding:0; pointer-events:none; }
-
-	/* SPEAKERS */
-	#speakers .speakers-wrapper .shadows { width:1080px; }
 	
 	/* HEADER */
 	.header-wrapper { width:700px; }
@@ -617,7 +766,7 @@ footer .in-this-summer { margin:3px 0 0; font-size:40px; letter-spacing:-2px; fo
 	
 }
 
-@media (min-width : 769px) and (max-width : 1024px) {
+@media (min-width : 1024px) and (max-width : 1270px) {
 
     /* MENU */    
     #menu { top:0; display:block; height:auto; width:100%; z-index:101; }

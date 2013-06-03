@@ -21,6 +21,9 @@
     Brazil JS Co founder: Felipe Moura
     Twitter: @felipenmoura
     From: Porto Alegre, Brazil
+    
+    Bryan O'malley for bringing us the Scott Pilgrin series
+    Staphane Boutain for the Scott Pilgrim vs The world Game Animations - http://boutain.blogspot.com
 
 # TECHNOLOGY COLOPHON
 

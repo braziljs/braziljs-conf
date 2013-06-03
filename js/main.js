@@ -80,9 +80,6 @@ $(function () {
 
             bindWindowEvents : function () {
 
-                //Bind an trigger to show the menu
-                $(window).on('scroll', menu.attachMenu);
-
                 //Binds the expanded menu in mobile or tablet devices
                 menuContainer.find('.menu-switch:first').on('click', function () {
 
@@ -98,20 +95,6 @@ $(function () {
                     menu.goToSelectedAnchor($(this).attr('href'));
 
                 });
-
-            },
-
-            attachMenu : function () {
-
-                var menuTriggerHeight = $('main').offset().top;
-
-                if ($(window).scrollTop() > menuTriggerHeight) {
-
-                    menuContainer.addClass('show');
-
-                    $(window).off('scroll', menu.attachMenu);
-
-                }
 
             },
 
@@ -233,17 +216,39 @@ $(function () {
 
                     activeLayer = true;
 
+                    //Binds an event to close the modal if the user clicks outside it's content
+                    modal.bindBodyBehaviours();
+
                 },
 
                 closeModal : function () {
 
                     if (activeLayer) {
 
+                        //Closes the modal
                         modalContainer.removeClass('on');
 
+                        //Hides the overlay
                         overlayContainer.addClass('visuallyhidden');
 
+                        //Removes the event attached to the body
+                        $('body').off('click.modalEvents');
+
                     }
+
+                },
+
+                bindBodyBehaviours : function () {
+
+                    $('body').on('click.modalEvents', function (evt) {
+
+                        if ($(evt.target).is(modalContainer)) {
+
+                            modal.closeModal();
+
+                        }
+
+                    });
 
                 }
 
