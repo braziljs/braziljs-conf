@@ -26,6 +26,9 @@ $(function () {
 
         PUBLIC.appendEvents();
 
+        //Loads the right speakers background
+        PUBLIC.loadBackground();
+
         //Function responsible for expand the content in schedule section
         PUBLIC.applyScheduleEvents();
 
@@ -60,6 +63,80 @@ $(function () {
 
             }
         );
+
+    };
+
+    PUBLIC.loadBackground = function () {
+
+        var background = {},
+            userInformation = {},
+            shadowsContainer = $('#speakers').find('.shadows:first');
+
+        background = {
+
+            init : function () {
+
+                var hasLocalStorage = background.verifyLocalStorage();
+
+                if (hasLocalStorage) {
+
+                    background.loadHeroes();
+
+                } else {
+
+                    shadowsContainer.addClass('theather-version');
+
+                }
+
+            },
+
+            verifyLocalStorage : function () {
+
+                //This function is the same used in Modernizr.
+                try {
+
+                    return 'localStorage' in window && window['localStorage'] !== null;
+
+                } catch (e) {
+
+                    return false;
+
+                }
+
+            },
+
+            loadHeroes : function () {
+
+                userInformation.movieVersion = localStorage.getItem('BRJS-movieVersion');
+
+                if (userInformation.movieVersion) {
+
+                    if (userInformation.movieVersion === 'directors-cut') {
+
+                        userInformation.movieVersion = 'theater-version';
+
+                    } else {
+
+                        userInformation.movieVersion = 'directors-cut';
+
+                    }
+
+                } else {
+
+                    localStorage.setItem('BRJS-movieVersion', 'directors-cut');
+                    userInformation.movieVersion = 'directors-cut';
+
+                }
+
+                //Puts the current version in the shadows container
+                shadowsContainer.addClass(userInformation.movieVersion);
+                localStorage.setItem('BRJS-movieVersion', userInformation.movieVersion);
+
+            }
+
+        };
+
+        return background.init();
 
     };
 
