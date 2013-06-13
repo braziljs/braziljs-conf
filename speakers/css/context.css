@@ -11,6 +11,7 @@
 .caridy #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/caridy.png') no-repeat; }
 .renato #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/renato.png') no-repeat; }
 .alexandre #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/alexandre.png') no-repeat; }
+.demian #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/demian.png') no-repeat; }
 #speakers .speakers-wrapper .ballons { position:relative; top:-24px; left:270px; width:224px; height:212px; background:url('../img/ballons.png') no-repeat; }
 #speakers .speakers-wrapper .ballons .calling { position:absolute; font-size:16px; color:#FFF; width:127px; font-family:"Comic Sans MS", 'arial'; text-transform:uppercase; text-align:center; -webkit-transform:rotate(-22deg); -moz-transform:rotate(-22deg); -o-transform:rotate(-22deg); -ms-transform:rotate(-22deg); transform:rotate(-22deg); }
 #speakers .speakers-wrapper .ballons .calling.what { left:5px; top:22px; }
@@ -62,6 +63,7 @@
 	.caridy  #speakers .speakers-wrapper .speaker { left:-2px; top:34px; background:url('../img/mobile/caridy.png') no-repeat; }
 	.renato  #speakers .speakers-wrapper .speaker { left:-7px; top:50px; width:212px; background:url('../img/mobile/renato.png') no-repeat; }
 	.alexandre  #speakers .speakers-wrapper .speaker { left:5px; top:50px; width:212px; background:url('../img/mobile/alexandre.png') no-repeat; }
+	.demian #speakers .speakers-wrapper .speaker { left:5px; top:50px; width:212px; background:url('../img/mobile/demian.png') no-repeat; }
 	#speakers .speakers-wrapper .logo { float:none; display:block; left:128px; top:-109px; width:178px; height:82px; background:url('../img/mobile/logo.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons { left:197px; top:147px; height:81px; width:97px; background:url('../img/mobile/ttl-general.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons .calling.what { display:none; }

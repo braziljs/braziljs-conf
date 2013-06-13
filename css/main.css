@@ -204,7 +204,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes .heroes-list .alexandre-gaigalas .spikes { height:533px; width:300px; background:url('../img/wide-spikes.png') no-repeat; }
 #heroes .heroes-list .alexandre-gaigalas .photo { top:3px; left:61px; width:239px; height:530px; background:url('../img/hero-alexandre.png') no-repeat; }
 #heroes .heroes-list .AB .specialguest.photo { right:0; bottom:0; width:300px; height:533px; background:url('../img/hero-betao.png') no-repeat; }
-#heroes .heroes-list .LV { margin:-316px 20px 0 0; width:300px; height:317px; background:url('../img/hero-lv.jpg') no-repeat; }
+#heroes .heroes-list .demian-borba { margin:-316px 20px 0 0; width:300px; height:317px; }
+#heroes .heroes-list .demian-borba .spikes { height:318px; width:300px; }
+#heroes .heroes-list .demian-borba .photo { bottom:0; right:0; height:309px; width:236px; background:url('../img/hero-damian.png') no-repeat; }
 #heroes .heroes-list .thibault-imbert { margin-top:-316px; width:300px; height:317px; }
 #heroes .heroes-list .thibault-imbert .spikes { width:300px; background:url('../img/spikes-thibault.png') no-repeat; }
 #heroes .heroes-list .thibault-imbert .hero-name { font-size:30px; }
@@ -281,6 +283,8 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay #angus-marcel .photo { left:-61px; top:100px; width:432px; height:321px; background:url('../img/overlay-angus-marcel.png') no-repeat; }
 #heroes-overlay #angus-marcel .photo:before { left:1px; }
 #heroes-overlay #caridy .photo:before { left:-67px; }
+#heroes-overlay #demian .photo { left:-12px; top:30px; width:272px; height:422px; background:url('../img/overlay-demian.png') no-repeat; }
+#heroes-overlay #demian .photo:before { left:-48px; }
 
 /* SCHEDULE */
 #schedule { display:inline-block; clear:both; margin-top:60px; width:100%; }
@@ -462,7 +466,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .hero-company { font-size:14px !important; color:rgb(121,121,121); text-shadow:none; font-weight:normal; font-style:italic; }
 	#heroes .heroes-list .douglas-crockford .photo { top:-4px; width:106px; height:156px; background:url('../img/mobile/douglas-small.png') no-repeat; }
 	#heroes .heroes-list .alexandre-gaigalas .photo { top:1px; left:11px; height:152px; width:134px; background:url('../img/mobile/alexandre-small.png') no-repeat; }
-	#heroes .heroes-list .LV { background:url('../img/mobile/lv-small.png') no-repeat; }
+	#heroes .heroes-list .demian-borba .photo { right:0; top:1px; height:151px; width:122px; background:url('../img/mobile/demian-small.png') no-repeat; }
 	#heroes .heroes-list .JG { background:url('../img/mobile/jg-small.png') no-repeat; }
 	#heroes .heroes-list .PI { background:url('../img/mobile/pi-small.png') no-repeat; }
 	#heroes .heroes-list .JW { background:url('../img/mobile/jw-small.png') no-repeat; }
@@ -513,7 +517,8 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes-overlay #caridy .photo { left:0; width:199px; height:317px; background:url('../img/mobile/hero-caridy.png') no-repeat; }
 	#heroes-overlay #angus-marcel .photo { left:0; width:286px; height:211px; background:url('../img/mobile/hero-angus-marcel.png') no-repeat; }	
 	#heroes-overlay #renato .photo { top:21px; left:0; width:199px; height:317px; background:url('../img/mobile/hero-renato.png') no-repeat; }
-	#heroes-overlay #alexandre .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-alexandre.png') no-repeat; }	
+	#heroes-overlay #alexandre .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-alexandre.png') no-repeat; }
+	#heroes-overlay #demian .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-demian.png') no-repeat; }	
 	#heroes-overlay .close { right:5px; top:281px; height:32px; width:73px; background-position:0 -270px; z-index:10; }
 	#heroes-overlay #angus-marcel .speaker .name { width:360px; }	
 	
@@ -640,7 +645,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .alexandre-gaigalas { margin-top:138px; width:229px; height:410px; }
 	#heroes .heroes-list .alexandre-gaigalas .spikes { width:230px; height:410px; background:url('../img/tablet/wide-spikes.png') no-repeat; }
 	#heroes .heroes-list .alexandre-gaigalas .photo { left:45px; top:0; width:185px; height:410px; background:url('../img/tablet/hero-alexandre.png') no-repeat; }
-	#heroes .heroes-list .LV { margin-top:-240px; width:229px; height:241px; background:url('../img/tablet/hero-LV.jpg') no-repeat; }
+	#heroes .heroes-list .demian-borba { margin-top:-240px; width:229px; height:241px;  }
+	#heroes .heroes-list .demian-borba .spikes { height:257px; width:229px; background:url('../img/tablet/special-spikes.png') no-repeat; }
+	#heroes .heroes-list .demian-borba .photo { width:190px; height:239px; background:url('../img/tablet/hero-demian.png') no-repeat; }
 	#heroes .heroes-list .thibault-imbert { margin-top:-241px; width:229px; height:241px; }
 	#heroes .heroes-list .thibault-imbert .hero-name { font-size:22px; }
 	#heroes .heroes-list .thibault-imbert .photo { left:0; width:187px; height:239px; background:url('../img/tablet/hero-thibault.png') no-repeat; }
