@@ -14,7 +14,8 @@ $(function () {
                 "twitter" : 'http://platform.twitter.com/widgets',
                 "g+" : 'http://apis.google.com/js/plusone',
                 "sequence" : 'jquery.sequence-min',
-                "async" : 'async-plugin'
+                "async" : 'async-plugin',
+                "twitterPostFetcher" : 'twitterPostFetcher'
             }
         });
 
@@ -43,6 +44,9 @@ $(function () {
 
         //Just load the facebook, gplus and twitter API´s
         PUBLIC.loadSocialAPPS();
+
+        //Load what the people are saying about our event!
+        PUBLIC.loadTweets();
 
     };
 
@@ -408,6 +412,16 @@ $(function () {
     PUBLIC.loadSocialAPPS = function () {
 
         require(['facebook', 'twitter', 'g+']);
+
+    };
+
+    PUBLIC.loadTweets = function () {
+
+        require(['twitterPostFetcher'], function () {
+
+            window.twitterFetcher.fetch('347162232708276224', 'tweets-container', 3, true, true, false);
+
+        });
 
     };
 

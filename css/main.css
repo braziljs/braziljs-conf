@@ -154,9 +154,9 @@ body { background-color:#201C1D; }
 /* SPEAKERS */
 #speakers { width:100%; position:relative; background-color:#D3D3D1; overflow:hidden; background-image: -webkit-linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); background-image:-moz-linear-gradient(50% 0% -90deg,rgb(207,208,205) 0%,rgba(207,208,205,0) 25%); background-image: -o-linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); background-image: -ms-linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); background-image:linear-gradient(bottom, rgb(220,222,217) 15%, rgb(209,209,204) 66%); }
 #speakers .speakers-wrapper { position:relative; margin:auto; height:605px; width:1000px; }
-#speakers .speakers-wrapper .shadows { position:absolute; left:-176px; width:1333px; height:590px; }
-#speakers .speakers-wrapper .shadows.theater-version { background:url('../img/shadows.jpg') no-repeat center center; }
-#speakers .speakers-wrapper .shadows.directors-cut { background:url('../img/shadows-directors-cut.jpg') no-repeat center center; }
+#speakers .speakers-wrapper .shadows { position:absolute; left:-176px; width:1333px; height:590px; transition:opacity 0.8s ease; opacity:0; }
+#speakers .speakers-wrapper .shadows.theater-version { background:url('../img/shadows.jpg') no-repeat center center; opacity:1; }
+#speakers .speakers-wrapper .shadows.directors-cut { background:url('../img/shadows-directors-cut.jpg') no-repeat center center; opacity:1; }
 #speakers .cities { position:absolute; bottom:-71px; height:278px; width:100%; background:url('../img/bg-header.png') repeat-x center center; z-index:2; }
 
 /* HEADER */
@@ -215,10 +215,12 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes .heroes-list .robert-nyman .spikes { width:940px; height:142px; background:url('../img/spikes-robert.png') no-repeat; }
 #heroes .heroes-list .robert-nyman .photo { right:40px; bottom:0; width:567px; height:153px; background:url('../img/hero-robert.png') no-repeat; }
 #heroes .heroes-list .JG { margin:20px 20px 0 0; width:300px; height:560px; background:url('../img/hero-jg.jpg') no-repeat; }
-#heroes .heroes-list .marcel-angus { margin-top:20px; width:620px; height:311px; }
-#heroes .heroes-list .marcel-angus .hero-name { display:inline-block; width:369px; }
-#heroes .heroes-list .marcel-angus .photo { right:10px; bottom:-2px; width:418px; height:313px; background:url('../img/heroes-marcel-angus.png') no-repeat; }
-#heroes .heroes-list .PI { margin-top:20px; width:620px; height:229px; background:url('../img/hero-pi.jpg') no-repeat; }
+#heroes .heroes-list .marcel-angus { margin-top:20px; width:620px; height:271px; }
+#heroes .heroes-list .marcel-angus .hero-name { display:inline-block; width:369px;}
+#heroes .heroes-list .rey-josh .hero-name { display:inline-block; width:300px; }
+#heroes .heroes-list .marcel-angus .photo { right:10px; bottom:-2px; width:393px; height:273px; background:url('../img/heroes-angus-marcel.png') no-repeat; }
+#heroes .heroes-list .rey-josh { margin-top:20px; width:620px; height:271px; }
+#heroes .heroes-list .rey-josh .photo { right:15px; bottom:0; width:491px; height:273px; background:url('../img/heroes-rey-josh.png') no-repeat; }
 #heroes .heroes-list .JW { margin:20px 20px 0 0; width:460px; height:223px; background:url('../img/hero-jw.jpg') no-repeat; }
 #heroes .heroes-list .stoyan-stefanov { margin-top:20px; width:460px; height:223px; }
 #heroes .heroes-list .stoyan-stefanov .spikes { width:460px; height:192px; background:url('../img/spikes-stoyan.png') no-repeat; }
@@ -234,9 +236,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 
 /* HEROES OVERLAY */
 #heroes-overlay { position:fixed; top:50%; left:50%; margin:-275px 0 0 -450px; width:936px; height:554px; background:url('../img/bg-overlay.png') no-repeat; z-index:1000; }
-#heroes-overlay .previous { position:absolute; left:10px; top:50%; width:30px; height:38px; background-position:0 -370px; cursor:pointer; z-index:10; color:transparent; }
+#heroes-overlay .previous { position:absolute; left:10px; top:50%; width:30px; height:38px; background-position:0 -370px; cursor:pointer; z-index:25; color:transparent; }
 #heroes-overlay .previous .sign { position:absolute; top:1px; left:7px; width:14px; height:30px; background-position:0 -420px; }
-#heroes-overlay .next { position:absolute; right:10px; top:50%; width:30px; height:38px; background-position:-153px -370px; cursor:pointer; z-index:10; color:transparent; }
+#heroes-overlay .next { position:absolute; right:10px; top:50%; width:30px; height:38px; background-position:-153px -370px; cursor:pointer; z-index:25; color:transparent; }
 #heroes-overlay .next .sign { position:absolute; top:1px; right:9px; width:17px; height:30px; background-position:-165px -420px; }
 #heroes-overlay .sequence-canvas { height:100%; width:100%; }
 #heroes-overlay .sequence-canvas > li { position:absolute; }
@@ -258,7 +260,8 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay .photo:after { content:''; position:absolute; top:194px; left:-81px; width:495px; height:256px; background:url('../img/speaker-gradient.png') no-repeat; }
 #heroes-overlay .speaker { float:left; padding-top:99px; width:510px; }
 #heroes-overlay .speaker .name { margin:0; font-family:"Arial Black", Gadget, sans-serif; font-size:40px; font-weight:900; line-height:40px; color:rgb(255,255,255); text-shadow:-2px -2px 0 rgb(92,206,247), 2px -2px 0 rgb(92,206,247), -2px 2px 0 rgb(92,206,247), 2px 2px 0 rgb(92,206,247); text-transform:lowercase; }
-#heroes-overlay #angus-marcel .speaker .name { width:400px; }
+#heroes-overlay #angus-marcel .speaker .name,
+#heroes-overlay #ray-josh .speaker .name { width:400px; }
 #heroes-overlay .speaker .company { display:block; font-family:"Arial Black", Gadget, sans-serif; font-style:normal; font-size:20px; font-weight:900; line-height:120%; color:rgb(0,158,212); text-align:left; text-shadow:-2px -2px 0 rgb(255,255,255), 2px -2px 0 rgb(255,255,255), -2px 2px 0 rgb(255,255,255), 2px 2px 0 rgb(255,255,255); }
 #heroes-overlay .speaker .information { position:relative; margin:30px 0 22px; padding:12px 10px 1px 21px; width:495px; background-color:rgba(0,0,0,0.9); }
 #heroes-overlay .speaker .information .spacer { position:absolute; left:0; top:-35px; width:495px; height:35px; background:url('../img/bg-speaker-overlay.png') no-repeat; }
@@ -285,6 +288,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay #caridy .photo:before { left:-67px; }
 #heroes-overlay #demian .photo { left:-12px; top:30px; width:272px; height:422px; background:url('../img/overlay-demian.png') no-repeat; }
 #heroes-overlay #demian .photo:before { left:-48px; }
+#heroes-overlay #ray-josh .photo { left:-59px; width:419px; height:372px; background:url('../img/overlay-ray-josh.png') no-repeat; }
+#heroes-overlay #ray-josh .photo:before { left:-1px; }
+#heroes-overlay #ray-josh .photo:after { left:-21px; }
 
 /* SCHEDULE */
 #schedule { display:inline-block; clear:both; margin-top:60px; width:100%; }
@@ -350,12 +356,76 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 @-ms-keyframes "piggies" { from { background-position: 0; } to {  background-position: -637px; } }
 @-o-keyframes "piggies" { from { background-position: 0; } to { background-position: -637px; }}
 
+/* MANIFEST */
+#manifest { clear:both; margin-bottom:300px; width:100%; }
+#manifest .manifest-wrapper { position:relative; padding:70px 100px 0; margin:auto; width:980px; }
+#manifest .manifest-wrapper:before { content:''; position:absolute; left:0; top:-63px; width:980px; height:980px; background:url('../img/bg-manifest.png') no-repeat; }
+#manifest .manifest-wrapper .title { position:relative; top:27px; margin:0; width:312px; height:115px; background-position:-7px -1202px; z-index:1; }
+#manifest .manifest-wrapper .our-history { position:relative; float:left; padding:57px 43px; width:380px; height:548px; background:url('../img/bg-legacy.png') no-repeat; z-index:2; }
+#manifest .manifest-wrapper .the-origin { margin-right:20px; background:url('../img/bg-legacy.png') no-repeat; }
+#manifest .manifest-wrapper .the-future { margin-top:15px; background:url('../img/bg-future.png') no-repeat; }
+#manifest .manifest-wrapper .the-origin .moto { margin-bottom:30px; width:188px; height:75px; background-position:0 -1355px; }
+#manifest .manifest-wrapper .our-history .disclaimer { margin-bottom:20px; width:288px; font-family:"Comic Sans MS", cursive; font-size:13px; line-height:19px; color:rgb(255,255,255); text-align:left; text-shadow:1px -3px 0px rgba(0,0,0,0.25); }
+
 /* SPONSORS */
-#sponsors { clear:both; margin-top:260px; width:100%; }
-#sponsors .sponsors-wrapper { position:relative; padding:70px 20px 0; margin:auto; width:980x; }
+#sponsors { position:relative; clear:both; width:100%; background-color:#171314; }
+#sponsors:before { content:''; position:absolute; top:-239px; left:0; right:0; height:239px; width:100%; background:url('../img/bg-sponsors.png'); z-index:2; }
+#sponsors .sponsors-wrapper { position:relative; padding:70px 20px 0; margin:auto; width:980px; }
+#sponsors .sponsors-wrapper .title { margin:auto auto 20px; height:29px; width:461px; background-position:0 -1492px; }
+#sponsors .sponsors-wrapper .sponsors { display:inline-block; margin-bottom:70px; }
+#sponsors .sponsors-wrapper .sponsors .ttl-general { margin-bottom:21px; }
+#sponsors .sponsors-wrapper .adamantiun .ttl-general { width:224px; height:17px; background-position:0 -1531px; }
+#sponsors .sponsors-wrapper .gold .ttl-general { width:159px; height:17px; background-position:0 -1564px; }
+#sponsors .sponsors-wrapper .bronze .ttl-general { width:185px; height:13px; background-position:0 -1598px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list { display:inline-block; margin:0; padding:24px 16px; width:939px; list-style:none; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { float:left; width:220px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { display:block; background:url('../img/sponsors.png') no-repeat; text-indent:-9999px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:36px; width:201px; height:36px; background-position:0 0;  }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:16px; width:202px; height:60px; background-position:0 -56px;  }
+#sponsors .sponsors-wrapper .adamantiun .sponsor-list { background-color:#96B800; }
+#sponsors .sponsors-wrapper .gold .sponsor-list { background-color:#C13832; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .about { float:left; margin:0; width:670px; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:120%; color:rgb(255,255,255); text-align:left; }
+#sponsors .sponsors-wrapper .bronze .sponsor-list { padding:0; }
+#sponsors .sponsors-wrapper .bronze li { display:inline-block; margin-left:14px; } 
+#sponsors .sponsors-wrapper .bronze li:first-child { margin-left:0; }
+#sponsors .sponsors-wrapper .bronze li a { display:block; width:221px; height:141px; background:url('../img/bg-bronze-sponsor.png') no-repeat; text-indent:-9999px; }  
+#sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:50px 0 0 28px;  width:163px; height:44px; background-position:0 -137px; } 
+#sponsors .sponsors-wrapper .bronze li .sponsor.join-us { width:221px; background:url('../img/bg-join-us.png') no-repeat; }
+#sponsors .sponsors-wrapper .be-a-sponsor { margin:auto auto 180px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:120%; color:rgb(255,255,255); text-align:center; }
+#sponsors .sponsors-wrapper .be-a-sponsor a { color:rgb(255,204,0); text-decoration:none; }
+#sponsors .sponsors-wrapper .supporters { padding-bottom:100px; }
+#sponsors .sponsors-wrapper .supporters .ttl-general { height:14px; width:59px; background-position:0 -1632px; }
+#sponsors .sponsors-wrapper .supporters ul { margin:0; padding:0; list-style:none; }
+#sponsors .sponsors-wrapper .supporters ul li a { display:inline-block; background:url('../img/supporters.png') no-repeat; }
+#sponsors .sponsors-wrapper .supporters ul li a.marimbondo { width:201px; height:47px; }
+
+/* FOLLOW US */
+#follow-us { position:relative; clear:both; width:100%; background-color:#171314; } 
+#follow-us .follow-us-container { position:relative; padding:70px 20px 0; margin:auto; width:980px; }
+#follow-us .follow-us-container .title { position:relative; margin:auto; width:438px; height:316px; background:url('../img/bg-twitter.png') no-repeat; z-index:2; }
+#follow-us .follow-us-container .burst { position:absolute; top:-14px; left:263px; width:448px; height:453px; background:url('../img/twitter-burst.png') no-repeat; z-index:1; } 
+#follow-us .follow-us-container .at-braziljs { margin-left:200px; margin-top:40px; display:inline-block; clear:both; }
+#follow-us .follow-us-container .birdy { display:inline-block; width:347px; height:53px; background-position:0 -781px; }
+#follow-us .follow-us-container .our-link { display:inline-block; width:261px; height:23px; background-position:0 -1449px; }
+#likes-container { position:relative; width:961px; height:444px; background:url('../img/bg-facebook-like.png') no-repeat; }
+#likes-container .like-us { position:absolute; right:0; top:40px; width:124px; height:61px; background-position:0 -1666px; }
+#likes-container .facebook-container { position:absolute; left:154px; top:166px; }
+
+#tweets-container { display:inline-block; height:270px; width:980px; }
+#tweets-container ul { display:inline-block; margin:0; list-style:none; font-family:"Comic Sans MS", arial; line-height:130%; color:rgb(255,255,255); text-align:center; }
+#tweets-container ul a { text-decoration:none; }
+#tweets-container ul li { float:left; width:298px; }
+#tweets-container ul li .user a { color:#FFF; position:relative; }
+#tweets-container ul li .user a:after { content:''; position:absolute; bottom:-18px; left:9px; height:9px; width:11px; background:url('../img/ico-general.png') 0 -855px no-repeat; }
+#tweets-container ul li .user img { position:relative; width:48px; height:48px; border:2px solid #FFF; border-radius:80px; }
+#tweets-container ul li .user span { display:block; margin-top:15px; font-size:16px; text-transform:uppercase; }
+#tweets-container ul li .user span:nth-child(3) { margin-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:rgb(255,204,0); text-align:center; text-decoration:none; }
+#tweets-container ul li .tweet { position:relative; margin-top:25px; padding-top:11px; font-size:13px; text-transform:uppercase; }
+#tweets-container ul li .tweet:before { content:''; position:absolute; top:-20px; width:292px; height:11px; background:url('../img/bg-tweet.png') no-repeat; }
+#tweets-container ul li .tweet a { color:rgb(55,171,191); }
 
 /* THE GUYS */
-#the-guys { clear:both; margin-top:60px; padding-bottom:329px; width:100%; }
+#the-guys { clear:both; padding-top:60px; padding-bottom:589px; width:100%; background-color:#171314; }
 #the-guys .the-guys-container { position:relative; padding:70px 20px 0; margin:auto; width:980px; }
 #the-guys .the-guys-container .title { display:block; margin:auto; width:414px; height:104px; background-position:0 -773px; }
 #the-guys .the-guys-container .curator { position:relative; display:inline-block; float:left; margin-top:60px; }
@@ -374,7 +444,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #the-guys .the-guys-container .curator.felipe .photo { top:0; right:200px; width:282px; height:529px; background:url('../img/felipe.png') no-repeat; }
 
 /* DIRECTED BY */
-.directed-by { position:relative; clear:both; margin-top:260px; width:100%; background-color:#2A2C39; }
+.directed-by { position:relative; clear:both; width:100%; background-color:#2A2C39; }
 .directed-by:before { content:''; position:absolute; top:-239px; left:0; right:0; height:239px; width:100%; background:url('../img/bg-footer-cities.png'); z-index:2; } 
 .directed-by .directed-by-wrapper { position:relative; padding:15px 20px 0; margin:auto; width:980px; text-align:left; }
 .directed-by .directed-by-wrapper .brazil-js-logo { display:inline-block; width:60px; height:20px; background-position:0 -517px; }
@@ -446,7 +516,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	/* MAIN CONTENT */
 	main { margin-bottom:13px; padding:0; width:300px; }
 	main .what { position:relative; float:none; display:block; margin:-731px 0 0 139px; width:160px; font-family:"Arial Black", Gadget, sans-serif; font-size:18px; line-height:19px; font-weight:900; letter-spacing:-1pt; color:rgb(184,30,28); text-align:center; text-shadow:none; z-index:5; }
-	main .where { width:270px; margin:-368px 0 0 21px; font-family:"Arial"; font-size:18px; font-weight:bold; letter-spacing:-1pt; line-height:130%; color:rgb(212,212,210); text-align:center; text-shadow:0px 3px 0px rgb(0,0,0); }
+	main .where { float:none; display:inline-block; width:270px; margin:291px 0 0 21px; font-family:"Arial"; font-size:18px; font-weight:bold; letter-spacing:-1pt; line-height:130%; color:rgb(212,212,210); text-align:center; text-shadow:0px 3px 0px rgb(0,0,0); }
 	main .disclaimer { width:303px; font-family:Arial, Helvetica, sans-serif; font-size:9px; line-height:12px; color:rgba(255,255,255,0.6); text-align:center; }
 	
 	/* HEROES */
@@ -463,7 +533,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .info { top:160px; }
 	#heroes .heroes-list .hero-name { font-size:14px !important; color:rgb(248,204,95); text-shadow:none; text-transform:uppercase; }
 	#heroes .heroes-list .marcel-angus .hero-name { width:146px; }
+	#heroes .heroes-list .rey-josh .hero-name { display:inline-block; width:146px; }
 	#heroes .heroes-list .hero-company { font-size:14px !important; color:rgb(121,121,121); text-shadow:none; font-weight:normal; font-style:italic; }
+	#heroes .heroes-list .renato-mangini .hero-company { text-align:left; }
 	#heroes .heroes-list .douglas-crockford .photo { top:-4px; width:106px; height:156px; background:url('../img/mobile/douglas-small.png') no-repeat; }
 	#heroes .heroes-list .alexandre-gaigalas .photo { top:1px; left:11px; height:152px; width:134px; background:url('../img/mobile/alexandre-small.png') no-repeat; }
 	#heroes .heroes-list .demian-borba .photo { right:0; top:1px; height:151px; width:122px; background:url('../img/mobile/demian-small.png') no-repeat; }
@@ -472,12 +544,14 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .JW { background:url('../img/mobile/jw-small.png') no-repeat; }
 	#heroes .heroes-list .AR { background:url('../img/mobile/ar-small.png') no-repeat; }
 	#heroes .heroes-list .BW { background:url('../img/mobile/bw-small.png') no-repeat; }
-	#heroes .heroes-list .thibault-imbert .photo { top:0; left:0; width:145px; height:152px; background:url('../img/mobile/thibault-small.png') no-repeat; }
-	#heroes .heroes-list .robert-nyman .photo { top:0; left:0; width:145px; height:152px; background:url('../img/mobile/robert-small.png') no-repeat; }
-	#heroes .heroes-list .marcel-angus .photo { top:0; left:0; width:145px; height:152px; background:url('../img/mobile/angus-marcel-small.png') no-repeat; }
-	#heroes .heroes-list .stoyan-stefanov .photo { top:0; left:0; width:145px; height:152px; background:url('../img/mobile/stoyan-small.png') no-repeat; }
-	#heroes .heroes-list .caridy-patino .photo { top:0; left:0; width:145px; height:152px; background:url('../img/mobile/caridy-small.png') no-repeat; }
-	#heroes .heroes-list .renato-mangini .photo { top:0; right:-7px; width:145px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
+	#heroes .heroes-list .photo { top:0; left:0; }
+	#heroes .heroes-list .thibault-imbert .photo { width:145px; height:152px; background:url('../img/mobile/thibault-small.png') no-repeat; }
+	#heroes .heroes-list .robert-nyman .photo { width:145px; height:152px; background:url('../img/mobile/robert-small.png') no-repeat; }
+	#heroes .heroes-list .marcel-angus .photo { width:145px; height:152px; background:url('../img/mobile/angus-marcel-small.png') no-repeat; }
+	#heroes .heroes-list .stoyan-stefanov .photo { width:145px; height:152px; background:url('../img/mobile/stoyan-small.png') no-repeat; }
+	#heroes .heroes-list .caridy-patino .photo { width:145px; height:152px; background:url('../img/mobile/caridy-small.png') no-repeat; }
+	#heroes .heroes-list .renato-mangini .photo { right:-7px; width:145px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
+	#heroes .heroes-list .rey-josh .photo { top:3px; width:145px; height:152px; background:url('../img/mobile/rey-josh-small.png') no-repeat; }
 	
 	/* HEROES OVERLAY */	
 	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:none; background-color:#111111; }
@@ -518,10 +592,11 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes-overlay #angus-marcel .photo { left:0; width:286px; height:211px; background:url('../img/mobile/hero-angus-marcel.png') no-repeat; }	
 	#heroes-overlay #renato .photo { top:21px; left:0; width:199px; height:317px; background:url('../img/mobile/hero-renato.png') no-repeat; }
 	#heroes-overlay #alexandre .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-alexandre.png') no-repeat; }
-	#heroes-overlay #demian .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-demian.png') no-repeat; }	
+	#heroes-overlay #demian .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-demian.png') no-repeat; }		
 	#heroes-overlay .close { right:5px; top:281px; height:32px; width:73px; background-position:0 -270px; z-index:10; }
-	#heroes-overlay #angus-marcel .speaker .name { width:360px; }	
-	
+	#heroes-overlay #angus-marcel .speaker .name { width:360px; }
+	#heroes-overlay #ray-josh .photo { top:66px; left:-28px; width:372px; height:366px; background:url('../img/mobile/hero-ray-josh.png') no-repeat; z-index:-1; }
+
 	/* SCHEDULE */
 	#schedule { margin:30px 0 0; }
 	#schedule .schedule-wrapper { padding:0 10px; width:320px; }
@@ -551,6 +626,64 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#locale .locale-wrapper .photo-container .photo-2 { display:none; }
 	#locale .locale-wrapper .how-to { position:static; height:auto; width:auto; text-indent:0; color:#FFF; text-transform:uppercase; }
 	
+    /* MANIFEST */
+    #manifest { margin:80px 0 180px 0; }
+    #manifest .manifest-wrapper { padding:0 10px; width:320px; }
+    #manifest .manifest-wrapper:before { content:none; }
+    #manifest .manifest-wrapper .title { top:4px; left:-5px; width:186px; height:64px; background-position:0 -377px; }
+    #manifest .manifest-wrapper .our-history { padding-left:33px; height:577px; }
+    #manifest .manifest-wrapper .the-origin { margin:0; width:379px; height:506px; background:url('../img/mobile/bg-legacy.png') no-repeat; }
+    #manifest .manifest-wrapper .the-future { margin-top:0; padding-top:0; height:330px; width:369px; background:url('../img/mobile/bg-future.png') no-repeat; }
+    #manifest .manifest-wrapper .the-origin .moto { margin-bottom:25px; width:188px; height:73px; background-position:0 -451px; }
+    #manifest .manifest-wrapper .our-history .disclaimer { line-height:17px; margin-bottom:16px; font-size:12px; width:235px; }
+    
+    /* SPONSORS */
+    #sponsors { }
+    #sponsors:before { content:''; top:-110px; background:url('../img/mobile/bg-sponsors.png') repeat-x; }
+    #sponsors .sponsors-wrapper { padding:0 10px; width:320px; }    
+    #sponsors .sponsors-wrapper .title { height:33px; width:174px; background-position:0 -534px; }
+    #sponsors .sponsors-wrapper .adamantiun .ttl-general { height:10px; background-position:0 -577px; }
+    #sponsors .sponsors-wrapper .gold .ttl-general { height:14px; width:175px; background-position:0 -577px; }
+    #sponsors .sponsors-wrapper .bronze .ttl-general { height:13px; background-position:0 -617px; }
+    #sponsors .sponsors-wrapper .sponsors { margin-bottom:10px; }
+    #sponsors .sponsors-wrapper .sponsors .ttl-general { margin-bottom:11px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list { padding:30px 12px 27px; width:300px; }    
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .about { font-size:13px; line-height:16px; width:279px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { margin:auto auto 15px auto; width:279px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { background:url('../img/mobile/sponsors.png') no-repeat; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin:auto; height:26px; width:149px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin:auto; height:44px; width:149px; background-position:0 -36px; }
+    #sponsors .sponsors-wrapper .bronze .sponsor-list { padding:0; }
+    #sponsors .sponsors-wrapper .bronze li { margin-left:0; }
+    #sponsors .sponsors-wrapper .bronze li:nth-last-child(even) { margin-right:5px; }
+    #sponsors .sponsors-wrapper .bronze li a { width:145px !important; height:99px; background:url('../img/mobile/bg-bronze-sponsor.png') no-repeat; }
+    #sponsors .sponsors-wrapper .bronze li .sponsor.join-us { width:145px; height:99px; background:url('../img/mobile/bg-join-us.png') no-repeat; }
+    #sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:35px auto; height:27px; width:101px; background-position:0 -91px; }
+    #sponsors .sponsors-wrapper .supporters { padding-bottom:80px; }
+    #sponsors .sponsors-wrapper .supporters .ttl-general { background-position:0 -637px; }
+    #sponsors .sponsors-wrapper .supporters ul li a { background:url('../img/mobile/supporters.png') no-repeat; }
+    #sponsors .sponsors-wrapper .be-a-sponsor { margin-bottom:80px; font-size:15px; }
+    
+    /* FOLLOW US */
+    #follow-us { padding-bottom:250px; background-color:#171314; }
+    #follow-us .follow-us-container { padding:0 10px; width:320px; }
+    #follow-us .follow-us-container .title { width:304px; height:299px; background:url('../img/mobile/bg-twitter.png') no-repeat; }
+    #follow-us .follow-us-container .burst { display:none; }
+    #tweets-container ul { list-style:none; font-family:"Comic Sans MS", arial; line-height:130%; color:rgb(255,255,255); text-align:center; }
+    #tweets-container ul a { text-decoration:none; }
+    #tweets-container ul li { float:left; width:229px; }
+    #tweets-container ul li:first-child { display:block; }
+    #tweets-container ul li { display:none; }    
+    #tweets-container ul li .user a { position:relative; color:#FFF; }
+    #tweets-container ul li .user a:after { content:''; position:absolute; bottom:-18px; left:9px; height:9px; width:11px; background:url('../img/mobile/ico-general.png') 0 -389px no-repeat; }
+    #tweets-container ul li .user img { position:relative; width:52px; height:52px; border:4px solid #FFF; border-radius:80px; }
+    #tweets-container ul li .user span:nth-child(3) { margin-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:rgb(255,204,0); text-align:center; text-decoration:none; }
+    #tweets-container ul li .tweet { font-size:12px; }
+    #tweets-container ul li .tweet:before { content:''; position:absolute; top:-20px; left:0; width:225px; height:11px; background:url('../img/mobile/bg-tweet.png') no-repeat; }
+    #follow-us .follow-us-container .at-braziljs { margin:20px 0 0 16px; }
+    #follow-us .follow-us-container .birdy { margin-right:14px; width:28px; height:21px; background-position:0 -408px; }
+    #follow-us .follow-us-container .our-link { height:22px; width:222px; background-position:0 -656px; }
+	
 	/* FOOTER */
 	footer { width:auto; }
 	footer .in-this-summer { margin-bottom:28px; font-size:28px; letter-spacing:0; }
@@ -576,9 +709,10 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#tickets .tickets-wrapper .gogogo { margin:0; height:53px; background-position:0 -315px; }
 	
 	/* THE GUYS */
-	#the-guys { margin:80px 0 0; }
+	#the-guys { position:relative; display:inline-block; margin:0; padding:52px 0 80px; background-color:#0D0A0A; }
+	#the-guys:before { content:''; position:absolute; left:0; top:-110px; height:110px; width:100%; background:url('../img/mobile/bg-guys.png') repeat-x; }
 	#the-guys .the-guys-container { padding:0 10px; width:320px; }
-	#the-guys .the-guys-container .title { margin:0 0 300px 0; height:31px; width:141px; background-position:0 -229px; }
+	#the-guys .the-guys-container .title { position:relative; top:-219px; margin-bottom:110px; height:31px; width:auto; background-position:0 -229px; }
 	#the-guys .the-guys-container .curator { margin:20px 0 10px; }
 	#the-guys .the-guys-container .curator .name { font-size:16px; }
 	#the-guys .the-guys-container .curator .resume { margin:5px 0 10px; width:295px; font-size:14px; }
@@ -586,15 +720,16 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#the-guys .the-guys-container .curator .social-networks li a.twitter { background-position:-40px -135px; }
 	#the-guys .the-guys-container .curator .social-networks li a.blog { background-position:-120px -135px; }
 	#the-guys .the-guys-container .curator.jaydson .photo { left:0; top:-294px; width:137px; height:283px; background:url('../img/mobile/jaydson-small.png') no-repeat; }
-	#the-guys .the-guys-container .curator.felipe { float:left; text-align:left; }
+	#the-guys .the-guys-container .curator.felipe { margin-bottom:0; float:left; text-align:left; }
 	#the-guys .the-guys-container .curator.felipe .photo { right:3px; top:-513px; width:159px; height:297px; background:url('../img/mobile/felipe-small.png') no-repeat; }
 	.directed-by .directed-by-wrapper .marimbondo-logo { background-position:0 -225px; }
 	
 	/* DIRECTED BY */
-	.directed-by { margin:140px 0 0; }
+	.directed-by { margin:0; }
 	.directed-by:after, 
 	.directed-by:before { content:none; }
-	.directed-by .directed-by-wrapper { padding:10px 10px 0; width:320px; }
+	.directed-by .directed-by-wrapper { position:relative; padding:10px 10px 0; width:320px; }
+	.directed-by .directed-by-wrapper:before { content:''; position:absolute; top:-51px; right:0; width:193px; height:51px; background:url('../img/mobile/ico-general.png') 0 -437px no-repeat; }
 	.directed-by .directed-by-wrapper .brazil-js-logo { margin-right:10px; background-position:0 -202px; }
 	.directed-by .directed-by-wrapper .copyright { padding:0; margin:0 0 20px; width:200px; }
 	.directed-by .directed-by-wrapper .developed-by { margin-left:30px; }
@@ -613,7 +748,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	/* SPEAKERS */
 	#speakers {  }
 	#speakers .speakers-wrapper { width:768px; margin:auto; }
-	#speakers .speakers-wrapper .shadows { left:-149px; width:1023px; height:451px; background:url('../img/tablet/shadows.jpg') no-repeat; }
+	#speakers .speakers-wrapper .shadows { left:-149px; width:1023px; height:451px; }
+	#speakers .speakers-wrapper .shadows.theater-version { background:url('../img/tablet/shadows.jpg') no-repeat center center; }
+    #speakers .speakers-wrapper .shadows.directors-cut { background:url('../img/tablet/shadows-directors-cut.jpg') no-repeat center center; }
 	#speakers .cities { bottom:-11px; }
 	.social-bg { top:-103px; height:103px; }
 	
@@ -739,9 +876,56 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #tickets .tickets-wrapper .pigies.pig-3 { right:37px; top:10px; }
     #tickets .tickets-wrapper .corner-shadow { left:246px; bottom:40px; width:479px; height:16px; background:url('../img/tablet/buyShadow.png') no-repeat; }
     #tickets .tickets-wrapper .gogogo { height:41px; width:427px; background-position:0 -539px; }
-	
+    
+    /* MANIFEST */
+    #manifest { margin-top:80px; }
+    #manifest .manifest-wrapper { padding:0 20px 0 0; width:768px; }
+    #manifest .manifest-wrapper .title { top:26px; left:20px; width:335px; height:109px; background-position:0 -852px; }
+    #manifest .manifest-wrapper .our-history { height:577px; }
+    #manifest .manifest-wrapper .the-origin { margin:0; width:379px; background:url('../img/tablet/bg-legacy.png') no-repeat; }
+    #manifest .manifest-wrapper .the-future { width:369px; background:url('../img/tablet/bg-future.png') no-repeat; }
+    #manifest .manifest-wrapper .the-origin .moto { width:188px; height:73px; background-position:0 -971px; }
+    #manifest .manifest-wrapper .our-history .disclaimer { width:267px; }
+       
+    /* SPONSORS */
+    #sponsors { }
+    #sponsors .sponsors-wrapper { padding:0 20px; width:768px; }
+    #sponsors .sponsors-wrapper .title { height:19px; background-position:0 -1054px; }    
+    #sponsors .sponsors-wrapper .adamantiun .ttl-general { height:13px; background-position:0 -1081px; }
+    #sponsors .sponsors-wrapper .gold .ttl-general { height:14px; background-position:0 -1104px; }
+    #sponsors .sponsors-wrapper .bronze .ttl-general { height:13px; background-position:0 -1105px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list { width:728px; }    
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .about { width:523px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { width:165px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { background:url('../img/tablet/sponsors.png') no-repeat; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:60px; height:26px; width:147px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:31px; height:50px; width:149px; background-position:0 -40px; }
+    #sponsors .sponsors-wrapper .bronze li a { width:167px; height:121px; background:url('../img/tablet/bg-bronze-sponsor.png') no-repeat; }
+    #sponsors .sponsors-wrapper .bronze li .sponsor.join-us { width:168px; height:121px; background:url('../img/tablet/bg-join-us.png') no-repeat; }
+    #sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:43px 0 0 19px; height:35px; width:128px; background-position:0 -177px; }
+    #sponsors .sponsors-wrapper .supporters .ttl-general { background-position:0 -1151px; }
+    
+    /* FOLLOW US */
+    #follow-us { }
+    #follow-us .follow-us-container { padding:0 20px; width:768px; }
+    #follow-us .follow-us-container .title { width:379px; height:375px; background:url('../img/tablet/bg-twitter.png') no-repeat; }
+    #follow-us .follow-us-container .burst { display:none; }
+    #tweets-container ul { list-style:none; font-family:"Comic Sans MS", arial; line-height:130%; color:rgb(255,255,255); text-align:center; }
+    #tweets-container ul a { text-decoration:none; }
+    #tweets-container ul li { float:left; width:229px; }    
+    #tweets-container ul li .user a { color:#FFF; background-position:0 -637px; }    
+    #tweets-container ul li .user img { position:relative; width:48px; height:48px; border:2px solid #FFF; border-radius:80px; }
+    #tweets-container ul li .user span { display:block; margin-top:15px; font-size:16px; text-transform:uppercase; }
+    #tweets-container ul li .user span:nth-child(3) { margin-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:rgb(255,204,0); text-align:center; text-decoration:none; }
+    #tweets-container ul li .tweet { position:relative; margin-top:25px; padding-top:11px; font-size:13px; text-transform:uppercase; }
+    #tweets-container ul li .tweet:before { content:''; position:absolute; top:-20px; left:0; width:225px; height:11px; background:url('../img/tablet/bg-tweet.png') no-repeat; }
+    #tweets-container ul li .tweet a { color:rgb(55,171,191); }
+    #follow-us .follow-us-container .at-braziljs { margin-left:135px; }    
+    #follow-us .follow-us-container .birdy { width:243px; height:38px; background-position:0 -579px; }
+    #follow-us .follow-us-container .our-link { height:22px; width:261px; background-position:0 -1176px; }
+    
 	/* THE GUYS */
-	#the-guys { padding-bottom:479px; }
+	#the-guys { padding-bottom:739px; }
 	#the-guys .the-guys-container { padding:0 20px; width:768px; }
 	#the-guys .the-guys-container .title { height:75px; width:344px; background-position:0 -454px; }
 	#the-guys .the-guys-container .curator .resume { width:350px; }
@@ -763,7 +947,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#menu { top:0; display:block; height:auto; width:100%; z-index:101; }
 	#menu .ico-general { display:block; background:url('../img/mobile/ico-general.png') no-repeat; }
 	#menu .menu-switch { display:block; margin:10px; width:100%; height:10px; background-position:0 -250px; cursor:pointer; }
-	#menu .chapters-list { display:none; }
+	#menu .chapters-list { display:none; transition:all ease 1s; }
 	#menu .opened.chapters-list { display:block; z-index:10; }
 	#menu .chapters-list li a { width:100%; height:42px; }
 	#menu .chapters-list li a:hover { background-color:rgb(219,110,14); }
