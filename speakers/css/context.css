@@ -12,6 +12,11 @@
 .renato #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/renato.png') no-repeat; }
 .alexandre #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/alexandre.png') no-repeat; }
 .demian #speakers .speakers-wrapper .speaker { left:-20px; top:-5px; background:url('../img/demian.png') no-repeat; }
+.zeke #speakers .speakers-wrapper .speaker { left:-20px; top:-45px; height:477px; width:431px; background:url('../img/zeke.png') no-repeat; }
+.mauricio #speakers .speakers-wrapper .speaker { left:-26px; top:0; height:477px; width:431px; background:url('../img/mauricio.png') no-repeat; }
+.jean #speakers .speakers-wrapper .speaker { left:-20px; top:14px; height:477px; width:431px; background:url('../img/jean.png') no-repeat; }
+.zeno #speakers .speakers-wrapper .speaker { left:-20px; top:14px; height:477px; width:431px; background:url('../img/zeno.png') no-repeat; }
+.rey-josh #speakers .speakers-wrapper .speaker { left:-58px; top:35px; height:477px; width:431px; background:url('../img/rey-josh.png') no-repeat; } 
 #speakers .speakers-wrapper .ballons { position:relative; top:-24px; left:270px; width:224px; height:212px; background:url('../img/ballons.png') no-repeat; }
 #speakers .speakers-wrapper .ballons .calling { position:absolute; font-size:16px; color:#FFF; width:127px; font-family:"Comic Sans MS", 'arial'; text-transform:uppercase; text-align:center; -webkit-transform:rotate(-22deg); -moz-transform:rotate(-22deg); -o-transform:rotate(-22deg); -ms-transform:rotate(-22deg); transform:rotate(-22deg); }
 #speakers .speakers-wrapper .ballons .calling.what { left:5px; top:22px; }
@@ -23,7 +28,8 @@
 .speaker-info { position:relative; margin:-83px auto 30px auto; padding:0 63px; width:1000px; z-index:2; }
 .speaker-info .info-container { float:left; margin-bottom:82px; }
 .speaker-info .info-container .name { margin:0 0 5px; color:#B81E1C; font-size:46px; line-height:46px; font-weight:800; font-family:'Arial'; text-transform:uppercase; }
-.marcel .speaker-info .info-container .name { width:500px; }
+.marcel .speaker-info .info-container .name,
+.rey-josh .speaker-info .info-container .name { width:500px; }
 .speaker-info .info-container .company { color:#FFF; font-size:20px; line-height:20px; font-weight:normal; font-family:'Arial'; }
 .speaker-info #social-networks { float:right; margin-bottom:0; padding:0; width:209px; }
 .speaker-info #social-networks .like-it { position:absolute; bottom:40px; right:-14px; width:84px; height:64px; background:url('../img/ico-general.png') 0 -49px no-repeat; }
@@ -64,6 +70,9 @@
 	.renato  #speakers .speakers-wrapper .speaker { left:-7px; top:50px; width:212px; background:url('../img/mobile/renato.png') no-repeat; }
 	.alexandre  #speakers .speakers-wrapper .speaker { left:5px; top:50px; width:212px; background:url('../img/mobile/alexandre.png') no-repeat; }
 	.demian #speakers .speakers-wrapper .speaker { left:5px; top:50px; width:212px; background:url('../img/mobile/demian.png') no-repeat; }
+	.zeke #speakers .speakers-wrapper .speaker { left:-3px; top:34px; width:212px; background:url('../img/mobile/zeke.png') no-repeat; }
+	.mauricio #speakers .speakers-wrapper .speaker { left:-3px; top:64px; width:212px; background:url('../img/mobile/mauricio.png') no-repeat; }
+	.jean #speakers .speakers-wrapper .speaker { left:-3px; top:66px; width:212px; background:url('../img/mobile/jean.png') no-repeat; }
 	#speakers .speakers-wrapper .logo { float:none; display:block; left:128px; top:-109px; width:178px; height:82px; background:url('../img/mobile/logo.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons { left:197px; top:147px; height:81px; width:97px; background:url('../img/mobile/ttl-general.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons .calling.what { display:none; }
@@ -72,7 +81,8 @@
 	.speaker-info { margin:auto; padding:0 15px; width:320px; }
 	.speaker-info .info-container { margin-bottom:20px; }
 	.speaker-info .info-container .name { font-size:26px; line-height:26px; }
-	.marcel .speaker-info .info-container .name { width:390px; }
+	.marcel .speaker-info .info-container .name, { width:390px; }
+	.rey-josh .speaker-info .info-container .name, { width:250px; }
 	.speaker-info .info-container .company { font-size:16px; line-height:16px; }
 	.speaker-info #social-networks { float:left; left:-115px; margin-bottom:20px; padding:43px 150px; width:550px; height:182px; background-color:#161414; }
 	.speaker-info #social-networks .like-it { bottom:29px; left:127px; width:90px; height:61px; background:url('../img/mobile/ico-general.png') no-repeat; }
