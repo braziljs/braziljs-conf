@@ -365,7 +365,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #manifest .manifest-wrapper .the-origin { margin-right:20px; background:url('../img/bg-legacy.png') no-repeat; }
 #manifest .manifest-wrapper .the-future { margin-top:15px; background:url('../img/bg-future.png') no-repeat; }
 #manifest .manifest-wrapper .the-origin .moto { margin-bottom:30px; width:188px; height:75px; background-position:0 -1355px; }
-#manifest .manifest-wrapper .our-history .disclaimer { margin-bottom:20px; width:288px; font-family:"Comic Sans MS", cursive; font-size:13px; line-height:19px; color:rgb(255,255,255); text-align:left; text-shadow:1px -3px 0px rgba(0,0,0,0.25); }
+#manifest .manifest-wrapper .our-history .disclaimer { margin-bottom:20px; width:288px; font-family:"Comic Sans MS", arial; font-size:13px; line-height:19px; color:rgb(255,255,255); text-align:left; text-shadow:1px -3px 0px rgba(0,0,0,0.25); }
 
 /* SPONSORS */
 #sponsors { position:relative; clear:both; width:100%; background-color:#171314; }
