@@ -228,7 +228,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes .heroes-list .caridy-patino { margin:20px 20px 0 0; width:620px; height:260px; }
 #heroes .heroes-list .caridy-patino .photo { right:0; bottom:0; width:262px; height:261px; background:url('../img/hero-caridy.png') no-repeat; }
 #heroes .heroes-list .AR { margin-top:20px; width:300px; height:441px; background:url('../img/hero-ar.jpg') no-repeat; }
-#heroes .heroes-list .BW { margin:-152px 20px 0 0; width:302px; height:237px; background:url('../img/hero-bw.jpg') no-repeat; }
+#heroes .heroes-list .jean-carlo { margin:-152px 20px 0 0; width:302px; height:237px; }
+#heroes .heroes-list .jean-carlo .spikes { height:228px; width:302px; } 
+#heroes .heroes-list .jean-carlo .photo { left:0; width:215px; height:237px; background:url('../img/hero-jean.png') no-repeat; }
 #heroes .heroes-list .renato-mangini { margin-top:-152px; width:300px; height:235px; }
 #heroes .heroes-list .renato-mangini .spikes { width:300px; height:228px; background:url('../img/spikes-renato.png') no-repeat; }
 #heroes .heroes-list .renato-mangini .photo { right:0; bottom:0; width:198px; height:235px; background:url('../img/hero-renato.png') no-repeat; }
@@ -291,6 +293,8 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay #ray-josh .photo { left:-59px; width:419px; height:372px; background:url('../img/overlay-ray-josh.png') no-repeat; }
 #heroes-overlay #ray-josh .photo:before { left:-1px; }
 #heroes-overlay #ray-josh .photo:after { left:-21px; }
+#heroes-overlay #jean .photo { left:-9px; width:253px; height:388px; background:url('../img/overlay-jean.png') no-repeat; }
+
 
 /* SCHEDULE */
 #schedule { display:inline-block; clear:both; margin-top:60px; width:100%; }
@@ -365,7 +369,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #manifest .manifest-wrapper .the-origin { margin-right:20px; background:url('../img/bg-legacy.png') no-repeat; }
 #manifest .manifest-wrapper .the-future { margin-top:15px; background:url('../img/bg-future.png') no-repeat; }
 #manifest .manifest-wrapper .the-origin .moto { margin-bottom:30px; width:188px; height:75px; background-position:0 -1355px; }
-#manifest .manifest-wrapper .our-history .disclaimer { margin-bottom:20px; width:288px; font-family:"Comic Sans MS", cursive; font-size:13px; line-height:19px; color:rgb(255,255,255); text-align:left; text-shadow:1px -3px 0px rgba(0,0,0,0.25); }
+#manifest .manifest-wrapper .our-history .disclaimer { margin-bottom:20px; width:288px; font-family:"Comic Sans MS", arial; font-size:13px; line-height:19px; color:rgb(255,255,255); text-align:left; text-shadow:1px -3px 0px rgba(0,0,0,0.25); }
 
 /* SPONSORS */
 #sponsors { position:relative; clear:both; width:100%; background-color:#171314; }
@@ -415,11 +419,14 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #tweets-container ul { display:inline-block; margin:0; list-style:none; font-family:"Comic Sans MS", arial; line-height:130%; color:rgb(255,255,255); text-align:center; }
 #tweets-container ul a { text-decoration:none; }
 #tweets-container ul li { float:left; width:298px; }
+#tweets-container ul li .user { position:relative; }
+#tweets-container ul li .user:after { content:''; position:absolute; top:41px; left:132px; height:9px; width:11px; background:url('../img/ico-general.png') 0 -855px no-repeat; }
 #tweets-container ul li .user a { color:#FFF; position:relative; }
-#tweets-container ul li .user a:after { content:''; position:absolute; bottom:-18px; left:9px; height:9px; width:11px; background:url('../img/ico-general.png') 0 -855px no-repeat; }
+#tweets-container ul li .user a:after { /*content:''; position:absolute; bottom:-18px; left:9px; height:9px; width:11px; background:url('../img/ico-general.png') 0 -855px no-repeat; */}
 #tweets-container ul li .user img { position:relative; width:48px; height:48px; border:2px solid #FFF; border-radius:80px; }
 #tweets-container ul li .user span { display:block; margin-top:15px; font-size:16px; text-transform:uppercase; }
 #tweets-container ul li .user span:nth-child(3) { margin-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:rgb(255,204,0); text-align:center; text-decoration:none; }
+#tweets-container ul li .user span:first:child:after { content:''; position:absolute; bottom:-18px; left:9px; height:9px; width:11px; background:url('../img/ico-general.png') 0 -855px no-repeat; }
 #tweets-container ul li .tweet { position:relative; margin-top:25px; padding-top:11px; font-size:13px; text-transform:uppercase; }
 #tweets-container ul li .tweet:before { content:''; position:absolute; top:-20px; width:292px; height:11px; background:url('../img/bg-tweet.png') no-repeat; }
 #tweets-container ul li .tweet a { color:rgb(55,171,191); }
@@ -536,9 +543,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .rey-josh .hero-name { display:inline-block; width:146px; }
 	#heroes .heroes-list .hero-company { font-size:14px !important; color:rgb(121,121,121); text-shadow:none; font-weight:normal; font-style:italic; }
 	#heroes .heroes-list .renato-mangini .hero-company { text-align:left; }
-	#heroes .heroes-list .douglas-crockford .photo { top:-4px; width:106px; height:156px; background:url('../img/mobile/douglas-small.png') no-repeat; }
+	#heroes .heroes-list .douglas-crockford .photo { top:-4px; width:143px; height:156px; background:url('../img/mobile/douglas-small.png') no-repeat; }
 	#heroes .heroes-list .alexandre-gaigalas .photo { top:1px; left:11px; height:152px; width:134px; background:url('../img/mobile/alexandre-small.png') no-repeat; }
-	#heroes .heroes-list .demian-borba .photo { right:0; top:1px; height:151px; width:122px; background:url('../img/mobile/demian-small.png') no-repeat; }
+	#heroes .heroes-list .demian-borba .photo { right:0; left:23px; top:1px; height:151px; width:122px; background:url('../img/mobile/demian-small.png') no-repeat; }
 	#heroes .heroes-list .JG { background:url('../img/mobile/jg-small.png') no-repeat; }
 	#heroes .heroes-list .PI { background:url('../img/mobile/pi-small.png') no-repeat; }
 	#heroes .heroes-list .JW { background:url('../img/mobile/jw-small.png') no-repeat; }
@@ -550,8 +557,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .marcel-angus .photo { width:145px; height:152px; background:url('../img/mobile/angus-marcel-small.png') no-repeat; }
 	#heroes .heroes-list .stoyan-stefanov .photo { width:145px; height:152px; background:url('../img/mobile/stoyan-small.png') no-repeat; }
 	#heroes .heroes-list .caridy-patino .photo { width:145px; height:152px; background:url('../img/mobile/caridy-small.png') no-repeat; }
-	#heroes .heroes-list .renato-mangini .photo { right:-7px; width:145px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
+	#heroes .heroes-list .renato-mangini .photo { left:7px; width:138px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
 	#heroes .heroes-list .rey-josh .photo { top:3px; width:145px; height:152px; background:url('../img/mobile/rey-josh-small.png') no-repeat; }
+	#heroes .heroes-list .jean-carlo .photo { background:url('../img/mobile/jean-small.png') no-repeat; }
 	
 	/* HEROES OVERLAY */	
 	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:none; background-color:#111111; }
@@ -559,7 +567,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes-overlay ul { padding:0; }
 	#heroes-overlay .previous { left:auto; top:47px; right:50px; height:30px; width:31px; background-position:0 -301px; }
 	#heroes-overlay .previous .sign { display:none; }
-	#heroes-overlay .next { top:47px; right:10px; height:30px; width:31px; background-position:-34px -301px; z-index:10; }
+	#heroes-overlay .next { top:47px; right:10px; height:30px; width:31px; background-position:-34px -301px; z-index:20; }
 	#heroes-overlay .next .sign { display:none; }
 	#heroes-overlay .sequence-canvas { margin:auto; width:320px; }
 	#heroes-overlay .portrait { left:0; width:600px; }
@@ -593,9 +601,10 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes-overlay #renato .photo { top:21px; left:0; width:199px; height:317px; background:url('../img/mobile/hero-renato.png') no-repeat; }
 	#heroes-overlay #alexandre .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-alexandre.png') no-repeat; }
 	#heroes-overlay #demian .photo { top:36px; left:0; width:230px; height:296px; background:url('../img/mobile/hero-demian.png') no-repeat; }		
-	#heroes-overlay .close { right:5px; top:281px; height:32px; width:73px; background-position:0 -270px; z-index:10; }
+	#heroes-overlay .close { right:5px; top:281px; height:32px; width:73px; background-position:0 -270px; z-index:20; }
 	#heroes-overlay #angus-marcel .speaker .name { width:360px; }
 	#heroes-overlay #ray-josh .photo { top:66px; left:-28px; width:372px; height:366px; background:url('../img/mobile/hero-ray-josh.png') no-repeat; z-index:-1; }
+	#heroes-overlay #jean .photo { top:46px; left:-28px; width:191px; height:291px; background:url('../img/mobile/hero-jean.png') no-repeat; z-index:-1; }
 
 	/* SCHEDULE */
 	#schedule { margin:30px 0 0; }
@@ -675,7 +684,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #tweets-container ul li:first-child { display:block; }
     #tweets-container ul li { display:none; }    
     #tweets-container ul li .user a { position:relative; color:#FFF; }
-    #tweets-container ul li .user a:after { content:''; position:absolute; bottom:-18px; left:9px; height:9px; width:11px; background:url('../img/mobile/ico-general.png') 0 -389px no-repeat; }
+    #tweets-container ul li .user:after { content:''; position:absolute; left:97px; top:44px; height:9px; width:11px; background:url('../img/mobile/ico-general.png') 0 -389px no-repeat; }
     #tweets-container ul li .user img { position:relative; width:52px; height:52px; border:4px solid #FFF; border-radius:80px; }
     #tweets-container ul li .user span:nth-child(3) { margin-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:rgb(255,204,0); text-align:center; text-decoration:none; }
     #tweets-container ul li .tweet { font-size:12px; }
@@ -794,8 +803,11 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .robert-nyman .spikes { width:728px; height:118px; }
 	#heroes .heroes-list .JG { width:229px; height:438px; background:url('../img/tablet/hero-JG.jpg') no-repeat; }
 	#heroes .heroes-list .marcel-angus { width:479px; height:209px; }
+	#heroes .heroes-list .rey-josh .spikes,
 	#heroes .heroes-list .marcel-angus .spikes { width:478px; height:211px; background:url('../img/tablet/special-spikes.png') no-repeat; }
 	#heroes .heroes-list .marcel-angus .photo { bottom:0; width:325px; height:214px; background:url('../img/tablet/hero-angus-marcel.png') no-repeat; }
+	#heroes .heroes-list .rey-josh { width:479px; height:209px; }
+	#heroes .heroes-list .rey-josh .photo { right:0; width:407px; height:209px; background:url('../img/tablet/hero-rey-josh.png') no-repeat; }
 	#heroes .heroes-list .PI { width:479px; height:209px; background:url('../img/tablet/hero-PI.jpg') no-repeat; }
 	#heroes .heroes-list .JW { width:354px; height:179px; background:url('../img/tablet/hero-JW.jpg') no-repeat; }
 	#heroes .heroes-list .stoyan-stefanov { width:354px; height:179px; }	
@@ -805,7 +817,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .caridy-patino .spikes { background:url('../img/tablet/special-spikes.png') no-repeat; }
 	#heroes .heroes-list .caridy-patino .photo { width:168px; height:199px; background:url('../img/tablet/hero-caridy.png') no-repeat; }
 	#heroes .heroes-list .AR { width:229px; height:337px; background:url('../img/tablet/hero-AR.jpg') no-repeat; }
-	#heroes .heroes-list .BW { margin-top:-114px; width:229px; height:179px; background:url('../img/tablet/hero-BW.jpg') no-repeat; }
+	#heroes .heroes-list .jean-carlo { margin-top:-114px; width:229px; height:179px; }
+	#heroes .heroes-list .jean-carlo .spikes { width:229px; height:179px; background:url('../img/tablet/spikes-jean.png') no-repeat; }
+	#heroes .heroes-list .jean-carlo .photo { width:154px; height:179px; background:url('../img/tablet/hero-jean-carlo.png') no-repeat; }
 	#heroes .heroes-list .renato-mangini { margin-top:-114px; width:229px; height:179px; }
 	#heroes .heroes-list .renato-mangini .spikes { width:229px; height:180px; }
 	#heroes .heroes-list .renato-mangini .photo { width:154px; height:179px; background:url('../img/tablet/hero-renato.png') no-repeat; }
@@ -829,16 +843,18 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #heroes-overlay .speaker .social-networks li a.github { background-position:0 -316px; }
     #heroes-overlay .speaker .social-networks li a.twitter { background-position:-40px -316px; }
     #heroes-overlay .speaker .social-networks li a.blog { background-position:-119px -316px; }
-    #heroes-overlay .speaker { padding-top:419px; margin-left:-371px; }
+    #heroes-overlay .speaker { padding-top:419px; margin-left:-371px; z-index:8; }
     #heroes-overlay .speaker .info:before { content:''; position:absolute; right:0; left:-130px; top:352px; display:block; width:1024px; height:150px; background:url('../img/tablet/bg-social-overlay.png') no-repeat; z-index:-1; }
 	#heroes-overlay #douglas-crockford .photo { left:-69px; top:-1px; height:391px; width:257px; }
 	#heroes-overlay #angus-marcel .photo { top:70px; left:-81px; }
+	#heroes-overlay #ray-josh .photo { top:52px; width:419px; height:353px; left:-59px; }
 	#heroes-overlay #stoyan .photo { top:10px; left:-69px; height:381px; }
 	#heroes-overlay #caridy .photo { left:-63px; top:0; height:392px; }	
 	#heroes-overlay #robert .photo { top:0; left:-69px; }
 	#heroes-overlay #renato .photo { left:-79px; top:1px; height:391px; }
 	#heroes-overlay #thibault .photo { top:0; left:-80px; width:319px; height:390px; background:url('../img/overlay-thibault.png') no-repeat; }
 	#heroes-overlay #alexandre .photo { left:-61px; top:1px; }
+	#heroes-overlay #jean .photo { top:28px; left:-21px; width:253px; height:364px; }
 	
 	/* SCHEDULE */
 	#schedule { margin-top:100px; }
@@ -913,6 +929,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #tweets-container ul { list-style:none; font-family:"Comic Sans MS", arial; line-height:130%; color:rgb(255,255,255); text-align:center; }
     #tweets-container ul a { text-decoration:none; }
     #tweets-container ul li { float:left; width:229px; }    
+    #tweets-container ul li .user:after { content:''; position:absolute; left:97px; top:41px; height:9px; width:11px; background:url('../img/tablet/ico-general.png') 0 -637px no-repeat; }
     #tweets-container ul li .user a { color:#FFF; background-position:0 -637px; }    
     #tweets-container ul li .user img { position:relative; width:48px; height:48px; border:2px solid #FFF; border-radius:80px; }
     #tweets-container ul li .user span { display:block; margin-top:15px; font-size:16px; text-transform:uppercase; }
