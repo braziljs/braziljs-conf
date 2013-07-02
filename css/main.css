@@ -188,51 +188,90 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes .heroes-list { position:relative; margin:-65px 0 0; list-style:none; }
 #heroes .heroes-list li { float:left; }
 #heroes .heroes-list .info { position:absolute; bottom:15px; z-index:6; }
-#heroes .heroes-list .spikes { position:absolute; left:0; width:620px; height:260px; background:url('../img/default-spikes.png') no-repeat; }
-#heroes .heroes-list .hero { position:relative; padding-left:22px; width:100%; height:100%; text-decoration:none; transition:all 0.5s ease-in; display:block; background-size:100%; background-image:-moz-radial-gradient(rgb(255,255,255) 0%,rgb(68,68,68) 100%); background-image:-webkit-gradient(radial,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(68,68,68))); background-image:-webkit-radial-gradient(rgb(255,255,255) 0%,rgb(68,68,68) 100%); background:radial-gradient(rgb(255,255,255) 0%,rgb(68,68,68) 100%), #808080; }
+#heroes .heroes-list .spikes { position:absolute; left:0; width:620px; height:260px; background:url('../img/default-spikes.png') no-repeat; transition:all 0.3s ease; }
+#heroes .heroes-list .hero { position:relative; display:block; padding-left:22px; width:100%; height:100%; text-decoration:none; transition:all 0.5s ease-in; background-size:100%; background-image:-moz-radial-gradient(rgb(255,255,255) 0%,rgb(68,68,68) 100%); background-image:-webkit-gradient(radial,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(68,68,68))); background-image:-webkit-radial-gradient(rgb(255,255,255) 0%,rgb(68,68,68) 100%); background:radial-gradient(rgb(255,255,255) 0%,rgb(68,68,68) 100%), #808080; }
 .ie9 #heroes .heroes-list .hero { background-color:#CACACA; }
 #heroes .heroes-list a.hero:hover { background-image:none; background-color:#000; }
-#heroes .heroes-list .hero-name { font-family:"Arial Black", Gadget, sans-serif; font-size:30px; font-weight:900; line-height:120%; color:rgb(255,255,255); text-align:left; text-shadow:-2px -2px 0 rgb(92,206,247), 2px -2px 0 rgb(92,206,247), -2px 2px 0 rgb(92,206,247), 2px 2px 0 rgb(92,206,247); /*text-shadow:-1px -1px 0 rgb(92,206,247), 1px -1px 0 rgb(92,206,247), -1px 1px 0 rgb(92,206,247), 1px 1px 0 rgb(92,206,247);*/ text-transform:lowercase; }
-#heroes .heroes-list .hero-company { display:block; font-family:"Arial Black", Gadget, sans-serif; font-style:normal; font-size:20px; font-weight:900; line-height:120%; color:rgb(0,158,212); text-align:left; text-shadow:-2px -2px 0 rgb(255,255,255), 2px -2px 0 rgb(255,255,255), -2px 2px 0 rgb(255,255,255), 2px 2px 0 rgb(255,255,255); }
+#heroes .heroes-list a.hero:hover .spikes { opacity:0; }
+#heroes .heroes-list .hero-name { font-family:"Arial Black", Gadget, sans-serif; font-size:30px; font-weight:900; line-height:120%; color:rgb(255,255,255); text-align:left; text-shadow:-2px -2px 0 rgb(92,206,247), 2px -2px 0 rgb(92,206,247), -2px 2px 0 rgb(92,206,247), 2px 2px 0 rgb(92,206,247); text-transform:lowercase; transition:all 0.7s ease; }
+#heroes .heroes-list .hero-company { transition:all 0.7s ease; display:block; font-family:"Arial Black", Gadget, sans-serif; font-style:normal; font-size:20px; font-weight:900; line-height:120%; color:rgb(0,158,212); text-align:left; text-shadow:-2px -2px 0 rgb(255,255,255), 2px -2px 0 rgb(255,255,255), -2px 2px 0 rgb(255,255,255), 2px 2px 0 rgb(255,255,255); text-transform:lowercase; }
 #heroes .heroes-list .photo { position:absolute; display:block; z-index:3; }
 #heroes .heroes-list .angle { position:absolute; left:18px; width:620px; height:86px; background:url('../img/bg-angle.png') no-repeat; z-index:3; }
 #heroes .heroes-list .douglas-crockford { margin-right:20px; width:620px; height:347px; } 
+#heroes .heroes-list a.douglas-crockford:hover { background-image:-moz-radial-gradient(rgb(0,121,193) 0%,rgb(0,69,124) 100%); background-image:radial-gradient(rgb(0,121,193) 0%,rgb(0,69,124) 100%); }
 #heroes .heroes-list .douglas-crockford .spikes { top:-3px; height:349px; width:620px; background:url('../img/douglas-spikes.png') no-repeat; }
 #heroes .heroes-list .douglas-crockford .hero-name { font-size:40px; }
+#heroes .heroes-list .douglas-crockford:hover .hero-name { text-shadow:-3px -3px 0 rgb(0,70,125), 3px -3px 0 rgb(0,70,125), -3px 3px 0 rgb(0,70,125), 3px 3px 0 rgb(0,70,125); }
 #heroes .heroes-list .douglas-crockford .photo { right:0; top:-24px; width:327px; height:371px; background:url('../img/hero-douglas.png') no-repeat; z-index:5; }
+#heroes .heroes-list .douglas-crockford:hover .hero-company { color:rgb(0,69,124); }
 #heroes .heroes-list .alexandre-gaigalas { margin-top:154px; width:300px; height:533px; }
+#heroes .heroes-list a.alexandre-gaigalas:hover { background-color:rgb(123,0,153); }
+#heroes .heroes-list .alexandre-gaigalas:hover .hero-name { text-shadow:-3px -3px 0 rgb(123,0,153), 3px -3px 0 rgb(123,0,153), -3px 3px 0 rgb(123,0,153), 3px 3px 0 rgb(123,0,153); }
 #heroes .heroes-list .alexandre-gaigalas .spikes { height:533px; width:300px; background:url('../img/wide-spikes.png') no-repeat; }
+#heroes .heroes-list .alexandre-gaigalas:hover .hero-company { color:rgb(123,0,153); }
 #heroes .heroes-list .alexandre-gaigalas .photo { top:3px; left:61px; width:239px; height:530px; background:url('../img/hero-alexandre.png') no-repeat; }
 #heroes .heroes-list .AB .specialguest.photo { right:0; bottom:0; width:300px; height:533px; background:url('../img/hero-betao.png') no-repeat; }
 #heroes .heroes-list .demian-borba { margin:-316px 20px 0 0; width:300px; height:317px; }
+#heroes .heroes-list a.demian-borba:hover { background-color:rgb(150,184,0); }
 #heroes .heroes-list .demian-borba .spikes { height:318px; width:300px; }
+#heroes .heroes-list .demian-borba:hover .hero-name { text-shadow:-3px -3px 0 rgb(50,184,0), 3px -3px 0 rgb(50,184,0), -3px 3px 0 rgb(50,184,0), 3px 3px 0 rgb(50,184,0); }
+#heroes .heroes-list .demian-borba:hover .hero-company { color:rgb(50,184,0); }
 #heroes .heroes-list .demian-borba .photo { bottom:0; right:0; height:309px; width:236px; background:url('../img/hero-damian.png') no-repeat; }
 #heroes .heroes-list .thibault-imbert { margin-top:-316px; width:300px; height:317px; }
+#heroes .heroes-list a.thibault-imbert:hover { background-color:rgb(217,2,0); }
 #heroes .heroes-list .thibault-imbert .spikes { width:300px; background:url('../img/spikes-thibault.png') no-repeat; }
 #heroes .heroes-list .thibault-imbert .hero-name { font-size:30px; }
+#heroes .heroes-list .thibault-imbert:hover .hero-name { text-shadow:-3px -3px 0 rgb(217,2,0), 3px -3px 0 rgb(217,2,0), -3px 3px 0 rgb(217,2,0), 3px 3px 0 rgb(217,2,0); }
+#heroes .heroes-list .thibault-imbert:hover .hero-company { color:rgb(217,2,0); }
 #heroes .heroes-list .thibault-imbert .photo { right:40px; bottom:0; width:260px; height:311px; background:url('../img/hero-thibault.png') no-repeat; }
 #heroes .heroes-list .robert-nyman { margin-top:20px; clear:both; width:940px; height:153px; }
+#heroes .heroes-list a.robert-nyman:hover { background-color:rgb(193,56,50); }
 #heroes .heroes-list .robert-nyman .spikes { width:940px; height:142px; background:url('../img/spikes-robert.png') no-repeat; }
+#heroes .heroes-list .robert-nyman:hover .hero-name { text-shadow:-3px -3px 0 rgb(193,56,50), 3px -3px 0 rgb(193,56,50), -3px 3px 0 rgb(193,56,50), 3px 3px 0 rgb(193,56,50); }
+#heroes .heroes-list .robert-nyman:hover .hero-company { color:rgb(193,56,50); }
 #heroes .heroes-list .robert-nyman .photo { right:40px; bottom:0; width:567px; height:153px; background:url('../img/hero-robert.png') no-repeat; }
 #heroes .heroes-list .JG { margin:20px 20px 0 0; width:300px; height:560px; background:url('../img/hero-jg.jpg') no-repeat; }
 #heroes .heroes-list .marcel-angus { margin-top:20px; width:620px; height:271px; }
-#heroes .heroes-list .marcel-angus .hero-name { display:inline-block; width:369px;}
-#heroes .heroes-list .rey-josh .hero-name { display:inline-block; width:300px; }
+#heroes .heroes-list a.marcel-angus:hover { background-color:rgb(51,204,255); }
+#heroes .heroes-list .marcel-angus .hero-name { display:inline-block; width:318px; }
+#heroes .heroes-list .marcel-angus:hover .hero-name { text-shadow:-3px -3px 0 rgb(51,204,255), 3px -3px 0 rgb(51,204,255), -3px 3px 0 rgb(51,204,255), 3px 3px 0 rgb(51,204,255); }
+#heroes .heroes-list .marcel-angus:hover .hero-company { color:rgb(51,204,255); }
 #heroes .heroes-list .marcel-angus .photo { right:10px; bottom:-2px; width:393px; height:273px; background:url('../img/heroes-angus-marcel.png') no-repeat; }
+#heroes .heroes-list .rey-josh .hero-name { display:inline-block; width:300px; }
+#heroes .heroes-list a.rey-josh:hover { background-color:rgb(255,185,1); }
 #heroes .heroes-list .rey-josh { margin-top:20px; width:620px; height:271px; }
+#heroes .heroes-list .rey-josh:hover .hero-name { text-shadow:-3px -3px 0 rgb(255,185,1), 3px -3px 0 rgb(255,185,1), -3px 3px 0 rgb(255,185,1), 3px 3px 0 rgb(255,185,1); }
+#heroes .heroes-list .rey-josh:hover .hero-company { color:rgb(255,185,1); }
 #heroes .heroes-list .rey-josh .photo { right:15px; bottom:0; width:491px; height:273px; background:url('../img/heroes-rey-josh.png') no-repeat; }
 #heroes .heroes-list .JW { margin:20px 20px 0 0; width:460px; height:223px; background:url('../img/hero-jw.jpg') no-repeat; }
 #heroes .heroes-list .stoyan-stefanov { margin-top:20px; width:460px; height:223px; }
+#heroes .heroes-list a.stoyan-stefanov:hover { background-color:rgb(59,89,152); }
 #heroes .heroes-list .stoyan-stefanov .spikes { width:460px; height:192px; background:url('../img/spikes-stoyan.png') no-repeat; }
+#heroes .heroes-list .stoyan-stefanov:hover .hero-company { color:rgb(59,89,152); }
+#heroes .heroes-list .stoyan-stefanov:hover .hero-name { text-shadow:-3px -3px 0 rgb(59,89,152), 3px -3px 0 rgb(59,89,152), -3px 3px 0 rgb(59,89,152), 3px 3px 0 rgb(59,89,152); }
 #heroes .heroes-list .stoyan-stefanov .photo { left:0; bottom:0; width:198px; height:212px; background:url('../img/hero-stoyan.png') no-repeat; }
 #heroes .heroes-list .caridy-patino { margin:20px 20px 0 0; width:620px; height:260px; }
+#heroes .heroes-list a.caridy-patino:hover { background-color:rgb(123,0,153); }
+#heroes .heroes-list .caridy-patino:hover .hero-company { color:rgb(123,0,153); }
+#heroes .heroes-list .caridy-patino:hover .hero-name { text-shadow:-3px -3px 0 rgb(123,0,153), 3px -3px 0 rgb(123,0,153), -3px 3px 0 rgb(123,0,153), 3px 3px 0 rgb(123,0,153); }
 #heroes .heroes-list .caridy-patino .photo { right:0; bottom:0; width:262px; height:261px; background:url('../img/hero-caridy.png') no-repeat; }
-#heroes .heroes-list .AR { margin-top:20px; width:300px; height:441px; background:url('../img/hero-ar.jpg') no-repeat; }
+#heroes .heroes-list .zeno-rocha { margin-top:20px; width:300px; height:441px; }
+#heroes .heroes-list a.zeno-rocha:hover { background-color:rgb(1,139,206); }
+#heroes .heroes-list .zeno-rocha .spikes { width:300px; height:441px; background:url('../img/spikes-zeno.png') no-repeat; }
+#heroes .heroes-list .zeno-rocha:hover .hero-company { color:rgb(1,139,206); }
+#heroes .heroes-list .zeno-rocha:hover .hero-name { text-shadow:-3px -3px 0 rgb(1,139,206), 3px -3px 0 rgb(1,139,206), -3px 3px 0 rgb(1,139,206), 3px 3px 0 rgb(1,139,206); }
+#heroes .heroes-list .zeno-rocha .photo { left:0; bottom:0; width:279px; height:439px; background:url('../img/hero-zeno.png') no-repeat; }
 #heroes .heroes-list .jean-carlo { margin:-152px 20px 0 0; width:302px; height:237px; }
-#heroes .heroes-list .jean-carlo .spikes { height:228px; width:302px; } 
+#heroes .heroes-list a.jean-carlo:hover { background-color:rgb(139,12,22); }
+#heroes .heroes-list .jean-carlo .spikes { height:228px; width:302px; }
+#heroes .heroes-list .jean-carlo:hover .hero-company { color:rgb(139,12,22); } 
+#heroes .heroes-list .jean-carlo:hover .hero-name { text-shadow:-3px -3px 0 rgb(139,12,22), 3px -3px 0 rgb(139,12,22), -3px 3px 0 rgb(139,12,22), 3px 3px 0 rgb(139,12,22); } 
 #heroes .heroes-list .jean-carlo .photo { left:0; width:215px; height:237px; background:url('../img/hero-jean.png') no-repeat; }
 #heroes .heroes-list .renato-mangini { margin-top:-152px; width:300px; height:235px; }
+#heroes .heroes-list a.renato-mangini:hover { background-color:rgb(32,172,39); }
 #heroes .heroes-list .renato-mangini .spikes { width:300px; height:228px; background:url('../img/spikes-renato.png') no-repeat; }
+#heroes .heroes-list .renato-mangini:hover .hero-company { color:rgb(32,172,39); }
+#heroes .heroes-list .renato-mangini:hover .hero-name { text-shadow:-3px -3px 0 rgb(32,172,39), 3px -3px 0 rgb(32,172,39), -3px 3px 0 rgb(32,172,39), 3px 3px 0 rgb(32,172,39); }
 #heroes .heroes-list .renato-mangini .photo { right:0; bottom:0; width:198px; height:235px; background:url('../img/hero-renato.png') no-repeat; }
 #heroes .heroes-list .renato-mangini .hero-company { text-align:right; }
 
@@ -256,7 +295,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay .portrait .second { top:300px; }
 #heroes-overlay .portrait { position:relative; float:left; width:350px; }
 #heroes-overlay .portrait .share li { display:inline-block; margin-right:10px; vertical-align:top; }
-#heroes-overlay .close { position:absolute; bottom:9px; right:31px; display:block; width:73px; height:43px; background-position:0 -887px; color:transparent; cursor:pointer; }
+#heroes-overlay .close { position:absolute; bottom:9px; right:31px; display:block; width:73px; height:43px; background-position:0 -887px; color:transparent; cursor:pointer; z-index:20; }
 #heroes-overlay ul { margin:0; list-style:none; }
 #heroes-overlay .photo:before { content:''; position:absolute; top:80px; left:-51px; width:495px; height:256px; background:url('../img/speaker-gradient-2.png') no-repeat; }
 #heroes-overlay .photo:after { content:''; position:absolute; top:194px; left:-81px; width:495px; height:256px; background:url('../img/speaker-gradient.png') no-repeat; }
@@ -294,7 +333,8 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #heroes-overlay #ray-josh .photo:before { left:-1px; }
 #heroes-overlay #ray-josh .photo:after { left:-21px; }
 #heroes-overlay #jean .photo { left:-9px; width:253px; height:388px; background:url('../img/overlay-jean.png') no-repeat; }
-
+#heroes-overlay #zeno .photo { top:31px; left:-35px; width:304px; height:432px; background:url('../img/overlay-zeno.png') no-repeat; }
+#heroes-overlay #zeno .photo:before { left:-25px; }
 
 /* SCHEDULE */
 #schedule { display:inline-block; clear:both; margin-top:60px; width:100%; }
@@ -381,21 +421,28 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .adamantiun .ttl-general { width:224px; height:17px; background-position:0 -1531px; }
 #sponsors .sponsors-wrapper .gold .ttl-general { width:159px; height:17px; background-position:0 -1564px; }
 #sponsors .sponsors-wrapper .bronze .ttl-general { width:185px; height:13px; background-position:0 -1598px; }
-#sponsors .sponsors-wrapper .sponsors .sponsor-list { display:inline-block; margin:0; padding:24px 16px; width:939px; list-style:none; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list { padding:0; display:inline-block; margin:0; list-style:none; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list li { display:inline-block; margin-top:20px; padding:24px 16px; width:939px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list li:first-child { margin-top:0; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { float:left; width:220px; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { display:block; background:url('../img/sponsors.png') no-repeat; text-indent:-9999px; }
-#sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:36px; width:201px; height:36px; background-position:0 0;  }
-#sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:16px; width:202px; height:60px; background-position:0 -56px;  }
-#sponsors .sponsors-wrapper .adamantiun .sponsor-list { background-color:#96B800; }
-#sponsors .sponsors-wrapper .gold .sponsor-list { background-color:#C13832; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry { background-color:#96B800; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:36px; width:201px; height:36px; background-position:0 0; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla { background-color:#C13832; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:16px; width:202px; height:60px; background-position:0 -56px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay { background-color:#FFF; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .sponsor a { margin-top:12px; width:202px; height:49px; background-position:0 -201px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .about { color:#000; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .about { float:left; margin:0; width:670px; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:120%; color:rgb(255,255,255); text-align:left; }
 #sponsors .sponsors-wrapper .bronze .sponsor-list { padding:0; }
-#sponsors .sponsors-wrapper .bronze li { display:inline-block; margin-left:14px; } 
+#sponsors .sponsors-wrapper .bronze li { display:inline-block; margin-left:14px; }
+#sponsors .sponsors-wrapper .bronze .sponsor-list li { padding:0; width:220px; } 
 #sponsors .sponsors-wrapper .bronze li:first-child { margin-left:0; }
 #sponsors .sponsors-wrapper .bronze li a { display:block; width:221px; height:141px; background:url('../img/bg-bronze-sponsor.png') no-repeat; text-indent:-9999px; }  
-#sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:50px 0 0 28px;  width:163px; height:44px; background-position:0 -137px; } 
+#sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:50px 0 0 28px;  width:163px; height:44px; background-position:0 -137px; }
+#sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .adobe { margin:50px 0 0 28px;  width:163px; height:44px; background-position:0 -137px; } 
 #sponsors .sponsors-wrapper .bronze li .sponsor.join-us { width:221px; background:url('../img/bg-join-us.png') no-repeat; }
-#sponsors .sponsors-wrapper .be-a-sponsor { margin:auto auto 180px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:120%; color:rgb(255,255,255); text-align:center; }
+#sponsors .sponsors-wrapper .be-a-sponsor { margin:auto auto; padding-bottom:100px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:120%; color:rgb(255,255,255); text-align:center; }
 #sponsors .sponsors-wrapper .be-a-sponsor a { color:rgb(255,204,0); text-decoration:none; }
 #sponsors .sponsors-wrapper .supporters { padding-bottom:100px; }
 #sponsors .sponsors-wrapper .supporters .ttl-general { height:14px; width:59px; background-position:0 -1632px; }
@@ -408,7 +455,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #follow-us .follow-us-container { position:relative; padding:70px 20px 0; margin:auto; width:980px; }
 #follow-us .follow-us-container .title { position:relative; margin:auto; width:438px; height:316px; background:url('../img/bg-twitter.png') no-repeat; z-index:2; }
 #follow-us .follow-us-container .burst { position:absolute; top:-14px; left:263px; width:448px; height:453px; background:url('../img/twitter-burst.png') no-repeat; z-index:1; } 
-#follow-us .follow-us-container .at-braziljs { margin-left:200px; margin-top:40px; display:inline-block; clear:both; }
+#follow-us .follow-us-container .at-braziljs { margin-top:40px; display:inline-block; clear:both; }
 #follow-us .follow-us-container .birdy { display:inline-block; width:347px; height:53px; background-position:0 -781px; }
 #follow-us .follow-us-container .our-link { display:inline-block; width:261px; height:23px; background-position:0 -1449px; }
 #likes-container { position:relative; width:961px; height:444px; background:url('../img/bg-facebook-like.png') no-repeat; }
@@ -560,6 +607,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .renato-mangini .photo { left:7px; width:138px; height:152px; background:url('../img/mobile/renato-small.png') no-repeat; }
 	#heroes .heroes-list .rey-josh .photo { top:3px; width:145px; height:152px; background:url('../img/mobile/rey-josh-small.png') no-repeat; }
 	#heroes .heroes-list .jean-carlo .photo { background:url('../img/mobile/jean-small.png') no-repeat; }
+	#heroes .heroes-list .zeno-rocha .photo { left:0; bottom:0; width:145px; height:152px; background:url('../img/mobile/zeno-rocha-small.png') no-repeat; }
 	
 	/* HEROES OVERLAY */	
 	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:none; background-color:#111111; }
@@ -605,6 +653,8 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes-overlay #angus-marcel .speaker .name { width:360px; }
 	#heroes-overlay #ray-josh .photo { top:66px; left:-28px; width:372px; height:366px; background:url('../img/mobile/hero-ray-josh.png') no-repeat; z-index:-1; }
 	#heroes-overlay #jean .photo { top:46px; left:-28px; width:191px; height:291px; background:url('../img/mobile/hero-jean.png') no-repeat; z-index:-1; }
+	#heroes-overlay #zeno .photo { top:34px; left:-11px; width:227px; height:323px; background:url('../img/mobile/hero-zeno.png') no-repeat; }
+	
 
 	/* SCHEDULE */
 	#schedule { margin:30px 0 0; }
@@ -652,26 +702,28 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper { padding:0 10px; width:320px; }    
     #sponsors .sponsors-wrapper .title { height:33px; width:174px; background-position:0 -534px; }
     #sponsors .sponsors-wrapper .adamantiun .ttl-general { height:10px; background-position:0 -577px; }
-    #sponsors .sponsors-wrapper .gold .ttl-general { height:14px; width:175px; background-position:0 -577px; }
+    #sponsors .sponsors-wrapper .gold .ttl-general { height:14px; width:175px; background-position:0 -597px; }
     #sponsors .sponsors-wrapper .bronze .ttl-general { height:13px; background-position:0 -617px; }
     #sponsors .sponsors-wrapper .sponsors { margin-bottom:10px; }
     #sponsors .sponsors-wrapper .sponsors .ttl-general { margin-bottom:11px; }
-    #sponsors .sponsors-wrapper .sponsors .sponsor-list { padding:30px 12px 27px; width:300px; }    
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list { width:300px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list li { width:300px; }    
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .about { font-size:13px; line-height:16px; width:279px; }
-    #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { margin:auto auto 15px auto; width:279px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { margin:auto auto 15px auto; width:246px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { background:url('../img/mobile/sponsors.png') no-repeat; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin:auto; height:26px; width:149px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin:auto; height:44px; width:149px; background-position:0 -36px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .sponsor a { margin:auto; width:135px; height:19px; background-position:0 -132px; }
     #sponsors .sponsors-wrapper .bronze .sponsor-list { padding:0; }
-    #sponsors .sponsors-wrapper .bronze li { margin-left:0; }
+    #sponsors .sponsors-wrapper .bronze li { margin-left:0; width:145px !important; }
     #sponsors .sponsors-wrapper .bronze li:nth-last-child(even) { margin-right:5px; }
     #sponsors .sponsors-wrapper .bronze li a { width:145px !important; height:99px; background:url('../img/mobile/bg-bronze-sponsor.png') no-repeat; }
     #sponsors .sponsors-wrapper .bronze li .sponsor.join-us { width:145px; height:99px; background:url('../img/mobile/bg-join-us.png') no-repeat; }
-    #sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:35px auto; height:27px; width:101px; background-position:0 -91px; }
+    #sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:35px auto; height:27px; width:101px; background-position:0 -91px; }    
     #sponsors .sponsors-wrapper .supporters { padding-bottom:80px; }
     #sponsors .sponsors-wrapper .supporters .ttl-general { background-position:0 -637px; }
     #sponsors .sponsors-wrapper .supporters ul li a { background:url('../img/mobile/supporters.png') no-repeat; }
-    #sponsors .sponsors-wrapper .be-a-sponsor { margin-bottom:80px; font-size:15px; }
+    #sponsors .sponsors-wrapper .be-a-sponsor { /*margin-bottom:80px;*/ font-size:15px; }
     
     /* FOLLOW US */
     #follow-us { padding-bottom:250px; background-color:#171314; }
@@ -759,7 +811,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#speakers .speakers-wrapper { width:768px; margin:auto; }
 	#speakers .speakers-wrapper .shadows { left:-149px; width:1023px; height:451px; }
 	#speakers .speakers-wrapper .shadows.theater-version { background:url('../img/tablet/shadows.jpg') no-repeat center center; }
-    #speakers .speakers-wrapper .shadows.directors-cut { background:url('../img/tablet/shadows-directors-cut.jpg') no-repeat center center; }
+    #speakers .speakers-wrapper .shadows.directors-cut { top:29px; background:url('../img/tablet/shadows-directors-cut.jpg') no-repeat center center; }
 	#speakers .cities { bottom:-11px; }
 	.social-bg { top:-103px; height:103px; }
 	
@@ -807,6 +859,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .marcel-angus .spikes { width:478px; height:211px; background:url('../img/tablet/special-spikes.png') no-repeat; }
 	#heroes .heroes-list .marcel-angus .photo { bottom:0; width:325px; height:214px; background:url('../img/tablet/hero-angus-marcel.png') no-repeat; }
 	#heroes .heroes-list .rey-josh { width:479px; height:209px; }
+	#heroes .heroes-list .rey-josh .hero-name { width:200px; }
 	#heroes .heroes-list .rey-josh .photo { right:0; width:407px; height:209px; background:url('../img/tablet/hero-rey-josh.png') no-repeat; }
 	#heroes .heroes-list .PI { width:479px; height:209px; background:url('../img/tablet/hero-PI.jpg') no-repeat; }
 	#heroes .heroes-list .JW { width:354px; height:179px; background:url('../img/tablet/hero-JW.jpg') no-repeat; }
@@ -816,13 +869,16 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#heroes .heroes-list .caridy-patino { width:475px; height:201px; }
 	#heroes .heroes-list .caridy-patino .spikes { background:url('../img/tablet/special-spikes.png') no-repeat; }
 	#heroes .heroes-list .caridy-patino .photo { width:168px; height:199px; background:url('../img/tablet/hero-caridy.png') no-repeat; }
-	#heroes .heroes-list .AR { width:229px; height:337px; background:url('../img/tablet/hero-AR.jpg') no-repeat; }
+	#heroes .heroes-list .AR {  background:url('../img/tablet/hero-AR.jpg') no-repeat; }
 	#heroes .heroes-list .jean-carlo { margin-top:-114px; width:229px; height:179px; }
 	#heroes .heroes-list .jean-carlo .spikes { width:229px; height:179px; background:url('../img/tablet/spikes-jean.png') no-repeat; }
 	#heroes .heroes-list .jean-carlo .photo { width:154px; height:179px; background:url('../img/tablet/hero-jean-carlo.png') no-repeat; }
 	#heroes .heroes-list .renato-mangini { margin-top:-114px; width:229px; height:179px; }
 	#heroes .heroes-list .renato-mangini .spikes { width:229px; height:180px; }
 	#heroes .heroes-list .renato-mangini .photo { width:154px; height:179px; background:url('../img/tablet/hero-renato.png') no-repeat; }
+    #heroes .heroes-list .zeno-rocha { width:229px; height:337px; margin-top:20px; }
+    #heroes .heroes-list .zeno-rocha .spikes { width:229px; height:337px; background:url('../img/tablet/spikes-zeno.png') no-repeat; }
+    #heroes .heroes-list .zeno-rocha .photo { left:0; bottom:0; width:209px; height:337px; background:url('../img/tablet/hero-zeno.png') no-repeat; }
 	
 	/* HEROES OVERLAY */
 	#heroes-overlay { overflow:hidden; overflow-y:visible; position:fixed; top:0; left:0; right:0; margin:0; height:100%; width:100%; background:none; background-color:#0E0300; }
@@ -910,14 +966,17 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .adamantiun .ttl-general { height:13px; background-position:0 -1081px; }
     #sponsors .sponsors-wrapper .gold .ttl-general { height:14px; background-position:0 -1104px; }
     #sponsors .sponsors-wrapper .bronze .ttl-general { height:13px; background-position:0 -1105px; }
-    #sponsors .sponsors-wrapper .sponsors .sponsor-list { width:728px; }    
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list li { width:728px; }    
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .about { width:523px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor { width:165px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { background:url('../img/tablet/sponsors.png') no-repeat; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:60px; height:26px; width:147px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:31px; height:50px; width:149px; background-position:0 -40px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .sponsor a { margin-top:38px; width:135px; height:20px; background-position:0 -235px; }
+    #sponsors .sponsors-wrapper .bronze li { width:auto !important; }
     #sponsors .sponsors-wrapper .bronze li a { width:167px; height:121px; background:url('../img/tablet/bg-bronze-sponsor.png') no-repeat; }
     #sponsors .sponsors-wrapper .bronze li .sponsor.join-us { width:168px; height:121px; background:url('../img/tablet/bg-join-us.png') no-repeat; }
+    
     #sponsors .sponsors-wrapper .bronze .sponsor-list .sponsor .github { margin:43px 0 0 19px; height:35px; width:128px; background-position:0 -177px; }
     #sponsors .sponsors-wrapper .supporters .ttl-general { background-position:0 -1151px; }
     
@@ -937,7 +996,6 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #tweets-container ul li .tweet { position:relative; margin-top:25px; padding-top:11px; font-size:13px; text-transform:uppercase; }
     #tweets-container ul li .tweet:before { content:''; position:absolute; top:-20px; left:0; width:225px; height:11px; background:url('../img/tablet/bg-tweet.png') no-repeat; }
     #tweets-container ul li .tweet a { color:rgb(55,171,191); }
-    #follow-us .follow-us-container .at-braziljs { margin-left:135px; }    
     #follow-us .follow-us-container .birdy { width:243px; height:38px; background-position:0 -579px; }
     #follow-us .follow-us-container .our-link { height:22px; width:261px; background-position:0 -1176px; }
     
@@ -985,7 +1043,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	
 }
 
-@media (min-width : 1024px) and (max-width : 1270px) {
+@media (min-width : 1024px) and (max-width : 1159px) {
 
     /* MENU */    
     #menu { top:0; display:block; height:auto; width:100%; z-index:101; }

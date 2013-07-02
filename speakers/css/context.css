@@ -73,6 +73,8 @@
 	.zeke #speakers .speakers-wrapper .speaker { left:-3px; top:34px; width:212px; background:url('../img/mobile/zeke.png') no-repeat; }
 	.mauricio #speakers .speakers-wrapper .speaker { left:-3px; top:64px; width:212px; background:url('../img/mobile/mauricio.png') no-repeat; }
 	.jean #speakers .speakers-wrapper .speaker { left:-3px; top:66px; width:212px; background:url('../img/mobile/jean.png') no-repeat; }
+	.rey-josh #speakers .speakers-wrapper .speaker { left:-32px; top:68px; height:270px; width:358px; background:url('../img/mobile/rey-josh.png') no-repeat; }
+	.zeno #speakers .speakers-wrapper .speaker { left:-13px; top:51px; height:323px; width:227px; background:url('../img/mobile/zeno.png') no-repeat; }
 	#speakers .speakers-wrapper .logo { float:none; display:block; left:128px; top:-109px; width:178px; height:82px; background:url('../img/mobile/logo.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons { left:197px; top:147px; height:81px; width:97px; background:url('../img/mobile/ttl-general.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons .calling.what { display:none; }
@@ -81,8 +83,8 @@
 	.speaker-info { margin:auto; padding:0 15px; width:320px; }
 	.speaker-info .info-container { margin-bottom:20px; }
 	.speaker-info .info-container .name { font-size:26px; line-height:26px; }
-	.marcel .speaker-info .info-container .name, { width:390px; }
-	.rey-josh .speaker-info .info-container .name, { width:250px; }
+	.marcel .speaker-info .info-container .name { width:390px; }
+	.rey-josh .speaker-info .info-container .name { width:250px; }
 	.speaker-info .info-container .company { font-size:16px; line-height:16px; }
 	.speaker-info #social-networks { float:left; left:-115px; margin-bottom:20px; padding:43px 150px; width:550px; height:182px; background-color:#161414; }
 	.speaker-info #social-networks .like-it { bottom:29px; left:127px; width:90px; height:61px; background:url('../img/mobile/ico-general.png') no-repeat; }
