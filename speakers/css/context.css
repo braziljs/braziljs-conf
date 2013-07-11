@@ -36,6 +36,7 @@
 .speaker-info .description { clear:both; margin:0; font-size:16px; line-height:20px; font-family:'Arial'; color:#898787; }
 .speaker-info .find-me { margin:42px 0 6px; color:#FFF; font-size:16px; font-weight:normal; }
 .speaker-info .my-social-links { margin:0 0 76px; padding:0; }
+.rey-josh .speaker-info .my-social-links,
 .marcel .speaker-info .my-social-links { margin-bottom:20px; }
 .speaker-info .my-social-links li { position:relative; bottom:0; list-style:none; display:inline-block; transition: bottom 0.3s ease; }
 .speaker-info .my-social-links li:hover { bottom:4px; }
@@ -53,6 +54,7 @@
 .footer-container .cities { display:block; height:278px; width:100%; background:url('../img/bg-header-transparent.png') repeat-x center center; }
 .footer-container .debug { margin:auto; width:1000px; }
 .footer-container .debug .coins { width:200px; height:51px; position:relative; background:url('../img/debug.png') no-repeat; }
+.directed-by:before { content:none; }
 
 @media (min-width: 0) and (max-width: 500px) {
 
