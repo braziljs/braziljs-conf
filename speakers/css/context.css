@@ -17,6 +17,7 @@
 .jean #speakers .speakers-wrapper .speaker { left:-20px; top:14px; height:477px; width:431px; background:url('../img/jean.png') no-repeat; }
 .zeno #speakers .speakers-wrapper .speaker { left:-20px; top:14px; height:477px; width:431px; background:url('../img/zeno.png') no-repeat; }
 .rey-josh #speakers .speakers-wrapper .speaker { left:-58px; top:35px; height:477px; width:431px; background:url('../img/rey-josh.png') no-repeat; } 
+.angelina #speakers .speakers-wrapper .speaker { left:-28px; top:-3px; height:460px; width:431px; background:url('../img/angelina.png') no-repeat; } 
 #speakers .speakers-wrapper .ballons { position:relative; top:-24px; left:270px; width:224px; height:212px; background:url('../img/ballons.png') no-repeat; }
 #speakers .speakers-wrapper .ballons .calling { position:absolute; font-size:16px; color:#FFF; width:127px; font-family:"Comic Sans MS", 'arial'; text-transform:uppercase; text-align:center; -webkit-transform:rotate(-22deg); -moz-transform:rotate(-22deg); -o-transform:rotate(-22deg); -ms-transform:rotate(-22deg); transform:rotate(-22deg); }
 #speakers .speakers-wrapper .ballons .calling.what { left:5px; top:22px; }
@@ -77,6 +78,7 @@
 	.jean #speakers .speakers-wrapper .speaker { left:-3px; top:66px; width:212px; background:url('../img/mobile/jean.png') no-repeat; }
 	.rey-josh #speakers .speakers-wrapper .speaker { left:-32px; top:68px; height:270px; width:358px; background:url('../img/mobile/rey-josh.png') no-repeat; }
 	.zeno #speakers .speakers-wrapper .speaker { left:-13px; top:51px; height:323px; width:227px; background:url('../img/mobile/zeno.png') no-repeat; }
+	.angelina #speakers .speakers-wrapper .speaker { left:-33px; top:45px; height:312px; width:244px; background:url('../img/mobile/angelina.png') no-repeat; }
 	#speakers .speakers-wrapper .logo { float:none; display:block; left:128px; top:-109px; width:178px; height:82px; background:url('../img/mobile/logo.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons { left:197px; top:147px; height:81px; width:97px; background:url('../img/mobile/ttl-general.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons .calling.what { display:none; }
