@@ -34,6 +34,7 @@
 .speaker-info .info-container .company { color:#FFF; font-size:20px; line-height:20px; font-weight:normal; font-family:'Arial'; }
 .speaker-info #social-networks { float:right; margin-bottom:0; padding:0; width:209px; }
 .speaker-info #social-networks .like-it { position:absolute; bottom:40px; right:-14px; width:84px; height:64px; background:url('../img/ico-general.png') 0 -49px no-repeat; }
+.LNG-en-us .speaker-info #social-networks .like-it { background:url('../img/ico-general-en.png') no-repeat; }
 .speaker-info .description { clear:both; margin:0; font-size:16px; line-height:20px; font-family:'Arial'; color:#898787; }
 .speaker-info .find-me { margin:42px 0 6px; color:#FFF; font-size:16px; font-weight:normal; }
 .speaker-info .my-social-links { margin:0 0 76px; padding:0; }
@@ -47,8 +48,9 @@
 .speaker-info .my-social-links li a.blog { background-position:-120px 0 } 
 .speaker-info .home-container { display:block; margin:auto; width:375px; height:71px; border-top:1px solid rgba(92,97,121,0.5); border-bottom:1px solid rgba(17,15,16,0.5); background-color:rgb(64,68,91); -webkit-box-shadow:3px 2px 4px rgba(0,0,0,0.65); box-shadow:3px 2px 4px rgba(0,0,0,0.65); }
 .speaker-info .home-container .home { display:block; margin:5px auto auto; width:330px; height:52px; background:url('../img/ttl-general.png') no-repeat; }
+.LNG-en-us .speaker-info .home-container .home { margin:16px 0 0 96px; background-image:url('../img/ttl-general-en.png'); }
 .speaker-info .home-container .inner-shadow { position:relative; display:block; top:-9px; width:100%; background-image:-webkit-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-moz-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-o-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:-ms-linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image:linear-gradient(50% 0% -90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); text-indent:-9999px; }
-
+.LNG-en-us .speaker-info .home-container .inner-shadow { top:-21px; }
 /* FOOTER */
 .footer-container { width:100%; height:275px; background-image:-moz-linear-gradient(50% 14% -180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image:linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); }
 .footer-container .gradient { position:relative; top:-285px; display:block; height:281px; width:100%; background-image: -webkit-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image: -moz-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image: -o-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image: -ms-linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); background-image:linear-gradient(-180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 100%); }
@@ -81,6 +83,7 @@
 	.angelina #speakers .speakers-wrapper .speaker { left:-33px; top:45px; height:312px; width:244px; background:url('../img/mobile/angelina.png') no-repeat; }
 	#speakers .speakers-wrapper .logo { float:none; display:block; left:128px; top:-109px; width:178px; height:82px; background:url('../img/mobile/logo.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons { left:197px; top:147px; height:81px; width:97px; background:url('../img/mobile/ttl-general.png') no-repeat; }
+	.LNG-en-us #speakers .speakers-wrapper .ballons { height:59px; background:url('../img/mobile/ttl-general-en.png') no-repeat; }
 	#speakers .speakers-wrapper .ballons .calling.what { display:none; }
 	#speakers .speakers-wrapper .ballons .calling.where { display:none; }	
 
@@ -96,7 +99,9 @@
 	.speaker-info .my-social-links { margin-bottom:50px; }
 	.speaker-info .home-container { margin-bottom:45px; width:255px; }
 	.speaker-info .home-container .home { width:207px; height:52px; background:url('../img/mobile/ttl-general.png') -7px -83px no-repeat; }
-
+	.LNG-en-us .speaker-info .home-container .home { margin-left:41px; width:182px; background:url('../img/mobile/ttl-general-en.png') -5px -70px no-repeat; }
+    .LNG-en-us .speaker-info .home-container .inner-shadow { top:-20px; }
+    
 	.footer-container { height:53px; }
 	.footer-container .cities,
 	.footer-container .gradient { display:none; }

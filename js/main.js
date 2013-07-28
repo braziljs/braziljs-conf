@@ -4,13 +4,32 @@ $(function () {
     'use strict';
 
     var PUBLIC = {},
-        PRIVATE = {};
+        PRIVATE = {},
+        internationalCountry = false;
+
+    PRIVATE.setLanguage = function () {
+
+        if ($('body').hasClass('LNG-en-us')) {
+
+            internationalCountry = true;
+
+        }
+
+    };
 
     PRIVATE.configRequirePaths = function () {
+        
+        var facebookURL = "http://connect.facebook.net/pt_BR/all.js#xfbml=1";
+        
+        if (internationalCountry) {
 
+            facebookURL = "http://connect.facebook.net/en_US/all.js#xfbml=1"
+
+        }
+            
         require.config({
             paths: {
-                "facebook" : "http://connect.facebook.net/pt_BR/all.js#xfbml=1",
+                "facebook" : facebookURL,
                 "twitter" : 'http://platform.twitter.com/widgets',
                 "g+" : 'http://apis.google.com/js/plusone',
                 "sequence" : 'jquery.sequence-min',
@@ -22,7 +41,10 @@ $(function () {
     };
 
     PUBLIC.init = function () {
-
+            
+        //We need to see if the user is in the pt-BR or en-US page
+        PRIVATE.setLanguage();
+        
         PRIVATE.configRequirePaths();
 
         PUBLIC.appendEvents();
@@ -392,8 +414,17 @@ $(function () {
 
                 createWindow : function () {
 
-                    var infoWindow = new google.maps.InfoWindow({
-                        content : "<strong>BrazilJS Conf 2013: </strong><br/>Saiba <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>como chegar</a> aqui!",
+                    var contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Saiba <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>como chegar</a> aqui!",
+                        infoWindow;
+
+                    if (internationalCountry) {
+
+                        contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Know <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>how to get</a> here!"
+
+                    }
+
+                    infoWindow = new google.maps.InfoWindow({
+                        content : contentString,
                         maxWidth : 400
                     });
 

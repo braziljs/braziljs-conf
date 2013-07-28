@@ -31,20 +31,22 @@
 		<meta property="fb:admins" content="1114477480" /> 
 		<meta property="fb:app_id" content="136223956547034" /> 
 		<meta property="og:site_name" content="BrazilJS Conference" />
-
+		
+        <link rel="alternate" hreflang="en-us" href="http//braziljs.com.br/en/" />
     </head>
     <body>
     	<div class="wrapper">
     		<span id="modal"></span>
     		<nav id="menu">
     			<span class="menu-switch ico-general">&nbsp;</span>
+    			<a class="language" href="//braziljs.com.br/en" title="Ir para a versão do site em inglês"><span class="ico-general ballon">EN</span></a>
     			<ul class="chapters-list">
     				<li class="speakers">
-    					<a href="#heroes" title="Ir para a área de palestrantes"><span class="ir ico-general sign">Palestrantes</span></a>
+    					<a href="#heroes" title="Ir para a seção dos palestrantes"><span class="ir ico-general sign">Palestrantes</span></a>
     					<span class="extended-menu">palestrantes</span>
     				</li>
     				<li class="schedule">
-    					<a href="#schedule" title="Ir para a área de programação"><span class="ir ico-general sign">Programação</span></a>
+    					<a href="#schedule" title="Ir para a programação do evento"><span class="ir ico-general sign">Programação</span></a>
     					<span class="extended-menu">programação</span>
     				</li>
     				<li class="local">
@@ -52,13 +54,17 @@
     					<span class="extended-menu">local</span>
     				</li>
     				<li class="ticket">
-    					<a href="#tickets" title="Ir para a área de inscrições"><span class="ir ico-general sign">Inscrições</span></a>
+    					<a href="#tickets" title="Ir para a seção de inscrições"><span class="ir ico-general sign">Inscrições</span></a>
     					<span class="extended-menu">inscrições</span>
     				</li>    	
     				<li class="manifest">
-    					<a href="#manifest" title="Ir para a área de do manifesto"><span class="ir ico-general sign">Manifesto</span></a>
+    					<a href="#manifest" title="Ir para o nosso manifesto"><span class="ir ico-general sign">Manifesto</span></a>
     					<span class="extended-menu">manifesto</span>
-    				</li>    	    							    				
+    				</li>
+                    <li class="sponsors">
+                        <a href="#sponsors" title="Ir para a seção dos nossos patrocinadores"><span class="ir ico-general sign">Patrocinadores</span></a>
+                        <span class="extended-menu">patrocinadores</span>
+                    </li>    				    	    							    				
     			</ul>
     		</nav>
     		<div id="speakers">
@@ -477,7 +483,7 @@
 											<a class="twitter ir ico-general" href="https://twitter.com/angustweets" title="Acesse o Twitter de Angus">Twitter</a>
 										</li>
 										<li class="blog">
-											<a class="blog ir ico-general" href="http://anguscroll.com/" title="Acesse o site de Angus" itemprop="url">anguscroll.com</a>
+											<a class="blog ir ico-general" href="http://anguscroll.com/" title="Acesse o site de Angus">anguscroll.com</a>
 										</li>
 									</ul>
 									<ul class="social-networks">
@@ -490,7 +496,7 @@
 									</ul>									
 								</div>																
 							</li>
-                            <li id="ray-josh">
+                            <li id="ray-josh" itemscope itemtype="http://schema.org/Person">
                                 <div class="portrait">
                                     <span class="photo">&nbsp;</span>
                                     <ul class="share">
@@ -501,9 +507,9 @@
                                 </div>
                                 <div class="speaker">
                                     <div class="info">
-                                        <h3 class="name">Josh Holmes</h3>
-                                        <em class="company">Microsoft</em>
-                                        <div class="information">
+                                        <h3 class="name" itemprop="name">Josh Holmes</h3>
+                                        <em class="company" itemprop="worksFor">Microsoft</em>
+                                        <div class="information" itemprop="description">
                                             <span class="spacer">&nbsp;</span>
                                                 <p>Josh, atualmente está empregado pela Microsoft como gerente no time do Internet Explorer.</p>
                                                 <p>Antes de se juntar a Microsoft em outubro de 2006, Josh era um consultor e trabalhou com uma gama de clientes, indo desde grandes empresas até companhias de menor tamanho.</p>
@@ -515,12 +521,12 @@
                                             <a class="github ir ico-general" href="https://github.com/joshholmes" title="Acesse o github de Josh Holmes">github</a>
                                         </li>
                                         <li class="twitter">
-                                            <a class="blog ir ico-general" href="http://www.joshholmes.com/blog/" title="Acesse o site pessoal de Josh Holmes">joshholmes.com</a>
+                                            <a class="blog ir ico-general" href="http://www.joshholmes.com/blog/" title="Acesse o site pessoal de Josh Holmes" itemprop="url">joshholmes.com</a>
                                         </li>
                                     </ul>                                   
                                 </div>                                                              
                             </li>
-                            <li id="angelina">
+                            <li id="angelina" itemscope itemtype="http://schema.org/Person">
                                 <div class="portrait">
                                     <span class="photo">&nbsp;</span>
                                     <ul class="share">
@@ -531,9 +537,9 @@
                                 </div>
                                 <div class="speaker">
                                     <div class="info">
-                                        <h3 class="name">Angelina Fabbro</h3>
-                                        <em class="company">mozilla</em>
-                                        <div class="information">
+                                        <h3 class="name" itemprop="name">Angelina Fabbro</h3>
+                                        <em class="company" itemprop="worksFor">mozilla</em>
+                                        <div class="information" itemprop="description">
                                             <span class="spacer">&nbsp;</span>
                                                 <p>Angelina trabalha na Mozilla no projeto Firefox OS como desenvolvedora e technical evangelist.</p>
                                                 <p>Antes disso, ela trabalhou na Steam Clock Software, e na faculdade cursou Cognitive Science na Simon Fraser University.</p>
@@ -820,8 +826,8 @@
                                         </div>
                                         <span class="expand ir ico-general">&nbsp;</span>
                                         <div class="about">
-                                            <p>Heroku's open-source buildpacks enable developers to develop and deploy apps in any language, including JavaScript</p>
-                                            <p>In this talk I'll discuss the tools and techniques I use to help let the open-source community determine the future of the Node buildpack.</p>                                            
+                                            <p>Os pacotes open source de buildpacks da Heroku permitem que desenvolvedores desenvolvam e executem o deploy de suas aplicações em qualquer linguagem, incluindo, obviamente, JavaScript.</p>
+                                            <p>Nesta palestra eu apresentarei algumas técnicas e ferramentas que utilizo para ajudar a comunidade Open Source a determinar o futuro do Node Buildpack.</p>                                            
                                         </div>
                                     </td>                                   
                                 </tr>
@@ -851,8 +857,8 @@
                                         </div>
                                         <span class="expand ir ico-general">&nbsp;</span>
                                         <div class="about">
-                                            <p>Learn about the vision behind Firefox OS, and the open web technologies available for building HTML5 apps, including WebAPIs and Web Activities.</p>
-                                            <p>We'll talk about the Boilerplate app and other tools designed to get you started developing HTML5 apps for Firefox OS and the open Web.</p>
+                                            <p>Aprenda mais sobre a visão por trás do FirefoxOS e sobre as tecnologias open web disponíveis hoje em dia para construir suas apps com HTML5, incluindo WebAPIs e Web Activities.</p>
+                                            <p>Vamos falar sobre a App Boilerplate e outras ferramentas desenvolvidas para ajuda-lo a começar a desenvolver suas web apps para FirefoxOS e para a web aberta!</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -865,9 +871,9 @@
                                         </div>
                                         <span class="expand ir ico-general">&nbsp;</span>
                                         <div class="about">
-                                            <p>So there are these pretty awesome Firefox OS phones out there and you might know that you are able to write applications for them using your trusty HTML, CSS, and JavaScript skills.</p>
-                                            <p>What you might not know is exactly where to start. How is building and shipping a mobile app different from a desktop web app? What kind of device APIs can you use to get at the hardware? What are important design considerations when building for a small touchscreen device?</p>
-                                            <p>This tutorial will walk you through building and app - live! Bring a copy of Firefox on your laptop with the Firefox OS Simulator plugin installed to participate fully, but it'll be fun just to watch too.</p>
+                                            <p>Então há estes lindos e maravilhosos aparelhos com FirefoxOS por aí, e você já deve saber que pode criar suas aplicações para eles utilizando suas habilidades nas conhecidas tecnologias HTML, CSS e JavaScript.</p>
+                                            <p>O que você pode não saber, é por onde exatamente começar! Como diferente é, criar e publicar uma webapp? Que tipos de APIs você pode usar para chegar até o hardware? Quais as considerações mais importantes de design, quando construindo sua webapp para aparelhos com telas touchscreen pequenas?</p>
+                                            <p>Neste tutorial, vamos construir passo-a-passo uma app, ao vivo! Mesmo que só assistindo, vai ser muito divertido! Traga em seu laptop o Firefox instalado com o plugin simulador do FirefoxOS caso queira participar construindo junto!</p>
                                         </div>
                                     </td>
                                 </tr>                                
@@ -945,8 +951,9 @@
                                         </div>
                                         <span class="expand ir ico-general">&nbsp;</span>
                                         <div class="about">
-                                            <p>JavaScript developers can now enjoy the power of concurrency through the recent Web Worker API.</p>
-                                            <p>In this session, we will cover in details how to make your code more responsive and efficient in a very simple way thanks to web workers. Say goodbye to UI locks and single threaded code, start leveraging web workers today!</p>
+                                            <p>Desenvolvedores JavaScript podem agora aproveitar do poder das concorrências através da nova API dos Web Workers.</p>
+                                            <p>Nesta palestra, vamos trabalhar em detalhes, como deixar seu código mais eficiente e responsivo em uma maneira bastante simples graças a web workers.</p> 
+                                            <p>Diga adeus para travamento de telas e códigos em threads únicas! Comece a usufruir das vantagens dos web workers hoje mesmo!</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -981,10 +988,10 @@
                                         </div>
                                         <span class="expand ir ico-general">&nbsp;</span>
                                         <div class="about">
-                                            <p>Computer programs are the most complicated things that humans make. They must be perfect, which is hard for us because humans are not perfect. Programming is thought to be a “head” activity, but there is a lot of “gut” involved.</p>
-                                            <p>Indeed, it may be the gut that gives us the insight necessary for solving hard problems. But gut messes us up when it come to matters of style.</p>
-                                            <p>The systems in our brains that make us vulnerable to advertising and propaganda also influence our programming styles. This talk looks systematically at the development of a programming style  that specifically improves the reliability of programs. The examples are given in JavaScript, a language with an uncommonly large number of bad parts, but the principles are applicable to all programming languages.</p
-                                        </div>
+                                            <p>Programas de computador são a coisa mais complicada que humanos são capases de fazer. Eles precisam ser perfeitos, o que é complicado para nós, já que humanos não são perfeitos!</p>
+                                            <p>Programar é considerado uma atividade mental, da cabeça...mas há muito trabalho para o corpo, para os instintos! Na verdade, são os instintos que devem nos dar o insight necessário para que resolvamos certos problemas!</p>
+                                            <p>Mas instintos podem nos deixar confusos quando o assunto é estilo. Os sistemas em nossos cérebros é que nos faz vulneráveis às propagandas, e também, que influencia nosso estilo de programar.</p>
+                                            <p>Esta palestra analisa sistematicamente o desenvolvimento de um estilo de programação que melhora especificamente a leitura de programas e código. Os exemplos serão dados em JavaScript, uma linguagem com um incomum grande número de partes ruins, mas os princípios são aplicáveis a qualquer linguagem de programação.</p>                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="event">
@@ -1103,16 +1110,17 @@
                                     <a href="https://github.com/" rel="external" title="saiba mais sobre o github" class="sponsor" rel="external"><span class="github sponsors-general">github</span></a>
                                 </li>
                                 <li>
-                                    <a href="//caelum.com.br" rel="external" title="Caelum - Ensino e Inovação" class="sponsor" rel="external"><span class="caelum sponsors-general">Caelum</span></a>
-                                </li>
+                                    <a href="//adobe.com" rel="external" title="Saiba mais sobre a Adobe" class="sponsor adobe" rel="external"><span class="sponsors-general">Adobe</span></a>
+                                </li>                                
                                 <li>
-                                    <a href="mailto:contato@braziljs.org" title="Quer ser um patrocinador? Fale conosco!" class="sponsor join-us">&nbsp;</a>
+                                    <a href="//caelum.com.br" rel="external" title="Caelum - Ensino e Inovação" class="sponsor" rel="external"><span class="caelum sponsors-general">Caelum</span></a>
                                 </li>                                
                                 <li>
                                     <a href="mailto:contato@braziljs.org" title="Quer ser um patrocinador? Fale conosco!" class="sponsor join-us">&nbsp;</a>                                    
                                 </li>                                
                             </ul>
                         </div>
+                        <p class="be-a-sponsor">Também deseja fazer parte da nossa história? Seja um patrocinador do #BrazilJS2013! <a href="mailto:contato@braziljs.org" title="participe você também!">Entre em contato!</a></p>                        
                         <div class="supporters educational">
                             <h3 class="ir ttl-general">Apoio Educacional:</h3>
                             <ul>
@@ -1126,9 +1134,9 @@
                                 <li><a href="//www.eventick.com.br" title="Eventick" class="eventick ir" rel="external">Eventick</a></li>
                                 <li><a href="//www.abradi-rs.com.br" title="ABRADI-RS" class="abradi ir" rel="external">ABRADI-RS</a></li>
                                 <li><a href="//www.casadocodigo.com.br" rel="external" title="Casa do código - livros para o programador" class="casa-do-codigo ir">Casa do código</a></li>
+                                <li><a href="//getupcloud.com/" rel="external" title="Getup - Grow in the cloud" class="get-up ir">Getup</a></li>
                             </ul>
-                        </div>
-                        <p class="be-a-sponsor">Também deseja fazer parte da nossa história? Seja um patrocinador do #BrazilJS2013! <a href="mailto:contato@braziljs.org" title="participe você também!">Entre em contato!</a></p>                        
+                        </div>                                                
                     </div>          				    
 				</section>
 				<section id="follow-us">
