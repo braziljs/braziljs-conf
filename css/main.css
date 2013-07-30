@@ -485,7 +485,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .squares li .sponsor.join-us { width:221px; background:url('../img/bg-join-us.png') no-repeat; }
 #sponsors .sponsors-wrapper .be-a-sponsor { margin:auto auto; padding-bottom:80px; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:120%; color:rgb(255,255,255); text-align:center; }
 #sponsors .sponsors-wrapper .be-a-sponsor a { color:rgb(255,204,0); text-decoration:none; }
-#sponsors .sponsors-wrapper .supporters { padding-bottom:100px; }
+#sponsors .sponsors-wrapper .supporters { display:inline-block; padding-bottom:100px; }
 #sponsors .sponsors-wrapper .supporters .ttl-general { height:14px; width:203px; background-position:0 -1632px; }
 .LNG-en-us #sponsors .sponsors-wrapper .supporters .ttl-general { width:238px; background-position:0 -1633px; }
 #sponsors .sponsors-wrapper .supporters.educational .ttl-general { width:199px; background-position:-220px -1632px; }
@@ -499,9 +499,10 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .supporters a.abradi { margin-top:13px; width:168px; height:38px; background-position:0 -223px; }
 #sponsors .sponsors-wrapper .supporters a.casa-do-codigo { margin-top:13px; width:130px; height:38px; background-position:0 -281px; }
 #sponsors .sponsors-wrapper .supporters a.get-up { margin-top:13px; width:102px; height:53px; background-position:0 -339px; }
+#sponsors .sponsors-wrapper .supporters a.treinaweb { margin-top:13px; width:118px; height:51px; background-position:0 -412px; }
 
 /* FOLLOW US */
-#follow-us { position:relative; clear:both; padding-top:60px; width:100%; background-color:#171314; } 
+#follow-us { position:relative; clear:both; padding-top:20px; width:100%; background-color:#171314; } 
 #follow-us .follow-us-container { position:relative; padding:70px 20px 0; margin:auto; width:980px; }
 #follow-us .follow-us-container .title { position:relative; margin:auto; width:438px; height:316px; background:url('../img/bg-twitter.png') no-repeat; z-index:2; }
 .LNG-en-us #follow-us .follow-us-container .title { background:url('../img/bg-twitter-en.png') no-repeat; }
@@ -803,6 +804,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .supporters a.casa-do-codigo { width:97px; height:29px; background-position:0 -183px; }
     #sponsors .sponsors-wrapper .supporters a.abradi { width:125px; height:29px; background-position:0 -144px; }
     #sponsors .sponsors-wrapper .supporters a.get-up { width:83px; height:43px; background-position:0 -222px; }
+    #sponsors .sponsors-wrapper .supporters a.treinaweb { width:81px; height:36px; background-position:0 -275px; }
     #sponsors .sponsors-wrapper .squares .sponsor-list .sponsor.adobe .sponsors-general { margin-top:37px; width:115px; height:27px; background-position:0 -292px; }
     #sponsors .sponsors-wrapper .be-a-sponsor { padding-bottom:40px; font-size:15px; }
     
