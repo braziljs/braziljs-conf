@@ -468,6 +468,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay { background-color:#FFF; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .sponsor a { margin-top:12px; width:202px; height:49px; background-position:0 -201px; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .about { color:#000; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .w3c { background-color:rgb(0,74,255); }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .w3c .sponsor a { margin:13px 0 0 -8px; width:209px; height:66px; background-position:0 -554px; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .w3c .about { color:#FFF; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .about { float:left; margin:0; width:670px; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:120%; color:rgb(255,255,255); text-align:left; }
 #sponsors .sponsors-wrapper .squares .sponsor-list { padding:0; }
 #sponsors .sponsors-wrapper .squares li { display:inline-block; margin-left:14px; }
@@ -500,6 +503,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .supporters a.casa-do-codigo { margin-top:13px; width:130px; height:38px; background-position:0 -281px; }
 #sponsors .sponsors-wrapper .supporters a.get-up { margin-top:13px; width:102px; height:53px; background-position:0 -339px; }
 #sponsors .sponsors-wrapper .supporters a.treinaweb { margin-top:13px; width:118px; height:51px; background-position:0 -412px; }
+#sponsors .sponsors-wrapper .supporters a.superplayer { margin-top:21px; width:180px; height:57px; background-position:0 -483px; }
 
 /* FOLLOW US */
 #follow-us { position:relative; clear:both; padding-top:20px; width:100%; background-color:#171314; } 
@@ -780,6 +784,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin:auto; height:26px; width:149px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin:auto; height:44px; width:149px; background-position:0 -36px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .sponsor a { margin:auto; width:135px; height:19px; background-position:0 -132px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .w3c .sponsor a { margin:auto; width:209px; height:66px; background-position:0 -330px; }
     #sponsors .sponsors-wrapper .squares .sponsor-list { padding:0; }
     #sponsors .sponsors-wrapper .squares li { margin-left:0; width:145px !important; }
     #sponsors .sponsors-wrapper .squares li:nth-last-child(even) { margin-right:5px; }
@@ -805,6 +810,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .supporters a.abradi { width:125px; height:29px; background-position:0 -144px; }
     #sponsors .sponsors-wrapper .supporters a.get-up { width:83px; height:43px; background-position:0 -222px; }
     #sponsors .sponsors-wrapper .supporters a.treinaweb { width:81px; height:36px; background-position:0 -275px; }
+    #sponsors .sponsors-wrapper .supporters a.superplayer { width:163px; height:29px; background-position:0 -321px; }
     #sponsors .sponsors-wrapper .squares .sponsor-list .sponsor.adobe .sponsors-general { margin-top:37px; width:115px; height:27px; background-position:0 -292px; }
     #sponsors .sponsors-wrapper .be-a-sponsor { padding-bottom:40px; font-size:15px; }
     
@@ -1094,6 +1100,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:60px; height:26px; width:147px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:31px; height:50px; width:149px; background-position:0 -40px; }
     #sponsors .sponsors-wrapper .sponsors .sponsor-list .liferay .sponsor a { margin-top:38px; width:135px; height:20px; background-position:0 -235px; }
+    #sponsors .sponsors-wrapper .sponsors .sponsor-list .w3c .sponsor a { margin:36px 0 0 -4px; width:149px; height:57px; background-position:0 -516px; }
     #sponsors .sponsors-wrapper .squares li { width:auto !important; }
     #sponsors .sponsors-wrapper .squares li a { width:167px; height:121px; }
     #sponsors .sponsors-wrapper .squares li .sponsor.join-us { width:168px; height:121px; background:url('../img/tablet/bg-join-us.png') no-repeat; }    
