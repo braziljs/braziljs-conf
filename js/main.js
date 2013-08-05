@@ -5,11 +5,12 @@ $(function () {
 
     var PUBLIC = {},
         PRIVATE = {},
-        internationalCountry = false;
+        internationalCountry = false,
+        body = $(document.body);
 
     PRIVATE.setLanguage = function () {
 
-        if ($('body').hasClass('LNG-en-us')) {
+        if (body.hasClass('LNG-en-us')) {
 
             internationalCountry = true;
 
@@ -18,15 +19,15 @@ $(function () {
     };
 
     PRIVATE.configRequirePaths = function () {
-        
+
         var facebookURL = "http://connect.facebook.net/pt_BR/all.js#xfbml=1";
-        
+
         if (internationalCountry) {
 
-            facebookURL = "http://connect.facebook.net/en_US/all.js#xfbml=1"
+            facebookURL = "http://connect.facebook.net/en_US/all.js#xfbml=1";
 
         }
-            
+
         require.config({
             paths: {
                 "facebook" : facebookURL,
@@ -41,10 +42,10 @@ $(function () {
     };
 
     PUBLIC.init = function () {
-            
+
         //We need to see if the user is in the pt-BR or en-US page
         PRIVATE.setLanguage();
-        
+
         PRIVATE.configRequirePaths();
 
         PUBLIC.appendEvents();
@@ -69,6 +70,9 @@ $(function () {
 
         //Load what the people are saying about our event!
         PUBLIC.loadTweets();
+
+        //Open all the rel="external" links in another tab
+        PUBLIC.externalLinks();
 
     };
 
@@ -335,7 +339,7 @@ $(function () {
                         overlayContainer.addClass('visuallyhidden');
 
                         //Removes the event attached to the body
-                        $('body').off('click.modalEvents');
+                        body.off('click.modalEvents');
 
                     }
 
@@ -343,7 +347,7 @@ $(function () {
 
                 bindBodyBehaviours : function () {
 
-                    $('body').on('click.modalEvents', function (evt) {
+                    body.on('click.modalEvents', function (evt) {
 
                         if ($(evt.target).is(modalContainer)) {
 
@@ -419,7 +423,7 @@ $(function () {
 
                     if (internationalCountry) {
 
-                        contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Know <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>how to get</a> here!"
+                        contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Know <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>how to get</a> here!";
 
                     }
 
@@ -451,6 +455,18 @@ $(function () {
         require(['twitterPostFetcher'], function () {
 
             window.twitterFetcher.fetch('347162232708276224', 'tweets-container', 3, true, true, false);
+
+        });
+
+    };
+
+    PUBLIC.externalLinks = function () {
+
+        body.on('click', 'a[rel="external"]', function () {
+
+            window.open($(this).attr('href'));
+
+            return false;
 
         });
 
