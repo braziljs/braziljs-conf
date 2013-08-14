@@ -522,6 +522,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .supporters a.kinghost { margin-top:30px; width:193px; height:26px; background-position:0 -545px; }
 #sponsors .sponsors-wrapper .supporters a.publisoft { margin-top:23px; width:170px; height:38px; background-position:0 -592px; }
 #sponsors .sponsors-wrapper .supporters a.qi { margin-top:12px; width:93px; height:67px; background-position:0 -650px; }
+#sponsors .sponsors-wrapper .supporters a.nyvra { margin:33px 0 10px; width:244px; height:35px; background-position:0 -737px; }
 
 /* FOLLOW US */
 #follow-us { position:relative; clear:both; padding-top:20px; width:100%; background-color:#171314; } 
@@ -838,6 +839,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .supporters a.kinghost { margin-top:15px; width:114px; height:17px; background-position:0 -360px; }
     #sponsors .sponsors-wrapper .supporters a.publisoft { margin-top:11px; width:110px; height:24px; background-position:0 -387px; }
     #sponsors .sponsors-wrapper .supporters a.qi { margin-top:11px; width:72px; height:52px; background-position:0 -421px; }
+    #sponsors .sponsors-wrapper .supporters a.nyvra { margin-right:30px; width:162px; height:24px; background-position:0 -483px; }
     #sponsors .sponsors-wrapper .squares .sponsor-list .sponsor.adobe .sponsors-general { margin-top:37px; width:115px; height:27px; background-position:0 -292px; }
     #sponsors .sponsors-wrapper .be-a-sponsor { padding-bottom:40px; font-size:15px; }
     
