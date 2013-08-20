@@ -524,6 +524,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 #sponsors .sponsors-wrapper .supporters a.qi { margin-top:12px; width:93px; height:67px; background-position:0 -650px; }
 #sponsors .sponsors-wrapper .supporters a.nyvra { margin:33px 0 10px; width:244px; height:35px; background-position:0 -737px; }
 #sponsors .sponsors-wrapper .supporters a.computech { margin-top:21px; width:182px; height:45px; background-position:0 -792px; }
+#sponsors .sponsors-wrapper .supporters a.revista-W { margin-top:9px; width:72px; height:72px; background-position:0 -857px; }
 
 /* FOLLOW US */
 #follow-us { position:relative; clear:both; padding-top:20px; width:100%; background-color:#171314; } 
@@ -842,6 +843,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     #sponsors .sponsors-wrapper .supporters a.qi { margin-top:11px; width:72px; height:52px; background-position:0 -421px; }
     #sponsors .sponsors-wrapper .supporters a.nyvra { margin-right:30px; width:162px; height:24px; background-position:0 -483px; }
     #sponsors .sponsors-wrapper .supporters a.computech { margin:0; width:142px; height:35px; background-position:0 -517px; }
+    #sponsors .sponsors-wrapper .supporters a.revista-W { margin:0; width:57px; height:58px; background-position:0 -572px; }
     #sponsors .sponsors-wrapper .squares .sponsor-list .sponsor.adobe .sponsors-general { margin-top:37px; width:115px; height:27px; background-position:0 -292px; }
     #sponsors .sponsors-wrapper .be-a-sponsor { padding-bottom:40px; font-size:15px; }
     
