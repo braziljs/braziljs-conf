@@ -9,7 +9,7 @@ $(function () {
         body = $(document.body),
         liveConf = {
             isLive : true,
-            liveURL : 'http://www.youtube.com/embed/DQTXOFgB6lU'
+            liveURL : 'http://www.youtube.com/embed/0VT5rpsHXL0'
         };
 
     PRIVATE.setLanguage = function () {
