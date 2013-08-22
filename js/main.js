@@ -8,7 +8,7 @@ $(function () {
         internationalCountry = false,
         body = $(document.body),
         liveConf = {
-            isLive : true,
+            isLive : false,
             liveURL : 'http://www.youtube.com/embed/0VT5rpsHXL0'
         };
 
