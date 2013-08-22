@@ -6,7 +6,11 @@ $(function () {
     var PUBLIC = {},
         PRIVATE = {},
         internationalCountry = false,
-        body = $(document.body);
+        body = $(document.body),
+        liveConf = {
+            isLive : true,
+            liveURL : 'http://www.youtube.com/embed/DQTXOFgB6lU'
+        };
 
     PRIVATE.setLanguage = function () {
 
@@ -49,6 +53,9 @@ $(function () {
         PRIVATE.configRequirePaths();
 
         PUBLIC.appendEvents();
+        
+        //Loads the live event youtube trasmission
+        PUBLIC.liveVideo();        
 
         //Loads the right speakers background
         PUBLIC.loadBackground();
@@ -67,7 +74,7 @@ $(function () {
 
         //Just load the facebook, gplus and twitter API´s
         PUBLIC.loadSocialAPPS();
-
+        
         //Load what the people are saying about our event!
         PUBLIC.loadTweets();
 
@@ -279,11 +286,12 @@ $(function () {
 
                 bindEvents : function () {
 
-                    var heroesContainer = $('#heroes').find('.heroes-list:first');
+                    var heroesContainer = $('#heroes').find('.heroes-list:first'),
+                        speakerIndex;
 
                     heroesContainer.find('li').on('click', 'a', function (evt) {
 
-                        var speakerIndex = $(this).attr('data-layer');
+                        speakerIndex = $(this).attr('data-layer');
 
                         evt.preventDefault();
 
@@ -418,12 +426,12 @@ $(function () {
 
                 createWindow : function () {
 
-                    var contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Saiba <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>como chegar</a> aqui!",
+                    var contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Saiba <a target='_blank' href='https://maps.google.com.br/maps?q=Teatro+do+Bourbon+Country&hl=pt-BR&ll=-30.023857,-51.161989&spn=0.008267,0.016512&sll=-14.25517,-53.925968&sspn=0.002875,0.008256&t=h&hq=Teatro+do+Bourbon+Country&radius=15000&z=17&iwloc=A'>como chegar</a> aqui!",
                         infoWindow;
 
                     if (internationalCountry) {
 
-                        contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Know <a target='_blank' href='https://maps.google.com.br/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-110&aq=&sll=-30.022226, -51.16244&sspn=0.003954,0.004823&t=h&ie=UTF8&hq=&hnear=Teatro do Bourbon Country, Avenida Túlio de Rose, 80 - Passo da Areia, Porto Alegre - RS, 91340-1100&view=satellite'>how to get</a> here!";
+                        contentString = "<strong>BrazilJS Conf 2013: </strong><br/>Know <a target='_blank' href='https://maps.google.com.br/maps?q=Teatro+do+Bourbon+Country&hl=pt-BR&ll=-30.023857,-51.161989&spn=0.008267,0.016512&sll=-14.25517,-53.925968&sspn=0.002875,0.008256&t=h&hq=Teatro+do+Bourbon+Country&radius=15000&z=17&iwloc=A'>how to get</a> here!";
 
                     }
 
@@ -469,6 +477,79 @@ $(function () {
             return false;
 
         });
+
+    };
+
+    PUBLIC.liveVideo = function () {
+
+        if (liveConf.isLive) {
+
+            var live = {},
+                liveContainer = $('#jsLiveVideo');
+
+            live = {
+
+                init : function () {
+
+                    //Apply layer and show the content
+                    body.addClass('is-live');
+                    liveContainer.removeClass('visuallyhidden');
+
+                    //load the video link
+                    live.loadVideo();
+
+                    //Bind the close events
+                    live.bindEvents();
+
+                },
+
+                loadVideo : function () {
+
+                    var iFrameContainer = liveContainer.find('iframe:first'),
+                        videoLink = liveContainer.find('a:first');
+
+                    //Load the containers with the current live link
+                    iFrameContainer.attr('src', liveConf.liveURL);
+                    videoLink.attr('href', liveConf.liveURL);
+
+                },
+
+                bindEvents : function () {
+
+                    var closeButton = liveContainer.find('.close:first');
+
+                    //Closes the live video
+                    closeButton.on('click', function () {
+
+                        live.closeModal();
+
+                    });
+
+                    //Also Closes the live video
+                    $(document).keyup(function (evt) {
+
+                        if (evt.keyCode === 27 && liveConf.isLive) {
+
+                            live.closeModal();
+
+                        }
+
+                    });
+
+                },
+
+                closeModal : function () {
+
+                    liveContainer.remove();
+                    body.removeClass('is-live');
+
+                }
+
+            };
+
+            return live.init();
+
+        }
 
     };
 

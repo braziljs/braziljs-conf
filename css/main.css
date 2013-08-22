@@ -132,7 +132,8 @@ body { background-color:#201C1D; }
 /* WRAPPERS */
 .wrapper { overflow:hidden; }
 #modal { position:fixed; -webkit-transition:background-color 0.5s ease; -moz-transition:background-color 0.5s ease; -o-transition:background-color 0.5s ease; -ms-transition:background-color 0.5s ease; transition:background-color 0.5s ease; z-index:30; }
-#modal.on  { width:100%; height:100%; background-color:rgba(32,28,29,0.9); }
+#modal.on,
+.is-live #modal { width:100%; height:100%; background-color:rgba(32,28,29,0.9); }
 
 /* NAVIGATION */
 #menu { position:fixed; left:0px; height:100%; width:60px; background-color:#1B1819; z-index:8; transition:left 0.7s ease; }
@@ -168,7 +169,7 @@ body { background-color:#201C1D; }
 /* HEADER */
 #main-wrapper { background-color:#201C1D; }
 .header-wrapper { margin:auto; width:1000px; height:56px; z-index:4; }
-.header-wrapper .keynote-container { position:relative; margin:auto; left:34px; top:-109px; width:396px; z-index:100; }
+.header-wrapper .keynote-container { position:relative; margin:auto; left:34px; top:-109px; width:396px; z-index:10; }
 .header-wrapper .keynote-container .title { position:relative; margin:auto; width:406px; height:186px; background:url('../img/BrazilJS-logo.png') no-repeat; z-index:3; }
 .header-wrapper .keynote-container .the-ruler { position:absolute; top:-342px; right:95px; width:262px; height:459px; background:url('../img/douglas.png') no-repeat; z-index:2; }
 .header-wrapper .keynote-container .info { position:absolute; top:-244px; right:-75px; padding:13px 15px 10px; width:209px; background-color:#000; color:#FFF; z-index:1; -webkit-transition:all 0.5s ease; -moz-transition:all 0.5s ease; -o-transition:all 0.5s ease; -ms-transition:all 0.5s ease; transition:all 0.5s ease; opacity:0 }
@@ -176,6 +177,13 @@ body { background-color:#201C1D; }
 .header-wrapper .keynote-container .info .name { display:block; margin-bottom:1px; font-size:15px; line-height:15px; }
 .header-wrapper .keynote-container .info .alias { display:block; margin-bottom:1px; font-size:13px; }
 .header-wrapper .keynote-container .info .company { display:block; font-size:11px; }
+
+/* LIVE */
+.live-modal { position:fixed; top:50%; left:50%; margin:-270px 0 0 -427px; width:854px; height:540px; z-index:200; }
+.live-modal .title { margin:0; font-size:40px; line-height:120%; color:rgb(219,110,14); text-align:left; text-shadow:5px 5px 0px rgb(0,0,0); font-family:bangers; letter-spacing:1px; }
+.live-modal .close { position:absolute; right:-10px; top:34px; width:22px; height:22px; background:url('../img/ico-live-video.png') no-repeat transparent; color:transparent; border:none; }
+.live-modal .watch,
+.live-modal .disclaimer { display:none; }
 
 /* SOCIAL CONTAINER */
 .social-wrapper { position:relative; top:-22px; float:left; margin-bottom:34px; padding-top:15px; height:174px; width:100%; background-color:#101012; }
@@ -601,6 +609,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 @media (min-width: 0) and (max-width: 767px) {
 	
 	#modal { display:none; }
+	.is-live #modal { display:block; }
 	
 	/* HELPERS */
 	.ico-general { display:block; background:url('../img/mobile/ico-general.png') no-repeat; }
@@ -659,6 +668,16 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	.LNG-en-us main .where { width:auto; }
 	main .where { float:none; display:inline-block; width:270px; margin:291px 0 0 21px; font-family:"Arial"; font-size:18px; font-weight:bold; letter-spacing:-1pt; line-height:130%; color:rgb(212,212,210); text-align:center; text-shadow:0px 3px 0px rgb(0,0,0); }
 	main .disclaimer { width:303px; font-family:Arial, Helvetica, sans-serif; font-size:9px; line-height:12px; color:rgba(255,255,255,0.6); text-align:center; }
+	
+    /* LIVE */
+    .live-modal { position:fixed; padding:33px 20px; top:50%; left:50%; margin:-172px 0 0 -150px; width:300px; height:355px; z-index:100000; background-color:#DA6D0D; }    
+    .live-modal .title { margin:0; font-size:35px; line-height:120%; color:rgb(255,255,255); text-align:left; text-shadow:5px 5px 0px rgb(0,0,0); font-family:bangers; letter-spacing:1px; }
+    .live-modal .close { position:absolute; right:-10px; top:-11px; width:22px; height:22px; background:url('../img/ico-live-video.png') no-repeat transparent; color:transparent; border:none; }
+    .live-modal .disclaimer { display:block; color:#FFF; font-size:14px; }
+    .live-modal .watch { position:relative; display:inline-block; margin:20px 0 0 6px; padding:16px 23px 10px; border-top:1px solid rgba(17,15,16,0.5); font-size:28px; font-family:bangers; text-decoration:none; background-color:#40445B; background:-webkit-linear-gradient(to top, rgba(56, 42, 36, 0.6), rgba(56, 42, 36, 0.01)) #40445B; background:-moz-linear-gradient(to top, rgba(56, 42, 36, 0.6), rgba(56, 42, 36, 0.01)) #40445B; background:-o-linear-gradient(to top, rgba(56, 42, 36, 0.6), rgba(56, 42, 36, 0.01)) #40445B; background:-ms-linear-gradient(to top, rgba(56, 42, 36, 0.6), rgba(56, 42, 36, 0.01)) #40445B; background:linear-gradient(to top, rgba(56, 42, 36, 0.6), rgba(56, 42, 36, 0.01)) #40445B; text-align:center; }
+    .live-modal .watch:after { content:''; position:absolute; bottom:-9px; left:0; width:238px; height:17px; background:url('../img/live-watch-shadow-mobile.png') no-repeat; z-index:-1; }
+    .live-modal .watch .message { text-shadow:0px 0px 10px rgba(0,0,0,0.2); color:rgba(255,255,255,0.85); }
+    .live-modal iframe { display:none; }	
 	
 	/* HEROES */
 	#heroes { margin-top:0; }
@@ -937,9 +956,9 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
     .LNG-en-us .ttl-general { display:block; background:url('../img/tablet/ttl-general-en.png') no-repeat; }	
 	
 	#modal { display:none; }    
+	.is-live #modal { display:block; }
 	
 	/* SPEAKERS */
-	#speakers {  }
 	#speakers .speakers-wrapper { width:768px; margin:auto; }
 	#speakers .speakers-wrapper .shadows { left:-149px; width:1023px; height:451px; }
 	#speakers .speakers-wrapper .shadows.theater-version { background:url('../img/tablet/shadows.jpg') no-repeat center center; }
@@ -961,6 +980,16 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	.LNG-en-us main .what { width:279px; }
 	main .where { width:300px; font-size:20px; }
 	.LNG-en-us main .where { width:345px; }
+	
+	/* LIVE */
+    .live-modal { position:fixed; padding:65px 70px; top:50%; left:50%; margin:-202px 0 0 -270px; width:541px; height:404px; z-index:100000; background-color:#DA6D0D; }    
+    .live-modal .title { margin:0; font-size:40px; line-height:120%; color:rgb(255,255,255); text-align:left; text-shadow:4px 4px 0px rgb(0,0,0); font-family:bangers; letter-spacing:1px; }
+    .live-modal .close { position:absolute; right:-10px; top:-11px; width:22px; height:22px; background:url('../img/ico-live-video.png') no-repeat transparent; color:transparent; border:none; }
+    .live-modal .disclaimer { display:block; color:#FFF; }
+    .live-modal .watch { position:relative; display:inline-block; margin:20px 0 0 6px; padding:16px 33px 10px; border-top:1px solid rgba(17,15,16,0.5); font-size:46px; font-family:bangers; text-decoration:none; background-color:#40445B; background:linear-gradient(to top, rgba(56, 42, 36, 0.6), rgba(56, 42, 36, 0.01)) #40445B; text-align:center; }
+    .live-modal .watch:after { content:''; position:absolute; bottom:-13px; left:0; width:391px; height:24px; background:url('../img/live-watch-shadow-tablet.png') no-repeat; z-index:-1;}
+    .live-modal .watch .message { text-shadow:0px 0px 10px rgba(0,0,0,0.2); color:rgba(255,255,255,0.85); }
+    .live-modal iframe { display:none; }
 	
 	/* HEROES */
 	#heroes .heroes-wrapper { padding:0 20px; width:768px; }
@@ -1062,7 +1091,7 @@ main .where { float:left; width:432px; font-size:28px; font-weight:bold; letter-
 	#schedule .schedule-wrapper .burst { display:none; } 
 	#schedule table caption { margin-bottom:19px; font-size:24px; }
 	#schedule table caption .weekday { margin-top:8px; font-size:16px; }
-	#schedule table { width:354px; }
+	#schedule table { margin-right:18px; width:354px; }
 	#schedule table.friday { margin-right:0; }
 	#schedule table tbody td .info-wrapper { width:245px; }
 	#schedule table tbody td.speaker { padding-left:30px; }
