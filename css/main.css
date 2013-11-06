@@ -148,7 +148,7 @@ body { background-color:#201C1D; }
 #menu .chapters-list { margin:0; padding:0; position:relative; top:25%; list-style:none; }
 #menu .chapters-list li { position:relative; display:block; border-bottom:1px solid #464B4D; }
 #menu .chapters-list li:first-child { border-top:1px solid #464B4D; }
-#menu .chapters-list li a { position:relative; display:block; width:60px; height:62px;  }
+#menu .chapters-list li a { position:relative; display:block; width:60px; height:62px; }
 #menu .chapters-list a:focus,
 #menu .chapters-list a:hover { background-color:rgb(41,38,39); }
 #menu .chapters-list li a .sign { position:absolute; left:14px; bottom:18px; width:30px; height:22px; }
@@ -160,8 +160,11 @@ body { background-color:#201C1D; }
 #menu .chapters-list li.manifest a .sign { bottom:17px; left:17px; width:21px; height:26px; background-position:-200px -592px; }
 #menu .chapters-list li.sponsors a .sign { bottom:18px; left:4px; width:51px; height:22px; background-position:-246px -592px; }
 #menu .chapters-list li .extended-menu { position:absolute; left:80px; top:0; opacity:0; padding:22px 25px 20px; transition:all 0.5s ease; background-color:#DB6E0E; color:#FFF; font-size:16px; font-weight:bold; text-transform:uppercase; white-space:nowrap; pointer-events:none; }
+.lt-ie9 #menu .chapters-list li .extended-menu { display:none; }
 #menu .chapters-list a:hover + .extended-menu, 
 #menu .chapters-list a:focus + .extended-menu { opacity:1; left:60px; }
+.lt-ie9 #menu .chapters-list a:hover + .extended-menu, 
+.lt-ie9 #menu .chapters-list a:focus + .extended-menu { display:block; }
 #menu .chapters-list li .extended-menu:before { content:''; position:absolute; left:-7px; width:14px; height:14px; background:url('../img/ico-general.png') 0 -637px no-repeat; }
 
 /* SPEAKERS */
@@ -203,7 +206,7 @@ body { background-color:#201C1D; }
 /* MAIN CONTENT */
 main { margin:auto; width:980px; clear:both; text-align:center; }
 .LNG-en-us main { padding-left:96px; }
-main .what { display:inline-block; margin-right:25px; width:378px; font-size:30px; font-weight:900; letter-spacing:-1pt; line-height:120%; color:rgb(184,30,25); text-align:right; text-shadow:0px 5px 0px rgba(0,0,0,0.65); text-transform:uppercase; }
+main .what { display:inline-block; margin-right:25px; width:378px; font-size:30px; font-weight:900; letter-spacing:-1pt; line-height:120%; color:rgb(225,43,38); text-align:right; text-shadow:0px 5px 0px rgba(0,0,0,0.65); text-transform:uppercase; }
 .LNG-en-us main .what { width:419px; }
 main .where { display:inline-block; width:432px; font-size:28px; font-weight:bold; letter-spacing:-1pt; line-height:130%; color:rgb(212,212,210); text-align:left; text-shadow:0px 5px 0px rgba(0,0,0,0.65); }
 .LNG-en-us main .where { width:435px; }
@@ -467,19 +470,19 @@ main .where { display:inline-block; width:432px; font-size:28px; font-weight:bol
 #schedule .schedule-wrapper .burst { position:absolute; top:-156px; left:-96px; display:block; width:1280px; height:530px; background:url('../img/bg-schedule.png') no-repeat; }
 #schedule .schedule-wrapper .thunder { position:absolute; top:-41px; left:-2px; display:block; width:997px; height:241px; background:url('../img/thunder.png') no-repeat; }
 #schedule table { margin-right:19px; width:460px; float:left; }
-#schedule table caption { margin-bottom:38px; font-family:"Arial Black", Gadget, sans-serif; font-size:40px; font-weight:900; text-align:left; line-height:100%; color:rgb(184,30,25); text-shadow:0px 3px 0px rgb(0,0,0); }
-#schedule table caption .weekday { display:block; font-family:"Arial Black", Gadget, sans-serif; font-size:20px; font-weight:900; line-height:120%; color:rgb(32,28,29); text-align:left; text-shadow:-2px -2px 0 rgb(162,20,18), 2px -2px 0 rgb(162,20,18), -2px 2px 0 rgb(162,20,18), 2px 2px 0 rgb(162,20,18); }
+#schedule table caption { margin-bottom:38px; font-family:"Arial Black", Gadget, sans-serif; font-size:40px; font-weight:900; text-align:left; line-height:100%; color:rgb(225,43,38); text-shadow:0px 3px 0px rgb(0,0,0); }
+#schedule table caption .weekday { display:block; font-family:"Arial Black", Gadget, sans-serif; font-size:20px; font-weight:900; line-height:120%; color:rgb(32,28,29); text-align:left; text-shadow:-2px -2px 0 rgb(225,43,38), 2px -2px 0 rgb(225,43,38), -2px 2px 0 rgb(225,43,38), 2px 2px 0 rgb(225,43,38); }
 #schedule table tbody { vertical-align:top; }
-#schedule table tbody td.hour { font-size:16px; color:rgb(68,68,68) !important; }
+#schedule table tbody td.hour { font-size:16px; color:rgb(174,174,174) !important; }
 #schedule table tbody tr { padding:10px; border-top:1px solid #000; border-bottom:1px solid #000 }
 #schedule table tbody tr.event { background:url('../img/bg-table.png') repeat-x; }
-#schedule table tbody tr.event td { font-size:16px; color:rgb(135,133,133); }
+#schedule table tbody tr.event td { font-size:16px; color:rgb(174,174,174); }
 #schedule table tbody tr.event td.speaker { font-style:italic; }
 #schedule table tbody td { padding:15px 0 15px 15px; }
 #schedule table tbody td.speaker { padding:15px 0 0 30px; }
 #schedule table tbody td .info-wrapper { margin-bottom:20px; float:left; width:300px; }
 #schedule table tbody td .name { font-size:16px; color:rgb(248,204,95); text-transform:uppercase; }
-#schedule table tbody td .speak { display:block; color:rgb(121,121,121); font-weight:bold; }
+#schedule table tbody td .speak { display:block; color:rgb(173,173,173); font-weight:bold; }
 #schedule table tbody td .speak:hover,
 #schedule table tbody td .speak:focus { opacity:.7; } 
 #schedule table tbody td .expand { float:right; width:20px; height:20px; background-position:0 -242px; cursor:pointer; transition:all 1s ease; color:transparent; }
@@ -490,7 +493,7 @@ main .where { display:inline-block; width:432px; font-size:28px; font-weight:bol
 #schedule table tbody td .about:before { content:''; background:url('../img/ico-general.png') 0 -283px no-repeat; margin-left:221px; width:16px; height:7px; display:block; }
 #schedule table tbody td .expand.active + .about { max-height:600px; -webkit-transition:all ease 1s; -moz-transition:all ease 1s; -o-transition:all ease 1s; -ms-transition:all ease 1s; transition:all ease 1s; } 
 #schedule table tbody td .about p:first-child { padding:11px 13px; }
-#schedule table tbody td .about p { margin:0; padding:0 13px 13px; font-size:14px; color:rgb(134,133,133); }
+#schedule table tbody td .about p { margin:0; padding:0 13px 13px; font-size:14px; color:rgb(172,172,172); }
 .mozilla-hackday { position:relative; clear:both; float:left; margin-top:85px; padding-bottom:25px; width:100%; background-color:rgb(0,77,147); }
 .mozilla-hackday:after { content:''; position:absolute; bottom:0; right:0; width:12px; height:10px; background:url('../img/bg-hackday.png') no-repeat; }
 .mozilla-hackday .logo { position:absolute; top:-50px; left:-40px; margin:0; width:445px; height:251px; background:url('../img/mozilla.svg') no-repeat; pointer-events:none; }
@@ -570,7 +573,7 @@ main .where { display:inline-block; width:432px; font-size:28px; font-weight:bol
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor:hover,
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor:focus { opacity:.7; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .sponsor .sponsors-general { display:block; background:url('../img/sponsors.png') no-repeat; text-indent:-9999px; }
-#sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry { background-color:#96B800; }
+#sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry { background-color:#677A0E; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .blackberry .sponsor a { margin-top:36px; width:201px; height:36px; background-position:0 0; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla { background-color:#C13832; }
 #sponsors .sponsors-wrapper .sponsors .sponsor-list .mozilla .sponsor a { margin-top:16px; width:202px; height:60px; background-position:0 -56px; }
