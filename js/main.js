@@ -9,7 +9,7 @@ $(function () {
         body = $(document.body),
         liveConf = {
             isLive : false,
-            liveURL : 'http://www.youtube.com/embed/0VT5rpsHXL0'
+            liveURL : 'http://www.youtube.com/embed/TuwH-oo_UpQ'
         };
 
     PRIVATE.setLanguage = function () {
@@ -53,9 +53,6 @@ $(function () {
         PRIVATE.configRequirePaths();
 
         PUBLIC.appendEvents();
-        
-        //Loads the live event youtube trasmission
-        PUBLIC.liveVideo();        
 
         //Loads the right speakers background
         PUBLIC.loadBackground();
@@ -74,12 +71,9 @@ $(function () {
 
         //Just load the facebook, gplus and twitter API´s
         PUBLIC.loadSocialAPPS();
-        
+
         //Load what the people are saying about our event!
         PUBLIC.loadTweets();
-
-        //Open all the rel="external" links in another tab
-        PUBLIC.externalLinks();
 
     };
 
@@ -204,8 +198,6 @@ $(function () {
                 //Bind Links Scroll Animation
                 menuItens.on('click', 'a', function (evt) {
 
-                    evt.preventDefault();
-
                     menu.goToSelectedAnchor($(this).attr('href'));
 
                 });
@@ -221,6 +213,8 @@ $(function () {
                     scrollTop: $(anchor).offset().top - 70
 
                 }, 1000);
+                
+                $(anchor).attr('tabindex', 0);
 
             }
 
@@ -237,7 +231,7 @@ $(function () {
 
         tablesContainer.each(function () {
 
-            $(this).find('.expand').click(function () {
+            $(this).find('.expand').on('click', function () {
 
                 $(this).toggleClass('active');
 
@@ -463,18 +457,6 @@ $(function () {
         require(['twitterPostFetcher'], function () {
 
             window.twitterFetcher.fetch('347162232708276224', 'tweets-container', 3, true, true, false);
-
-        });
-
-    };
-
-    PUBLIC.externalLinks = function () {
-
-        body.on('click', 'a[rel="external"]', function () {
-
-            window.open($(this).attr('href'));
-
-            return false;
 
         });
 
