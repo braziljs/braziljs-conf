@@ -1,0 +1,81 @@
+.sponsors-section {
+	position:relative; @include rem(margin-top, 100px); @include rem(padding-top, 100px); background-color:rgb(228,227,212);
+	@include breakpoint(small) {
+		margin-top:0; @include rem(padding-top, 50px);
+	}
+	&:before {
+		content:''; position:absolute; bottom:100%; width:100%; height:134px; background:url('../img/backgrounds/bg-sponsors.png') repeat-x rgb(50,99,100);
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+}
+
+/* TEXTS */
+.section-title--sponsors {
+	position:relative; display:inline-block; @include rem(margin-bottom, 45px); color:rgba(0,0,0,0.3);
+	&:after {
+		content:''; position:absolute; top:-45px; right:-85px; width:161px; height:151px; background:url('../img/backgrounds/bg-title-sponsors.png') no-repeat;
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 30px);
+	}
+}
+.default-text--sponsors { margin-bottom:14px; @include rem(font-size, 22px); color:rgba(33,33,33,.7); }
+.default-paragraph--sponsors { min-height:200px; @include rem(padding-top, 35px); border-top:2px solid rgba(0,0,0,.2); @include rem(font-size, 15px); color:rgb(255,255,255); line-height:120%; }
+
+/* SPONSORS */
+.sponsors-list { @include rem(margin-bottom, 40px); }
+.sponsor-container {
+	@include rem(padding, 0 15px 55px); @include rem(margin-bottom, 20px); background-color:rgb(177,68,60); border:5px solid rgb(188,178,149); transition:opacity ease .2s;
+	@include breakpoint(small) {
+		@include rem(padding-bottom, 15px); @include rem(margin-bottom, 10px);
+	}
+	&:hover, &:focus { opacity:.7; }
+}
+.sponsor-logo-container { position:relative; height:156px; text-align:center; display:flex; align-items:center; justify-content:center; }
+.sponsor-container--gold {
+	.sponsor-logo-container { height:149px; }
+	.default-paragraph--sponsors {
+		height:276px; color:rgb(32,32,32);
+		@include breakpoint(desktop) {
+			height:326px;
+		}
+		@include breakpoint(small) {
+			height:auto; min-height:130px;
+		}
+	}
+}
+.sponsor-container--bronze {
+	padding:0; height:160px; vertical-align:middle; display:flex; align-items:center; justify-content:center;
+	@include breakpoint(desktop) {
+		height:121px;
+	}
+}
+.sponsor-container--be-a-sponsor { background-color:rgb(255,255,255); }
+.be-a-sponsor-container { @include rem(padding, 16px 14px 15px 17px); box-shadow:0 0 0 5px rgb(188,178,149), 0 0 0 8px white, 0 0 0 10px rgb(188,178,149); border-radius:50%; }
+.be-a-sponsor-container__star-icon { display:block; width:57px; height:54px; background:url('../img/svg/star.svg') no-repeat; text-indent:-9999px; }
+
+/* BE A SPONSOR */
+.contact-us-container {
+	@include rem(margin-bottom, 60px); text-align:center;
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 40px);
+	}
+}
+.default-paragraph--be-a-sponsor {
+	display:inline-block; @include rem(font-size, 17px); color:rgb(31,31,31);
+	@include breakpoint(desktop) {
+		display:block; margin:auto; @include rem(margin-bottom, 5px); width:476px;
+	}
+	@include breakpoint(small) {
+		width:auto; @include rem(margin-bottom, 15px);
+	}
+}
+.default-link--contact-us {
+	@include rem(padding, 16px 19px 10px); color:rgb(228,227,212); background-color:rgb(33,33,33);
+	&:hover, &:focus { background-color:rgb(228,227,212); color:rgb(33,33,33); }
+}

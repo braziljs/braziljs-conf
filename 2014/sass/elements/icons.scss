@@ -1,0 +1,76 @@
+  $flag-australia-x: 0px;
+  $flag-australia-y: 0px;
+  $flag-australia-offset-x: 0px;
+  $flag-australia-offset-y: 0px;
+  $flag-australia-width: 45px;
+  $flag-australia-height: 90px;
+  $flag-australia-total-width: 45px;
+  $flag-australia-total-height: 490px;
+  $flag-australia-image: '../img/sprite.png';
+  $flag-australia: 0px 0px 0px 0px 45px 90px 45px 490px '../img/sprite.png';
+  $flag-brazil-x: 0px;
+  $flag-brazil-y: 100px;
+  $flag-brazil-offset-x: 0px;
+  $flag-brazil-offset-y: -100px;
+  $flag-brazil-width: 45px;
+  $flag-brazil-height: 90px;
+  $flag-brazil-total-width: 45px;
+  $flag-brazil-total-height: 490px;
+  $flag-brazil-image: '../img/sprite.png';
+  $flag-brazil: 0px 100px 0px -100px 45px 90px 45px 490px '../img/sprite.png';
+  $flag-germany-x: 0px;
+  $flag-germany-y: 200px;
+  $flag-germany-offset-x: 0px;
+  $flag-germany-offset-y: -200px;
+  $flag-germany-width: 45px;
+  $flag-germany-height: 90px;
+  $flag-germany-total-width: 45px;
+  $flag-germany-total-height: 490px;
+  $flag-germany-image: '../img/sprite.png';
+  $flag-germany: 0px 200px 0px -200px 45px 90px 45px 490px '../img/sprite.png';
+  $flag-spain-x: 0px;
+  $flag-spain-y: 300px;
+  $flag-spain-offset-x: 0px;
+  $flag-spain-offset-y: -300px;
+  $flag-spain-width: 45px;
+  $flag-spain-height: 90px;
+  $flag-spain-total-width: 45px;
+  $flag-spain-total-height: 490px;
+  $flag-spain-image: '../img/sprite.png';
+  $flag-spain: 0px 300px 0px -300px 45px 90px 45px 490px '../img/sprite.png';
+  $flag-usa-x: 0px;
+  $flag-usa-y: 400px;
+  $flag-usa-offset-x: 0px;
+  $flag-usa-offset-y: -400px;
+  $flag-usa-width: 45px;
+  $flag-usa-height: 90px;
+  $flag-usa-total-width: 45px;
+  $flag-usa-total-height: 490px;
+  $flag-usa-image: '../img/sprite.png';
+  $flag-usa: 0px 400px 0px -400px 45px 90px 45px 490px '../img/sprite.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }

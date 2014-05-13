@@ -1,0 +1,96 @@
+.tickets-section {
+	//@include rem(padding, 125px 0 190px 0); background-color:rgb(231,184,73);
+	@include rem(padding, 60px 0 190px 0); background-color:rgb(231,184,73);
+	@include breakpoint(small) {
+		@include rem(padding, 55px 0 20px 0);
+	}
+}
+
+/* TEXTS */
+.section-title--tickets {
+	position:relative; display:inline-block; @include rem(margin-bottom, 40px); color:rgb(93,78,45);
+	&:after {
+		content:''; position:absolute; top:-45px; right:-70px; width:145px; height:150px; background:url('../img/backgrounds/bg-title-tickets.png') no-repeat;
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 20px);
+	}
+}
+.default-paragraph--tickets { @include rem(margin-bottom, 20px); }
+
+/* BUY NOW TICKET */
+.buy-ticket-container {
+	position:relative; display:block; @include rem(margin-top, 60px); z-index:1;
+	@include breakpoint(small) {
+		@include rem(margin-top, 30px); text-align:center;
+	}
+	&:hover, &:focus {
+		.ticket-user-container { transform:rotate(10deg); transform-origin:bottom left; transition:all ease .4s; }
+	}
+}
+
+.ticket-container { color:rgb(255,255,255); }
+.ticket-info-container {
+	position:relative; display:inline-block; @include rem(padding, 32px 50px 0 70px); width:288px; height:154px; background:url('../img/backgrounds/bg-ticket-container.png') no-repeat; color:rgb(255,255,255);
+	@include breakpoint(desktop) {
+		@include rem(padding, 32px 30px 0 50px); width:248px; background:url('../img/backgrounds/bg-ticket-container-tablet.png') no-repeat;
+	}
+	@include breakpoint(small) {
+		background-image:none; padding:0; margin:auto; text-align:center; font-weight:bold;
+	}
+	&:before {
+		content:''; position:absolute; top:0; left:0; width:370px; height:269px; background:url('../img/backgrounds/bg-ticket-shadow.png') no-repeat; z-index:-1; pointer-events:none;
+		@include breakpoint(desktop) {
+			width:320px;
+		}
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+}
+.ticket-info-container__name {
+	margin-bottom:4px; font-family:$primaryParagraph; @include rem(font-size, 14px); color:rgb(255,255,255); text-transform:uppercase;
+	@include breakpoint(small) {
+		color:rgb(32,32,32);
+	}
+}
+.ticket-info-container__call-to-action {
+	display:block; color:rgb(255,255,255);
+	@include breakpoint(small) {
+		@include rem(padding, 28px 41px 18px); margin:5px 0 20px; border:none; @include rem(font-size, 30px); line-height:.5; color:rgb(228,227,212); border-radius:29px; background-color:rgb(33,33,33);
+	}
+}
+.ticket-price-container {
+	display:block; margin-top:-11px;
+	@include breakpoint(small) {
+		color:rgb(32,32,32);
+	}
+}
+.ticket-price-container__version {
+	margin-right:30px; text-transform:uppercase;
+	@include breakpoint(small) {
+		@include rem(font-size, 14px);
+	}
+}
+.ticket-price-container__price {
+	float:right; font-weight:normal;
+	@include breakpoint(small) {
+		float:none;
+	}
+}
+
+.ticket-user-container {
+	vertical-align:top; display:inline-block; margin:-2px 0 0 -7px; padding-top:52px; width:174px; height:156px; background:url('../img/backgrounds/bg-ticket-user.png') no-repeat; transition:all ease .4s; transform:translateZ(0);
+	@include breakpoint(desktop) {
+		position:relative; margin-top:0; width:103px; height:154px; background:url('../img/backgrounds/bg-ticket-user-tablet.png') no-repeat; z-index:1;
+	}
+	@include breakpoint(small) {
+		display:none;
+	}
+}
+.ticket-user-container__info { display:inline-block; transform:rotate(-90deg); }
+.ticket-user-container__version { display:block; margin-bottom:10px; @include rem(font-size, 13px); color:rgb(255,255,255); text-transform:uppercase; }
+.ticket-user-container__price { display:block; @include rem(font-size, 35px); font-family:$primaryFont; color:rgba(0,0,0,0.5); line-height:80%; }

@@ -1,0 +1,11 @@
+//Normal Texts
+.default-text { margin:0; font-family:$primaryFont; @include rem(font-size, 30px); line-height:1; color:rgb(33,33,33); font-weight:normal; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.default-paragraph { margin:0; font-family:$primaryParagraph; @include rem(font-size, 16px); line-height:130%; color:rgb(31,31,31); }
+
+//Section Titles
+.section-title {
+	margin:0; font-family:$primaryFont; @include rem(font-size, 60px); line-height:1; color:rgb(33,33,33); font-weight:normal; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+	@include breakpoint(small) {
+		@include rem(font-size, 40px);
+	}
+}

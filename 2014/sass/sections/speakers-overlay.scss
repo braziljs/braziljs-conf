@@ -1,0 +1,174 @@
+//Layer container
+.speakers-overlay-container {
+	position:fixed; top:50%; left:50%; @include rem(margin, -225px 0 0 -447px); @include rem(width, 892px); @include rem(height, 459px); z-index:100;
+	&:before { content: ""; display:block; position:fixed; top:0; left: 0; height:100%; width:100%; background-color:rgba(0,0,0,.9); z-index:-1; }
+	@include breakpoint (desktop) {
+		//width:700px; margin-left:-330px;
+		//.speaker-info__name { font-size:36px; }
+		width:100%; height:100%; height:100%; top:0; left:0; margin:0; border:none;
+
+	}
+}
+.layer-active { overflow:hidden; }
+.layer-active .speakers-overlay-container { display:block; }
+.sequence-canvas {
+	border:5px solid white; height:100%; background:url('../img/backgrounds/bg-stack.jpg') no-repeat; box-shadow:0 1px 1px rgba(0,0,0,0.15), 0 10px 0 -5px #eee, 0 10px 1px -4px rgba(0,0,0,0.15), 0 20px 0 -10px #eee, 0 20px 1px -9px rgba(0,0,0,0.15);
+	@include breakpoint(desktop) {
+		border:none; box-shadow:none; background:none;
+	}
+}
+.overlay-item {
+	position:absolute; top:0; left:0; width:100%; height:100%; border:5px solid white; color:transparent; background-size:cover; background-repeat:none;
+ 	transform-origin: -30% 30%;	transform-style: preserve-3d; transform: translateZ(0); transition-timing-function: cubic-bezier(0.21, 0.99, 0, 1); transition-duration: 1200ms;
+	@include breakpoint(desktop) {
+		border:none; transform:none;
+	}
+
+	@include breakpoint(small) {
+		background-image:none !important; backface-visibility:visible;
+	}
+}
+.animate-in.overlay-item {
+
+	@include breakpoint(small) {
+		transform:none;
+	}
+}
+.animate-out.overlay-item {
+ 	transform: rotate(60deg) translate3d(0, 500px, 0); transition-timing-function: ease-out,cubic-bezier(0.51, 0.29, 0.34, 1); transition-duration: 200ms,500ms; transition-property: opacity,transform; opacity: 0;
+	@include breakpoint(small) {
+		transform:none;
+	}
+}
+
+.overlay-item--cabello {
+	background-image:url('../img/speakers/cabello-card.jpg');
+	@include breakpoint(desktop) {
+		background-image:url('../img/speakers/bg-cabello-medium.jpg');
+	}
+	@include breakpoint(small) {
+		background-image:none; background-color:rgb(140,1,0);
+	}
+}
+.overlay-item--dimitri {
+	background-image:url('../img/speakers/dmitri-card.jpg');
+	@include breakpoint(desktop) {
+		background-image:url('../img/speakers/bg-dmitri-medium.jpg');
+	}
+	@include breakpoint(small) {
+		background-image:none;	background-color:rgb(140,1,0);
+	}
+	.speaker-info { background-color:rgba(16,18,43,.85) }
+}
+.overlay-item--betao { background-image:url('../img/speakers/bg-beto.jpg'); background-position:50% 30%; }
+.overlay-item--jorn {
+	background-image:url('../img/speakers/jorn-card.jpg');
+	@include breakpoint(desktop) {
+		background-image:url('../img/speakers/bg-jorn-medium.jpg');
+	}
+	@include breakpoint(small) {
+		background-image:none; background-color:rgb(0,0,0);
+	}
+	.speaker-info { background-color:rgba(0,0,0,0.85); }
+}
+.overlay-item--max {
+	background-image:url('../img/speakers/max-card.jpg');
+	@include breakpoint(desktop) {
+		background-image:url('../img/speakers/bg-max-medium.jpg');
+	}
+	@include breakpoint(small) {
+		background-image:none; background-color:rgb(38,37,100);
+	}
+	.speaker-info { background-color:rgba(14,20,43,.85); }
+}
+.overlay-item--miller {
+	background-image:url('../img/speakers/miller-card.jpg');
+	@include breakpoint(desktop) {
+		background-image:url('../img/speakers/bg-miller-medium.jpg');
+	}
+	@include breakpoint(small) {
+		background-image:none; background-color:rgb(45,82,20);
+	}
+	.speaker-info { background-color:rgba(24,62,139,.85); }
+}
+.overlay-item--ricardo {
+	background-image:url('../img/speakers/ricardo-card.jpg');
+	@include breakpoint(desktop) {
+		background-image:url('../img/speakers/bg-ricardo-medium.jpg');
+	}
+	@include breakpoint(small) {
+		background-image:none; background-color:rgb(45,82,20);
+	}
+	.speaker-info { background-color:rgba(24,62,139,.85); }
+}
+
+//Buttons
+.overlay-button {
+	position:absolute; top:50%; width:15px; height:20px; background:url('../img/svg/overlay-arrow.svg') no-repeat; z-index:100000; transition:all ease .3s;
+	&:hover, &:focus { opacity:.7; }
+	@include breakpoint(medium) {
+		height:32px; width:23px; background:url('../img/svg/overlay-arrow-medium.svg') no-repeat;
+	}
+	@include breakpoint(small) {
+		top:2.5%;
+	}
+}
+.overlay-button--prev {
+	left:-3%; transform:rotate(180deg);
+	@include breakpoint(desktop) {
+		left:3%;
+	}
+	@include breakpoint(small) {
+		left:10px;
+	}
+}
+.overlay-button--next {
+	right:-3%;
+	@include breakpoint(desktop) {
+		right:3%;
+	}
+	@include breakpoint(small) {
+		left:60px;
+	}
+}
+.overlay-close-button {
+	position:absolute; top:5%; right:2%; width:20px; height:20px; background:url('../img/svg/overlay-close.svg') no-repeat;
+	&:hover, &:focus { opacity:.7; }
+	@include breakpoint(medium) {
+		height:21px; width:21px; background:url('../img/svg/overlay-close-medium.svg') no-repeat;
+	}
+	@include breakpoint(small) {
+		top:2%;
+	}
+}
+
+//Speaker Info
+.speaker-info {
+	position:absolute; top:35px; right:55px; @include rem(padding, 40px 23px 36px); @include rem(width, 468px); transition:all ease .3s; background-color:rgba(106,1,1,.8);
+	@include breakpoint(desktop) {
+		@include rem(width, 330px); top:10%;
+	}
+	@include breakpoint(small) {
+		top:0; left:0; margin-top:70px; padding:0 10px; width:100%; background-color:transparent !important;
+	}
+}
+.speaker-info__name { @include rem(font-size, 40px); line-height:.9; color:rgb(255,255,255); }
+.speaker-links-container { margin-top:-4px; @include rem(margin-bottom, 30px); }
+.speaker-links-container__item { display:inline-block; margin-right:10px; @include rem(font-size, 14px); }
+.speaker-links-container__anchor {
+	color:rgb(255,255,255); transition:opacity ease .3s;
+	&:focus, &:hover { opacity:.7; }
+}
+.speaker-bio {
+	position:relative;
+	@include breakpoint(desktop) {
+
+	}
+}
+.speaker-bio__info {
+	@include rem(font-size, 15px); color:rgb(255,255,255);
+	@include breakpoint(desktop) {
+		overflow-y:scroll; max-height:250px;
+	}
+}
+

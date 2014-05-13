@@ -1,0 +1,50 @@
+.footer-section {
+	@include rem(padding, 11px 0 7px); background-color:rgb(49,89,109);
+	@include breakpoint(small) {
+		padding-bottom:0; overflow-x:hidden; text-align:center;
+	}
+}
+
+/* COPYRIGHT */
+.copyright-container { @include rem(font-size, 11px); color:rgb(255,255,255); }
+.copyright-container__creative-commons {
+	color:rgb(229,140,44);
+	&:hover, &:focus { opacity:.7; }
+}
+
+/* DEVELOPERS */
+.developers-container {
+	float:right; margin-top:3px; font-family:$primaryParagraph; @include rem(font-size, 11px);
+	a {
+		color:rgba(255,255,255,0.5);
+		&:hover, &:focus { opacity:.7; }
+	}
+	@include breakpoint(small) {
+		 position:relative; float:left; margin-top:10px; @include rem(padding, 20px 0); width:100%; text-align:center; z-index:0;
+		&:before { content:''; position:absolute; top:0; right:-100%; left:-100%; height:100%; background-color:rgba(32,28,29,0.5); z-index:-1; }
+	}
+}
+.developers-container__logo {
+	margin:-2px 0 0 10px; vertical-align:top; transition:all ease .4s;
+	&:hover, &:focus { transform:translateY(-5px); }
+}
+
+//EASTER EGGS
+.ಠ_ಠ--load { display:block; background:url('../img/easter-egg.png') no-repeat; transition:all ease .3s; }
+.ಠ_ಠ--on { animation:easter ease 1.5s; position:fixed; bottom:0; right:-300px; width:246px; height:242px; transition:all ease .3s; z-index:10000; }
+@keyframes easter {
+
+	0% {
+		transform: translateX(0);
+	}
+
+	70% {
+
+		transform: translateX(-300px);
+
+	}
+	100% {
+		transform: translateX(300px);
+	}
+
+}

@@ -1,0 +1,91 @@
+/* GENERAL */
+* { margin:0; padding:0; }
+body { background-color:#FFF !important; }
+
+/* MENU */
+.template-header { position:fixed; top:0; z-index:3; padding:0.5em 0;  width:100%;  height:45px; border-bottom:1px solid #ddd; background-color:#f1f1f1; }
+
+/* CONTENT */
+.section.template-section { margin:auto; max-width:1280px; }
+.content-wrapper { margin-top:80px; padding:1em 2%; width:96%; background-color:white; }
+.template-title { padding-bottom:15px; margin-bottom:1.3rem; margin-top:40px; display:block; clear:left; line-height:1.2em; font-size:2.5rem; letter-spacing:-3px; font-family:'Montserrat', sans-serif; font-weight:700; text-transform:uppercase;  border-bottom:1px solid; border-color: rgba(229, 229, 229, 0.8); }
+.template-title:first-child { margin-top:0; }
+.template-title--item { border:none; font-size:1.5rem; margin:0; }
+.pattern-container { margin-bottom:40px; }
+
+/* COLORS */
+.color-list { list-style:none; }
+.color-list-item { float: left;
+margin-bottom: 1em;
+width: 20%;
+margin-right: 2%;
+background-color: white;
+padding: 10px 0;
+padding: 0.625rem 0;
+border-radius: 3px;
+border-radius: 0.1875rem;
+box-shadow: 0 0 1px rgba(0, 0, 0, 0.4); }
+.color-list-item-preview { border-top: 1px solid rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+display: block;
+float: left;
+height: 60px;
+width: 100%;
+margin: 0 0.8em 0.5em 0; }
+.color-list-item p { padding-left:10px; display: block;}
+
+/* PATTERNS */
+.pattern {
+  clear: both;
+  float: left;
+  margin: 0 0 3em;
+  width: 100%;
+  border: 1px solid;
+  border-color: #e5e5e5;
+  border-radius: 3px;
+}
+.pattern__details {   color: #004b6a;
+  background-color: #fbf9f9;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  padding: 0.5em 1%;
+  width: 98%;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid;
+  border-color: #e5e5e5;
+  border-color: rgba(229, 229, 229, 0.5);
+  border-radius: 3px 3px 0 0; }
+.pattern__name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: none;
+  margin: 0;
+}
+.pattern__preview { padding: 10px;
+  width: auto;
+  background-color: #fff;}
+.pattern__markup {
+border: 1px solid;
+  border-color: #e5e5e5;
+  width: 64%;
+  display: block;
+  font-size: 12px;
+  overflow: scroll;
+  max-height: 200px;
+  padding: 1em 2%;
+  margin: 1em 0;
+  float: left;
+}
+.pattern__markup,
+:not(pre) > code[class*="language-"] {
+  padding: 1em 2% !important;
+}
+.pattern__usage {
+ float: right;
+  width: 30%;
+  margin: 1.25em 0 0.5em 0;
+  font-size: 13px;
+  white-space: pre-line;
+  line-height: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+}

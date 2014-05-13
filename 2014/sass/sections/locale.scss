@@ -1,0 +1,93 @@
+/* LOCALE */
+.locale-section {
+	position:relative; @include rem(margin-top, 100px); @include rem(padding-top, 130px); @include rem(padding-bottom, 80px); background-color:rgb(231,184,73); z-index:1;
+	@include breakpoint(small) {
+		margin-top:0; @include rem(padding-bottom, 60px);
+	}
+	&:before {
+		content:''; position:absolute; bottom:100%; width:100%; height:134px; background:url('../img/backgrounds/bg-locale.png') repeat-x rgb(228,227,212);
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+	@include breakpoint(small) {
+		@include rem(padding-top, 40px);
+	}
+}
+
+/* TITLES */
+.section-title--locale {
+	@include rem(margin-bottom, 25px); @include rem(font-size, 80px); line-height:.75; color:rgba(33,33,33,0.7); text-align:center;
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 15px); @include rem(font-size, 50px); line-height:.8;
+	}
+}
+.section-title--venue {
+	display:block; @include rem(font-size, 50px); color:rgba(33,33,33,0.5);
+	@include breakpoint(small) {
+		@include rem(font-size, 30px);
+	}
+}
+
+/* Photo Container */
+.locale-photo-container {
+	position:relative; margin:auto; @include rem(margin-bottom,70px); z-index:2; text-align:center;
+	&:hover {
+		.locale-photo-container__photo--overview { transform:translate3d(0, -70px, 0); }
+		.locale-photo-container__photo--douglas { transform:translate3d(0, -65px, 0) rotate(-10deg); }
+		.locale-photo-container__photo--curators { transform:translate3d(0, -55px, 0) rotate(11deg); }
+	}
+	@include breakpoint(small) { display:none; }
+}
+.locale-photo-container__photo {
+	position:absolute; left:0; display:inline-block; transition:all ease 1s;
+}
+.locale-photo-container__photo {
+	@include breakpoint(small) { background:none !important; }
+}
+.locale-photo-container__photo--main {
+	position:relative; width:697px; height:467px; background:url('../img/bourbon-country-braziljs-2013.jpg') no-repeat; z-index:5;
+}
+.locale-photo-container__photo--overview {
+	top:-50px; left:354px; width:356px; height:237px; background:url('../img/bourbon-palco.jpg') no-repeat; z-index:4;
+	@include breakpoint(desktop) {
+		display:none; background:none;
+	}
+}
+.locale-photo-container__photo--douglas {
+	top:-60px; left:50px; width:351px; height:233px; background:url('../img/bourbon-douglas.jpg') no-repeat; z-index:2; transform:rotate(-8deg);
+	@include breakpoint(desktop) {
+		display:none; background:none;
+	}
+}
+.locale-photo-container__photo--curators {
+	top:-60px; left:580px; width:351px; height:233px; background:url('../img/bourbon-curadores.jpg') no-repeat; z-index:2; transform:rotate(8deg);
+	@include breakpoint(desktop) {
+		display:none; background:none;
+	}
+}
+
+/* Locale Info */
+.locale-info-container { margin:auto; max-width:620px; }
+.default-paragraph--venue {
+	margin:auto; @include rem(margin-bottom, 40px); line-height:130%;
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 20px);
+	}
+	&:last-child { margin-bottom:0; }
+}
+.locale-links-container {
+	margin:auto; text-align:center;
+	@include breakpoint(small) {
+		@include rem(margin-top, 25px);
+		a {
+			width:60%;
+		}
+	}
+}
+.default-link--locale {
+	margin-right:16px;
+	@include breakpoint(small) {
+		margin:0; margin-bottom:10px;
+	}
+}

@@ -1,0 +1,82 @@
+.twitter-section {
+	@include rem(padding, 100px 0 20px); border-top:5px solid rgb(187,177,145); background-color:rgb(207,202,178);
+	@include breakpoint(small) {
+		@include rem(padding-top, 50px); padding-bottom:0;
+	}
+}
+
+/* TEXTS */
+.twitter-header-container {
+	@include rem(margin-bottom, 60px);
+	@include breakpoint(desktop) {
+		@include rem(margin-bottom, 30px);
+	}
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 35px); text-align:center;
+	}
+}
+.section-title--twitter {
+	@include rem(font-size, 45px); text-transform:uppercase;
+	@include breakpoint(desktop) {
+		@include rem(font-size, 34px); @include rem(margin-top, 18px);
+	}
+	@include breakpoint(small) {
+		@include rem(font-size, 30px); margin-top:0; @include rem(margin-bottom, 30px);
+	}
+}
+.default-text--twitter { @include rem(font-size, 20px); color:rgb(121,119,104); }
+.twitter-highlight {
+	padding:3px 5px 0 0; background-color:rgb(34,34,34); line-height:1.1; color:rgb(210,204,177); transition:opacity ease .3s;
+	&:hover, &:focus { opacity:.7; }
+}
+
+/* TWITTER CONTAINER */
+.twitter-container {
+	min-height:300px;
+	a {
+		font-weight:bold; color:rgb(31,31,31);
+		&:hover, &:focus { text-decoration:underline; }
+	}
+	li {
+		@extend .col-3-12; display:flex; flex-direction:column; @include rem(padding-top, 35px); border-top:5px solid rgb(187,177,145);
+		@include breakpoint(desktop) {
+			@include rem(padding-top, 15px); @include rem(width, 166px);
+		}
+		@include breakpoint(small) {
+			@include rem(margin-bottom, 50px); margin-right:4%; width:48%; min-width:0;
+			&:nth-child(3n) { margin-right:0; }
+		}
+	}
+	li:first-child {
+		@extend .col-5-12;
+		.tweet { @include rem(font-size, 22px); }
+		@include breakpoint(medium) {
+			@include rem(width, 352px);
+		}
+		@include breakpoint(small) {
+			width:99%;
+		}
+	}
+	.user {
+		order:2; padding-top:10px; border-top:1px solid rgb(187,177,145);
+		[data-scribe="element:avatar"] { float:left; margin-right:10px; border:3px solid rgb(34,34,34); }
+		[data-scribe="element:name"] { @include rem(font-size, 16px); color:rgb(33,33,33); }
+		[data-scribe="element:screen_name"] { margin-top:-3px; display:block; @include rem(font-size, 14px); color:rgba(33,33,33,0.5); }
+	}
+	.tweet {
+		order:1; @include rem(margin, 0 0 40px 0); @include rem(font-size, 15px); color:rgb(31,31,31);
+		@include breakpoint(small) {
+			@include rem(margin-bottom, 20px);
+		}
+	}
+	.interact { display:none; }
+
+}
+
+.twiter-container__item { }
+.twiter-container__item--highlight { }
+.default-paragraph--tweet { @include rem(font-size, 15px); color:rgb(31,31,31); }
+.default-paragraph--tweet-highlight { @include rem(font-size, 22px); }
+.twitter-time { @include rem(font-size, 10px); color:rgb(113,102,70); }
+.twitter-name { @include rem(font-size, 16px); color:rgb(33,33,33); }
+.twitter-user-name { @include rem(font-size, 14px); color:rgba(33,33,33,0.5); }

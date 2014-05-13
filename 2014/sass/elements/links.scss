@@ -1,0 +1,5 @@
+.default-link {
+	display:inline-block; @include rem(padding, 17px 27px 10px); border:2px solid rgb(34,34,34); border-radius:19px; font-family:$primaryFont; @include rem(font-size, 20px); line-height:.5; color:rgb(33,33,33); text-decoration:none; background-color:transparent; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; transition:all ease .5s;
+	&:hover,
+	&:focus { color:rgb(231,184,73); background-color:rgb(34,34,34); }
+}

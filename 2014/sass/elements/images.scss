@@ -1,0 +1,6 @@
+.icon {
+	display:block; text-indent:-9999px; transition:all ease .2s;
+	&:hover, &:focus { opacity:.7; }
+}
+.icon--github { width:16px; height:20px; background:url('../img/svg/icon-github.svg') no-repeat; }
+.icon--twitter { width:21px; height:18px; background:url('../img/svg/icon-twitter.svg') no-repeat; }

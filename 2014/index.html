@@ -1,17 +1,541 @@
-<!doctype html>
-<html itemscope itemtype="http://schema.org/Event">
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="pt-BR"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="pt-BR"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="pt-BR"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="pt-BR"> <![endif]-->
+<!--[if gt IE 9]><!--><html itemscope itemtype="http://schema.org/Event" class="no-js" lang="pt-BR"><!--<![endif]-->
 <head>
 
+  <meta charset="utf-8">
   <title itemprop="name">BrazilJS 2014</title>
 
-  <meta charset="utf-8">
-  <meta name="author" content="BrazilJS 2014">
-  <meta name="description" content="A maior conferência de JavaScript do mundo">
-  <meta name="viewport" content="width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="refresh" content="0; url=http://braziljs.com.br/" />
+  <!--[if IE ]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <meta name="description" content="A maior conferência de javascript entra em campo em sua edição 2014!">
+  <meta name="author" content="marimbondo.me - Web com gominho :)" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <script type="text/javascript">
+    // Switch no-js class for js
+    (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+  </script>
+
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+  <!-- FACEBOOK -->
+  <meta property="fb:app_id" content="372862979453673">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.braziljs.com.br">
+  <meta property="og:title" content="BrazilJS 2014">
+  <meta property="og:description" content="A maior conferência de javascript entra em campo em sua edição 2014!">
+  <meta property="og:image" content="/img/facebook.jpg">
+  <!-- / FACEBOOK -->
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <!-- / STYLES -->
+
+  <link rel="alternate" hreflang="x-default" href="http://braziljs.com.br" />
+  <link rel="alternate" hreflang="en" href="http://braziljs.com.br/en" />
+
+  <meta itemprop="startDate" content="2014-08-21" />
+  <meta itemprop="endDate" content="2014-08-22" />
 
 </head>
-<body>
+<body data-language="pt_BR" class="pt_BR">
+  <div class="page-wrapper">
+    <!-- HEADER -->
+<main class="section header-container" role="main">
+    <header class="content" role="banner">
+        <!-- MENU -->
+<div class="menu-wrapper section">
+    <nav class="menu-container" role="navigation">
+        <button id="js-extended-menu" class="menu-container--extend-menu default-button default-text" title="Menu" type="button"><span class="ico-burger">&nbsp;</span><span class="visuallyhidden">Menu</span></button>
+        <ul class="navigation-container visuallyhidden" id="js-navigation-container">
+            <li class="default-text navigation-container__item">
+                <a href="#palestrantes" class="navigation-container__anchor">
+                    <span class="navigation-container__hook">palestrantes</span>
+                </a>
+            </li>
+            <li class="default-text navigation-container__item">
+                <a href="#localização" class="navigation-container__anchor">
+                    <span class="navigation-container__hook">localização</span>
+                </a>
+            </li>
+            <li class="default-text navigation-container__item">
+                <a href="#inscrições" class="navigation-container__anchor">
+                    <span class="navigation-container__hook">inscrições</span>
+                </a>
+            </li>
+            <li class="default-text navigation-container__item">
+                <a href="#manifesto" class="navigation-container__anchor">
+                    <span class="navigation-container__hook">manifesto</span>
+                </a>
+            </li>
+            <!-- li class="default-text navigation-container__item">
+                <a href="#patrocinadores" class="navigation-container__anchor">
+                    <span class="navigation-container__hook">patrocinadores</span>
+                </a>
+            </li -->
+            <li class="default-text navigation-container__item">
+                <a href="#curadores" class="navigation-container__anchor">
+                    <span class="navigation-container__hook">curadores</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="languages-container">
+        <ul>
+            
+                <li class="languages-container_item"><a class="default-text languages-container_language" href="/en" title="English version">EN</a></li>
+                <li class="languages-container_item"><span class="default-text languages-container_language languages-container_language--current">PT</span></li>
+            
+            
+        </ul>
+    </div>
+</div>
+<!--  / MENU -->
+        <div class="row conference-banner-container">
+            <div class="col-4-12 slogan-container">
+                <strong class="default-text default-text--conference-slogan">a maior conferência de javascript do universo!</strong>
+            </div>
+            <div class="col-4-12 logo-container">
+                <h1>
+                    <img src="/img/logos/braziljs-logo.svg" class="logo-container__image" alt="BrazilJS Conference 2014 Logo" />
+                </h1>
+            </div>
+            <div class="col-4-12 conference-info-container">
+                <strong class="default-text default-text--event-date">21 e 22 de agosto de 2014</strong>
+                <strong class="default-text default-text--event-city">porto alegre / rs</strong>
+                <strong class="default-text default-text--event-venue">teatro do bourbon country</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="price-container">
+                <div class="col-4-12">
+                    <strong class="default-text default-text--current-price">R$ 200,00</strong>
+                </div>
+                <div class="col-4-12 call-to-action-container">
+                    <a href="http://www.eventick.com.br/braziljs-2014" class="default-link default-link--call-to-action">Compre Agora!</a>
+                </div>
+            </div>
+            <ul class="col-4-12 social-media-container">
+                <li class="social-media-container__item"><div class="fb-like" data-href="https://www.facebook.com/braziljs" data-send="false" data-layout="box_count" data-width="72" data-show-faces="false"></div></li>
+                <li class="social-media-container__item"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://braziljs.com.br/" data-via="braziljs" data-lang="en" data-count="vertical">Tweet</a></li>
+                <li class="social-media-container__item"><div class="g-plusone" data-size="tall" data-href="http://braziljs.com.br/"></div></li>
+            </ul>
+        </div>
+    </header>
+</main>
+<!--  / HEADER -->
+    <!-- SPEAKERS -->
+<section class="section speakers-container">
+    <div class="content">
+        <h2 id="palestrantes" class="default-text default-text--speakers">BrazilJS Conf <span class="default-text--club-name">esporte clube</span></h2>
+        <strong class="flow-opposite default-text default-text--speakers-year">2014</strong>
+        <ul id="js-speakers-container" class="speaker-container clearfix">
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">01</span></div>
+            </li>
+            <li>
+                <a data-layer="1" class="col-3-12 speaker-card" href="#cabello" title="Saiba mais sobre o palestrante Ricardo Cabello">
+                    <img class="speaker-photo" src="../img/speakers/ricardo-cabello.jpg" alt="Ricardo Cabello" />
+                    <span class="speaker-country speaker-country--spain">Espanha</span>
+                    <h3 class="default-text speaker-name">Ricardo Cabello</h3>
+                    <strong class="speaker-company">------</strong>
+                </a>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">03</span></div>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">04</span></div>
+            </li>
+            <li>
+                <a data-layer="2" class="col-3-12 speaker-card" href="#jorn" title="Saiba mais sobre o palestrante Jörn Zaefferer">
+                    <img class="speaker-photo" src="../img/speakers/jorn.jpg" alt="Jörn Zaefferer" />
+                    <span class="speaker-country speaker-country--germany">Alemanha</span>
+                    <h3 class="default-text speaker-name">Jörn Zaefferer</h3>
+                    <strong class="speaker-company">jQuery UI</strong>
+                </a>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">06</span></div>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">07</span></div>
+            </li>
+            <li>
+                <a data-layer="3" class="col-3-12 speaker-card" href="#max" title="Saiba mais sobre o palestrante Max Ogden">
+                    <img class="speaker-photo" src="../img/speakers/max-ogden.jpg" alt="Max Ogden" />
+                    <span class="speaker-country speaker-country--usa">Estados Unidos</span>
+                    <h3 class="default-text speaker-name">Max Ogden</h3>
+                    <strong class="speaker-company">-------</strong>
+                </a>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">09</span></div>
+            </li>
+            <li>
+                <a data-layer="4" class="col-3-12 speaker-card" href="#miller" title="Saiba mais sobre o palestrante Miller Medeiros">
+                    <img class="speaker-photo" src="../img/speakers/miller-medeiros.jpg" alt="Miller Medeiros" />
+                    <span class="speaker-country speaker-country--brazil">Brasil</span>
+                    <h3 class="default-text speaker-name">Miller Medeiros</h3>
+                    <strong class="speaker-company">Firefox OS</strong>
+                </a>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">11</span></div>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">12</span></div>
+            </li>
+            <li>
+                <a data-layer="5" class="col-3-12 speaker-card" href="#dmitry" title="Saiba mais sobre o palestrante Dmitry Baranovskiy">
+                    <img class="speaker-photo" src="../img/speakers/dimitri.jpg" alt="Dmitry Baranovskiy"/>
+                    <span class="speaker-country speaker-country--australia">Australia</span>
+                    <h3 class="default-text speaker-name">Dmitry Baranovskiy </h3>
+                    <strong class="speaker-company">Adobe</strong>
+                </a>
+            </li>
+            <li>
+                <a data-layer="6" class="col-3-12 speaker-card" href="#ricardo" title="Saiba mais sobre o palestrante Ricardo Tomasi">
+                    <img class="speaker-photo" src="../img/speakers/ricardo-tomasi.jpg" alt="Ricardo Tomasi" />
+                    <span class="speaker-country speaker-country--brazil">Brasil</span>
+                    <h3 class="default-text speaker-name">Ricardo Tomasi</h3>
+                    <strong class="speaker-company">Booking.com</strong>
+                </a>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">15</span></div>
+            </li>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">16</span></div>
+            </li>
+        </ul>
+        <span class="flow-opposite default-text default-text--copyright">COPYRIGHT © BRAZIL JS CONF 2014</span>
+    </div>
+</section>
+<!-- /SPEAKERS -->
+    <!-- SPEAKERS OVERLAY -->
+<div id="js-overlay-container" class="speakers-overlay-container visuallyhidden">
+    <button id="js-overlay-button-prev" class="default-button overlay-button overlay-button--prev">Palestrante anterior</button>
+    <ul class="section sequence-canvas">
+        <!-- SPEAKER CABELLO -->
+        <li class="overlay-item overlay-item--cabello" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="cabello" class="speaker-info__name default-text" itemprop="name">Ricardo Cabello aka Mr. Doob</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item animate-out">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/mrdoob">@mrdoob</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/mrdoob">github.com/mrdoob</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Programador autoditada de compuação gráfica. Cabello nasceu em Barcelona, e começou sua carreira profissional alternando entre 2 funções: Designer e desenvolvedor. Em seu tempo livre, seu envolvimento na demoscene o colocou no caminho para a aprendizagem da programação gráfica. Combinando sua experiência como designer e experiência no desenvolvimento, seu trabalho varia de brinquedos digitais interativos simples, como o Google Gravity, Ball Pool e Harmony - até experimentos completos, como o The Johnny Cash Project, The Wilderness Downtown e ROME. Hoje em dia, Cabello passa a maior parte de seu tempo desenvolvendo bibliotecas de código aberto e ferramentas - three.js, frame.js e stats.js - com o objetivo de tornar o design e o desenvolvimento mais simples para todos.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER CABELLO -->
+        <!-- SPEAKER JORN -->
+        <li class="overlay-item overlay-item--jorn animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="jorn" class="speaker-info__name default-text" itemprop="name">Jörn Zaefferer</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/bassistance">@bassistance</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/jzaefferer">github.com/jzaefferer</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Web developer freelancer, consultor e instrutor, nascido em Cologne, Alemanha. Jörn evoluiu o testsuite do JQuery transformando-o no QUnit, framework jQuery para testes unitários. Atualmente Jörn é o mantenedor do QUnit. Jörn criou e mantém uma série de plugins muito populares para o jQuery. Ele também é lead developer do jQuery UI, focando no desenvolvimento de novos plugins, widgets e utiliários.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER JORN -->
+        <!-- SPEAKER MAX -->
+        <li class="overlay-item overlay-item--max animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="max" class="speaker-info__name default-text" itemprop="name">Max Ogden</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/maxogden">@maxogden</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/maxogden">github.com/maxogden</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Max Ogden é um programador que mora em Oakland, CA, e trabalha com JavaScript e Node. Atualmente Max só trabalha em código que é open source! Seu principal projeto atual é um sistema de controle de versão para dados, chamado dat, e também trabalhou no Voxel.js, Voxel Builder, Nodeschool.io e JavaScript para gatos.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER MAX -->
+        <!-- SPEAKER MILLER -->
+        <li class="overlay-item overlay-item--miller animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="miller" class="speaker-info__name default-text" itemprop="name">Miller Medeiros</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/millermedeiros">@millermedeiros</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/millermedeiros">github.com/millermedeiros</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Começou a fazer sites por diversão aos 14 anos de idade e nunca mais parou. Contribuidor de múltiplos projetos open source como MOUT, js-signals, crossroads.js, esformatter; e de vez em quando escreve em seu blog pessoal sobre programação e ajuda pessoas aleatórias através das redes sociais. Acredita que qualidade de código é fundamental para a produtividade ao longo prazo; também acredita que com tempo e recursos ilimitados, tudo é possível. Atualmente trabalha como desenvolvedor front-end no Firefox OS.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER MILLER -->
+        <!-- SPEAKER DMITRY -->
+        <li class="overlay-item overlay-item--dimitri animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="dmitry" class="speaker-info__name default-text" itemprop="name">Dmitry Baranovskiy</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/DmitryBaranovsk">@DmitryBaranovsk</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/DmitryBaranovsk">github.com/DmitryBaranovsk</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Dmitry começou sua jornada a uma década atrás como um desenvolvedor backend, em seguida, designer e agora finalmente aceitou seu destino como um desenvolvedor front-end. Apesar de seu profundo conhecimento de CSS e HTML, ele dedica-se principalmente ao JavaScript e é conhecido como o criador da biblioteca RaphaëlJS, bem como outras bibliotecas JavaScript. Atualmente ele é um cientista da computação sênior na Adobe.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER DMITRY -->
+        <!-- SPEAKER RICARDO -->
+        <li class="overlay-item overlay-item--ricardo animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="ricardo" class="speaker-info__name default-text" itemprop="name">Ricardo Tomasi</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/ricardobeat">@ricardobeat</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/ricardobeat">github.com/ricardobeat</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    
+                        <p class="default-paragraph speaker-bio__info">Desenvolvedor de software com foco em javascript. Entusiasta da open web e software livre, já usava javascript no servidor antes de isso ser legal. Palestrante da primeira edição do BrazilJS em 2011, além de aparições no RSJS, FISL e JSConfBR. Acredita em métodos ágeis, UX, event emitters, código limpo e simetricamente indentado. Atualmente mora em Amsterdam e faz parte da equipe de client-side da Booking.com</p>
+                    
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER RICARDO -->
+    </ul>
+    <button id="js-overlay-button-next" class="default-button overlay-button overlay-button--next">Próximo palestrante</button>
+    <button id="js-overlay-button-close" class="default-button overlay-button overlay-close-button">Fechar overlay</button>
+</div>
+<!-- /SPEAKERS OVERLAY -->
+    
+    <!-- LOCALE -->
+<section class="section locale-section">
+    <div class="content">
+        <div class="row locale-photo-container">
+            <span class="locale-photo-container__photo locale-photo-container__photo--main">&nbsp;</span>
+            <span class="locale-photo-container__photo locale-photo-container__photo--douglas">&nbsp;</span>
+            <span class="locale-photo-container__photo locale-photo-container__photo--overview">&nbsp;</span>
+            <span class="locale-photo-container__photo locale-photo-container__photo--curators">&nbsp;</span>
+        </div>
+        <div class="locale-info-container">
+            <h2 id="localização" class="section-title section-title--locale">Porto Alegre / RS<span class="section-title section-title--venue">Teatro do Bourbon Country</span></h2>
+            
+                <p class="default-paragraph default-paragraph--venue">O Teatro do Bourbon Country tem ao todo 4.100 m² distribuídos em quatro andares. O ambiente, as acomodações, o serviço, os recursos técnicos: tudo o que você imaginar está dentro do mais alto padrão.</p>
+                <p class="default-paragraph default-paragraph--venue">E como não podia deixar de ser, está instalado dentro do Bourbon Shopping Country, um dos pontos mais freqüentados de Porto Alegre por contar, entre outras operações, como os cinemas, Livraria Cultura, Cervejaria Dado Bier, Bourbon Hipermercado.</p>
+                <div class="locale-links-container">
+                    <a class="default-link default-link--locale" href="http://www.teatrodobourboncountry.com.br/" title="title">Mais informações</a>
+                    <a class="default-link" href="https://www.google.com/maps/dir//Avenida+T%C3%BAlio+de+Rose,+80+-+Passo+D'areia,+RS,+91340-110,+Brasil/@-30.0228579,-51.162539,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9519779eccd2341d:0x59bf533e3a0f0d00!2m2!1d-51.1623819!2d-30.0227408">Veja como chegar</a>
+                </div>
+            
+            
+        </div>
+    </div>
+</section>
+<!-- /LOCALE -->
+    
+    <!-- TICKETS -->
+<section class="section tickets-section">
+    <div class="content">
+        <div class="col-6-12">
+            <h2 id="inscrições" class="section-title section-title--tickets">inscrições</h2>
+            
+                <p class="default-paragraph default-paragraph--tickets">Garanta já o seu ingresso para a maior conferência de JavaScript do universo. Conteúdo inédito, palestrantes renomados e um networking enriquecedor.</p>
+                <p class="default-paragraph default-paragraph--tickets">Faça parte deste grande evento. <strong>A BrazilJS Conf 2014 será imperdível!</strong></p>
+            
+            
+        </div>
+        <div class="col-6-12">
+            <a class="buy-ticket-container" href="http://www.eventick.com.br/braziljs-2014">
+                
+                    <div class="ticket-info-container">
+                        <small class="ticket-info-container__name">Braziljs conf 2014</small>
+                        <strong class="section-title ticket-info-container__call-to-action">Comprar</strong>
+                        <div class="ticket-price-container">
+                            <small class="ticket-price-container__version">2º LOTE</small>
+                            <strong class="ticket-price-container__price">R$ 200.00</strong>
+                        </div>
+                    </div>
+                    <div class="ticket-user-container">
+                        <div class="ticket-user-container__info">
+                            <span class="ticket-user-container__version">2º LOTE</span>
+                            <span class="ticket-user-container__price">R$ 200.00</span>
+                        </div>
+                    </div>
+                
+            </a>
+        </div>
+    </div>
+</section>
+<!-- /TICKETS -->
+    <!-- MANIFEST -->
+<section class="section manifest-section">
+    <div class="content">
+        <div class="row manifest-title-container">
+            <h2 id="manifesto" class="section-title section-title--manifest">manifesto BrazilJS</h2>
+        </div>
+        
+            <div class="col-6-12">
+                <p class="default-text default-text--manifest">Nós somos a maior conferência de JavaScript do universo! E queremos ser ainda maiores.</p>
+                <p class="default-paragraph default-paragraph--manifest">A ideia do BrazilJS surgiu em meados de 2008. Muitos eventos de tecnologia e de diversas linguagens diferentes estavam acontecendo na época. Jaydson e Felipe sempre foram entusiastas JavaScript, e sentiram a falta de uma conferência focada na linguagem, que para eles, tinha um futuro promissor.</p>
+                <p class="default-paragraph default-paragraph--manifest">Pouco tempo depois, em 2009, nasceu a primeira conferência JavaScript, a JSConf americana. Durante o ano de 2010 a ideia evoluiu e Christiano Milfont estava pensando no mesmo, fazer uma conferência JavaScript nacional. Unindo forças, Jaydson, Felipe e Christiano conseguiram em 2011 fazer a primeira conferência JavaScript do Brasil.</p>
+            </div>
+            <div class="col-6-12">
+                <p class="default-paragraph default-paragraph--manifest">Na sua estréia, em maio de 2011, a BrazilJS Conf se tornou uma das maiores conferências JavaScript do mundo, contando com 600 participantes e mais de 20 palestras.</p>
+                <p class="default-paragraph default-paragraph--manifest">Em 2012 a BrazilJS Conf contou com mais de 900 pessoas e trouxe pela primeira vez ao Brasil o lendário criador da linguagem JavaScript, Brendan Eich.</p>
+                <p class="default-paragraph default-paragraph--manifest">Em 2013, a conferência repetiu o sucesso. Com nomes de peso, como Douglas Crockford, o número de participantes chegou a quase 1000, lotando o teatro onde a conferência é realizada.</p>
+                <p class="default-paragraph default-paragraph--manifest">2014 é um ano especial, será o quarto ano consecutivo em que o evento acontece e a organização está empenhada em manter o sucesso dos anos anteriores.</p>
+                <p class="default-paragraph default-paragraph--manifest">A comunidade JavaScript do Brasil pode esperar um evento surpreendente!</p>
+            </div>
+        
+
+    </div>
+</section>
+<!-- /MANIFEST -->
+    
+    <!-- TWITTER -->
+<section class="section twitter-section">
+    <div class="content">
+        <div class="clearfix twitter-header-container">
+            
+                <div class="col-9-12">
+                    <h2 class="section-title section-title--twitter">Veja o que andam falando da gente no twitter...</h2>
+                </div>
+                <p class="col-3-12 default-text default-text--twitter">Fale também usando <span class="twitter-highlight">#braziljs</span> E NOS SIGA EM <a class="twitter-highlight" href="http://www.twitter.com/braziljs">@braziljs</a> !</p>
+            
+        </div>
+        <div id="js-twitter-container" class="twitter-container">&nbsp;</div>
+    </div>
+</section>
+<!-- /TWITTER -->
+    <!-- CURATORS -->
+<section class="section curators-section">
+    <div class="content">
+        <div class="row">
+            <h2 id="curadores" class="section-title section-title--curators">curadores</h2>
+        </div>
+        <ul class="curators-list">
+            <li class="curator-container col-6-12" itemscope itemtype="http://schema.org/Person">
+                <div class="curator-photo-container">
+                    <img class="curator-photo-container__photo" src="/img/curador-jaydson.jpg" alt="Jaydson Gomes Barbudão" itemprop="image" />
+                </div>
+                <div class="curator-info-container">
+                    <div class="curator-work-info">
+                        <a href="http://jaydson.org" itemprop="url"><h3 class="default-text default-text--curator-name" itemprop="name">Jaydson Gomes</h3></a>
+                        <span class="default-paragraph default-paragraph--curator-company" itemprop="worksFor">Terra Networks</span>
+                    </div>
+                    <ul class="curator-social-media">
+                        <li class="curator-social-media__item"><a href="https://twitter.com/jaydson" class="icon icon--twitter">Twitter</a></li>
+                        <li class="curator-social-media__item"><a href="https://github.com/jaydson" class="icon icon--github">Github</a></li>
+                    </ul>
+                    
+                    <p class="default-paragraph default-paragraph--curator-description" itemprop="description">Entusiasta JavaScript, <span itemprop="jobTitle">Analista de Desenvolvimento Sênior</span> no Terra Networks, possui 8 anos de experiência em desenvolvimento Web, curador do BrazilJS e do RSJS.</p>
+                    
+                </div>
+            </li>
+            <li class="curator-container col-6-12" itemscope itemtype="http://schema.org/Person">
+                <div class="curator-photo-container">
+                    <img class="curator-photo-container__photo" src="/img/curador-felipe.jpg" alt="Felipe Nascimento" itemprop="image"/>
+                </div>
+                <div class="curator-info-container">
+                    <div class="curator-work-info">
+                        <a href="http://felipenmoura.org" itemprop="url"><h3 class="default-text default-text--curator-name" itemprop="name">Felipe Nascimento</h3></a>
+                        <span class="default-paragraph default-paragraph--curator-company" itemprop="worksFor">Terra Networks</span>
+                    </div>
+                    <ul class="curator-social-media">
+                        <li class="curator-social-media__item"><a href="https://twitter.com/felipenmoura" class="icon icon--twitter">Twitter</a></li>
+                        <li class="curator-social-media__item"><a href="https://github.com/felipenmoura" class="icon icon--github">Github</a></li>
+                    </ul>
+                    
+                    <p class="default-paragraph default-paragraph--curator-description" itemprop="description"><span itemprop="jobTitle">Analista de Desenvolvimento Sênior</span> no Terra, entusiasta de tecnologias web, trabalha há 9 anos com desenvolvimento e é bastante envolvido em projetos open source, além de ser curador do BrazilJS e do RSJS.</p>
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- /CURATORS -->
+    <!-- FOOTER -->
+<footer class="section footer-section">
+    <div class="content">
+        <a href="http://braziljs.org/"><img src="/img/braziljs-logo.png" alt="logo braziljs foundation"/></a>
+        <a href="http://confcodeofconduct.com/" class="copyright-container__creative-commons">Código de conduta</a>
+        
+            <small class="developers-container"><a href="/humans.txt">feito a mão por:</a><a href="http://marimbondo.me"><img class="developers-container__logo" src="/img/svg/logo-marimbondo.svg" alt="marimbondo - web com gominho"/></a></small>
+        
+    </div>
+</footer>
+<div id="fb-root"></div>
+<div id="js-ಠ_ಠ"></div>
+<!-- /FOOTER -->
+
+    <!-- CONTENT -->
+
+        <!--footer class="footer">
+          <p>Made with ♥ by <a href="http://confboilerplate.com">Conf Boilerplate</a> :)</p>
+          a maior conferência de javascript do universo!
+        </footer-->
+
+
+    </div>
+    <!-- / CONTENT -->
+
+<!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<!--<![endif]-->
+
+  <script src="/js/require.js" data-main="/js/main"></script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script type="text/javascript">
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-32119524-1');ga('send','pageview');
+  </script>
+  <!-- /GOOGLE ANALYTICS -->
+
 </body>
 </html>

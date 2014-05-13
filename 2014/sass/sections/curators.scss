@@ -1,0 +1,53 @@
+.curators-section {
+	@include rem(padding, 60px 0); background-color:rgb(207,202,178);
+	@include breakpoint(small) {
+		@include rem(padding-top, 0);
+	}
+}
+
+/* TEXTS */
+.section-title--curators {
+	position:relative; display:inline-block; @include rem(margin-bottom, 60px); color:rgba(0,0,0,0.3);
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 15px);
+	}
+	&:after {
+		content:''; position:absolute; top:-45px; right:-85px; width:161px; height:151px; background:url('../img/backgrounds/bg-title-curators.png') no-repeat;
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+}
+.default-text--curator-name { @include rem(font-size, 28px); color:rgb(49,89,108); }
+.default-paragraph--curator-company { display:block; margin-top:-3px; @include rem(font-size, 14px); color:rgb(229,141,46); }
+.default-paragraph--curator-description { @include rem(font-size, 15px); }
+
+/* CURATOR CONTAINER */
+.curator-container {
+	@include rem(padding, 13px); border:2px solid rgb(188,178,149); background-color:rgb(255,255,255);
+	@include breakpoint(desktop) {
+		text-align:center; @include rem(margin-bottom, 20px);
+	}
+}
+.curator-photo-container {
+	float:left; margin-right:18px;
+	@include breakpoint(desktop) {
+		float:none; margin:0;
+	}
+}
+.curator-photo-container__photo { }
+.curator-work-info {
+	display:inline-block; margin:0 0 10px 0;
+	a {
+		display:inline-block; transition:opacity ease .3s;
+		&:hover, &:focus { opacity:.7; }
+	}
+}
+.curator-social-media {
+	float:right; margin-right:7px; vertical-align:top;
+	@include breakpoint(desktop) {
+		float:none;
+	}
+}
+.curator-social-media__item { display:inline-block; }
+.curator-info-container { @include rem(padding-top, 25px); }

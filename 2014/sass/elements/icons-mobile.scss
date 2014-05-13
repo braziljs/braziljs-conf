@@ -1,0 +1,76 @@
+  $flag-australia-mobile-x: 0px;
+  $flag-australia-mobile-y: 133px;
+  $flag-australia-mobile-offset-x: 0px;
+  $flag-australia-mobile-offset-y: -133px;
+  $flag-australia-mobile-width: 29px;
+  $flag-australia-mobile-height: 59px;
+  $flag-australia-mobile-total-width: 30px;
+  $flag-australia-mobile-total-height: 331px;
+  $flag-australia-mobile-image: '../img/sprite-mobile.png';
+  $flag-australia-mobile: 0px 133px 0px -133px 29px 59px 30px 331px '../img/sprite-mobile.png';
+  $flag-brazil-mobile-x: 0px;
+  $flag-brazil-mobile-y: 271px;
+  $flag-brazil-mobile-offset-x: 0px;
+  $flag-brazil-mobile-offset-y: -271px;
+  $flag-brazil-mobile-width: 30px;
+  $flag-brazil-mobile-height: 60px;
+  $flag-brazil-mobile-total-width: 30px;
+  $flag-brazil-mobile-total-height: 331px;
+  $flag-brazil-mobile-image: '../img/sprite-mobile.png';
+  $flag-brazil-mobile: 0px 271px 0px -271px 30px 60px 30px 331px '../img/sprite-mobile.png';
+  $flag-germany-mobile-x: 0px;
+  $flag-germany-mobile-y: 0px;
+  $flag-germany-mobile-offset-x: 0px;
+  $flag-germany-mobile-offset-y: 0px;
+  $flag-germany-mobile-width: 28px;
+  $flag-germany-mobile-height: 56px;
+  $flag-germany-mobile-total-width: 30px;
+  $flag-germany-mobile-total-height: 331px;
+  $flag-germany-mobile-image: '../img/sprite-mobile.png';
+  $flag-germany-mobile: 0px 0px 0px 0px 28px 56px 30px 331px '../img/sprite-mobile.png';
+  $flag-spain-mobile-x: 0px;
+  $flag-spain-mobile-y: 202px;
+  $flag-spain-mobile-offset-x: 0px;
+  $flag-spain-mobile-offset-y: -202px;
+  $flag-spain-mobile-width: 29px;
+  $flag-spain-mobile-height: 59px;
+  $flag-spain-mobile-total-width: 30px;
+  $flag-spain-mobile-total-height: 331px;
+  $flag-spain-mobile-image: '../img/sprite-mobile.png';
+  $flag-spain-mobile: 0px 202px 0px -202px 29px 59px 30px 331px '../img/sprite-mobile.png';
+  $flag-usa-mobile-x: 0px;
+  $flag-usa-mobile-y: 66px;
+  $flag-usa-mobile-offset-x: 0px;
+  $flag-usa-mobile-offset-y: -66px;
+  $flag-usa-mobile-width: 28px;
+  $flag-usa-mobile-height: 57px;
+  $flag-usa-mobile-total-width: 30px;
+  $flag-usa-mobile-total-height: 331px;
+  $flag-usa-mobile-image: '../img/sprite-mobile.png';
+  $flag-usa-mobile: 0px 66px 0px -66px 28px 57px 30px 331px '../img/sprite-mobile.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }

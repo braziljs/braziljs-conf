@@ -1,0 +1,74 @@
+
+body { overflow-x:hidden; }
+
+.section {
+	width:100%;
+    // clear at the end of container
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
+}
+
+.content {
+	position:relative; margin:auto; @include rem(padding-left, 20px); width:$maxWidth;
+	@media screen and (max-width: $desktopSize) {
+		@include rem(padding, 0 10px); width:$mediumSize;
+		background-color:transparent;
+	}
+	@media screen and (max-width: $smallSize) {
+		width:100%; margin:auto;
+	}
+}
+
+.row {
+    // clear at the end of container
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
+}
+
+//Loop through the number of columns in the current layout and creates the specific classes
+@for $i from 1 through 12 {
+    .col-#{$i}-12 {
+    	@if $i == 1 {
+
+				//If it's the first column, we can't count the gutter width with the total width
+				@include rem(width, $columnWidth * $i);
+
+				@media (max-width:$desktopSize) {
+					@include rem(width, $columnMediumWidth * $i);
+				}
+
+    		} @else {
+
+    			@include rem(width, $columnWidth * $i + $gutterWidth * $i - $gutterWidth);
+
+				@media (max-width: $desktopSize) {
+					@include rem(width, $columnMediumWidth * $i + $gutterWidth * $i - $gutterWidth);
+				}
+
+    		}
+
+		//This is the default gutterWidth for every collumn and the display method
+		@include rem(margin-right, $gutterWidth);
+		float:left;
+
+		//We need to ensure that the collumns will not colapse
+		min-width:1px;
+
+		@media (max-width: $smallSize) {
+			min-width:300px; width:100%;
+		}
+
+    }
+}

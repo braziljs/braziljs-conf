@@ -1,0 +1,131 @@
+/* Container */
+.speakers-container {
+	@include rem(padding-bottom, 120px); background-color:rgb(228,227,212);
+	@include breakpoint(small) {
+		@include rem(padding-bottom, 60px);
+	}
+}
+
+/* Texts */
+.default-text--speakers {
+	position:relative; display:inline-block; @include rem(font-size, 80px); color:rgb(49,89,108); transform:rotate(-9deg);
+	&:after { content:''; position:absolute; top:-16px; right:-60px; width:239px; height:153px; background:url(../img/backgrounds/bg-title-speakers.png) no-repeat; transform:rotate(6deg); }
+	@include breakpoint(small) {
+		transform:none; @include rem(font-size, 40px);
+		&:after { content:none; }
+	}
+}
+.default-text--club-name {
+	display:block; margin-top:-10px; @include rem(font-size, 37px); color:rgb(33,33,33);
+	@include breakpoint(small) {
+		@include rem(font-size, 30px); margin-top:-4px;
+	}
+}
+.default-text--speakers-year {
+	@include rem(margin-right, 20px); @include rem(margin-top, 60px); @include rem(font-size, 60px);
+	@include breakpoint(desktop) {
+		@include rem(margin-right, 26px);
+	}
+	@include breakpoint(small) {
+		@include rem(margin-top, 35px); margin-right:0; @include rem(font-size, 30px);
+	}
+}
+.default-text--copyright {
+	@include rem(padding-right, 20px); @include rem(font-size, 16px);
+	@include breakpoint(medium) {
+		float:left !important;
+	}
+	@include breakpoint(small) {
+		padding:0;
+	}
+}
+
+
+/* SPEAKERS LIST */
+.speaker-container {
+	@include rem(margin-top, 14px);
+	@include breakpoint(small) {
+		@include rem(margin-top, 10px);
+		li {
+			float:left; min-width:145px; width:49%; margin-right:2%;
+			&:nth-child(even) { margin-right:0; }
+		}
+	}
+}
+
+/* Speakers Card */
+.speaker-container {
+	perspective:1500px; transform:translateZ(0);
+	@include breakpoint(desktop) {
+		perspective:none; transform:none;
+	}
+	li {
+		transform:rotateY(0); transition:transform ease .4s;
+		&:hover, &:focus { transform:rotateY(3deg); }
+		@include breakpoint(desktop) {
+			transform:none; transition:none;
+			&:hover, &:focus { transform:none; }
+		}
+	}
+}
+.speaker-card {
+	 position:relative; @include rem(margin-bottom, 20px); @include rem(padding, 13px); height:345px; border:2px solid rgb(188,178,149); background-color:rgb(255,255,255); transition:opacity ease .3s;
+	@include breakpoint(desktop) {
+		width:228px;
+	}
+	@include breakpoint(small) {
+		width:100%; min-width:145px; text-align:center;
+	}
+	&:hover, &:focus { opacity:.85; }
+}
+
+/* No Face card */
+.speaker-card--no-face {
+	display:flex; align-items:center; justify-content:center; border-width:5px; text-align:center; transform:none;
+	&:hover, &:focus { opacity:1; transform:none !important; transition:none !important; }
+}
+.speaker-card__number-container {
+	position:relative; opacity:1; overflow:hidden; @include rem(padding, 31px 33px 17px 35px); @include rem(font-size, 60px); color:rgb(187,178,148); box-shadow:0 0 0 5px rgb(188,178,149), 0 0 0 8px white, 0 0 0 10px rgb(188,178,149); border-radius:50%; transition:opacity ease .5s;
+	&:hover {
+		.speaker-card__number { opacity:0; left:-100px; }
+		&:before { opacity:1; right:41px; }
+	}
+	&:before { content:'?'; position:absolute; top:30px; right:-41px; opacity:0; cursor:default; transition:all ease .2s; }
+}
+.speaker-card__number { position:relative; opacity:1; left:0; transition:all ease .2s; }
+
+/* Complete card */
+.speaker-photo { @include rem(margin-bottom, 18px); }
+.speaker-country { position:absolute; top:-7px; right:13px; text-indent:-9999px; }
+.speaker-country--spain {
+	@include sprite($flag-spain);
+	@include breakpoint(small) {
+		@include sprite($flag-spain-mobile);
+	}
+}
+.speaker-country--germany {
+	@include sprite($flag-germany);
+	@include breakpoint(small) {
+		@include sprite($flag-germany-mobile);
+	}
+}
+.speaker-country--usa {
+	@include sprite($flag-usa);
+	@include breakpoint(small) {
+		@include sprite($flag-usa-mobile);
+	}
+}
+.speaker-country--brazil {
+	@include sprite($flag-brazil);
+	@include breakpoint(small) {
+		@include sprite($flag-brazil-mobile);
+	}
+}
+.speaker-country--australia {
+	@include sprite($flag-australia);
+	@include breakpoint(small) {
+		@include sprite($flag-australia-mobile);
+	}
+}
+.speaker-name { @include rem(font-size, 28px); color:rgb(49,89,108); }
+.speaker-company { display:block; margin-top:-2px; font-family:$primaryParagraph; @include rem(font-size, 14px); color:rgb(229,141,46); font-weight:normal; }

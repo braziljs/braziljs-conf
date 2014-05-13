@@ -1,0 +1,37 @@
+.manifest-section {
+	position:relative; @include rem(padding, 150px 0 120px 0); border-top:5px solid rgb(40,79,80); background-color:rgb(50,99,100);
+	&:before {
+		content:''; position:absolute; top:-94px; right:0; left:0; margin:auto; width:321px; height:192px; background:url('../img/backgrounds/bg-balls.png') no-repeat;
+		@include breakpoint(desktop) {
+			background:none;
+		}
+	}
+	@include breakpoint(small) {
+		@include rem(padding, 60px 0 40px 0);
+	}
+}
+.manifest-title-container { text-align:center; }
+
+/* TEXTS */
+.section-title--manifest {
+	position:relative; display:inline-block; @include rem(margin-bottom, 60px); color:rgba(0,0,0,0.3);
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 20px);
+	}
+	&:after {
+		content:''; position:absolute; top:-45px; right:-85px; width:161px; height:151px; background:url('../img/backgrounds/bg-title-manifest.png') no-repeat;
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+}
+.default-text--manifest {
+	@include rem(margin-bottom, 25px); @include rem(font-size, 37px); line-height:112%; color:rgb(255,255,255);
+	@include breakpoint(desktop) {
+		@include rem(font-size, 30px);
+	}
+	@include breakpoint(desktop) {
+		@include rem(margin-bottom, 15px);
+	}
+}
+.default-paragraph--manifest { @include rem(margin-bottom, 20px); color:rgb(255,255,255); }

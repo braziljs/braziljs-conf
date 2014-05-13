@@ -1,0 +1,57 @@
+.hotels-section {
+	@include rem(padding-top, 100px); background-color:rgb(219,175,71); background-image:linear-gradient(-90deg,rgba(0,0,0,0.04) 0%,rgba(0,0,0,0) 100%);
+	@include breakpoint(small) {
+		@include rem(padding-top, 55px);
+	}
+}
+
+/* TEXTS */
+.section-title--hotels {
+	@include rem(margin-bottom, 30px); @include rem(font-size, 45px); color:rgba(0,0,0,0.3); text-align:center;
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 25px); @include rem(font-size, 30px);
+	}
+}
+
+/* HOTEL INFO */
+.hotels-container {
+	float:left; @include rem(margin-bottom, 60px);
+	@include breakpoint(small) {
+		margin-bottom:0;
+	}
+}
+.hotels-container__list {
+	float:left; @include rem(margin-bottom, 35px);
+	@include breakpoint(small) {
+		margin-bottom:0;
+	}
+	&:first-child {
+		.hotels-container__item {
+			padding:0; border:none;
+			@include breakpoint(small) {
+				padding-bottom:25px; border-bottom:1px dashed rgb(161,128,51);
+			}
+		}
+	}
+}
+.hotels-container__item {
+	@include rem(margin-bottom, 35px); @include rem(padding-top, 40px); border-top:1px dashed rgb(161,128,51);
+	@include breakpoint(small) {
+		padding:0; @include rem(padding-bottom, 25px); @include rem(margin-bottom, 30px); text-align:center; border:none; border-bottom:1px dashed rgb(161,128,51);
+		&:last-child { border-bottom:none; }
+	}
+	&:nth-child(4n + 1) { clear:both; }
+}
+
+/* HOTEL INFO TEXTS */
+.default-text--hotel-name { margin-bottom:4px; @include rem(font-size, 22px); color:rgba(33,33,33,0.7); }
+.hotel-price { display:block; font-family:$primaryParagraph; @include rem(font-size, 14px); color:rgb(31,31,31); }
+.hotel-price--info { font-weight:normal; }
+.hotel-description { @include rem(font-size, 14px); line-height:1.4; color:rgb(93,76,44); text-transform:lowercase; }
+.hotel-stars { @include rem(margin-bottom, 18px); }
+.is-hostel {
+	display:block; padding-top:2px; margin-top:5px; @include rem(margin-bottom, 18px); width:76px; height:19px; @include rem(font-size, 13px); color:rgb(219,175,71); font-style:normal; text-transform:uppercase; text-align:center; background:url('../img/svg/bg-hostel.svg') no-repeat;
+	@include breakpoint(small) {
+		margin:auto; margin-bottom:20px;
+	}
+}

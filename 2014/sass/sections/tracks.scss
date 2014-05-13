@@ -1,0 +1,99 @@
+//Text
+.tracks-section {
+	position:relative; @include rem(margin-top, 240px); @include rem(padding-bottom, 110px); background-color:rgb(82,99,28);
+	@include breakpoint(small) {
+		margin-top:0; @include rem(padding-top, 50px);
+	}
+	&:before {
+		content:''; position:absolute; bottom:100%; width:100%; height:240px; background:url('../img/backgrounds/bg-tracks.png') repeat-x #E4E3D4;
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+	@include breakpoint(small) {
+		@include rem(padding-bottom, 40px);
+	}
+}
+.tracks-title-container { text-align:center; }
+.section-title--tracks {
+	position:relative; display:inline-block; @include rem(padding-top, 9px); @include rem(margin-bottom, 65px); text-align:center; color:rgba(0,0,0,0.3);
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 35px); text-align:left;
+	}
+	&:after {
+		content:''; position:absolute; top:-45px; right:-70px; width:145px; height:150px; background:url('../img/backgrounds/bg-title-tracks.png') no-repeat;
+		@include breakpoint(small) {
+			content:none; background-image:none;
+		}
+	}
+}
+
+//Tracks container
+.tracks-container { position:relative; }
+.track-table {
+	@include breakpoint(small) {
+		float:left !important; @include rem(margin-bottom, 20px);
+	}
+}
+.track-table__caption {
+	@include rem(margin-bottom, 30px); @include rem(font-size, 28px); color:rgb(170,203,69); text-align:right;
+	@include breakpoint(small) {
+		@include rem(margin-bottom, 20px); text-align:left;
+	}
+}
+.track-container {
+	position:relative; display:block; @include rem(margin-top, 30px); font-family:$primaryParagraph; text-align:right; color:rgb(255,255,255); font-weight:normal !important;
+	&:first-child { margin-top:0; }
+	@include breakpoint(small) {
+		text-align:left;
+	}
+}
+.track-time { display:block; font-style:normal; font-weight:normal; }
+.track-speaker {
+	position:relative; display:inline-block; padding:0; @include rem(font-size, 14px); color:rgb(170,203,69); text-transform:uppercase; font-weight:bold;
+	&:after { content:''; position:absolute; top:4px; right:-23px; width:11px; height:9px; background:url('../img/svg/track-expand.svg') no-repeat; transition:all ease .3s; }
+	@include breakpoint(small) {
+		display:inline-block; padding:0;
+	}
+}
+.track-title { display:block; @include rem(margin-top, -3px); @include rem(font-size, 14px); font-weight:normal; }
+.tracks-about { display:block; overflow:hidden; max-height:0; transition:all ease .2s; }
+.track-description { @include rem(margin-top, 10px); @include rem(font-size, 13px); }
+.track-expand {
+	&:hover, &:focus { opacity:.4; }
+}
+.track-expand--on:after { transform:rotate(180deg); }
+.track-expand--on ~ .tracks-about { max-height:600px; transition:all ease 1s; }
+.track-table--second-day {
+	.track-table__caption { color:rgb(230,184,72); text-align:left; }
+	.track-container { text-align:left; }
+	.track-speaker {
+		color:rgb(230,184,72);
+		&:after {
+			left:-22px; background:url('../img/svg/track-expand-yellow.svg') no-repeat;
+			@include breakpoint(small) {
+				left:initial;
+			}
+		}
+	}
+	.track-title { color:rgb(235,234,209); }
+}
+.vertical-separator {
+	position:absolute; left:0; right:0; margin:auto; margin-top:10px; padding-left:20px; width:0; height:100%; border-left:3px solid rgb(255,255,255);
+	@include breakpoint(small) {
+		position:relative; display:inline-block; padding:0; margin:35px 0; width:100%; border:none; border-top:3px solid rgb(255,255,255)
+	}
+	&:before, &:after { content:''; position:absolute; }
+	&:before {
+		top:0; left:-4px; height:5px; width:5px; box-shadow:0 0 0 3px rgb(86,106,22), 0 0 0 4px rgb(255,255,255); background-color:rgb(255,255,255); border-radius:50%;
+		@include breakpoint(small) {
+			top:-4px; left:50%;
+		}
+	}
+	&:after {
+		bottom:0; left:-10px; height:3px; width:17px; background-color:rgb(255,255,255);
+		@include breakpoint(small) {
+			content:none;
+		}
+	}
+}
