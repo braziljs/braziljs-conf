@@ -34,11 +34,11 @@
   <meta property="og:url" content="http://www.braziljs.com.br">
   <meta property="og:title" content="BrazilJS 2014">
   <meta property="og:description" content="A maior conferência de javascript entra em campo em sua edição 2014!">
-  <meta property="og:image" content="/img/facebook.jpg">
+  <meta property="og:image" content="http://braziljs.com.br/facebook.jpg">
   <!-- / FACEBOOK -->
 
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- STYLES -->
   <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -144,47 +144,29 @@
         <h2 id="palestrantes" class="default-text default-text--speakers">BrazilJS Conf <span class="default-text--club-name">esporte clube</span></h2>
         <strong class="flow-opposite default-text default-text--speakers-year">2014</strong>
         <ul id="js-speakers-container" class="speaker-container clearfix">
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">01</span></div>
+            <li>
+                <a data-layer="1" class="col-3-12 speaker-card" href="#yehuda" title="Saiba mais sobre o palestrante Yehuda Katz">
+                    <img class="speaker-photo" src="../img/speakers/yehuda-katz.jpg" alt="Yehuda Katz" />
+                    <span class="speaker-country speaker-country--usa">Estados Unidos</span>
+                    <h3 class="default-text speaker-name">Yehuda Katz</h3>
+                    <strong class="speaker-company">Tilde Inc.</strong>
+                </a>
             </li>
             <li>
-                <a data-layer="1" class="col-3-12 speaker-card" href="#cabello" title="Saiba mais sobre o palestrante Ricardo Cabello">
+                <a data-layer="2" class="col-3-12 speaker-card" href="#cabello" title="Saiba mais sobre o palestrante Ricardo Cabello">
                     <img class="speaker-photo" src="../img/speakers/ricardo-cabello.jpg" alt="Ricardo Cabello" />
                     <span class="speaker-country speaker-country--spain">Espanha</span>
                     <h3 class="default-text speaker-name">Ricardo Cabello</h3>
                     <strong class="speaker-company">------</strong>
                 </a>
             </li>
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">03</span></div>
-            </li>
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">04</span></div>
-            </li>
             <li>
-                <a data-layer="2" class="col-3-12 speaker-card" href="#jorn" title="Saiba mais sobre o palestrante Jörn Zaefferer">
-                    <img class="speaker-photo" src="../img/speakers/jorn.jpg" alt="Jörn Zaefferer" />
-                    <span class="speaker-country speaker-country--germany">Alemanha</span>
-                    <h3 class="default-text speaker-name">Jörn Zaefferer</h3>
-                    <strong class="speaker-company">jQuery UI</strong>
-                </a>
-            </li>
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">06</span></div>
-            </li>
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">07</span></div>
-            </li>
-            <li>
-                <a data-layer="3" class="col-3-12 speaker-card" href="#max" title="Saiba mais sobre o palestrante Max Ogden">
-                    <img class="speaker-photo" src="../img/speakers/max-ogden.jpg" alt="Max Ogden" />
+                <a data-layer="3" class="col-3-12 speaker-card" href="#rob" title="Saiba mais sobre o palestrante Rob Dodson">
+                    <img class="speaker-photo" src="../img/speakers/rob-dodson.jpg" alt="Rob Dodson" />
                     <span class="speaker-country speaker-country--usa">Estados Unidos</span>
-                    <h3 class="default-text speaker-name">Max Ogden</h3>
-                    <strong class="speaker-company">-------</strong>
+                    <h3 class="default-text speaker-name">Rob Dodson</h3>
+                    <strong class="speaker-company">Google</strong>
                 </a>
-            </li>
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">09</span></div>
             </li>
             <li>
                 <a data-layer="4" class="col-3-12 speaker-card" href="#miller" title="Saiba mais sobre o palestrante Miller Medeiros">
@@ -194,22 +176,65 @@
                     <strong class="speaker-company">Firefox OS</strong>
                 </a>
             </li>
+            <li>
+                <a data-layer="5" class="col-3-12 speaker-card" href="#jorn" title="Saiba mais sobre o palestrante Jörn Zaefferer">
+                    <img class="speaker-photo" src="../img/speakers/jorn.jpg" alt="Jörn Zaefferer" />
+                    <span class="speaker-country speaker-country--germany">Alemanha</span>
+                    <h3 class="default-text speaker-name">Jörn Zaefferer</h3>
+                    <strong class="speaker-company">jQuery UI</strong>
+                </a>
+            </li>
+            <li>
+                <a data-layer="6" class="col-3-12 speaker-card" href="#renato" title="Saiba mais sobre o palestrante Renato Mangini">
+                    <img class="speaker-photo" src="../img/speakers/renato-mangini.jpg" alt="Renato Mangini" />
+                    <span class="speaker-country speaker-country--brazil">Brasil</span>
+                    <h3 class="default-text speaker-name">Renato Mangini</h3>
+                    <strong class="speaker-company">Google</strong>
+                </a>
+            </li>
+            <li>
+                <a data-layer="7" class="col-3-12 speaker-card" href="#guillermo" title="Saiba mais sobre o palestrante Guillermo Rauch">
+                    <img class="speaker-photo" src="../img/speakers/guillermo-rauch.jpg" alt="Guillermo Rauch" />
+                    <span class="speaker-country speaker-country--argentina">Argentina</span>
+                    <h3 class="default-text speaker-name">Guillermo Rauch</h3>
+                    <strong class="speaker-company">LearnBoost/Cloudup</strong>
+                </a>
+            </li>
+            <li>
+                <a data-layer="8" class="col-3-12 speaker-card" href="#james" title="Saiba mais sobre o palestrante James Halliday">
+                    <img class="speaker-photo" src="../img/speakers/james-halliday.jpg" alt="James Halliday" />
+                    <span class="speaker-country speaker-country--usa">Estados Unidos</span>
+                    <h3 class="default-text speaker-name">James Halliday</h3>
+                    <strong class="speaker-company">Browserling</strong>
+                </a>
+            </li>
             <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">11</span></div>
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">09</span></div>
+            </li>
+            <li>
+                <a data-layer="9" class="col-3-12 speaker-card" href="#mauricio" title="Saiba mais sobre o palestrante Mauricio Wolff">
+                    <img class="speaker-photo" src="../img/speakers/mauricio-wolff.jpg" alt="Mauricio Wolff" />
+                    <span class="speaker-country speaker-country--brazil">Brasil</span>
+                    <h3 class="default-text speaker-name">Mauricio Wolff</h3>
+                    <strong class="speaker-company">Booking.com</strong>
+                </a>
+            </li>
+            <li>
+                <a data-layer="10" class="col-3-12 speaker-card" href="#eduardo" title="Saiba mais sobre o palestrante Eduardo Lundgren">
+                    <img class="speaker-photo" src="../img/speakers/eduardo-lundgren.jpg" alt="Eduardo Lundgren" />
+                    <span class="speaker-country speaker-country--brazil">Brasil</span>
+                    <h3 class="default-text speaker-name">Eduardo Lundgren</h3>
+                    <strong class="speaker-company">Liferay</strong>
+                </a>
             </li>
             <li class="col-3-12 speaker-card speaker-card--no-face">
                 <div class="default-text speaker-card__number-container"><span class="speaker-card__number">12</span></div>
             </li>
-            <li>
-                <a data-layer="5" class="col-3-12 speaker-card" href="#dmitry" title="Saiba mais sobre o palestrante Dmitry Baranovskiy">
-                    <img class="speaker-photo" src="../img/speakers/dimitri.jpg" alt="Dmitry Baranovskiy"/>
-                    <span class="speaker-country speaker-country--australia">Australia</span>
-                    <h3 class="default-text speaker-name">Dmitry Baranovskiy </h3>
-                    <strong class="speaker-company">Adobe</strong>
-                </a>
+            <li class="col-3-12 speaker-card speaker-card--no-face">
+                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">13</span></div>
             </li>
             <li>
-                <a data-layer="6" class="col-3-12 speaker-card" href="#ricardo" title="Saiba mais sobre o palestrante Ricardo Tomasi">
+                <a data-layer="11" class="col-3-12 speaker-card" href="#ricardo" title="Saiba mais sobre o palestrante Ricardo Tomasi">
                     <img class="speaker-photo" src="../img/speakers/ricardo-tomasi.jpg" alt="Ricardo Tomasi" />
                     <span class="speaker-country speaker-country--brazil">Brasil</span>
                     <h3 class="default-text speaker-name">Ricardo Tomasi</h3>
@@ -219,8 +244,13 @@
             <li class="col-3-12 speaker-card speaker-card--no-face">
                 <div class="default-text speaker-card__number-container"><span class="speaker-card__number">15</span></div>
             </li>
-            <li class="col-3-12 speaker-card speaker-card--no-face">
-                <div class="default-text speaker-card__number-container"><span class="speaker-card__number">16</span></div>
+            <li>
+                <a data-layer="12" class="col-3-12 speaker-card" href="#leo" title="Saiba mais sobre o palestrante Leonardo Balter">
+                    <img class="speaker-photo" src="../img/speakers/leo-balter.jpg" alt="Leonardo Balter" />
+                    <span class="speaker-country speaker-country--brazil">Brasil</span>
+                    <h3 class="default-text speaker-name">Leonardo Balter</h3>
+                    <strong class="speaker-company">------</strong>
+                </a>
             </li>
         </ul>
         <span class="flow-opposite default-text default-text--copyright">COPYRIGHT © BRAZIL JS CONF 2014</span>
@@ -231,12 +261,30 @@
 <div id="js-overlay-container" class="speakers-overlay-container visuallyhidden">
     <button id="js-overlay-button-prev" class="default-button overlay-button overlay-button--prev">Palestrante anterior</button>
     <ul class="section sequence-canvas">
+        <!-- SPEAKER YEHUDA -->
+        <li class="overlay-item overlay-item--yehuda" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="yehuda" class="speaker-info__name default-text" itemprop="name">Yehuda Katz</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/wycats">@wycats</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/wycats">github.com/wycats</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Yehuda Katz is a member of the  Ember.js, Ruby on Rails and jQuery Core Teams; his 9-to-5 home is at the startup he founded, Tilde Inc.. There he works on Skylight, the smart profiler for Rails, and does Ember.js consulting. He’s best known for his open source work, which also includes projects like Thor, Handlebars and Janus. He travels the world doing open source evangelism and web standards work.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER YEHUDA -->
         <!-- SPEAKER CABELLO -->
-        <li class="overlay-item overlay-item--cabello" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+        <li class="overlay-item overlay-item--cabello animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
             <div class="speaker-info">
                 <h3 id="cabello" class="speaker-info__name default-text" itemprop="name">Ricardo Cabello aka Mr. Doob</h3>
                 <ul class="speaker-links-container">
-                    <li class="speaker-links-container__item animate-out">
+                    <li class="speaker-links-container__item">
                         <a class="speaker-links-container__anchor" href="https://twitter.com/mrdoob">@mrdoob</a>
                     </li>
                     <li class="speaker-links-container__item">
@@ -244,47 +292,29 @@
                     </li>
                 </ul>
                 <div class="speaker-bio" itemprop="description">
-                    <p class="default-paragraph speaker-bio__info">Programador autoditada de compuação gráfica. Cabello nasceu em Barcelona, e começou sua carreira profissional alternando entre 2 funções: Designer e desenvolvedor. Em seu tempo livre, seu envolvimento na demoscene o colocou no caminho para a aprendizagem da programação gráfica. Combinando sua experiência como designer e experiência no desenvolvimento, seu trabalho varia de brinquedos digitais interativos simples, como o Google Gravity, Ball Pool e Harmony - até experimentos completos, como o The Johnny Cash Project, The Wilderness Downtown e ROME. Hoje em dia, Cabello passa a maior parte de seu tempo desenvolvendo bibliotecas de código aberto e ferramentas - three.js, frame.js e stats.js - com o objetivo de tornar o design e o desenvolvimento mais simples para todos.</p>
+                    <p class="default-paragraph speaker-bio__info">Programador autoditada de computação gráfica. Cabello nasceu em Barcelona, e começou sua carreira profissional alternando entre 2 funções: Designer e desenvolvedor. Em seu tempo livre, seu envolvimento na demoscene o colocou no caminho para a aprendizagem da programação gráfica. Combinando sua experiência como designer e experiência no desenvolvimento, seu trabalho varia de brinquedos digitais interativos simples, como o Google Gravity, Ball Pool e Harmony - até experimentos completos, como o The Johnny Cash Project, The Wilderness Downtown e ROME. Hoje em dia, Cabello passa a maior parte de seu tempo desenvolvendo bibliotecas de código aberto e ferramentas - three.js, frame.js e stats.js - com o objetivo de tornar o design e o desenvolvimento mais simples para todos.</p>
                 </div>
             </div>
         </li>
         <!-- END SPEAKER CABELLO -->
-        <!-- SPEAKER JORN -->
-        <li class="overlay-item overlay-item--jorn animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+        <!-- SPEAKER ROB -->
+        <li class="overlay-item overlay-item--rob animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
             <div class="speaker-info">
-                <h3 id="jorn" class="speaker-info__name default-text" itemprop="name">Jörn Zaefferer</h3>
+                <h3 id="rob" class="speaker-info__name default-text" itemprop="name">Rob Dodson</h3>
                 <ul class="speaker-links-container">
                     <li class="speaker-links-container__item">
-                        <a class="speaker-links-container__anchor" href="https://twitter.com/bassistance">@bassistance</a>
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/rob_dodson">@rob_dodson</a>
                     </li>
                     <li class="speaker-links-container__item">
-                        <a class="speaker-links-container__anchor" href="https://github.com/jzaefferer">github.com/jzaefferer</a>
+                        <a class="speaker-links-container__anchor" href="https://github.com/robdodson">github.com/robdodson</a>
                     </li>
                 </ul>
                 <div class="speaker-bio" itemprop="description">
-                    <p class="default-paragraph speaker-bio__info">Web developer freelancer, consultor e instrutor, nascido em Cologne, Alemanha. Jörn evoluiu o testsuite do JQuery transformando-o no QUnit, framework jQuery para testes unitários. Atualmente Jörn é o mantenedor do QUnit. Jörn criou e mantém uma série de plugins muito populares para o jQuery. Ele também é lead developer do jQuery UI, focando no desenvolvimento de novos plugins, widgets e utiliários.</p>
+                    <p class="default-paragraph speaker-bio__info">Rob Dodson is a developer advocate at Google where he focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies,  user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for the mobile web and to help developers build great experiences.</p>
                 </div>
             </div>
         </li>
-        <!-- END SPEAKER JORN -->
-        <!-- SPEAKER MAX -->
-        <li class="overlay-item overlay-item--max animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-            <div class="speaker-info">
-                <h3 id="max" class="speaker-info__name default-text" itemprop="name">Max Ogden</h3>
-                <ul class="speaker-links-container">
-                    <li class="speaker-links-container__item">
-                        <a class="speaker-links-container__anchor" href="https://twitter.com/maxogden">@maxogden</a>
-                    </li>
-                    <li class="speaker-links-container__item">
-                        <a class="speaker-links-container__anchor" href="https://github.com/maxogden">github.com/maxogden</a>
-                    </li>
-                </ul>
-                <div class="speaker-bio" itemprop="description">
-                    <p class="default-paragraph speaker-bio__info">Max Ogden é um programador que mora em Oakland, CA, e trabalha com JavaScript e Node. Atualmente Max só trabalha em código que é open source! Seu principal projeto atual é um sistema de controle de versão para dados, chamado dat, e também trabalhou no Voxel.js, Voxel Builder, Nodeschool.io e JavaScript para gatos.</p>
-                </div>
-            </div>
-        </li>
-        <!-- END SPEAKER MAX -->
+        <!-- END SPEAKER ROB -->
         <!-- SPEAKER MILLER -->
         <li class="overlay-item overlay-item--miller animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
             <div class="speaker-info">
@@ -303,24 +333,114 @@
             </div>
         </li>
         <!-- END SPEAKER MILLER -->
-        <!-- SPEAKER DMITRY -->
-        <li class="overlay-item overlay-item--dimitri animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+        <!-- SPEAKER JORN -->
+        <li class="overlay-item overlay-item--jorn animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
             <div class="speaker-info">
-                <h3 id="dmitry" class="speaker-info__name default-text" itemprop="name">Dmitry Baranovskiy</h3>
+                <h3 id="jorn" class="speaker-info__name default-text" itemprop="name">Jörn Zaefferer</h3>
                 <ul class="speaker-links-container">
                     <li class="speaker-links-container__item">
-                        <a class="speaker-links-container__anchor" href="https://twitter.com/DmitryBaranovsk">@DmitryBaranovsk</a>
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/bassistance">@bassistance</a>
                     </li>
                     <li class="speaker-links-container__item">
-                        <a class="speaker-links-container__anchor" href="https://github.com/DmitryBaranovsk">github.com/DmitryBaranovsk</a>
+                        <a class="speaker-links-container__anchor" href="https://github.com/jzaefferer">github.com/jzaefferer</a>
                     </li>
                 </ul>
                 <div class="speaker-bio" itemprop="description">
-                    <p class="default-paragraph speaker-bio__info">Dmitry começou sua jornada a uma década atrás como um desenvolvedor backend, em seguida, designer e agora finalmente aceitou seu destino como um desenvolvedor front-end. Apesar de seu profundo conhecimento de CSS e HTML, ele dedica-se principalmente ao JavaScript e é conhecido como o criador da biblioteca RaphaëlJS, bem como outras bibliotecas JavaScript. Atualmente ele é um cientista da computação sênior na Adobe.</p>
+                    <p class="default-paragraph speaker-bio__info">Web developer freelancer, consultor e instrutor, nascido em Cologne, Alemanha. Jörn evoluiu o testsuite do JQuery transformando-o no QUnit, framework jQuery para testes unitários. Atualmente Jörn é o mantenedor do QUnit. Jörn criou e mantém uma série de plugins muito populares para o jQuery. Ele também é lead developer do jQuery UI, focando no desenvolvimento de novos plugins, widgets e utiliários.</p>
                 </div>
             </div>
         </li>
-        <!-- END SPEAKER DMITRY -->
+        <!-- END SPEAKER JORN -->
+        <!-- SPEAKER RENATO -->
+        <li class="overlay-item overlay-item--renato animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="renato" class="speaker-info__name default-text" itemprop="name">Renato Mangini</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/renatomangini">@renatomangini</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/mangini">github.com/mangini</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Renato Mangini é engenheiro de software da equipe de Developer Relations do Google Chrome, empreendedor, geek, mountain biker e corredor amador nas horas vagas.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER RENATO -->
+        <!-- SPEAKER GUILLERMO -->
+        <li class="overlay-item overlay-item--guillermo animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="guillermo" class="speaker-info__name default-text" itemprop="name">Guillermo Rauch</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/rauchg">@rauchg</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/guille">github.com/guille</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Guillermo Rauch is the former CTO and co-founder of LearnBoost and Cloudup, acquired by Wordpress.com in 2013. His background and expertise is in the realtime web. He's the creator of socket.io, one of the most popular JavaScript projects on GitHub, with implementations in many different programming languages and frameworks (currently running the realtime backend of high profile apps like Microsoft Office online). He created the first MongoDB ORM for Node.JS, MongooseJS. Before that he was a core developer of the MooTools JavaScript framework. He's the author of "Smashing Node.JS" published by Wiley in 2012, best-selling book about Node.JS on Amazon in multiple programming categories.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER GUILLERMO -->
+        <!-- SPEAKER JAMES -->
+        <li class="overlay-item overlay-item--james animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="james" class="speaker-info__name default-text" itemprop="name">James Halliday</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/substack">@substack</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/substack">github.com/substack</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Open source librarian. unix philosopher. I write lots of tiny libraries and publish them to npm.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER JAMES -->
+        <!-- SPEAKER MAURICIO -->
+        <li class="overlay-item overlay-item--mauricio animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="mauricio" class="speaker-info__name default-text" itemprop="name">Mauricio Wolff</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/bitbonsai">@bitbonsai</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/bitbonsai">github.com/bitbonsai</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Graphic Designer no início dos anos 90, passou por Interface Design, BackEnd, Information Architecture e finalmente FrontEnd. UX Designer na booking.com, ajudando a criar experiências para milhões de usuários em mais de 170 países e 42 idiomas. Vive em Amsterdam com sua mulher e filha, e quando não está programando ou pensando em experiência de usuário (raro) pode ser encontrado andando de bicicleta,ouvindo música ou tocando bateria.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER MAURICIO -->
+        <!-- SPEAKER EDUARDO -->
+        <li class="overlay-item overlay-item--eduardo animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="eduardo" class="speaker-info__name default-text" itemprop="name">Eduardo Lundgren</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/eduardolundgren">@eduardolundgren</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/eduardolundgren">github.com/eduardolundgren</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Eduardo Lundgren, works for Liferay, Inc. as the Lead Engineer of Latin America offices. Always seeking to participate in innovative open source Web projects, have a long history of contributing to projects like jQuery, jQueryUI and YUI libraries. He is also author of AlloyUI, tracking.js and NodeGH libraries. Eduardo holds a bachelor's degree in Eletric Engineering of Telecommunications and a master's degree in Computer Science focused on Mathematics and Computer Vision from Federal University of Pernambuco, Brazil.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER EDUARDO LUNDGREN -->
         <!-- SPEAKER RICARDO -->
         <li class="overlay-item overlay-item--ricardo animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
             <div class="speaker-info">
@@ -341,6 +461,24 @@
             </div>
         </li>
         <!-- END SPEAKER RICARDO -->
+        <!-- SPEAKER LEONARDO -->
+        <li class="overlay-item overlay-item--leo animate-out" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <div class="speaker-info">
+                <h3 id="leo" class="speaker-info__name default-text" itemprop="name">Leonardo Balter</h3>
+                <ul class="speaker-links-container">
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://twitter.com/leobalter">@leobalter</a>
+                    </li>
+                    <li class="speaker-links-container__item">
+                        <a class="speaker-links-container__anchor" href="https://github.com/leobalter">github.com/leobalter</a>
+                    </li>
+                </ul>
+                <div class="speaker-bio" itemprop="description">
+                    <p class="default-paragraph speaker-bio__info">Leo Balter acredita que a Open Web torna o mundo um lugar melhor para todos. Colaborador de projetos open source, divide o tempo escrevendo códigos e testes - principalmente em JS, luta pela privacidade e direitos dos usuários na internet, e acredita que nada disso é possível sem a força da comunidades organicas de colaboração. Engenheiro de Software por profissão, também curte um bom Blues boa guitarra, video games, e long board. Em um momento da vida resolveu também ser advogado.</p>
+                </div>
+            </div>
+        </li>
+        <!-- END SPEAKER LEONARDO -->
     </ul>
     <button id="js-overlay-button-next" class="default-button overlay-button overlay-button--next">Próximo palestrante</button>
     <button id="js-overlay-button-close" class="default-button overlay-button overlay-close-button">Fechar overlay</button>

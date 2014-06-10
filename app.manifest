@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# Time: Mon Jun 09 2014 18:42:23 GMT-0300 (BRT)
+
+
+CACHE:
+humans.txt
+index.html
+css/main.css
+fonts/Coluna.eot
+fonts/Coluna.svg
+fonts/Coluna.ttf
+fonts/Coluna.woff
+js/main.js
+js/require.js
+
+
+NETWORK:
+http://*
+https://*
+*
+
+
+SETTINGS:
+prefer-online
