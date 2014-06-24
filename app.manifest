@@ -1,10 +1,10 @@
 CACHE MANIFEST
-# Time: Mon Jun 09 2014 18:42:23 GMT-0300 (BRT)
+# Time: Wed Jun 11 2014 15:42:08 GMT-0300 (BRT)lfjsldkfjdsklvlsknklsndsdflksdjfsld;sdkwww
 
 
 CACHE:
 humans.txt
-index.html
+offline.html
 css/main.css
 fonts/Coluna.eot
 fonts/Coluna.svg
@@ -18,6 +18,10 @@ NETWORK:
 http://*
 https://*
 *
+
+
+FALLBACK:
+/index.html /offline.html
 
 
 SETTINGS:
