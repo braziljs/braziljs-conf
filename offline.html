@@ -1,10 +1,263 @@
 <!DOCTYPE html>
 <html manifest="app.manifest">
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<title>BrazilJS Offline Fallback</title>
 </head>
+<style type="text/css">
+	* { font-family:Arial; }
+	body {background-color:#e4e3d4;}
+	h1 { margin-bottom:0px;  }
+	.disclaimer { font-weight:normal; margin-bottom:60px; display:block; }
+	.address { margin-bottom:60px; font-size:1em; }
+	.locale { font-size:1.5em; }
+	.col-5-12 { max-width:600px; }
+	.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+	.time { font-size:1em; }
+	/* TRACKS */
+	.track-table { margin-bottom:40px; }
+	.track-table__caption { text-align:left; margin-bottom:10px; font-size:28px; font-family:Arial; font-weight:bold; }
+	.track-container { margin-bottom:20px;}
+	.track-speaker { margin-top:0; display:block; padding:0; font-size:14px; font-size:0.875rem; text-transform:uppercase; font-weight:bold; }
+	th { vertical-align:top; }
+	.track-time { display:block; font-style:normal; font-weight:normal; vertical-align:top; }
+	.track-description { margin-top:5px;}
+	.track-description, .track-title { color:#666; }
+</style>
 <body>
-	<h1>AGORA TÁ OFFLINE</h1>
+<!-- SCHEDULE -->
+<h1>Amigo, você está sem conexão com a internet!</h1>
+<strong class="disclaimer">Então vamos colocar aqui o que de mais importante você precisa saber para o evento!</strong>
+<h2 class="address">Endereço do BrazilJS: <br/><span class="locale">Teatro do Bourbon Country (Endereço: Av. Túlio de Rose, 80 – Porto Alegre/RS - CEP: 91340-110 – Fone: (51) 3361.7399)</span></h2>
+<h2 class="time">Horário das Palestras:</h2>
+<table class="track-table col-5-12">
+	<caption class="default-text track-table__caption">quinta-feira, 21 de agosto</caption>
+	<thead class="visuallyhidden">
+	    <tr>
+	        <th scope="col">Horário da palestras</th>
+	        <th scope="col">Descrição da palestra</th>
+	    </tr>
+	</thead>
+	<tbody>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">08:00</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Credenciais/Check-in</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">09:00</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Abertura</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">9:20</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Renato Mangini</h3>
+	            <strong class="track-title">Why ServiceWorker may be the next big thing    </strong>
+	            <div class="tracks-about">
+	                <p class="track-description">In this session, we will learn about the new ServiceWorker specification that Google, Mozilla and others are developing and how it can fill the gap between native apps and the web. We will also hear about the upcoming derived specs that will allow you to run web apps in the background, receive push notifications and much more.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">10:10</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Coffee-Break</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">10:30</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Chris Miller</h3>
+	            <strong class="track-title">Frontend at Scale - The Tumblr Story</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Growing to become one of the largest sites on the Internet comes with a unique set of problems. Learning how to and adopt, and doing so without losing sight of content creator's voice proves tricky. This talk details some of the frontend tools we've built and approaches we've taken to service our millions of users at scale.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">11:25</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Nick Desaulniers</h3>
+	            <strong class="track-title">Intro to GFX: Raw WebGL</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Graphics programming is significantly different than DOM manipulation. What does low level graphics programming look like without high level abstractions?  WebGL provides us low level capabilities for high quality real time rendering portably in the browser.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">12:10</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Almoço</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">13:45</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Jörn Zaefferer</h3>
+	            <strong class="track-title">Effective jQuery</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Patterns for maintainability and performance</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">14:30</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Chris Mills</h3>
+	            <strong class="track-title">Web versus native: round 1?</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">In this talk, Chris Mills will discuss the historic problems with web apps and which technologies are stepping up to fill the holes. This includes device APIs such as Web Activities, Camera, device orientation and nfc, offline apps (which are finally looking realistic thanks to service workers), installable apps, and high quality games and other immersive high performance experiences using such features as Web audio API, Pointer lock, asm.js and Emscripten.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">15:15</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Mauricio Wolff</h3>
+	            <strong class="track-title">Limpando CSS gigantes com JS</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Sabe aquele momento em que o seu CSS tem tantos seletores que é melhor correr o risco de duplicar seletores do que quebrar algo? Neste talk vamos ver como utilizar JS para limpar CSS legado em websites gigantes, rodando testes AB e com múltiplos desenvolvedores.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">16:00</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Coffee-Break</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">16:30</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Eduardo Lundgren</h3>
+	            <strong class="track-title">Single Page Applications Done Right</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Even modest improvements in latency can have measurable impact on a website usage. As such, sites should have aggressive goals for both actual and user perceived latency. The most obvious metric is load time, also websites often optimize and minify resources, however, even with cached resources the browser still has to re-parse and execute the CSS and JS on every page load, it still has to lay out the HTML and redraw the UI. This slows down the actual navigation but can also add perceived slowness and often introduces a white flash. In order to improve actual and perceived latencies many sites are moving to the Single Page Application (SPA) model. These days the approach is widely employed by the likes of Facebook, Twitter, GitHub, and Flickr. These examples all feel kind of app-y. Sites with more traditional layouts can still reap the benefits. Some other folks like Medium.com is technologically a single page application but it is intended to feel like a traditional website. This talk is going to teach you how to use a hybrid rendering model in an attempt to get the best out of both worlds.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">17:30</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Guillermo Rauch</strong>
+	        </td>
+	    </tr>
+	</tbody>
+</table>
+<table class="flow-opposite track-table track-table--second-day col-5-12">
+	<caption class="default-text track-table__caption">sexta-feira, 22 de agosto</caption>
+	<thead class="visuallyhidden">
+	    <tr>
+	        <th scope="col">Horário da palestras</th>
+	        <th scope="col">Descrição da palestra</th>
+	    </tr>
+	</thead>
+	<tbody>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">09:20</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Jacob Page</h3>
+	            <strong class="track-title">From commit to prod in 5 minutes</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Continuous Delivery without Continuous Disappointment is very hard to do. Here is the workflow, tools, and  my team uses to help us automatically deploy our JavaScript to production continuously without worrying about breaking prod.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">10:10</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Coffee-Break</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">10:30</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Ricardo Tomasi</h3>
+	            <strong class="track-title">Frontend was always my favorite color</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Ser um bom developer envolve mais do que habilidade técnica e conhecimento de linguagens, boas práticas e bibliotecas ou frameworks. Esta talk é uma coletânea de coisas que aprendi (the hard way) sobre colaborar com outros seres humanos, evoluir, e contribuir de maneira mais eficiente e produtiva em uma equipe de frontend.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">11:25</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Jonathan Sampson</h3>
+	            <strong class="track-title">Mastering IE’s updated F12 tools</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">The F12 tools in Internet Explorer 11 are updated every few months with new features such as “just my code” debugging, source map support, and even richer performance and memory management tools. Come and learn about how to use these new features to test and debug the web with IE11.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">12:10</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Almoço</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">13:45</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Rob Dodson</h3>
+	            <strong class="track-title">The Web Component Ecosystem</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">Web Components give us the power to invent our own HTML elements, designed to be future-facing, interoperable, and beautiful on the multi-device web. With tools like Polymer and X-Tag, we can start taking advantage of this new technology today. Let’s take a look at some of the amazing elements that are already being produced, and explore how you can start leveraging them in your own projects.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">14:30</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Leonardo Balter</h3>
+	            <strong class="track-title">Data-biding [R]evolution</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">O ecossistema de desenvolvimento se direciona cada vez mais para soluções com data-bindings. Popularizado em ferramentas como o Backbone, Angular e Ember, agora essa evolução passa a fazer parte das especificações do ES6 e ES7.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">15:15</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Miller Medeiros</h3>
+	            <strong class="track-title">AST, CST e Ferramentas Incríveis</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">A palestra será sobre AST (árvore de sintaxe abstrata) e ferramentas de manipulação de código. Muitos desenvolvedores de JavaScript não possuem um diploma de Ciência da Computação ou qualquer tipo de treinamento formal em programação, e esse é um assunto pouco discutido e de difícil acesso, minha intenção é mostrar casos de uso e explicar como que a "mágica" funciona. Existe uma carência enorme de ferramentas nessa área e a maioria das pessoas não sabem por onde começar, pretendo desmitificar e introduzir o tema de uma forma técnica mas de fácil compreensão.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">16:00</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Coffee Break</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">16:30</em></th>
+	        <td>
+	            <h3 type="button" class="default-button track-expand track-speaker">Yehuda Katz</h3>
+	            <strong class="track-title">A Day in the Life of an Ember Developer</strong>
+	            <div class="tracks-about">
+	                <p class="track-description">In this talk, Yehuda will walk you through the tools most Ember developers use for day-to-day development, and show you how an Ember developer would think about adding a feature to an existing application. Instead of focusing on yet another Hello World, this talk will show you what it’s like to add features to real-world apps.</p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">17:30</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Ricardo Cabello (Mr. Doob)</strong>
+	        </td>
+	    </tr>
+	    <tr class="track-container">
+	        <th scope="row"><em class="track-time">18:30</em></th>
+	        <td>
+	            <strong class="default-button track-expand track-expand track-speaker track-speaker--interval">Encerramento</strong>
+	        </td>
+	    </tr>
+	</tbody>
+	</table>
+
+<!-- /SCHEDULE -->
 </body>
 </html>
