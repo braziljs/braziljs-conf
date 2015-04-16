@@ -1,0 +1,48 @@
+/* Large desktop */
+@media (max-width: 1200px) {
+	
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	.ticket-button{
+		margin-bottom: 40px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.ticket-button div{
+		font-size: 28px;
+	}
+	.ticket-button span{
+		font-size: 18px;
+  		line-height: inherit;
+	}
+	.ticket{
+		margin-bottom: 30px;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+	body{
+		padding:20px;
+	}
+	.logo img{
+		width: 86%;
+	}
+	.ticket{
+		margin-bottom: 30px;
+	}
+	.ticket-button{
+		max-width: 84% !important;
+	}
+	.ticket-button div{
+		font-size: 20px;
+	}
+	.ticket-button span{
+		  font-size: 14px;
+  		  line-height: 0
+	}
+}

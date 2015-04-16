@@ -3,46 +3,13 @@
 
 # TEAM
 
-	Design and UX: Amanda Muller Reche
-	Twitter: @amandaerre
-	Linkedin: http://br.linkedin.com/pub/amanda-reche/50/4bb/390
-	From: Porto Alegre, Brazil
-
-	Front End Engineer: Bruno Nogueira Azevedo
-    Twitter: @bazevedo
-    GitHub : https://github.com/bazevedo/
-	Linkedin: http://www.linkedin.com/pub/bruno-nogueira-azevedo/64/78/b22
-	From: Porto Alegre, Brazil
+    <name> -- <role> -- <twitter>
 
 # THANKS
 
-    Brazil JS Co founder: Jaydson Gomes
-    Twitter: @jaydson
-    From: Porto Alegre, Brazil
-
-    Brazil JS Co founder: Felipe Moura
-    Twitter: @felipenmoura
-    From: Porto Alegre, Brazil
-
+    <name>
 
 # TECHNOLOGY COLOPHON
 
-    Standards:
-    	HTML5, CSS3, Schema
-
-    Components:
-    	Conf-Boilerplate - https://github.com/braziljs/conf-boilerplate
-    	DocPad - http://docpad.org/
-    	Github - https://github.com/
-    	Normalize.css - http://necolas.github.io/normalize.css/
-    	HTML5 boilerplate - http://html5boilerplate.com/
-    	GruntJS - http://gruntjs.com
-    	GULP - http://gulpjs.com/
-    	SASS - http://sass-lang.com
-    	JQuery - http://jquery.com
-    	RequireJS - http://requirejs.org/
-    	Sequence - sequencejs.com
-    	FastClick - https://github.com/ftlabs/fastclick
-    	Twitter Fetcher - http://jasonmayes.com/projects/twitterApi/
-
-	Software: Sublime Text 3, Adobe Fireworks CS6
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
