@@ -123,11 +123,7 @@ body,
 .block{
     height: 100%;
 }
-body{
-    /*background: url(../../img/bg-teaser-1.jpg) no-repeat center center fixed;*/
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+body {
     overflow-x:hidden; 
 }
 .block {
@@ -146,6 +142,7 @@ body{
  }
  .logo{
     margin-top: 0;
+    text-align: center;
  }
 .stroke{
     color: white;
@@ -173,7 +170,7 @@ body{
     border-radius: 5px;
     margin: 34px auto 0;
     border: solid 6px #24770e;
-    max-width: 50%;
+    max-width: 40%;
 }
 .ticket-button div{
    transform:skew(15deg); 
@@ -184,6 +181,7 @@ body{
 .ticket-button:hover{
     background: #24770e;
     border: solid 6px #1a4f0b;
+    text-decoration: none;
 }
 .ticket-button:hover div{
     color: #fff;
@@ -195,12 +193,54 @@ body{
 .ticket .red:hover{
     color: #ffd648;
 }
+.speakers{
+    margin-top: 34px;
+}
+.speakers .date{
+    margin-bottom: 20px;
+}
+.avatar-speaker{
+    display: table;
+    border: solid 5px #000;
+    margin: 0 auto 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.avatar-speaker img{
+    max-width: 100%;
+    height: auto;
+}
+.info-speaker h2{
+    margin: 0;
+}
+.speaker  h2{
+    font-size: 16px;
+    margin:0;
+}
+.info-speaker span{
+    font-size: 18px;
+    margin-top: 4px;
+    display: block;
+}
+.speaker  span{
+    font-size: 12px;
+}
+.container{
+    padding: 85px 0;
+}
+.speaker{
+    margin-top: 50px;
+}
 
-
-
-
-
-
+.share {
+    margin-top: 50px;
+}
+.share .twitter {
+    position: relative;
+    bottom: -9px;
+}
 
 
 
