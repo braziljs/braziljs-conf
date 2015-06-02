@@ -170,7 +170,7 @@ body {
     border-radius: 5px;
     margin: 34px auto 0;
     border: solid 6px #24770e;
-    max-width: 40%;
+    max-width: 92%;
 }
 .ticket-button div{
    transform:skew(15deg); 
@@ -185,6 +185,20 @@ body {
 }
 .ticket-button:hover div{
     color: #fff;
+}
+.c4p-button{
+    background: #ed8b2c;
+    border-color: #9b5b1d;
+}
+.c4p-button div{
+    color: #6f4114;
+}
+.c4p-button:hover{
+    background: #9b5b1d;
+    border-color: #6f4114;
+}
+.c4p-button:hover div{
+
 }
 .ticket span,
 .ticket span a{
