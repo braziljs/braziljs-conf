@@ -1,0 +1,28 @@
+footer {
+	text-align: center;
+	height: 103px;
+	background: rgb(240, 240, 240);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding-top: 25px;
+}
+
+.categories {
+	margin-bottom: 1rem;
+	list-style: none;
+	display: inline;
+	margin: 2px;
+	background: rgb(229, 227, 227);
+	border: solid gray 1px;
+	border-radius: 5px;
+	padding: 4px;
+}
+
+.social span {
+	margin: 5px;
+}
+
+.content {
+	padding-bottom: 230px;
+}

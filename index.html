@@ -1,51 +1,1364 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<!-- Responsive Meta Data -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Responsive Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<!-- Core Meta Data -->
-	<meta name="author" content="@italowaxman">
-	<meta name="description" content="Em sua quinta edição o maior evento de javascript do universo homenageia os anos 90.">
+    <!-- Facebook Tags -->
+    <meta property="og:description" content="Em sua quinta edição o Braziljs homenageia os anos 90 comemorando os 20 anos do javascript.">
+    <meta property="og:image" content="http://www.braziljs.com.br/images/avatar-share.jpg">
+    <meta property="og:site_name" content="BrazilJS Conf 2015">
+    <meta property="og:title" content="BrazilJS Conf 2015">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.braziljs.com.br">
 
-	<!-- Facebook Tags -->
-	<meta property="og:description" content="Em sua quinta edição o maior evento de javascript do universo homenageia os anos 90.">
-	<meta property="og:image" content="http://www.braziljs.com.br/avatar_face.png">
-	<meta property="og:site_name" content="BrazilJS Conf">
-	<meta property="og:title" content="BrazilJS Conf 2015">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://www.braziljs.com.br">
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://www.braziljs.com.br">
+    <meta name="twitter:creator" content="@italowaxmanr">
+    <meta name="twitter:title" content="BrazilJS Conf 2015">
+    <meta name="twitter:description" content="Em sua quinta edição o Braziljs homenageia os anos 90 comemorando os 20 anos do javascript.">
+    <meta name="twitter:image" content="http://www.braziljs.com.br/images/avatar-share.jpg">
 
-	<!-- Twitter tags -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="http://www.braziljs.com.br">
-	<meta name="twitter:creator" content="@italowaxman">
-	<meta name="twitter:title" content="BrazilJS Conf 2015">
-	<meta name="twitter:description" content="Em sua quinta edição o maior evento de javascript do universo homenageia os anos 90.">
-	<meta name="twitter:image" content="http://www.braziljs.com.br/avatar_face.png">
+    <!-- Gplus tags -->
+    <meta itemprop="name" content="BrazilJS Conf 2015">
+    <meta itemprop="description" content="Em sua quinta edição o Braziljs homenageia os anos 90 comemorando os 20 anos do javascript.">
+    <meta itemprop="image" content="http://www.braziljs.com.br/images/avatar-share.jpg">
 
-	<!-- Humans -->
-	<link rel="author" href="humans.txt" />
+    <!-- Humans -->
+    <link rel="author" href="humans.txt" />
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="favicon.png" type="image/png">
-	<link rel="shortcut icon" href="http://www.braziljs.com.br/favicon.png" type="image/png"> <!-- link absoluto do favicon -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 
-	<!-- CSS compilado e minificado -->
-	<link rel="stylesheet" href="assets/css/_build/style.min.css">
+    <!-- Core Meta Data -->
+    <meta name="description" content="Em sua quinta edição o Braziljs homenageia os anos 90 comemorando os 20 anos do javascript.">
+    <meta name="author" content="@italowaxman">
 
-	<meta charset="UTF-8">
-	<title>BrazilJS Conf 2015</title>
+    <!-- CSS compilado e minificado / Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>BrazilJS 2015</title>
 </head>
-<body>
+<body> 
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <nav class="main-menu hidden-sm hidden-xs">
+                            <ul class="main-menu">
+                                <li class="item-main-menu"><a href="#intro">Intro</a></li>
+                                <li class="item-main-menu"><a href="#speakers">Palestrantes</a></li>
+                                <li class="item-main-menu"><a href="#location">Local</a></li>
+                                <li class="item-main-menu"><a href="#ticket">Ticket</a></li>
+                                <li class="item-main-menu"><a href="#manifesto">Manisfesto Braziljs</a></li>
+                                <li class="item-main-menu"><a href="#sponsors">Patrocínio</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky-menu">
+                <button id="trigger-overlay" type="button">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                </button>
+            </div>    
+                        
+            <div class="overlay overlay-hugeinc">
+                <button type="button" class="overlay-close">Close</button>
+                <nav>
+                    <ul>
+                        <li><a class="close-overlay" href="#intro">Intro</a></li>
+                        <li><a class="close-overlay" href="#speakers">Palestrantes</a></li>
+                        <li><a class="close-overlay" href="#location">Local</a></li>
+                        <li><a class="close-overlay" href="#ticket">Ticket</a></li>
+                        <li><a class="close-overlay" href="#manifesto">Manifesto Braziljs</a></li>
+                        <li><a class="close-overlay" href="#sponsors">Patrocínio</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        
+        <section id="intro" class="intro">
+    <div class="share hidden-sm hidden-xs">
+        <span>
+            <div class="fb-share-button" data-href="http://braziljs.com.br/" data-layout="button_count"></div>
+        </span>
+        <span class="twitter-share-button">
+            <a href="http://braziljs.com.br/" class="twitter-share-button" data-text="BrazilJS Conf 2015 - A maior conferência JavaScript do universo!" data-via="braziljs" data-hashtags="braziljs">Tweet</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+            </script>
+        </span>
+    </div>
+    <div class="info-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="logo"><img src="/images/braziljs.svg" alt="braziljs logo" class="braziljs"></div>
+                    <span class="date-local"><span>21 e 22 de Agosto |</span> Porto Alegre, RS</span>
+                    <h3 class="slogan">A maior conferência Javascript do Universo</h3>
+                    <span class="birthday hidden-xs">Não fique de fora! <span>Comemore conosco os 20 anos do javascript</span></span>
+                    <div class="bg-info-intro"><img src="/images/bg-info-intro.png" alt="background intro"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a class="button button-ticket" target="_blank" href="http://www.eventick.com.br/braziljs-2015" title="Comprar Ticket">
+                        <div>
+                            <h4>Comprar Ticket</h4>
+                            <span class="hidden-xs">Lote Eich</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <a class="button button-patrocinio" target="_blank" href="mailto:jayalemao@gmail.com;felipenmoura@gmail.com?subject=Patrocínio BrazilJS 2015" title="Seja um Patrocinador">
+                        <div>
+                            <h4>Seja um Patrocinador</h4>
+                            <span class="hidden-xs">Patrocine a maior conferência JS do universo</span>
+                        </div>
+                    </a>
+                </div>
+            </div>  
+        </div>
+    </div>  
+    <div class="thunders">
+        <div class="thunder-1"><div></div></div>
+        <div class="thunder-2"><div></div></div>
+    </div>
+
+    <div class="intro-bg">
+        <div></div>
+    </div>
+</section>
+
+        
+
+<section id="speakers" class="speakers" data-highlighted="1">
+	<div class="speaker-highlight">
+		<div class="container">
+			<div class="js-cube hidden-xs"><img src="/images/js-cube.png" alt="js cube"></div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>Palestrantes</h2>
+					<p>Conheça o time de feras que selecionamos para tornar esse dia único em sua vida.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container-highlight">
+
+					
+						
+							<div class="speaker-container speaker-1">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/brendan-eich.png" alt="Brendan Eich" title="Brendan Eich: Criador do JavaScript">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Brendan Eich </h3>
+										<h4 class="yellow">Criador do JavaScript</h4>
+										<p>Brendan Eich criou o JavaScript e já foi CTO da Mozilla. É amplamente reconhecido por suas contribuições para a evolução da Internet. Em 1995, Eich inventou o JavaScript (ECMAScript), a linguagem de programação mais utilizada na internet.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/BrendanEich" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/brendaneich" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-2">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/cristian-haillman.png" alt="Christian Heilmann" title="Christian Heilmann: HTML5/Open Web Evangelist at Microsoft">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Christian Heilmann </h3>
+										<h4 class="yellow">HTML5/Open Web Evangelist at Microsoft</h4>
+										<p>Chris Heilmann tem dedicado muito do seu tempo a fazer a web melhor. Originalmente vindo de um background de jornalismo de rádio, ele construiu seu primeiro site do zero lá por 1997 e passou os anos seguintes trabalhando em vários sites de grande porte. Ele então passou alguns anos no Yahoo, depois trabalhou na Mozilla. Chris escreveu 2 livros sobre desenvolvimento web e contribuiu para 8, além de escrever muitos artigos e centenas de blog posts. Ele está atualmente trabalhando no time do Microsoft Edge.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/codepo8" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/codepo8" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-3">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/ju-goncalves.png" alt="Ju Gonçalves" title="Ju Gonçalves: @junspector">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Ju Gonçalves </h3>
+										<h4 class="yellow">@junspector</h4>
+										<p>Ju Gonçaves é uma cientista em tempo integral, sendo não somente Mestre Pokémon como Mestre em Ciência da Computação. Tem artigos citados no mundo inteiro, é integrante da comunidade JavaScript, embora dedique parte do seu tempo à Programação Funcional e a compilar diversas linguagens para rodá-las no browser.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/junspector" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/jugoncalves" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-4">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/james-halliday.png" alt="James Halliday" title="James Halliday: Criador do Browserify">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> James Halliday </h3>
+										<h4 class="yellow">Criador do Browserify</h4>
+										<p>O James, mais conhecido como Subastck, gosta de escrever pequenos módulos que fazem apenas uma coisa bem feita. Ele gosta do unix, leveldb, streams, e experimentos loucos.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/substack" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/substack" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-5">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/sebastian-mackenzie.png" alt="Sebastian McKenzie" title="Sebastian McKenzie: Criador do Babeljs">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Sebastian McKenzie </h3>
+										<h4 class="yellow">Criador do Babeljs</h4>
+										<p>Jovem prodígio Australiano que aos 18 anos é um dos devs JavaScript mais respeitados da comunidade.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/sebmck" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/sebmck" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-6">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/andreas-gal.png" alt="Andreas Gal" title="Andreas Gal: Empreendedor, Tecnólogo, Ex-CTO da Mozilla">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Andreas Gal </h3>
+										<h4 class="yellow">Empreendedor, Tecnólogo, Ex-CTO da Mozilla</h4>
+										<p>Andreas é empreendedor e tecnólogo com uma paixão para resolver problemas difíceis com grande impacto. Como o ex-CTO da Mozilla ele trabalhou por muitos anos com a Web e com as tecnologias que fizeram a Web ser o que é hoje.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/andreasgal" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/andreasgal" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-7">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/laurie-voss.png" alt="Laurie Voss" title="Laurie Voss: CTO do NPM">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Laurie Voss </h3>
+										<h4 class="yellow">CTO do NPM</h4>
+										<p>Laurie é desenvolvedor de websites há 19 anos, atuando como dev front-end, back-end, como DBA. Ele se preocupa em tornar a web melhor para todos. Anteriormente já trabalhou no Yahoo e co-fundou o awe.sm, que foi comprado em Maio de 2014. Atualmente ele é o CTO do npm, Inc., e gasta muito tempo no Twitter.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/seldo" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/seldo" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-8">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/eric-schoff.png" alt="Eric Schoffstall" title="Eric Schoffstall: Criador do Gulp">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Eric Schoffstall </h3>
+										<h4 class="yellow">Criador do Gulp</h4>
+										<p>Eric Schoffstall (aka Contra) é co-founder da Fractal, atualmente morando em San Francisco. Quando ele não está trabalhando em um dos seus 210 projetos open source, ele esta normalmente andando de skate ou escalando montanhas ao redor do mundo.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/contra-hacks" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/contra" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-9">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/douglas-campos.png" alt="Douglas Campos" title="Douglas Campos: @qmx">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Douglas Campos </h3>
+										<h4 class="yellow">@qmx</h4>
+										<p>Desenvolvedor, baixista, pai, not-dumb-christian, ciclista urbano, geek, professor, JRuby & outras linguagens JVM-based, freak, table tennis n00b - criador do dynjs.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/qmx" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/qmx" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-10">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/julian-duque.png" alt="Julián Duque" title="Julián Duque: NodeSource">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Julián Duque </h3>
+										<h4 class="yellow">NodeSource</h4>
+										<p>Desenvolvedor e professr por paixão, engenheiro na NodeSource, contribuidor e evangelista io.js. Organizador do MedellinJS e da JSConf Colombia.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/julian_duque" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/julianduque" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-11">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/reinaldo-ferraz.png" alt="Reinaldo Ferraz" title="Reinaldo Ferraz: W3C">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Reinaldo Ferraz </h3>
+										<h4 class="yellow">W3C</h4>
+										<p>Formado em desenho e computação gráfica e pós graduado em design de hipermídia pela Universidade Anhembi Morumbi em São Paulo. Trabalha há mais de 12 anos com desenvolvimento web. Coordenador do Prêmio Nacional de Acessibilidade na Web e do Grupo de Trabalho em Acessibilidade na Web e representante do W3C Brasil em plenárias técnicas do W3C.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/reinaldoferraz" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-12">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/felipe-ribeiro.png" alt="Felipe Ribeiro" title="Felipe Ribeiro: Spotify">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Felipe Ribeiro </h3>
+										<h4 class="yellow">Spotify</h4>
+										<p>Graduado em Ciência da Computação pela UFCG e atualmente trabalha como Engenheiro de Software no Spotify em Estocolmo - Suécia, onde faz parte da equipe responsável pelo cliente Spotify para Desktop.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/felipernb" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/felipernb" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-13">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/tania-gonzales.png" alt="Tania Gonzales" title="Tania Gonzales: ThoughtWorks">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Tania Gonzales </h3>
+										<h4 class="yellow">ThoughtWorks</h4>
+										<p>Tania Gonzales é desenvolvedora de software pela ThoughtWorks Brazil desde 2013, e atua como profissional de TI a 6 anos. Apaixonada por inovação e boas práticas.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/taniadgv" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/taniadgv/" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-14">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/diogo-lucas.png" alt="Diogo Lucas" title="Diogo Lucas: AGCO">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Diogo Lucas </h3>
+										<h4 class="yellow">AGCO</h4>
+										<p>Desenvolvedor, arquitéto, professor e entusiasta tecnológico. Diogo realmente acredita que a vida é muito curta para beber cerveja ruim, criar produtos ruins ou deixar pessoas na zona de conforto.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/diogoclucas" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/dclucas" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-15">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/damian-schenk.png" alt="Damian Schenkelman" title="Damian Schenkelman: Auth0">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Damian Schenkelman </h3>
+										<h4 class="yellow">Auth0</h4>
+										<p>Damian é engenheiro na Auth0 trabalhando em fazer o core escalável e performático. Ele ama aprender sobre JavaScript.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/dschenkelman" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/dschenkelman" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-16">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/raphael-amorim.png" alt="Raphael Amorim" title="Raphael Amorim: ">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Raphael Amorim </h3>
+										<h4 class="yellow"></h4>
+										<p>É um dos contribuidores brasileiros mais ativos de projetos open source, já tendo atuado como desenvolvedor em empresas como Videolog e Petrobras. Palestrou em alguns dos principais eventos do Brasil, além de fazer parte da 3days e ser autor de diversos artigos no iMasters.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/raphamundi" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/raphamorim" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-17">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/nicolas-bevacqua.png" alt="Nicolas Bevacqua" title="Nicolas Bevacqua: Pony Foo">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Nicolas Bevacqua </h3>
+										<h4 class="yellow">Pony Foo</h4>
+										<p>Nico é um hacker entusiasta JavaScript que mora em Buenos Aires, Argentina. Quando ele não está hackeando em projetos freelance, ou contribuindo com a comunidade open-source, Nico dedica o seu tempo para comunidades locais como a NodeSchool e Beer.js, e escrevendo para Pony Foo; Ele também publicou um livro, chanado JavaScript Application Design.</p>
+										<div class="social-speaker">
+											<a href="https://twitter.com/nzgb" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/bevacqua" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="speaker-container speaker-18">
+								<div class="col-sm-6 speaker-image">
+									<div class="avatar-speaker-highlight">
+										<img src="/images/speakers/fernando-micalli.png" alt="Fernando Miçalli" title="Fernando Miçalli: UOL">
+									</div>
+								</div>
+								<div class="col-sm-5 speaker-data">
+									<div class="info-speaker-highlight">
+										<h3> Fernando Miçalli </h3>
+										<h4 class="yellow">UOL</h4>
+										<p>Formado em Ciência da Computação, trabalha há 15 anos no UOL e atuou em diversas áreas da empresa como desenvolvedor de Front e Back End, Líder Técnico, Scrum Master e Gerente de Projetos. Participou da criação e evolução de produtos como Home Page do UOL, Busca, Rádio UOL, Bate-papo, CMS e Placar UOL</p>
+										<div class="social-speaker">
+											<a href="" class="item-social-speaker" title="Twitter"><img src="/images/twitter.svg" alt="icon twitter"></a>
+											<a href="https://github.com/fermads/" class="item-social-speaker" title="Github"><img src="/images/github.svg" alt="icon github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+
+					<div class="arrows">
+						<a href="#" class="prev">
+							<div>
+								<img src="/images/arrow-speakers.png" alt="">
+							</div>
+						</a>
+						<a href="#" class="next">
+							<div>
+								<img src="/images/arrow-speakers.png" alt="">
+							</div>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="bg-info-speaker hidden-xs"><img src="/images/bg-info-speaker.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="speaker-selection">
+		<div class="container hidden-xs">
+			<div class="row">
+				<div class="col-sm-12">
+					<h4>- SELECIONE O PALESTRANTE DESEJADO -</h4>
+				</div>
+			</div>
+			<div class="row  hidden-xs">
+				<div class="col-sm-12 speakers-list">
+					<ul>
+						<div class="first-line">
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-1" data-speaker-idx="1">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-brendan.jpg" alt="Brendan Eich" title="Brendan Eich: Criador do JavaScript">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-2" data-speaker-idx="2">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-cristian.jpg" alt="Christian Heilmann" title="Christian Heilmann: HTML5/Open Web Evangelist at Microsoft">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-3" data-speaker-idx="3">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-ju.jpg" alt="Ju Gonçalves" title="Ju Gonçalves: @junspector">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-4" data-speaker-idx="4">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-james.jpg" alt="James Halliday" title="James Halliday: Criador do Browserify">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-5" data-speaker-idx="5">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-sebastian.jpg" alt="Sebastian McKenzie" title="Sebastian McKenzie: Criador do Babeljs">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-6" data-speaker-idx="6">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-andreas.jpg" alt="Andreas Gal" title="Andreas Gal: Empreendedor, Tecnólogo, Ex-CTO da Mozilla">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-7" data-speaker-idx="7">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-laurie.jpg" alt="Laurie Voss" title="Laurie Voss: CTO do NPM">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-8" data-speaker-idx="8">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-eric.jpg" alt="Eric Schoffstall" title="Eric Schoffstall: Criador do Gulp">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-9" data-speaker-idx="9">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-douglas.jpg" alt="Douglas Campos" title="Douglas Campos: @qmx">
+		</a>
+	</li>
+
+
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+						</div>
+
+						<div class="second-line">
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-10" data-speaker-idx="10">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-julian.jpg" alt="Julián Duque" title="Julián Duque: NodeSource">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-11" data-speaker-idx="11">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-reinaldo.jpg" alt="Reinaldo Ferraz" title="Reinaldo Ferraz: W3C">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-12" data-speaker-idx="12">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-felipe.jpg" alt="Felipe Ribeiro" title="Felipe Ribeiro: Spotify">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-13" data-speaker-idx="13">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-tania.jpg" alt="Tania Gonzales" title="Tania Gonzales: ThoughtWorks">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-14" data-speaker-idx="14">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-diogo.jpg" alt="Diogo Lucas" title="Diogo Lucas: AGCO">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-15" data-speaker-idx="15">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-damian.jpg" alt="Damian Schenkelman" title="Damian Schenkelman: Auth0">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-16" data-speaker-idx="16">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-raphael.jpg" alt="Raphael Amorim" title="Raphael Amorim: ">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-17" data-speaker-idx="17">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-nicolas.jpg" alt="Nicolas Bevacqua" title="Nicolas Bevacqua: Pony Foo">
+		</a>
+	</li>
+
+
+							
+						
+							
+								
+
+
+	<li class="speaker speaker-first-line speaker-18" data-speaker-idx="18">
+		<a href="#">
+			<img src="/images/speakers/list/avatar-fernando.jpg" alt="Fernando Miçalli" title="Fernando Miçalli: UOL">
+		</a>
+	</li>
+
+
+							
+						
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bg-speaker-location">
+			<div></div>
+		</div>
+	</div>
+</section>
+
+        <section id="location" class="location">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>O Local</h2>
+                <p>Conheça o mega local que escolhemos a dedo visando tornar seu dia <span class="red">#epic</span></p>
+                <div class="info-location">
+                    <h4 class="red">Shopping Center BarraShoppingSul</h4>
+                    <p>Av. Diário de Notícias, 300, bairro Cristal, Porto Alegre/RS</p>
+                </div>
+            </div>
+             <div class="col-sm-6 hidden-xs pc-container">
+                <div class="pc-location">
+                    <div class="disquete"><img src="/images/disquete.png" alt="disquete"></div>
+                    <div class="mini-game"><img src="/images/mini-game.png" alt="mini game"></div>
+                    <div class="tijolao"><img src="/images/tijolao.png" alt=""></div>
+                    <div class="pc"><img src="/images/pc-location.png" alt="computer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hide-scroll"></div>
+                <div class="gmaps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.3121959943473!2d-51.245887999999994!3d-30.085244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978a137f9606d%3A0xace8a6c8f07f05e1!2sBarraShoppingSul!5e0!3m2!1spt-BR!2sbr!4v1434849270302" width="100%" height="400" frameborder="0" style="border:0"></iframe></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12"><img src="/images/local/img-local-1.jpg" alt="image local" class="img-local"></img></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><img src="/images/local/img-local-2.jpg" alt="image local" class="img-local"></img></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><img src="/images/local/img-local-3.jpg" alt="image local" class="img-local"></img></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><img src="/images/local/img-local-4.jpg" alt="image local" class="img-local"></img></div>
+        </div>
+    </div>
+
+    <div id="game_wrapper">
+        <object id="game_iframe" type="application/x-shockwave-flash" data="http://chat.kongregate.com/gamez/0003/0444/live/470460_DoomGame.swf?kongregate_game_version=1363137900" width="800" height="500" id="gamediv"><param name="bgcolor" value="#ffffff"><param name="allownetworking" value="all"><param name="allowscriptaccess" value="never"><param name="base" value="http://chat.kongregate.com/gamez/0003/0444/live/"><param name="flashvars" value="kongregate=true&amp;kongregate_username=Guest&amp;kongregate_user_id=0&amp;kongregate_game_id=30444&amp;kongregate_game_version=1363137900&amp;kongregate_host=http%3A%2F%2Fwww.kongregate.com&amp;kongregate_game_url=http%3A%2F%2Fwww.kongregate.com%2Fgames%2Fmike_id%2Fdoom-1&amp;kongregate_api_host=http%3A%2F%2Fapi.kongregate.com&amp;kongregate_svid=358a093b-120d-40d6-a2a1-16ec03fff93f&amp;kongregate_game_auth_token=84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec&amp;kongregate_stamp=84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec&amp;api_path=http%3A%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_0256891c32c4fb4b4d8435be3d168b6a.swf&amp;game_url=http%3A%2F%2Fwww.kongregate.com%2Fgames%2Fmike_id%2Fdoom-1&amp;kongregate_split_treatments=none&amp;kongregate_api_path=http%3A%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_0256891c32c4fb4b4d8435be3d168b6a.swf&amp;kongregate_channel_id=1435717352149&amp;debug_level=undefined"></object>
+    </div>
+</section>
+
+        <section class="accommodation">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Onde Se hospedar?</h2>
+                <p>Essas são nossas dicas de hospedagem para melhor a sua estadia em Porto Alegre.</p>
+            </div>
+        </div>
+        <div class="row gameboy-trigger">
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.ekoresidence.com.br/" alt="Eko Residence Tower">
+                        <h4>Eko Residence Tower</h4>
+                    </a>
+                    <strong>a partir de R$ 149,00</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.accorhotels.com/pt/hotel-7202-ibis-budget-porto-alegre/index.shtml" alt="Ibis budget Porto Alegre">
+                        <h4>Ibis budget Porto Alegre</h4>
+                    </a>
+                    <strong>a partir de R$ 99.00</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.trihoteis.com/" alt="Tri Hotel">
+                        <h4>Tri Hotel</h4>
+                    </a>
+                    <strong>a partir de R$ 129,00</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.master-hoteis.com.br" alt="Master Express Cidade Baixa">
+                        <h4>Master Express Cidade Baixa</h4>
+                    </a>
+                    <strong>a partir de R$ 183,00</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.master-hoteis.com.br" alt="Master Express Perimetral">
+                        <h4>Master Express Perimetral</h4>
+                    </a>
+                    <strong>a partir de R$ 183,00</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="www.comfortportoalegre.com.br" alt="Comfort Inn">
+                        <h4>Comfort Inn</h4>
+                    </a>
+                    <strong>a partir de R$ 210,00</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.casaazulhostel.com.br" alt="Casa Azul Hostel">
+                        <h4>Casa Azul Hostel</h4>
+                    </a>
+                    <strong>a partir de R$ 40,00 cama em quarto coletivo</strong>
+                    <p>distância de 7 a 8 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.bommhostel.com/" alt="Bom Fim Hostel">
+                        <h4>Bom Fim Hostel</h4>
+                    </a>
+                    <strong>a partir de R$ 49,00 cama em quarto coletivo</strong>
+                    <p>distância de 8 a 9 km do evento</p>
+                </div>
+            </div>    
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="accommodation-local">
+                    <a target="_blank" href="http://www.intercityhoteis.com.br" alt="Intercity Premium">
+                        <h4>Intercity Premium</h4>
+                    </a>
+                    <strong>a partir de R$ 242,00</strong>
+                    <p>distância de 5 a 6 km do evento</p>
+                </div>
+            </div>    
+            
+        </div>
+    </div>
+</section>
+
+        <section id="ticket" class="ticket">
+    <div class="container">
+        <div class="gameboy hidden-xs"><img src="/images/gameboy.png" alt="gameboy"></div>
+        <div class="col-md-8 col-md-offset-4 col-sm-12">
+            <h2>Garanta seu ticket</h2>
+            <p>Garanta já o seu ticket para a maior conferência de JavaScript do universo. Esse ano comemoraremos os 20 anos de JavaScript relembrando a década de 90. </p>
+            <a class="button button-ticket" target="_blank" href="http://www.eventick.com.br/braziljs-2015">
+                <div>
+                    <h4 class="red">Comprar Ticket</h4>
+                    <span class="hidden-xs">Lote Eich</span>
+                </div>
+            </a>
+        </div>
+        <div class="tickets hidden-xs">
+            <div class="ticket-1"><img src="/images/ticket-1.png" alt="ticket"></div>
+            <div class="ticket-2"><img src="/images/ticket-2.png" alt="ticket"></div>
+        </div>
+    </div>
+</section>
+
+        <section id="manifesto" class="manifesto">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2><span class="yellow">Manifesto</span> <span class="white">Braziljs</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="white">Nós somos a maior conferência JavaScript do universo! E queremos ser ainda maiores.</h4>
+                <p class="white">A ideia do BrazilJS surgiu em meados do ano de 2008. Muitos eventos de tecnologia e de diversas linguagens diferentes estavam acontecendo na época. Jaydson e Felipe sempre foram entusiastas JavaScript, e sentiram a falta de uma conferência focada na linguagem, que para eles, tinha um futuro promissor.</p>
+                <p class="white">Pouco tempo depois, em 2009, nasceu a primeira conferência JavaScript, a JSConf americana. Durante o ano de 2010 a ideia evoluiu e Christiano Milfont estava pensando no mesmo, fazer uma conferência JavaScript nacional. Unindo forças, Jaydson, Felipe e Christiano conseguiram em 2011 fazer a primeira conferência JavaScript do Brasil.</p>
+            </div>
+            <div class="col-sm-6">
+                <p class="white">Na sua estréia, em maio de 2011, a BrazilJS Conf se tornou uma das maiores conferências JavaScript do mundo, contando com 600 participantes e mais de 20 palestras.</p>
+                <p class="white">Em 2012 a BrazilJS Conf contou com mais de 900 pessoas e trouxe pela primeira vez ao Brasil o lendário criador da linguagem JavaScript, Brendan Eich.</p>
+                <p class="white">Em 2013 e 2014, a conferência repetiu o sucesso. Com nomes de peso, como Douglas Crockford, Yehuda Katz, Guillermo Rauch e Mr. Doob o número de participantes chegou a quase 1000 em ambas edições, lotando o teatro onde a conferência foi realizada.</p>
+                <p class="white">2015 é um ano especial. É o ano do 20º aniversário do JavaScript e também é a nossa 5º edição. Estamos empenhados em manter o sucesso dos últimos anos e não vamos parar por aqui.</p>
+            </div>
+        </div>
+        <div class="delorean hidden-xs">
+            <div class="fire-container">
+                <div class="fire"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="sponsors" class="sponsors">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Patrocínio</h2>
+                <p>Um <strong>agradecimento mais que especial</strong> aos nossos parceiros que acreditam e são fundamentais para o acontecimento da BrazilJS Conf.</p>
+            </div>
+        </div>
+        
+        <div class="mk2-snes hidden-xs"><img src="/images/mk2-snes.png" alt="mortal kombat 2"></div>
+        <div class="tamagochi hidden-xs"><img src="/images/tamagochi.png" alt="tamagochi"></div>
+        <div class="adamantium">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Patrocínio Adamantium</h4>
+                </div>
+            </div>
+            <div class="row">
+            
+                <div class="col-md-6">
+                    <div class="sponsor mozilla">
+                        <div class="row">
+                            <div class="col-sm-6 logo-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <a href="https://www.mozilla.org/">
+                                            <img src="/images/logo-sponsor-mozilla.png" alt="Mozilla">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 info-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <p>
+                                            Mozilla has been a pioneer and advocate for the Web for more than a decade. We create and promote open standards that enable innovation and advance the Web as a platform for all. Today, hundreds of millions of people worldwide use Mozilla Firefox to experience the Web on computers, tablets and mobile devices. With Firefox OS and Firefox Marketplace, Mozilla is driving a new mobile ecosystem that is built entirely on open Web standards, freeing mobile providers, developers and end users from the limitations and restrictions imposed by proprietary platforms.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="sponsor godaddy">
+                        <div class="row">
+                            <div class="col-sm-6 logo-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <a href="http://br.godaddy.com/">
+                                            <img src="/images/logo-sponsor-godaddy.png" alt="GoDaddy">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 info-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <p>
+                                            Quase tão antiga quanto a própria Internet, a GoDaddy nasceu para dar às pessoas uma maneira fácil e acessível de obter suas idéias online. Hoje, temos mais de 12 milhões de clientes no mundo inteiro, mas nosso objetivo é o mesmo. Esta mos aqui para ajudar as pessoas a iniciar facilmente, crescer com confiança e executar com sucesso seus próprios empreendimentos. Em resumo, para ajudá-lo a otimizar, online e offline!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="gold">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Patrocínio Gold</h4>
+                </div>
+            </div>
+            <div class="row">
+            
+                <div class="col-md-6">
+                    <div class="sponsor">
+                        <div class="row">
+                            <div class="col-sm-6 logo-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <a href="http://www.w3c.br/">
+                                            <img src="/images/logo-sponsor-w3c.jpg" alt="W3C">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 info-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <p>
+                                           W3C Brasil O Consórcio World Wide Web (W3C) é um consórcio internacional no qual organizações filiadas, uma equipe em tempo integral e o público trabalham juntos para desenvolver padrões para a Web. Liderado pelo inventor da web Tim Berners-Lee e o CEO Jeffrey Jaffe, o W3C tem como missão Conduzir a World Wide Web para que atinja todo seu potencial, desenvolvendo protocolos e diretrizes que garantam seu crescimento de longo prazo. Para mais informações, contate-nos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="sponsor">
+                        <div class="row">
+                            <div class="col-sm-6 logo-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <a href="https://www.liferay.com/pt/">
+                                            <img src="/images/logo-sponsor-liferay.jpg" alt="Liferay">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 info-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <p>
+                                           A Liferay é líder mundial em soluções para portais horizontais de colaboração social de código aberto. Reconhecida pelo Gartner em seu Quadrante Mágico como líder, possui escritórios físicos em mais de 14 países ao redor do mundo. No Brasil os escritórios estão em São Paulo e Recife, responsáveis por atender toda a América Latina.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="sponsor">
+                        <div class="row">
+                            <div class="col-sm-6 logo-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <a href="https://www.terra.com.br">
+                                            <img src="/images/logo-sponsor-terra.png" alt="Terra">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 info-sponsor">
+                                <div class="vert-container">
+                                    <div class="vert-centering">
+                                        <p>
+                                           O Terra é considerada a maior empresa latino-americana de mídia online. O portal está presente em 17 países latinoamericanos - Argentina, Brasil, Chile, Colômbia, Costa Rica, Equador, El Salvador, Guatemala, Honduras, México, Nicarágua, Panamá, Peru, Porto Rico, República Dominicana, Uruguai e Venezuela - e também nos Estados Unidos. Por seus portais, passam mensalmente cerca de 70 milhões de pessoas, segundo dados da comScore.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="silver">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Patrocínio Silver</h4>
+                </div>
+            </div>
+            <div class="row">
+                             
+                <div class="col-md-3 col-sm-6">
+                    <div class="sponsor">
+                        <div class="vert-container">
+                            <div class="vert-centering">
+                                <a href="http://globo.com/">
+                                    <img src="/images/logo-sponsor-globo.com.svg" alt="Globo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                             
+                <div class="col-md-3 col-sm-6">
+                    <div class="sponsor">
+                        <div class="vert-container">
+                            <div class="vert-centering">
+                                <a href="http://www.payu.com.br/">
+                                    <img src="/images/logo-sponsor-payu.png" alt="PayU">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+         <div class="bronze hidden">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Patrocínio Bronze</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="sponsor">
+                        <div class="vert-container">
+                            <div class="vert-centering">
+                                <img src="/images/logo-sponsor-adobe.jpg" alt="logo adobe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="sponsor">
+                        <div class="vert-container">
+                            <div class="vert-centering">
+                                <img src="/images/logo-sponsor-adobe.jpg" alt="logo adobe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="sponsor">
+                        <div class="vert-container">
+                            <div class="vert-centering">
+                                <img src="/images/logo-sponsor-adobe.jpg" alt="logo adobe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="sponsor">
+                        <div class="vert-container">
+                            <div class="vert-centering">
+                                <img src="/images/logo-sponsor-adobe.jpg" alt="logo adobe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="contact-us"><strong>Também deseja fazer parte da nossa história? Seja um patrocinador do #BrazilJS2015! <a target="_blank" href="mailto:jayalemao@gmail.com;felipenmoura@gmail.com?subject=Patrocínio BrazilJS 2015">Entre em contato!</a></strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="curadores">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="yellow">Curadores</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="curador felipe">
+                    <div class="info-curador">
+                        <h4 class="yellow">Felipe N. Moura</h4>
+                        <p class="white hidden-xs">Analista de Desenvolvimento Sênior no Terra Networks, entusiasta de tecnologias web, trabalha há cerca de 10 anos com desenvolvimento e é bastante envolvido em projetos open source, além de ser curador do BrazilJS e do RSJS.</p>
+                        <div class="social-curador">
+                            <a href="https://twitter.com/felipenmoura" class="item-social-curador" title="Twitter"><img src="/images/twitter-white.svg" alt="icon twitter"></a>
+                            <a href="https://github.com/felipenmoura" class="item-social-curador" title="Github"><img src="/images/github-white.svg" alt="icon github"></a>
+                        </div>
+                    </div>
+                    <img src="/images/ranger-verde-felipe.png" alt="ranger felipe" class="ranger">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="curador jaydson">
+                    <div class="info-curador">
+                        <h4 class="yellow">Jaydson Gomes</h4>
+                        <p class="white hidden-xs">Entusiasta JavaScript, Analista de Desenvolvimento Sênior no Terra Networks, possui + de 10 anos de experiência em desenvolvimento Web, curador do BrazilJS e do RSJS.</p>
+                        <div class="social-curador">
+                            <a href="https://twitter.com/jaydson" class="item-social-curador" title="Twitter"><img src="/images/twitter-white.svg" alt="icon twitter"></a>
+                            <a href="https://github.com/jaydson" class="item-social-curador" title="Github"><img src="/images/github-white.svg" alt="icon github"></a>
+                        </div>
+                    </div>
+                    <img src="/images/ranger-vermelho-jaydson.png" alt="ranger jaydson" class="ranger">
+                </div>
+            </div>
+        </div>
+        <div class="explosion hidden-xs">
+            <img src="/images/bg-curadores-explosion.png" alt="background explosion">
+        </div>
+    </div>
+</section>
+
+        <footer class="bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1 col-sm-2 col-xs-12">
+				<div class="braziljs-org">
+					<img src="/images/braziljs-org.svg" alt="logo braziljs">
+				</div>
+			</div>
+			<div class="col-md-7 col-sm-6 col-xs-12">
+				<a href="http://pt-br.confcodeofconduct.com/" class="yellow codigo-conduta">Código de Conduta</a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<span class="white creator">Feito pelo pixel lover <a href="https://www.linkedin.com/in/italowaxman" class="yellow" target="_blank">Ítalo Waxman</a></span>
+			</div>
+		</div>
+	</div>
+</footer>
+
 <div id="fb-root"></div>
 <script>
 (function(d, s, id) {
@@ -56,109 +1369,22 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-    <div class="wrapper">
-    	<div class="block">
-	    	<div class="centered container">
-	    		<div class="row">
-	    			<div class="col-md-12 info-evento slideDown">
-	    				<h1 class="logo"><img src="assets/img/braziljs.svg"></h1>
-	    				<div class="date stroke align">21 e 22 de Agosto <span class="yellow">Porto alegre,Br</span></div>
-			       		<div class="slogan stroke align">A maior conferência Javascript do Universo</div>
-	    			</div>
-	    			<div class="col-md-12 ticket fadeIn">
-	    				<div class="row">
-	    					<div class="col-md-6">
-			    				<a class="ticket-button" target="_blank" href="http://www.eventick.com.br/braziljs-2015"><div>Comprar Ticket</div></a>
-			       				<span class="stroke">Não perca tempo, já estamos no 2º lote.</span>
-		       				</div>
-		       				<div class="col-md-6">
-			    				<a class="ticket-button c4p-button" target="_blank" href="http://pt-br.confcodeofconduct.com/"><div>Código de Conduta</div></a>
-			       				<span class="stroke">Faça e proporcione uma boa conferência. Siga nosso código de conduta</span>
-		       				</div>
-	       				</div>
-	    			</div>
-	    			<div class="col-md-12 speakers slideUp">
-	    				<div class="date stroke yellow align">Palestrantes já confirmados para esta edição:</div>
 
-	    				<div class="col-md-2 col-sm-4 speaker andreas">
-	    					<div class="avatar-speaker">
-	    						<img src="assets/img/img-andreas.jpg">
-	    					</div>
-	    					<div class="info-speaker">
-	    						<h2 class="name stroke align">Andreas Gal</h2>
-	    						<span class="stroke yellow">CTO da Mozilla</span>
-	    					</div>
-	    				</div>
+<!-- Scripts minificados e concatenados -->
+<script type="text/javascript" src="/harmonic.js"></script>
+<script type="text/javascript" src="/js/all.min.js"></script>
+<script type="text/javascript" src="/js/bundle.js"></script>
 
-	    				<div class="col-md-2 col-sm-4 speaker eric">
-	    					<div class="avatar-speaker">
-	    						<img src="assets/img/img-eric.jpg">
-	    					</div>
-	    					<div class="info-speaker">
-	    						<h2 class="name stroke align">Eric Schoffstall</h2>
-	    						<span class="stroke yellow">Criador do Gulp</span>
-	    					</div>
-	    				</div>
+<!-- Google Analytics: Altere UA-XXXXX-X pelo ID do seu site. -->
+	<script>
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src='//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
 
-	    				<div class="col-md-4 col-sm-4 legend-speaker brendan floating">
-	    					<div class="avatar-speaker">
-	    						<img src="assets/img/img-brendan.jpg">
-	    					</div>
-	    					<div class="info-speaker">
-	    						<h2 class="name stroke yellow align">Brendan Eich</h2>
-	    						<span class="stroke">Criador do Javascript</span>
-	    					</div>
-	    				</div>
 
-	    				<div class="col-md-2 col-sm-6 speaker laurie">
-	    					<div class="avatar-speaker">
-	    						<img src="assets/img/img-laurie.jpg">
-	    					</div>
-	    					<div class="info-speaker">
-	    						<h2 class="name stroke align">Laurie Voss</h2>
-	    						<span class="stroke yellow">CTO do npm</span>
-	    					</div>
-	    				</div>
-
-	    				<div class="col-md-2 col-sm-6 speaker sebastian">
-	    					<div class="avatar-speaker">
-	    						<img src="assets/img/img-sebastian.jpg">
-	    					</div>
-	    					<div class="info-speaker">
-	    						<h2 class="name stroke align">Sebastian McKenzie</h2>
-	    						<span class="stroke yellow">Criador do BabelJS</span>
-	    					</div>
-	    				</div>
-
-	    			</div>
-	    			<div class="col-md-12 share">
-	    				<span>
-	    					<div class="fb-share-button" data-href="http://braziljs.com.br/" data-layout="button_count"></div>
-	    				</span>
-	    				<span class="twitter">
-	    					<a href="https://twitter.com/share" class="twitter-share-button" data-text="BrazilJS Conf - A maior conferência JavaScript do universo!" data-via="braziljs" data-hashtags="braziljs">Tweet</a>
-	    					<script>
-	    					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-	    					</script>
-	    				</span>
-	    			</div>
-	    		</div>
-	    	</div>
-    	</div>
     </div>
-
-	<!-- Scripts minificados e concatenados -->
-	<script src="assets/js/_build/all.min.js"></script>
-
-	<!-- Google Analytics: Altere UA-XXXXX-X pelo ID do seu site. -->
-	<script type="text/javascript">
-	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-	    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-	    e.src='//www.google-analytics.com/analytics.js';
-	    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-	    ga('create','UA-32119524-1');ga('send','pageview');
-    </script>
-
 </body>
 </html>
+
