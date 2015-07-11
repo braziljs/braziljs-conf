@@ -166,7 +166,7 @@
 					}
 				} else if ("string" == typeof this._theme.backgroundGrid) {
 					{
-						var o = this._theme.strokeWidth;Math.round(.23 * this._block_size), Math.round(.3 * this._block_size);
+						var o = this._theme.strokeWidth;Math.round(0.23 * this._block_size), Math.round(0.3 * this._block_size);
 					}this._ctx.globalAlpha = 1, this._ctx.fillStyle = this._theme.backgroundGrid;for (var t = 0; t < this._BLOCK_WIDTH; t++) for (var e = 0; e < this._BLOCK_HEIGHT; e++) {
 						var i = t * this._block_size,
 						    n = e * this._block_size;this._ctx.fillRect(i + o, n + o, this._block_size - 2 * o, this._block_size - 2 * o);
@@ -175,11 +175,11 @@
 			}
 		}, _drawBlock: function _drawBlock(t, e, i, n) {
 			t *= this._block_size, e *= this._block_size, n = "boolean" == typeof n ? n : !1;var o = this._theme.strokeWidth,
-			    s = Math.round(.23 * this._block_size),
-			    r = Math.round(.3 * this._block_size),
+			    s = Math.round(0.23 * this._block_size),
+			    r = Math.round(0.3 * this._block_size),
 			    a = this._getBlockColor(i, n);if ((this._ctx.globalAlpha = 1, a instanceof Image)) {
 				if ((this._ctx.globalAlpha = 1, 0 === a.width || 0 === a.height)) return;this._ctx.drawImage(a, 0, 0, a.width, a.height, t, e, this._block_size, this._block_size);
-			} else "string" == typeof a && (this._ctx.fillStyle = a, this._ctx.fillRect(t, e, this._block_size, this._block_size), "string" == typeof this._theme.innerShadow && (this._ctx.globalAlpha = 1, this._ctx.strokeStyle = this._theme.innerShadow, this._ctx.lineWidth = 1, this._ctx.strokeRect(t + 1, e + 1, this._block_size - 2, this._block_size - 2)), "string" == typeof this._theme.stroke && (this._ctx.globalAlpha = 1, this._ctx.fillStyle = this._theme.stroke, this._ctx.strokeStyle = this._theme.stroke, this._ctx.lineWidth = o, this._ctx.strokeRect(t, e, this._block_size, this._block_size)), "string" == typeof this._theme.innerStroke && (this._ctx.fillStyle = this._theme.innerStroke, this._ctx.fillRect(t + s, e + s, this._block_size - 2 * s, o), this._ctx.fillRect(t + s, e + s + o, o, this._block_size - 2 * s - o)), "string" == typeof this._theme.innerSquare && (this._ctx.fillStyle = this._theme.innerSquare, this._ctx.globalAlpha = .2, this._ctx.fillRect(t + r, e + r, this._block_size - 2 * r, this._block_size - 2 * r)));this._ctx.globalAlpha = 1;
+			} else "string" == typeof a && (this._ctx.fillStyle = a, this._ctx.fillRect(t, e, this._block_size, this._block_size), "string" == typeof this._theme.innerShadow && (this._ctx.globalAlpha = 1, this._ctx.strokeStyle = this._theme.innerShadow, this._ctx.lineWidth = 1, this._ctx.strokeRect(t + 1, e + 1, this._block_size - 2, this._block_size - 2)), "string" == typeof this._theme.stroke && (this._ctx.globalAlpha = 1, this._ctx.fillStyle = this._theme.stroke, this._ctx.strokeStyle = this._theme.stroke, this._ctx.lineWidth = o, this._ctx.strokeRect(t, e, this._block_size, this._block_size)), "string" == typeof this._theme.innerStroke && (this._ctx.fillStyle = this._theme.innerStroke, this._ctx.fillRect(t + s, e + s, this._block_size - 2 * s, o), this._ctx.fillRect(t + s, e + s + o, o, this._block_size - 2 * s - o)), "string" == typeof this._theme.innerSquare && (this._ctx.fillStyle = this._theme.innerSquare, this._ctx.globalAlpha = 0.2, this._ctx.fillRect(t + r, e + r, this._block_size - 2 * r, this._block_size - 2 * r)));this._ctx.globalAlpha = 1;
 		}, _getBlockColor: function _getBlockColor(t, e) {
 			return ("boolean" != typeof e && (e = !0), e ? "string" == typeof this._theme.primary && "" !== this._theme.primary ? this._theme.primary : this._theme.blocks[t] : "string" == typeof this._theme.secondary && "" !== this._theme.secondary ? this._theme.secondary : this._theme.blocks[t]);
 		}, _shapeFactory: null, _SetupShapeFactory: function _SetupShapeFactory() {
@@ -241,7 +241,7 @@
 					    r = [];for (e = 0, i = this.data.length; i > e; e++) o = this.asX(e), 0 == o && (n = 0), this.data[e] && "string" == typeof this.data[e] && (n += 1), o == t._BLOCK_WIDTH - 1 && n == t._BLOCK_WIDTH && r.push(this.asY(e));for (e = 0, i = r.length; i > e; e++) this._popRow(r[e]), t._board.lines++, t._board.lines % 10 == 0 && t._board.dropDelay > 1;var a = t._board.lines - s;this._updateScore(a);
 				}, _updateScore: function _updateScore(e) {
 					if (!(0 >= e)) {
-						var i = [0, 400, 1e3, 3e3, 12e3];e >= i.length && (e = i.length - 1), this.score += i[e], t._$scoreText.text(this.score), t.options.onLine.call(t.element, e, i[e], this.score);
+						var i = [0, 400, 1000, 3000, 12000];e >= i.length && (e = i.length - 1), this.score += i[e], t._$scoreText.text(this.score), t.options.onLine.call(t.element, e, i[e], this.score);
 					}
 				}, _resetScore: function _resetScore() {
 					this.score = 0, t._$scoreText.text(this.score);
@@ -258,7 +258,7 @@
 				} };
 		}, _SetupBoard: function _SetupBoard() {
 			var t = this,
-			    e = this._info;this._board = { animateDelay: 1e3 / t.options.speed, cur: null, lines: 0, dropCount: 0, dropDelay: 5, started: !1, gameover: !1, init: function init() {
+			    e = this._info;this._board = { animateDelay: 1000 / t.options.speed, cur: null, lines: 0, dropCount: 0, dropDelay: 5, started: !1, gameover: !1, init: function init() {
 					this.cur = this.nextShape(), t.options.showFieldOnStart && (t._drawBackground(), t._board.createRandomBoard(), t._board.render()), this.showStartMessage();
 				}, showStartMessage: function showStartMessage() {
 					t._$start.show();
@@ -284,7 +284,7 @@
 								e = !1;for (var a = 0; a < n.blocksLen; a += 2) t._filled.add(o + r[a], s + r[a + 1], n.blockType), s + r[a] < 0 && (i = !0);t._filled.checkForClears(), this.cur = this.nextShape();
 							}
 						}t._ctx.clearRect(0, 0, t._PIXEL_WIDTH, t._PIXEL_HEIGHT), t._drawBackground(), t._filled.draw(), this.cur.draw(e);
-					}i ? (this.gameover = !0, t.gameover(), t.options.autoplay && t.options.autoplayRestart && t.restart()) : (this.animateDelay = 1e3 / t.options.speed, window.setTimeout(function () {
+					}i ? (this.gameover = !0, t.gameover(), t.options.autoplay && t.options.autoplayRestart && t.restart()) : (this.animateDelay = 1000 / t.options.speed, window.setTimeout(function () {
 						t._board.animate();
 					}, this.animateDelay));
 				}, createRandomBoard: function createRandomBoard() {
@@ -501,10 +501,6 @@ var scene = new ScrollMagic.Scene({ triggerElement: ".sponsors", duration: 1600 
 var tween = new TimelineMax().add([TweenMax.fromTo(".pager", 1, { top: 75 }, { top: 15, ease: Linear.easeNone }), TweenMax.fromTo(".twitter-bird", 1, { top: 0 }, { top: 90, ease: Linear.easeNone })]);
 
 var scene = new ScrollMagic.Scene({ triggerElement: ".silver", duration: 1600 }).setTween(tween).addTo(controller);
-
-var tween = new TimelineMax().add([TweenMax.fromTo(".explosion", 1, { bottom: -425 }, { bottom: 0, ease: Linear.easeNone })]);
-
-var scene = new ScrollMagic.Scene({ triggerElement: ".gold", duration: 1000 }).setTween(tween).addTo(controller);
 
 // speakers selection
 $(document).ready(function () {
