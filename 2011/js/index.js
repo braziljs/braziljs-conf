@@ -95,7 +95,7 @@ var milosa = true;
     this.use(Sammy.Mustache, "html");
 
     this.get('#!/home', function() {
-      this.partial('/2011/views/home.html').then(function() {
+      this.partial('views/home.html').then(function() {
         twitter();
         renderPage(true, "#!/home", iniciarTwitter);
         if(milosa) {
@@ -106,27 +106,27 @@ var milosa = true;
     });
 
     this.get('#!/agenda', function() {
-      rota('/2011/views/agenda.html', '#!/agenda', this);
+      rota('views/agenda.html', '#!/agenda', this);
     });
 
     this.get('#!/local', function() {
-      rota('/2011/views/local.html', '#!/local', this);
+      rota('views/local.html', '#!/local', this);
     });
 
     this.get('#!/inscricoes', function() {
-      rota('/2011/views/inscricoes.html', '#!/inscricoes', this);
+      rota('views/inscricoes.html', '#!/inscricoes', this);
     });
 
     this.get('#!/quemsomos', function() {
-      rota('/2011/views/quemsomos.html', '#!/quemsomos', this);
+      rota('views/quemsomos.html', '#!/quemsomos', this);
     });
 
     this.get('#!/contato', function() {
-      rota('/2011/views/contato.html', '#!/contato', this);
+      rota('views/contato.html', '#!/contato', this);
     });
 
     this.get('#!/pressrelease', function() {
-      rota('/2011/views/pressrelease.html', '#!/pressrelease', this);
+      rota('views/pressrelease.html', '#!/pressrelease', this);
     });
 
   });
