@@ -5,11 +5,11 @@ _gaq.push(['_setAccount', _uacct]);
 _gaq.push(['_trackPageview']);
 
 try {
- var pageTracker = _gat._getTracker(_uacct); 
- pageTracker._initData(); 
- pageTracker._trackPageview(); 	
+  var pageTracker = _gat._getTracker(_uacct); 
+  pageTracker._initData(); 
+  pageTracker._trackPageview();  
 } catch(e) {
-	if (console) console.log(e);
+  if (console) console.log(e);
 }
 
 
@@ -18,13 +18,13 @@ var ativarMenu = function(route) {
   $('#menu li a[href*="'+route+'"]').parent().addClass("active");
 };
 var mostrarDestaque = function(toggle) {
-	if(toggle) {
+  if(toggle) {
     $("#destaque").show();
     $('body').addClass('inicial');
-	} else {
+  } else {
     $("#destaque").hide();
     $('body').removeClass('inicial');
-	}
+  }
 };
 
 var twitterWidget;
@@ -32,20 +32,38 @@ var twitterWidget;
 var twitter = function() {
 
   twitterWidget = new TWTR.Widget({
-     id: "twtr-widget", width: 'auto', height: 415,
-     version: 2, type: 'search',search: 'braziljs', interval: 6000,
-     title: 'BrazilJS', subject: 'The Brazilian JS Conference',
-     theme: {
-       shell: { background: '#450d0b', color: '#ffffff' },
-       tweets: { background: '#ffffff', color: '#444444', links: '#1985b5'}
-     },
-     features: {
-       scrollbar: true,loop: true,live: true,
-       hashtags: true,timestamp: true,avatars: true,toptweets: true,
-       behavior: 'default'
-     }
- })
- twitterWidget.render();
+    id: "twtr-widget",
+    width: 'auto',
+    height: 415,
+    version: 2,
+    type: 'search',
+    search: 'braziljs',
+    interval: 6000,
+    title: 'BrazilJS',
+    subject: 'The Brazilian JS Conference',
+    theme: {
+      shell: {
+        background: '#450d0b',
+        color: '#ffffff'
+      },
+      tweets: {
+        background: '#ffffff',
+        color: '#444444',
+        links: '#1985b5'
+      }
+    },
+    features: {
+      scrollbar: true,
+      loop: true,
+      live: true,
+      hashtags: true,
+      timestamp: true,
+      avatars: true,
+      toptweets: true,
+      behavior: 'default'
+    }
+  });
+  twitterWidget.render();
 
 };
 
@@ -54,25 +72,13 @@ var renderPage = function(destaque, route, callback) {
   ativarMenu(route);
   callback.call(this);
 };
+
 var iniciarTwitter = function(){
-	pararTwitter();
+  pararTwitter();
   if(twitterWidget) { twitterWidget.start(); }
 };
-var pararTwitter = function() { if(twitterWidget)  twitterWidget.stop(); };
 
-/*
-var call4paperz = {
-  url: "http://call4paperz.com/events/13.jsonp",
-  callback: function() {
-    var sammy = this;
-    var proposals = sammy.content.event.proposals;
-    $("td.lightning", "table#programacao table tr")
-    .each(function(index) {
-      sammy.render('/views/lightning.html', proposals[index]).replace($(this));
-    });
-  }
-};
-*/
+var pararTwitter = function() { if(twitterWidget)  twitterWidget.stop(); };
 
 var rota = function(template, route, sammy) {
   sammy.partial(template).then(function() {
@@ -86,50 +92,43 @@ var milosa = true;
 
   var app = $.sammy('#corpo .container', function() {
     this.use('GoogleAnalytics');
-  	this.use(Sammy.Mustache, "html");
-    
+    this.use(Sammy.Mustache, "html");
+
     this.get('#!/home', function() {
-      this.partial('/views/home.html').then(function() {
-      	twitter();
-      	renderPage(true, "#!/home", iniciarTwitter);
+      this.partial('/2011/views/home.html').then(function() {
+        twitter();
+        renderPage(true, "#!/home", iniciarTwitter);
         if(milosa) {
           $('#destaque').divSlideShow( { width:960, height:350, loop:999999, delay:10000 } );
           milosa = false;
         }
       });
     });
-    
+
     this.get('#!/agenda', function() {
-      
-      rota('/views/agenda.html', '#!/agenda', this);
-      
-      /*this.partial('/views/agenda.html').then(function() {
-      	renderPage(false, "#!/agenda", pararTwitter);
-        this.load(call4paperz.url, {dataType: "jsonp"}, call4paperz.callback);
-      });*/
+      rota('/2011/views/agenda.html', '#!/agenda', this);
     });
 
     this.get('#!/local', function() {
-      rota('/views/local.html', '#!/local', this);
+      rota('/2011/views/local.html', '#!/local', this);
     });
-    
+
     this.get('#!/inscricoes', function() {
-      rota('/views/inscricoes.html', '#!/inscricoes', this);
+      rota('/2011/views/inscricoes.html', '#!/inscricoes', this);
     });
 
     this.get('#!/quemsomos', function() {
-      rota('/views/quemsomos.html', '#!/quemsomos', this);
+      rota('/2011/views/quemsomos.html', '#!/quemsomos', this);
     });
 
     this.get('#!/contato', function() {
-      rota('/views/contato.html', '#!/contato', this);
+      rota('/2011/views/contato.html', '#!/contato', this);
     });
-    
+
     this.get('#!/pressrelease', function() {
-      rota('/views/pressrelease.html', '#!/pressrelease', this);
+      rota('/2011/views/pressrelease.html', '#!/pressrelease', this);
     });
-    
-    
+
   });
 
   $(function() { app.run('#!/home'); });
