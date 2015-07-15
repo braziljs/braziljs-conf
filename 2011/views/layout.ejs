@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Brazil JS</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"> 
+  </head>
+  <body>
+    <div id="top">
+      <div class="container">
+        <a href="/" id="logo"></a>
+        <ul id="menu">
+          <li class='active'><a href="#!/home">Home</a></li>
+          <li><a href="#!/agenda">Agenda</a></li>
+          <li><a href="#!/local">Local</a></li>
+          <li><a href="#!/inscricoes">Inscrições</a></li>
+        </ul>
+
+        <div id="destaque" class="hide_destaque"> 
+          <div class="slide">
+            <div class="chamada">
+              <h1>Keynote Richard D. Worth</h1>
+              <p>
+                Keynote confirmado com um membro do Jquery Core Development Team http://jquery.org/team#richard-d-worth
+              </p>
+            </div>
+            <img src="images/richard.jpg">
+          </div>
+          <div class="slide">
+            <div class="chamada">
+              <h1>Keynote Mike Taylor</h1>
+              <br/>
+              <p>Web Opener da Opera Software falando sobre o que é a especificação HTML5 Web Messaging e como fazer comunicação entre aplicações web.</p>
+            </div>
+            <img src="images/mikey.jpg">
+          </div>
+          <div class="slide">
+            <div class="chamada">
+              <h1>Keynote Maurício Samy Silva (Maujor)</h1>
+              <br/>
+              <p> Escritor renomado e um dos maiores especialistas de CSS do Brasil está confirmado como Keynote.</p>
+            </div>
+            <img src="images/maujor200x170.jpg">
+          </div>
+          <div class="slide">
+            <div class="chamada">
+              <h1>Node.js, NoSQL, Jquery...</h1>
+              <p>Tecnologias JS client/server-side, HTML5, NoSQL, Frameworks famosos e muitas novidades </p>
+            </div>
+            <img src="images/desconferencia3.jpg">
+          </div>
+        </div> 
+
+      </div>
+    </div>
+    <div id="corpo">
+      <div class="container">
+          <%- body %>
+      </div>
+    </div>
+    <div id="bottom">
+      <ul>
+        <li><a href="#!/home">Home</a></li>
+        <li><a href="#!/quemsomos">Quem somos</a></li>
+        <li><a href="#!/contato">Contato</a></li>
+      </ul>
+      BrazilJS 2011<br>
+    </div>
+<!-- 
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+-->
+  <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://pcapr.googlecode.com/svn-history/r75/trunk/script/fancybox/jquery.fancybox-1.3.4.js"></script> 
+  <link rel="stylesheet" type="text/css" href="http://pcapr.googlecode.com/svn-history/r75/trunk/script/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+  <script src="js/sammy.mustache.js" type="text/javascript"></script>
+  <script src="js/index.js" type="text/javascript"></script>
+  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,282 @@
+@font-face {
+  font-family: Lithos;
+  src: url('LithosPro-Regular.otf');
+}
+
+@font-face {
+  font-family: Lithos;
+  font-weight: bold;
+  src: url('LithosPro-Black.otf');
+}
+
+html {
+  font-family: Lithos, sans-serif;
+  color: #450D0B;
+  background: url('images/textura.png');
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  width: 60%;
+  height: 24px;
+  font-size: 18px;
+  border-bottom: 3px solid #AB8978;
+}
+/* h1 span { */
+/*   display: block; */
+/*   float: left; */
+/*   padding: 6px 10px;  */
+/*   font-size: 24px; */
+/*   text-shadow: 5px 5px 5px #000; */
+/*   color: #FFF; */
+/*   border-radius: 5px; */
+/*   -moz-border-radius: 5px; */
+/*   -webkit-border-radius: 5px; */
+/*   background: #AB8978; */
+/* } */
+a {
+  text-decoration: none;
+  color: #450D0B;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+#top {
+  position: relative;
+  height: 119px;
+  background: #450D0B url('images/topo.png') no-repeat center;
+}
+.inicial #top {
+  height: 515px;
+  background: #450D0B url('images/topoIni.png') no-repeat center;
+}
+#top .container {
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  display: block;
+  top: 47px;
+  left: 0;
+  width: 200px;
+  height: 60px;
+}
+
+ul#menu {
+  float: right;
+  margin: 65px 0 0;
+  padding: 0;
+  min-width: 650px;
+}
+ul#menu li {
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+ul#menu li a {
+  float: left;
+  display: block;
+  padding: 8px 15px 5px;
+  font: 20px Lithos, sans-serif;
+  color: #FFF;
+  text-shadow: 5px 5px 5px #000;
+  text-decoration: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+ul#menu li a:hover,
+ul#menu li.active a {
+  background: #230403;
+}
+
+#destaque {
+  display: none;
+  position: absolute;
+  top: 149px;
+}
+#destaque .slide {
+  padding: 0 90px;
+  height: 350px;
+  color: #FFF;
+}
+#destaque .slide img {
+  float: right;
+  margin-top: 40px;
+  width: 300px;
+  border: 8px solid #FFF;
+  box-shadow: 2px 2px 25px #222;
+  -moz-box-shadow: 2px 2px 25px #222;
+  -webkit-box-shadow: 2px 2px 25px #222;
+  transform: rotate(3deg); 
+  -moz-transform: rotate(3deg); 
+  -webkit-transform: rotate(3deg);
+  -O-transform: rotate(3deg);
+}
+#destaque .slide .chamada {
+  float: left;
+  width: 430px;
+  margin-top: 70px;
+  text-shadow: 2px 2px 10px #000;
+}
+#destaque .slide h1 {
+  width: 100%;
+  font-size: 25px;
+  border: none;
+}
+#destaque .slide p {
+  font-size: 18px;
+}
+
+#content {
+  float: left;
+  padding: 40px 0;
+  width: 67%;
+  min-height: 500px;
+}
+#content img {
+  margin: 10px;
+}
+
+#side {
+  float: right;
+  padding: 40px 0;
+  width: 29%;
+  font-size: 12px;
+}
+#side ul {
+  margin: 0;
+  padding: 0;
+}
+#side ul li {
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+#bottom {
+  clear: both;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 800px;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px dotted #450D0B;
+}
+#bottom ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+#bottom ul li {
+  display: inline;
+  padding: 0 10px;
+  font-weight: bold;
+  list-style: none;
+}
+
+#agendaSexta {
+  float:left; width: 480px;
+}
+
+#agendaSabado {
+  float:left; width: 480px;
+}
+
+#content_agenda {
+  float: left;
+  padding-bottom: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 40px;
+}
+#content_agenda #programacao > tbody > tr > td {
+  width: 400px;
+}
+#content_agenda .lightning {
+  width: 100% !important;
+}
+#content_agenda .horario {
+  width: 50px !important;
+  font-size: 10px;
+}
+#content_agenda img {
+  float: left;
+  margin: 0 8px;
+  width: 70px;
+  box-shadow: 2px 2px 6px #450D0B;
+  -moz-box-shadow: 2px 2px 6px #450D0B;
+  -webkit-box-shadow: 2px 2px 6px #450D0B;
+  border: 1px solid #450D0B;
+}
+#content_agenda a {
+  color: blue;
+}
+#content_agenda tr {
+  display: block;
+  border-bottom: 1px dotted #450D0B;
+}
+
+#contentquemsomos {
+  padding: 40px 0;
+  width: 700px;
+  min-height: 500px;
+}
+
+.quemsomos {
+  clear: both;
+  margin: 30px 0;
+}
+
+.quemsomos img {
+  float: left;
+  margin: 0 10px 10px;
+  width: 70px;
+  box-shadow: 2px 2px 6px #450D0B;
+  -moz-box-shadow: 2px 2px 6px #450D0B;
+  -webkit-box-shadow: 2px 2px 6px #450D0B;
+  border: 1px solid #450D0B;
+}
+
+/* DESTAQUE INICIAL */
+.dssSlide {
+  overflow: hidden !important;
+}
+.dssControl[direction] {
+  cursor: pointer;
+  width: 35px;
+  height: 65px;
+}
+.dssControl[direction='-1'] {
+  position: absolute;
+  top: 140px;
+  left: 10px;
+  background: url('images/setaL.gif') no-repeat;
+}
+.dssControl[direction='1'] {
+  position: absolute;
+  top: 140px;
+  right: 10px;
+  background: url('images/setaR.gif') no-repeat;
+}
+.dssControl span {
+  display: none;
+}
+
+.hide_destaque {
+  overflow: hidden; display: none;
+}
