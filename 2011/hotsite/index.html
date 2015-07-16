@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Brazil JS</title>
+    <script src="js/jquery-1.5.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cycle.all.latest.js" type="text/javascript"></script>
+    <script src="js/sammy.js" type="text/javascript"></script>
+    <script src="js/sammy.title-latest.min.js" type="text/javascript"></script>
+    <script src="js/sammy.googleanalytics-latest.min.js" type="text/javascript"></script>
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  </head>
+  <body class='inicial'>
+    <div id="top">
+      <div class="container">
+        <ul id="menu">
+          <li id="menu-home" class='active'><a href="#/">Home</a></li>
+          <li id="menu-fotos"><a href="#/fotos">Fotos</a></li>
+          <li id="menu-slides"><a href="#/slides">Slides</a></li>
+          <li id="menu-videos"><a href="#/videos">Vídeos</a></li>
+          <li id="menu-blogs"><a href="#/blogs">Blogs</a></li>
+        </ul>
+        <div id="quote">
+          <blockquote>O BrazilJS tá dinâmico, divertido e informal: "esse cara ia passando ali do outro lado da rua e a gente chamou ele pra palestrar" <span>@jorafael</span></blockquote> 
+          <blockquote>O Node.JS e o ambiente mobile dominaram o evento, devido a quantidade de palestras que abordaram esses dois assuntos e pelo nível das palestras abordadas. <span>@dobau</span></blockquote> 
+        </div>
+      </div>
+    </div>
+    <div id="middle">
+      <div class="container">
+      </div>
+    </div>
+    <div id="bottom">
+      <img src="images/patrocinadores.png">
+      <br><br>
+      Primeira Conferência Brazileira de JavaScript<br>
+      13 e 14/05/2011
+    </div>
+  </body>
+  <script>
+  $(document).ready(function() {
+    $("#quote").cycle();
+  });
+  </script>
+  <script src="js/app.js" type="text/javascript"></script>
+</html>
