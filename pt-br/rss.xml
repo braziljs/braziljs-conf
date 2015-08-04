@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>My awesome static website</title>
-        <link>http://awesome.com</link>
-        <description>This is the description</description>
-        <managingEditor>Jaydson</managingEditor>
-        <webMaster>Jaydson</webMaster>
-        <pubDate>Wed, 22 Jul 2015 14:24:48 GMT</pubDate>
+        <title>BrazilJS 2015</title>
+        <link>http://braziljs.com.br</link>
+        <description>BrazilJS Conference's web site</description>
+        <managingEditor>Felipe</managingEditor>
+        <webMaster>Felipe</webMaster>
+        <pubDate>Mon, 03 Aug 2015 00:23:16 GMT</pubDate>
         <language>pt-br</language>
-        <atom:link href="http://awesome.com/pt-br/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://braziljs.com.br/pt-br/rss.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>ola mundo</title>
-            <link>http://awesome.com/pt-br/2014/05/hello-world</link>
+            <link>http://braziljs.com.br/pt-br/2014/05/hello-world</link>
             <description><![CDATA[<p>Olá mundo!</p>
 ]]></description>
             <pubDate>Sat, 17 May 2014 08:18:47 GMT</pubDate>
-            <guid>http://awesome.com/pt-br/2014/05/hello-world</guid>
+            <guid>http://braziljs.com.br/pt-br/2014/05/hello-world</guid>
         </item>
         
     </channel>
