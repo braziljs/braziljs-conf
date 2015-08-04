@@ -536,8 +536,8 @@ $(document).ready(function () {
 		var cur = $("[data-speaker-idx=" + curIdx + "]")[0];
 		cur = cur.previousElementSibling;
 		if (!cur) {
-			if (curIdx >= 9) {
-				cur = $("[data-speaker-idx=9]")[0];
+			if (curIdx >= 11) {
+				cur = $("[data-speaker-idx=11]")[0];
 			} else {
 				cur = $("[data-speaker-idx]:last")[0];
 			}
@@ -552,15 +552,19 @@ $(document).ready(function () {
 			_again = false;
 
 			var cur = $("[data-speaker-idx=" + curIdx + "]")[0];
+			console.warn(curIdx);
 
+			cur = cur.nextElementSibling;
 			if (!cur) {
-				if (curIdx <= 10) {
-					cur = $("[data-speaker-idx=10]")[0];
+				if (curIdx <= 11) {
+					cur = $("[data-speaker-idx=12]")[0];
 				} else {
 					cur = $("[data-speaker-idx=1]")[0];
 				}
 			}
-			cur = cur.nextElementSibling;
+
+			console.warn(cur);
+
 			if (cur && cur.classList && cur.classList.contains("incognito")) {
 				_again = true;
 				continue _function;
