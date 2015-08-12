@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>BrazilJS 2015</title>
+        <link>http://braziljs.com.br</link>
+        <description>BrazilJS Conference's web site</description>
+        <managingEditor>Felipe</managingEditor>
+        <webMaster>Felipe</webMaster>
+        <pubDate>Mon, 03 Aug 2015 00:23:16 GMT</pubDate>
+        <language>en</language>
+        <atom:link href="http://braziljs.com.br/rss.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>hello world</title>
+            <link>http://braziljs.com.br/2014/05/hello-world</link>
+            <description><![CDATA[<p>Hello World!</p>
+]]></description>
+            <pubDate>Sat, 17 May 2014 08:18:47 GMT</pubDate>
+            <guid>http://braziljs.com.br/2014/05/hello-world</guid>
+        </item>
+        
+    </channel>
+</rss>

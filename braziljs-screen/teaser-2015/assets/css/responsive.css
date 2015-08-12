@@ -1,0 +1,69 @@
+/* Large desktop */
+@media (max-width: 1200px) {
+	
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	.ticket-button{
+		max-width: 55% !important;
+	}
+	.eric{
+		float: right !important;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	body{
+		padding:20px !important;
+	}
+	.ticket-button div{
+		font-size: 28px !important;
+	}
+	.ticket-button span{
+		font-size: 18px !important;
+  		line-height: inherit !important;
+	}
+	.ticket{
+		margin-bottom: 30px !important;
+	}
+	.speaker, .legend-speaker{
+		margin-top: 25px !important;
+	}
+	.ticket-button{
+		max-width: 64% !important;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+	body{
+		padding:20px;
+	}
+	.logo img{
+		width: 86%;
+	}
+	.ticket{
+		margin-bottom: 30px !important;
+	}
+	.ticket-button{
+		max-width: 92% !important;
+	}
+	.ticket-button div{
+		font-size: 18px !important;
+	}
+	.ticket span{
+		  font-size: 13px !important;
+  		  line-height: 0 !important;
+	}
+	.slogan{
+		margin-top: 20px !important;
+	}
+	.speaker, .legend-speaker{
+		margin-top: 25px !important;
+	}
+	.block{
+		height: auto !important;
+	}
+}
