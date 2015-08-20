@@ -7682,7 +7682,7 @@ body {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 54%;
+    top: 15%; /* 54 */
     transform: translate(0px, -50%);
     z-index: 2
 }
@@ -9924,13 +9924,13 @@ footer .creator {
     right: 0;
     margin: auto;
 
-    transform: scale(2);
+    /*transform: scale(2);*/
     transform-origin: center bottom;
 
-    -webkit-transform: scale(2);
+    /*-webkit-transform: scale(2);*/
     -webkit-transform-origin: center bottom;
 
-    -moz-transform: scale(2);
+    /*-moz-transform: scale(2);*/
     -moz-transform-origin: center bottom;
 }
 
@@ -9950,5 +9950,5 @@ footer .creator {
 
 .info-intro {
     opacity: 1;
-    transform: scale(3);
+    transform: scale(1);
 }
