@@ -7399,15 +7399,16 @@ textarea {
 html,
 body,
 .wrapper {
-    height: 378px;
+    /*height: 378px;*/
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
 body {
     overflow-x: hidden;
     position:relative;
-    top:50%;
-    margin-top: -80px;
+    /*top:50%;
+    margin-top: -80px;*/
 }
 h2,
 h2 span {
@@ -9955,15 +9956,24 @@ footer .creator {
 
 .info-intro {
     opacity: 1;
-    transform: scale(.75);
-    margin-top: -75px;
+    /*transform: scale(.75);*/
+    /*margin-top: -75px;*/
+    top: 50%;
 }
 .avatar-speaker-highlight img{
     width: 75%;
 }
-.container-highlight {
+/*.container-highlight {
     height: 340px
-}
+}*/
 .speaker{
     z-index: 1000;
+}
+
+.intro-bg>img {
+    width: 150%;
+}
+
+.speakers, .speakers .container {
+    bottom: -15px;
 }
