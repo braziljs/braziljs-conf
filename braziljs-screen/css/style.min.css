@@ -9971,7 +9971,8 @@ footer .creator {
 }
 
 .intro-bg>img {
-    width: 150%;
+    width: 170%;
+    margin-left: -7%;
 }
 
 .speakers, .speakers .container {
