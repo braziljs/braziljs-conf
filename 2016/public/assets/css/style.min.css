@@ -414,7 +414,7 @@ header{
 .clip-title{
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
-	background: -webkit-linear-gradient(transparent, transparent), url(/2016/public/assets/images/img-mask-intro.jpg) repeat;
+	background: -webkit-linear-gradient(transparent, transparent), url(/conf/2016/public/assets/images/img-mask-intro.jpg) repeat;
 	background: -o-linear-gradient(transparent, transparent);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -575,7 +575,7 @@ header{
 .always-bet .clip-title{
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
-	background: -webkit-linear-gradient(transparent, transparent), url(/2016/public/assets/images/img-mask-betjs.jpg) repeat;
+	background: -webkit-linear-gradient(transparent, transparent), url(/conf/2016/public/assets/images/img-mask-betjs.jpg) repeat;
 	background: -o-linear-gradient(transparent, transparent);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -1012,7 +1012,7 @@ header{
 .clip-title-jay{
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
-	background: -webkit-linear-gradient(transparent, transparent), url(/2016/public/assets/images/img-mask-curator-jay.jpg) repeat;
+	background: -webkit-linear-gradient(transparent, transparent), url(/conf/2016/public/assets/images/img-mask-curator-jay.jpg) repeat;
 	background: -o-linear-gradient(transparent, transparent);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -1023,7 +1023,7 @@ header{
 .clip-title-felipe{
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
-	background: -webkit-linear-gradient(transparent, transparent), url(/2016/public/assets/images/img-mask-curator-felipe.jpg) repeat;
+	background: -webkit-linear-gradient(transparent, transparent), url(/conf/2016/public/assets/images/img-mask-curator-felipe.jpg) repeat;
 	background: -o-linear-gradient(transparent, transparent);
 	background-clip: text;
 	-webkit-background-clip: text;
