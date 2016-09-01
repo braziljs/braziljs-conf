@@ -1,0 +1,76 @@
+<section class="programacao" id="programacao">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section animate">
+					<h3>{{ __('conf_agenda_title') }}</h3>
+					<div class="desc-title">
+						<span class="f-18">{{ __('conf_agenda_text_1') }}</span>
+						<span class="f-24">{{ __('conf_agenda_text_2') }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for eventDate, talks in data.eventDates %}
+				<div class="col-sm-6 animate">
+					<h4>{{ __('conf_agenda_day') }}{{ loop.index }} - <span class="red">{{eventDate}}</span></h4>
+					<div class="row">
+						<div class="col-xs-12">
+							{% for talk in talks %}
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">{{talk.timeStr}}</h5>
+											</div>
+											<div class="col-sm-10">
+												{% for speaker in talk.speaker %}
+													<div class="col-sm-8 col-sm-9">
+														<h5>{{speaker.name}}</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(/images/cms/{{speaker.image.filename}})"></div>
+													</div>
+												{% endfor %}
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>{{talk.talkTitle}}</h5>
+													<p>{{talk['shortDesc'+lang|upper]}}</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">{{talk.timeStr}}</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>{{talk.talkTitle}}</h5>
+												<p>{{talk['shortDesc'+lang|upper]}}</p>
+											</div>
+										</div>
+										{% for speaker in talk.speaker %}
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/{{speaker.image.filename}})"></div>
+													<h6>{{speaker.name}}</h6>
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								</div> -->
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+

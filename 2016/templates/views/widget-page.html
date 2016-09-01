@@ -1,0 +1,121 @@
+{% extends "templates/layouts/default-new.html" %}
+
+{% block main %}
+    <div class="wrapper style1">
+        <div class="container">
+            Acrescente o bloco de código abaixo, no local de sua página, onde deseja que nosso widget esteja visível.<br/>
+            <br/>
+            Primeiramente, escolha o evento afiliado:
+            <select id="selectEvent">
+                <option value=""></option>
+                {% for event in data.events %}
+                    <option value="{{ event.id }}">{{ event.name }}</option>
+                {% endfor %}
+            </select>
+            &nbsp;
+            <span id='theme-label'>
+                E o tema:
+                <select id="selectTheme">
+                    <option value=""></option>
+                    <option value="white">White theme</option>
+                    <option value="dark">Dark theme</option>
+                </select>
+            </span>
+            <br/>
+            <div id='theCodeLabel'>
+                Copie o código abaixo e cole em sua página, onde deseja que os patrocinadores afiliados apareçam:<br/>
+                <textarea id="theCode" readonly="readonly" ></textarea>
+
+                <input type='button' value='Visualizar' id='seeResult'>
+            </div>
+            <br/><br/>
+            <div id='braziljs-widget-partners'></div>
+
+            <div>
+                Se preferir, pode usar nossa API, também, veja como em <a href="https://github.com/braziljs/braziljs-api/blob/master/README.md" target="blank">nosso github</a>.
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/widget.js"></script>
+    <style type="text/css">
+        #theme-label, #theCodeLabel {
+            display: none;
+        }
+
+        #cideSnipet {
+            transition: height linear .2s;
+        }
+
+        #theCode {
+            overflow: hidden;
+            resize: none;
+            height: 456px;
+            margin-bottom: 10px;
+        }
+
+        #braziljs-widget-partners {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+
+        document.getElementById('theCode').addEventListener('click', function(){
+            this.select();
+        });
+
+        document.getElementById('selectEvent').addEventListener('change', function(){
+            document.getElementById('theme-label').style.display = 'inline';
+        });
+
+        document.getElementById('selectEvent').addEventListener('change', function(){
+            updateCode();
+            document.getElementById('braziljs-widget-partners').style.display = 'none';
+        });
+
+        function getSnippet () {
+            var selectEvent = document.getElementById('selectEvent');
+            return "<!-- BrazilJS snippet -->\n"+
+            "<div id='braziljs-widget-partners'></div>\n"+
+            "<script src='" + location.protocol + '//' + location.host + "/js/widget.js'><"+"/script>\n"+
+            "<script>\n"+
+            "    BrazilJS.widget.load('partners', {\n"+
+            "        eventId: '" + selectEvent.value + "',\n"+
+            "        name: '" + selectEvent[selectEvent.selectedIndex].text + "',\n"+
+            "        theme: '" + document.getElementById('selectTheme').value + "',\n"+
+            "        container: document.getElementById('braziljs-widget-partners')\n"+
+            "    });\n"+
+            "<"+"/script>\n"+
+            "<!-- end of BrazilJS snippet -->";
+        }
+
+        function updateCode(){
+            var theCodeStr = getSnippet();
+            var code = document.getElementById('theCode');
+            code.value = theCodeStr;
+        }
+
+        document.getElementById('selectTheme').addEventListener('change', function(){
+
+            updateCode();
+            var codeSnipet = document.getElementById('theCodeLabel');
+            codeSnipet.style.display = 'block';
+        });
+
+        document.getElementById('seeResult').addEventListener('click', function() {
+            var selectEvent = document.getElementById('selectEvent');
+            BrazilJS.widget.load('partners', {
+                eventId: selectEvent.value,
+                name: selectEvent[selectEvent.selectedIndex].text,
+                theme: document.getElementById('selectTheme').value,
+                container: document.getElementById('braziljs-widget-partners')
+            });
+
+            document.getElementById('braziljs-widget-partners').style.display = 'block';
+        });
+    </script>
+
+{% endblock %}

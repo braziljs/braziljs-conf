@@ -1,0 +1,47 @@
+<section class="wrapper style2">
+	<div class="container">
+		<header class="major">
+			<h2 id="artigos">Últimos artigos</h2>
+			<p>Aprenda e evolua profissionalmente com o conteúdo exclusivo da BrazilJS. No nosso "portal" você vai encontrar (quase) tudo que precisa pra se tornar um profissional ainda melhor :) <br /> Veja <a href="/blog">todos os artigos</a></p>
+		</header>
+	</div>
+</section>
+
+<section class="wrapper style1" itemscope itemtype="http://schema.org/NewsArticle" lang="pt-BR">
+	<div class="container">
+		{% for post in posts %}
+			<div class="row">
+				<section class="6u 12u(narrower)">
+					<div class="box post">
+						<a href="{{ post[0].url }}" itemscope itemtype="https://schema.org/ImageObject">
+							<img class="image left" src="{{ post[0].img }}"></img>
+							<meta itemprop="url" content="{{ image }}">
+						</a>
+						<div class="inner" itemprop="headline">
+							<a href="{{ post[0].url }}">
+								<h3>{{ post[0].title }}</h3>
+							</a>
+						</div>
+					</div>
+				</section>
+				{% if post[1] %}
+					<section class="6u 12u(narrower)">
+						<div class="box post">
+							<a href="{{ post[1].url }}" itemscope itemtype="https://schema.org/ImageObject">
+								<img class="image left" src="{{ post[1].img }}"></img>
+								<meta itemprop="url" content="{{ image }}">
+							</a>
+							<div class="inner" itemprop="headline">
+								<a href="{{ post[1].url }}">
+									<h3>{{ post[1].title }}</h3>
+								</a>
+							</div>
+						</div>
+					</section>
+				{% endif %}
+			</div>
+		{% else %}
+			<div>Nenhum artigo encontrado</div>
+		{% endfor %}
+	</div>
+</section>

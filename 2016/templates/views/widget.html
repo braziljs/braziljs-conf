@@ -1,0 +1,230 @@
+<!doctype HTML>
+<head>
+    <title>BrazilJS Afiliados - Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="theme-{{ data.theme }}">
+    {% macro partnerTpl(sponsor) %}
+      <div class="partner-container">
+        <a href="{{ partner.link }}" target="_blank">
+            <img class="partner-item {{ sponsor.level }}" src="images/cms/{{ sponsor.image.filename }}" alt="{{ sponsor.name }}" title="{{ sponsor.name}}" />
+        </a>
+        <div class="partner-label">{{ sponsor.name }}</div>
+      </div>
+    {% endmacro %}
+
+    <style type="text/css">
+        @import url("https://braziljs.org/styles/font-awesome.min.css");
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+        body, html {
+            margin: 0;
+            padding: 10px 0 0 0;
+            width: 100%;
+        }
+        body {
+            background: red;
+            color: #474747;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 16pt;
+            font-weight: 300;
+            line-height: 1.65em;
+        }
+        body.theme-dark {
+            color: white;
+        }
+        .header-program {
+          width: 100%;
+          text-align: center;
+          font-size: 2em;
+        }
+        .partner-group {
+        }
+        .partner-container {
+            position: relative;
+            padding: 5px;
+            margin: 0 10px 0 10px;
+            float: left;
+            text-align: center;
+        }
+        .partner-label {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .partner-item {
+            float: left;
+        }
+        .group-gold .partner-item {
+            width: 250px;
+        }
+        .group-silver .partner-item {
+            width: 200px;
+        }
+        .group-bronze .partner-item {
+            width: 150px;
+        }
+        .partner-item:hover {
+            outline: solid 1px #999;
+        }
+        .partner-label {
+            text-indent: -99000px;
+            position: absolute;
+            z-index: -1;
+        }
+        .partner-group h3 {
+            margin: 20px;
+            margin-bottom: 50px;
+            line-height: 100px;
+        }
+        h3 {
+            font-size: 1.2rem;
+            display: inline;
+        }
+        .clearfix {
+            clear: both;
+            float: none;
+        }
+        .partner-kind {
+            width: 100px;
+        }
+        .partner-kind-container {
+            margin-bottom: 20px;
+        }
+        .partner-kind, .partner-group {
+            float: left;
+        }
+
+        .header-program.logo {
+            width: 70px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            height: 50px;
+        }
+        #image-loader {
+            display: none;
+            background-color: #ffde17;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+            z-index: 1;
+            transition: height ease-in-out .3s .2s;
+        }
+        .header-program img {
+            position: relative;
+            z-index: 9;
+        }
+
+        #partners-list {
+            transition: opacity linear .7s .3s;
+        }
+        #partners-list.hide-content {
+            opacity: 0;
+        }
+
+    </style>
+
+    <div class="wrapper style1">
+        <div class="container">
+            {% if data.header %}
+            <div class="header-program logo">
+                <div>
+                    <div id="image-loader"></div>
+                    <img id="braziljs-partners-logo"
+                         src="/images/braziljs-logo-loading.png"
+                         alt="BrazilJS Afiliados"
+                         onload="document.getElementById('image-loader').style.display='block'"/>
+                </div>
+            </div>
+            <div class="header-program" style="margin-top:15px">
+              <strong>Afiliados BrazilJS</strong>
+            </div>
+            {% endif %}
+            {% if data.header %}
+            <div id="partners-list" class="hide-content">
+            {% else %}
+            <div id="partners-list">
+            {% endif %}
+
+            <div class="partner-kind-container">
+                <div class="partner-kind">
+                    <h3>Adamantium</h3>
+                </div>
+                <div class="partner-group group-gold">
+                    {% for partner in data.sponsors.gold %}
+                        {{ partnerTpl(partner) }}
+                    {% endfor %}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="partner-kind-container">
+                <div class="partner-kind">
+                    <h3>Platinum 1234</h3>
+                </div>
+                <div class="partner-group group-silver">
+                    {% for partner in data.sponsors.silver %}
+                        {{ partnerTpl(partner) }}
+                    {% endfor %}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="partner-kind-container">
+                <div class="partner-kind">
+                    <h3>Diamond</h3>
+                </div>
+                <div class="partner-group group-bronze">
+                    {% for partner in data.sponsors.bronze %}
+                        {{ partnerTpl(partner) }}
+                    {% endfor %}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        {% if data.header %}
+        </div>
+        {% endif %}
+    </div>
+    <script>
+        var loader = document.getElementById('image-loader') || document.createElement('div');
+        loader.style.height = '10%';
+        var imgs = document.images,
+            len = imgs.length,
+            done = 0;
+
+        [].forEach.call( imgs, function( img ) {
+            var image = new Image;
+            image.onload = incrementCounter;
+            image.onerror = incrementCounter;
+            image.src    = img.getAttribute('src');
+
+            //img.addEventListener( 'load', incrementCounter, false );
+            //img.addEventListener( 'error', incrementCounter, false );
+        } );
+
+        function incrementCounter() {
+            done++;
+            var l = imgs.length;
+            if ( done === l ) {
+                loader.style.height = '100%';
+                setTimeout(function () {
+                    document.getElementById('partners-list').classList.remove('hide-content');
+                }, 500);
+            }else{
+                loader.style.height = (100 * done / l) + '%';
+            }
+        }
+
+
+        function messageNewSize () {
+            //window.postMessage('{"contentHeight": ' + document.documentElement.offsetHeight + '}', "*"); // https://braziljs.org/
+
+            var data = { contentHeight: document.documentElement.offsetHeight};
+            parent.postMessage(data, "{{ data.receivingPage }}");
+        }
+
+        window.addEventListener("load", messageNewSize);
+        self.addEventListener("resize", messageNewSize);
+    </script>
+</body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ __('full_lang') }}"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ __('full_lang') }}"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ __('full_lang') }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ __('full_lang') }}"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--base href="https://braziljs.org/conf/" /-->
+
+	<!-- Responsive Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!--  site com responsivo / comente caso contrário-->
+
+	<!-- Core Meta Data -->
+	<meta name="author" content="@braziljs">
+	<meta name="description" content="{{ __('In the olympics year we want to make a big and unique conference where you will be the gold medalist.')}}">
+
+	<!-- Facebook Tags -->
+	<meta property="og:description" content="{{ __('In the olympics year we want to make a big and unique conference where you will be the gold medalist.') }}">
+	<meta property="og:image" content="https://braziljs.org/assets/images/thumb-share.jpg">
+	<meta property="og:site_name" content="BrazilJS 2016">
+	<meta property="og:title" content="BrazilJS 2016">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://braziljs.org/conf">
+
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="https://braziljs.org/conf">
+	<meta name="twitter:creator" content="@braziljs">
+	<meta name="twitter:title" content="BrazilJS 2016">
+	<meta name="twitter:description" content="{{ __('In the olympics year we want to make a big and unique conference where you will be the gold medalist.') }}">
+	<meta name="twitter:image" content="https://braziljs.org/assets/images/thumb-share.jpg">
+
+	<!-- Humans -->
+	<link rel="author" href="humans.txt" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+	<!-- Carregamento CSS -->
+	<link rel="stylesheet" href="/assets/css/normalize.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/assets/css/style.min.css">
+	<link rel="stylesheet" href="/assets/css/responsive.min.css">
+
+	<!-- Carregamento Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic' rel='stylesheet' type='text/css'>
+
+	<meta charset="UTF-8">
+	<title>BrazilJS 2016</title>
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		{% include "templates/partials/conf/header.html" %}
+
+		{% include "templates/partials/conf/intro.html" %}
+
+		{% include "templates/partials/conf/speakers.html" %}
+
+		{% include "templates/partials/conf/carousel.html" %}
+
+		{% include "templates/partials/conf/local.html" %}
+
+		{% include "templates/partials/conf/agenda.html" %}
+
+		{% include "templates/partials/conf/manifest.html" %}
+
+		{% include "templates/partials/conf/highlights.html" %}
+
+		{% include "templates/partials/conf/sponsors.html" %}
+
+		{% include "templates/partials/conf/organization.html" %}
+
+		{% include "templates/partials/conf/footer.html" %}
+
+	</div>
+
+	<!-- Scripts minificados e concatenados -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/modernizr-2.6.2.min.js"></script>
+	<script src="/assets/js/bootstrap.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/prefixfree.min.js"></script>
+	
+
+	<!-- Scripts do Parallax -->
+	<script src="/assets/js/TweenMax.min.js"></script>
+	<script src="/assets/js/ScrollMagic.js"></script>
+	<script src="/assets/js/animation.gsap.js"></script>
+
+	<script>
+		var _gaq=[['_setAccount','UA-32119524-1'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src='//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+
+</body>
+</html>

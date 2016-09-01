@@ -1,0 +1,38 @@
+<head>
+	<title>{{ campaigns[curcampaign].title | default("BrazilJS - Trabalhando para, e com a comunidade JS do Brasil") }}</title>
+	<meta charset="UTF-8">
+	<meta name="robots" content="all, index, follow">
+	<meta name="description" content="O BrazilJS é um projeto que visa ajudar a comunidade JavaScript/Front-end brasileira, levando conhecimento através de artigos, eventos, newsletter, vídeos e muito mais">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" href="/styles/critical.css" />
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!-- FACEBOOK -->
+	<meta property="og:title" content="{{ campaigns[curcampaign].title }}">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="{{ campaigns[curcampaign].description }}">
+	<meta property="og:url" content="{{ campaigns[curcampaign].url }}">
+	<meta property="og:image" content="{{ campaigns[curcampaign].image }}">
+	<meta property="og:site_name" content="{{ campaigns[curcampaign].title }}"/>
+	<meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@braziljs">
+    <meta name="twitter:title" content="{{ campaigns[curcampaign].title }}">
+    <meta name="twitter:description" content="{{ campaigns[curcampaign].description }}">
+    <meta name="twitter:creator" content="@braziljs">
+    <meta name="twitter:image:src" content="{{ campaigns[curcampaign].image }}">
+    <meta name="twitter:image" content="{{ campaigns[curcampaign].image }}">
+
+    <!-- GOOGLE -->
+    <link rel="author" href="https://plus.google.com/114842058824018671473"/>
+    <link rel="publisher" href="https://plus.google.com/114842058824018671473"/>
+    <meta itemprop="name" content="BrazilJS - Trabalhando com, e para a comunidade JavaScript no Brasil">
+    <meta itemprop="description" content="Artigos, vídeos, eventos e conteúdos técnicos sobre desenvolvimento front-end">
+    <meta itemprop="image" content="https://braziljs.org/images/braziljs-logo.png">
+</head>

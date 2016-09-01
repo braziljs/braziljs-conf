@@ -1,0 +1,73 @@
+<section class="wrapper style2">
+	<div class="container">
+		<header class="major">
+			<h2 id="eventos">Eventos afiliados</h2>
+			<p>
+				Acompanhe por aqui quais são os eventos que estão acontecendo ou irão acontcer em breve em todo o Brasil. <br />Os eventos afiliados são eventos com o selo de qualidade BrazilJS®.<br />
+				Saiba mais sobre eventos afiliados acessando a <a href="/programa-afiliados">página de afiliados</a>.
+			</p>
+		</header>
+	</div>
+</section>
+
+<section class="wrapper style1">
+	<div class="container">
+		<div class="featured_event">
+			{% for event in events.featured %}
+				<div>
+					<div class="bg_image" style="background-image:url(images/cms/{{ event.featuredBG.filename }});"></div>
+					<a href="{{ event.link }}">
+						<section class="12u(narrower)">
+							<div class="box post" >
+								<img src="images/cms/{{ event.image.filename }}" alt="{{ event.name }}" />
+								<div class="event_data">
+									{% if(event.formatedDateEnd) %}
+										<h2 data-event-id="{{event.id}}">{{ event.name }}<br/>De {{ event.formatedDate }} até {{ event.formatedDateEnd}}</h2>
+									{% else %}
+										<h2 data-event-id="{{event.id}}">{{ event.name }} - {{ event.formatedDate }}</h2>
+									{% endif%}
+									<p>{{ event.description }}</p>
+								</div>
+							</div>
+						</section>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+
+		{% for event in events.list %}
+			<div class="row">
+				<section class="6u 12u(narrower)">
+					<div class="box post">
+						<a href="{{ event[0].link }}" class="image left"><img src="images/cms/{{ event[0].image.filename }}" alt="{{ event[0].name }}" /></a>
+						<div class="inner">
+							{% if(event[0].formatedDateEnd) %}
+								<h3 data-event-id="{{event[0].id}}">{{ event[0].name }}<br/>De {{ event[0].formatedDate }} até {{ event[0].formatedDateEnd}}</h3>
+							{% else %}
+								<h3 data-event-id="{{event[0].id}}">{{ event[0].name }} - {{ event[0].formatedDate }}</h3>
+							{% endif%}
+							<p>{{ event[0].description }}</p>
+						</div>
+					</div>
+				</section>
+				{% if event[1] %}
+					<section class="6u 12u(narrower)">
+						<div class="box post">
+							<a href="{{ event[1].link }}" class="image left"><img src="images/cms/{{ event[1].image.filename }}" alt="{{ event[1].name }}" /></a>
+							<div class="inner">
+								{% if(event[1].formatedDateEnd) %}
+									<h3 data-event-id="{{event[1].id}}">{{ event[1].name }}<br/>De {{ event[1].formatedDate }} até {{ event[1].formatedDateEnd}}</h3>
+								{% else %}
+									<h3 data-event-id="{{event[1].id}}">{{ event[1].name }} - {{ event[1].formatedDate }}</h3>
+								{% endif%}
+								<p>{{ event[1].description }}</p>
+							</div>
+						</div>
+					</section>
+				{% endif %}
+			</div>
+		{% else %}
+			<div>Nenhum evento cadastrado</div>
+		{% endfor %}
+	</div>
+</section>

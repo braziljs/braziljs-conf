@@ -1,0 +1,62 @@
+{% extends "templates/layouts/campaign.html" %}
+
+{% block main %}
+<style type="text/css">
+	article a, .major a {
+		color: #af9400 !important;
+	}
+	p {
+		margin-left: 12px !important;
+	}
+
+    /*@media screen and (max-width: 1280px) {
+        #banner {
+            height: 500px !important;
+        }
+    }
+    @media screen and (max-width: 1680px){
+        #banner {
+            height: 500px !important;
+        }
+    }*/
+</style>
+<section id="banner" style="background-image: url('../../images/indicacao-promo.png');
+background-position: top center;">
+	<header>
+		<em>Se você sabe de uma empresa que ama o JavaScript</em>
+		<a href="#campanha" class="button">Saiba mais</a>
+	</header>
+</section>
+
+<br />
+<div class="container">
+  <header class="major">
+    <h2 id="campanha">Minha empresa <3 JavaScript</h2>
+    <p>Indique sua empresa a se tornar um dos patrocinadores da BrazilJS e ganhe benefícios incríveis!<br/>Você pode ganhar de cortesias e brindes, até uma viagem com tudo pago para participar da BrzilJS 2016!
+	<div style="text-align: center;"><iframe width="560" style="margin: auto;" height="315" src="https://www.youtube.com/embed/rwZKD724cRs" frameborder="0" allowfullscreen></iframe></div><br/></p>
+  </header>
+  <article class="">
+ 	<h1>Como funciona?</h1>
+ 	<p>
+ 		Para participar, a empresa deve entrar em contato conosco atraves do e-mail <a href="eventos@nasc.io">eventos@nasc.io</a> demonstrando interesse em patrocinar a BrazilJS, nos informando que a indicação partiu de você.<br>
+ 		Não há sorteios envolvidos, se a parceria acontecer, além de ajudar a conferência a manter sua qualidade e oferecer o melhor à comunidade JavaScript no Brasil você ainda sai ganhando!<br/>
+        <br/>
+        Conforme a cota de patrocínio fechada pela empresa em negociação com a BrazilJS, você ganha:<br/>
+        - <i>bronze</i>: você ganha a sua inscrição gratuita para a <strong>BrazilJS 2016, e 2017</strong>.<br/>
+        - <i>prata</i>: você ganha a inscrição da <strong>BrazilJS 2016 e 2017</strong>, mais um <strong>kit BrazilJS</strong> com diversos brindes.<br/>
+        - <i>gold ou adamantium</i>: a BrazilJS <strong>banca a tua vinda deste ano</strong>!
+        <br/>É isso aí, <strong>entrada para 2016 + hotel + passagens aéreas</strong> de onde você estiver no Brasil!<br/>Além disto, ainda terá a chance de participar de alguns horários programados com os palestrantes.<br/>
+ 	</p>
+
+ 	<h1>Regras e mais informações:</h1>
+ 	<p>
+ 		A única regra é que tem que ser a primeira vez que a empresa patrocina a BrazilJS e que você foi realmente, o primeiro contato (não vale empresas com quem já estejamos em negociação).
+ 	</p>
+
+    <h3>Nos ajude a descobrir mais empresas brasucas que investem no JavaScript!</h3>
+    <p>
+        Com isto, esperamos descobrir e entrar em contato com novas empresas, fomentar o mercado e a comunicação entre as empresas, clientes, vagas e grandes desenvolvedores, além de ajudar marcas a crescer e serem mais valorizadas.<br/>
+    </p>
+  </article>
+</div>
+{% endblock %}

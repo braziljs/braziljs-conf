@@ -1,0 +1,360 @@
+@media (max-width: 1920px) {
+	h2,
+	h2 span{
+		font-size: 175px;
+		line-height: 175px;
+	}
+
+	h3{
+		font-size: 135px;
+		line-height: 135px;
+	}
+
+	.date,
+	.date span{
+	    font-size: 30px;
+	}
+
+	.headline  h2 svg {
+	  display: table;
+	  margin: 70px auto;
+	}
+
+	.date svg{
+		height: 0;
+	}
+}
+
+@media (max-width: 1600px), (max-height: 800px)  {
+	h2,
+	h2 span{
+		font-size: 125px;
+		line-height: 125px;
+		letter-spacing: -6px;
+	}
+
+	h3{
+		font-size: 100px;
+		line-height: 100px;
+		letter-spacing: -4px;
+	}
+
+	h4{
+		font-size: 75px;
+		letter-spacing: -2px;
+		line-height: 75px;
+	}
+
+	.date span{
+		font-size: 24px;
+	}
+
+	.headline svg {
+	  display: table;
+	  margin: 30px auto;
+	}
+}
+
+@media (max-width: 1200px) {
+	h3{
+		font-size: 75px;
+		line-height: 75px;
+	}
+
+	.programacao h4{
+	    font-size: 48px;
+	}
+
+	.title-section{
+		margin: 70px 0;
+	}
+
+	.item-programacao img{
+		padding: 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	h5{
+		font-size: 24px;
+	}
+
+	.fixed-buttons{
+		width: 100%;
+		text-align: center;
+	}
+
+	.item-menu a{
+		font-size: 14px;
+	}
+
+	.speaker > .small-block,
+	.local  .small-block{
+	    position: relative;
+	    top:1px !important;
+	}
+	
+	.speaker .small-block{
+		height: auto !important;
+	}
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	h2,
+	h2 span{
+		font-size: 62px;
+	    line-height: 62px;
+	    letter-spacing: -3px;
+	}
+
+	h3{
+		font-size: 42px;
+		letter-spacing: -2px;
+		line-height: 42px;
+	}
+
+	h4{
+		font-size: 36px;
+		letter-spacing: -1px;
+	}
+
+	h5{
+		font-size: 24px;
+	}
+
+	.f-18{
+		font-size: 16px;
+	}
+
+	.f-24{
+		font-size: 20px;
+	}
+
+	.f-60{
+		font-size: 48px;
+	}
+
+	.headline svg {
+	  display: table;
+	  margin: -22px auto;
+	}
+
+	.button{
+		padding: 8px 14px;
+	}
+
+	.logo img{
+		width: 60px;
+	}
+
+	.intro h2{
+		display: table-row !important;
+	}
+
+	.intro h2 svg:last-child{
+		margin-bottom: 15px;
+	}
+
+	.intro-button span:first-child{
+		font-size: 30px;
+	}
+
+	.intro-button span{
+		line-height: 32px;
+	}
+
+	.date{
+		position: relative;
+		float: left;
+		text-align: left;
+		margin-bottom: 30px;
+		font-size: 18px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.date svg{
+		width: 26%;
+		float: left;
+		margin-bottom: 25px;
+		height: 20px;
+	}
+
+	.date span{
+		margin-right: 10px;
+		display: inline;
+		font-size: 18px;
+	}
+
+	.fixed-buttons{
+		width: 100%;
+		text-align: center;
+	}
+
+	.fixed-buttons a{
+		font-size: 18px;
+		width: 49.6%;
+		padding: 15px 0;
+		font-size: 14px;
+	}
+
+
+	.intro-button{
+		margin-left: 0;
+		margin-top: 20px;
+		display: block;
+	}
+
+	.speaker {
+		margin-bottom: 0;
+	}
+
+	.speaker > div{
+		float: left;
+		width: 100%;
+	}
+
+	.title-section{
+		margin:70px 0;
+	}
+
+	.speaker > .small-block,
+	.local  .small-block{
+	    position: relative;
+	    top:1px !important;
+	}
+	.speaker .small-block{
+		height: auto !important;
+	}
+
+	.speaker-item:nth-child(5n){
+	    border-right: none;
+	}
+
+	.speaker > .small-block,
+	.local  .small-block{
+	    position: relative;
+	    top:0;
+	}
+
+	.speaker .info-container{
+		padding: 30px;
+	}
+
+	.speaker-item{
+		width: 20%;
+	}
+
+	.img-workshop{
+		max-width: 100%;
+	}
+
+	.edicao-2015 h3{
+		font-size: 40px;
+	}
+
+	.edicao-2015 .col-xs-6{
+		padding: 0;
+	}
+
+	.info-local{
+		margin-top: 0;
+	}
+	
+	.arrow-slide img{
+		width: 20px;
+	}
+
+	.arrow-slide{
+		padding: 5px;
+	}
+
+	.highlight-block{
+		margin-bottom: 1px;
+	}
+
+	.patrocinio .bronze-container{
+	    clear: both;
+	}
+
+	.img-container .col-xs-6{
+		padding: 0;
+	}
+
+	.img-container h3{
+		font-size: 36px;
+		line-height: 36px;
+	}
+
+	.highlights{
+		margin-top: 60px;
+	}
+
+	footer .button{
+		margin-bottom: 2px;
+		float: left;
+		text-align: center;
+		margin-right: 2px;
+	}
+
+	footer .button:first-child,
+	footer .button:nth-child(2){
+		width: calc(50% - 2px);
+		margin-right: 2px;
+	}
+
+	footer .button:nth-child(3),
+	footer .button:nth-child(4),
+	footer .button:nth-child(5){
+		width: calc(33.333% - 2px);
+		margin-bottom: 20px;
+	}
+
+	footer .txt-right{
+		text-align: center;
+	}
+
+
+
+}
+
+@media (max-width: 320px) {
+	h2,
+	h2 span{
+		font-size: 54px;
+	    line-height: 54px;
+	}
+
+	.button{
+		font-size: 13px;
+	}
+
+	.date{
+		margin-bottom: 20px;
+	}
+
+	.intro-button{
+		margin-top: 15px;
+	}
+
+	.img-container h3{
+		font-size: 30px;
+	}
+
+	.programacao h4{
+		font-size: 44px;
+	}
+
+	.clip-title-felipe{
+		padding-right: 4px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-height: 435px) {
+	.intro{
+		--background: purple;
+	}
+}

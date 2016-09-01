@@ -1,0 +1,9 @@
+<nav id="nav">
+	<ul>
+		{% for link in navLinks %}
+			<li class="{{ 'current' if link.key == section else '' }}">
+				<a href="{{ link.href }}">{{ link.label }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</nav>

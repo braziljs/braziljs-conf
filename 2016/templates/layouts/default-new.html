@@ -1,0 +1,14 @@
+{% import "templates/mixins/flash-messages.html" as FM %}<!DOCTYPE HTML>
+<html lang="pt-BR">
+	{% include "templates/partials/head.html" %}
+	<body>
+		<div id="page-wrapper">
+			{% include "templates/partials/header.html" %}
+
+			{% block main %}
+			{% endblock %}
+
+			{% include "templates/partials/footer.html" %}
+		</div>
+	</body>
+</html>

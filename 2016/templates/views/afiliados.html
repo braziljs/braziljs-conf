@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Admin - Afiliados</title>
+        <script src="/js/nunjucks/nunjucks-2.3.0.js"></script>
+        <link href="/styles/admin-reports.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <div class="header">
+            Edition:
+            <select id="select-edition-year">
+                {% for edition in data.afiliadosEditions %}
+                    <option value="{{edition.name}}" {% if data.afiliados.name == edition.name %}selected{% endif %}>{{edition.name}}</option>
+                {% endfor %}
+            </select>
+
+            Initial Budget: <strong id="editionInitialCash">{{ data.afiliados.initialCash }}</strong> |
+            Sponsoring Limit: <strong id="editionSponsoringLimit">{{ data.afiliados.sponsoringLimit }}</strong> |
+            Bonus Limit: <strong id="editionBonusLimit">{{ data.afiliados.bonusLimit }}</strong>
+        </div>
+
+        <table id="final-table" cellspacing="0">
+            <tr>
+                <th colspan="14">
+                    Final Results
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Nasc Profit(year)
+                </td>
+                <td id="final-nasc-commission">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Incoming from Sponsors
+                </td>
+                <td id="final-sponsors-incoming">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Distributed among events
+                </td>
+                <td id="final-invested-in-events">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Initial Budget for the next Edition
+                </td>
+                <td id="final-cash-next-edition">
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <table id="spon-table" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th colspan="14">
+                        Patrocinadores (datas de pagamentos)
+                    </th>
+                </tr>
+                <tr>
+                    <th rowspan="2">
+                    </th>
+                    <th colspan="3">
+                        Q1
+                    </th>
+                    <th colspan="3">
+                        Q2
+                    </th>
+                    <th colspan="3">
+                        Q3
+                    </th>
+                    <th colspan="3">
+                        Q4
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+
+                    <th>Total/year</th>
+                </tr>
+            </tbody>
+            <tbody class="spon-list">
+                {% for sponsor in data.sponsors %}
+                    <tr>
+                        <td>
+                            <span class="spon-level level-{{ sponsor.level | lower }}" title="{{ sponsor.level }}"></span>
+                            {{sponsor.name}}
+                            <input type="button" value="i" style="float: right;"
+                                    data-name="{{sponsor.name}}"
+                                    data-ammount="{{ sponsor.ammount }}"
+                                    data-firstPayment="{{ sponsor.paymentDate }}"
+                                    data-monthPayment="{{ sponsor.monthPayment }}"
+                                    data-payments="{{ sponsor.payments }}"
+                                    data-image="{{ sponsor.image.secure_url }}"
+                                    data-contracts='{{ sponsor.contractsList }}'
+                                    data-nfs='{{ sponsor.nfsList }}'
+                                    data-level="{{ sponsor.level }}"
+                                    />
+                        </td>
+                        {% for i in range(0, 12) %}
+                            {% if sponsor.firstPaymentMonth <= i %}
+                                <td class="month-{{ i }} has-payment" data-ammount="{{ sponsor.monthPayment }}">
+                                {{ sponsor.monthPayment }}
+                            {% else %}
+                                <td data-ammount="0">
+                            {% endif %}
+                            </td>
+                        {% endfor %}
+                        <td>
+                            {{ sponsor.ammount }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfooter>
+                <tr class="total-quarter">
+                    <td class="line-title">
+                        Sponsors income
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td id="total-quarter-sum"
+                        class="total-last-td">
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td rowspan="2" class="line-title">
+                        Nasc Taxes
+                    </td>
+                    {% for i in range(0, 12) %}
+                    <td class="nasc-month-ammount">
+                    </td>
+                    {% endfor %}
+                    <td id="total-nasc-commission"
+                        class="total-last-td"
+                        rowspan="2">
+                    </td>
+                </tr>
+                <tr class="total-nasc">
+                    <td colspan="3"
+                        class="center-it">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                </tr>
+                <tr class="total-for-quarters">
+                    <td class="line-title">
+                        Quarters Income
+                    </td>
+                    <td colspan="3" class="has-info">
+                    </td>
+                    <td colspan="3" class="has-info">
+                    </td>
+                    <td colspan="3" class="has-info">
+                    </td>
+                    <td colspan="3" class="has-info">
+                    </td>
+                    <td id="total-for-quarters-sum"
+                        class="total-last-td">
+                    </td>
+                </tr>
+                <tr class="extra-for-next-edition">
+                    <td class="line-title">
+                        Budget for<br/>
+                        Next Edition<br/>
+                        from sponsors
+                    </td>
+                    <td colspan="12">
+                    </td>
+                    <td class="has-info total-last-td" id="extra-ammount">
+                    </td>
+                </tr>
+            </tfooter>
+        </table>
+
+
+
+        {% macro eventTD(event, fixed) %}
+            {% if fixed == 0 %}
+              <th title="Aceita valores flexíveis" class="event-name">
+            {% else %}
+              <th title="Patrocínio em valores fixos" class="event-name">
+            {% endif %}
+
+            <!--span class='icon'
+
+                  ></span-->
+            {{ event.name }}
+            <input type="button" value="i" style="float: right;"
+                    data-name="{{event.name}}"
+                    data-sponsoring-type="{{event.sponsoringType}}"
+
+                    {% if fixed == 0 %}
+                        data-flexible-ammount="{{event.flexibleAmmount}}"
+                    {% else %}
+                        data-fixed-ammount-gold="{{event.fixedAmmountGold}}"
+                        data-fixed-ammount-silver="{{event.fixedAmmountSilver}}"
+                        data-fixed-ammount-bronze="{{event.fixedAmmountBronze}}"
+                    {% endif %}
+
+                    data-featured="{{event.featured}}"
+                    data-description="{{event.description}}"
+                    data-date="{{event.date}}"
+                    data-dateEnd="{{event.dateEnd}}"
+                    data-venue="{{event.venue}}"
+                    data-location='{{ event.locationString | escape}}'
+                    data-price="{{event.price}}"
+                    data-image="{{event.image.secure_url}}"
+                    data-link="{{event.link}}"
+                    />
+        </th>
+        {% endmacro %}
+
+
+        <table id="events-table" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th colspan="14">
+                        Eventos (datas e valores)
+                    </th>
+                </tr>
+                <tr>
+                    <th rowspan="2">
+                    </th>
+                    <th colspan="3">
+                        Q1
+                    </th>
+                    <th colspan="3">
+                        Q2
+                    </th>
+                    <th colspan="3">
+                        Q3
+                    </th>
+                    <th colspan="3">
+                        Q4
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+
+                    <th>
+                        Total/year
+                    </th>
+                </tr>
+            </tbody>
+
+            <tbody class="fixed-value-events">
+                {% for event in data.events[1] %}
+                    <tr>
+                        {{ eventTD(event, 1) }}
+                        {% for i in range(0, 12) %}
+                            {% if event.month == i %}
+                            <td class="event-month">
+                                {{ event.formatedDate }}
+                            {% else %}
+                                <td>
+                            {% endif %}
+                            </td>
+                        {% endfor %}
+                        {% if loop.index == 1 %}
+                        <td class="nothing" rowspan="{{ data.events[1].length }}"></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tbody class="flexible-value-events">
+                {% for event in data.events[0] %}
+                    <tr>
+                        {{ eventTD(event, 0) }}
+                        {% for i in range(0, 12) %}
+                            {% if event.month == i %}
+                            <td class="event-month">
+                                {{ event.formatedDate }}
+                            {% else %}
+                                <td>
+                            {% endif %}
+                            </td>
+                        {% endfor %}
+                        {% if loop.index == 1 %}
+                        <td class="nothing" rowspan="{{ data.events[0].length }}" style="border-top: none !important;"></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tbody>
+                <tr class="total-fixed">
+                    <td class="line-title">
+                        Total for<br/>Fixed Events
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td id="total-fixed-sum"
+                        class="total-last-td">
+                    </td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr class="restante">
+                    <td class="line-title">
+                        Total for<br/>
+                        Flexible Events
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td id="total-flexible-sum"
+                        class="total-last-td">
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="total-extra">
+                    <td class="line-title">
+                        Budget for<br/>Next Edition<br/>from extra
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                    </td>
+                    <td id="total-extra-sum" class="total-last-td">
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <div id="shaddow-modal">
+            <div id="modal">
+            </div>
+            <div id="back-modal">
+                &lt;&lt;
+            </div>
+            <div id="close-modal">
+                X
+            </div>
+        </div>
+        <script src="/js/admin-reports.js"></script>
+    </body>
+</html>

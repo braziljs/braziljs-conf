@@ -1,0 +1,47 @@
+<section class="wrapper style2">
+	<div class="container">
+		<header class="major">
+			<h2 id="eventos">Patrocinadores BrazilJS</h2>
+			<p>
+				Quem torna o projeto BrazilJS possível são as empresas que apoiam, investem e acreditam em nossas ideias.<br />
+				Quer fazer parte dessa iniciativa? Veja como <a href="/patrocine">se tornar um parceiro</a>.
+			</p>
+		</header>
+	</div>
+</section>
+
+<section class="wrapper style1">
+	<div class="container">
+		<div id='braziljs-widget-partners'></div> 
+		<script src='/js/widget.js'></script>
+		<script>BrazilJS.widget.load('partners', {eventId: '*',noheader:1,theme: 'white',container: document.getElementById('braziljs-widget-partners')});</script>
+	</div>
+	<!--div class="container">
+		{% for sponsor in sponsors %}
+			<div class="row">
+				<section class="6u 12u(narrower)">
+					<div class="box post">
+						<a href="{{ sponsor[0].link }}" class="image left"><img src="{{ sponsor[0].image.secure_url }}" alt="{{ sponsor[0].name }}" /></a>
+						<div class="inner">
+							<h3 data-partner-id="{{ sponsor[0].id }}">{{ sponsor[0].name }}</h3>
+							<p>{{ sponsor[0].description }}</p>
+						</div>
+					</div>
+				</section>
+				{% if sponsor[1] %}
+					<section class="6u 12u(narrower)">
+						<div class="box post">
+							<a href="{{ sponsor[1].link }}" class="image left"><img src="{{ sponsor[1].image.secure_url }}" alt="{{ sponsor[1].name }}" /></a>
+							<div class="inner">
+								<h3 data-partner-id="{{ sponsor[1].id }}">{{ sponsor[1].name }}</h3>
+								<p>{{ sponsor[1].description }}</p>
+							</div>
+						</div>
+					</section>
+				{% endif %}
+			</div>
+		{% else %}
+			<div>Nenhum patrocinador encontrado</div>
+		{% endfor %}
+	</div-->
+</section>

@@ -1,0 +1,115 @@
+<section class="palestrantes" id="palestrantes">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section txt-right animate">
+					<h3>{{ __('conf_speakers_title') }}</h3>
+					<div class="desc-title">
+						<span class="f-18">{{ __('conf_speakers_text_1') }}</span>
+						<span class="f-24">{{ __('conf_speakers_text_2') }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="speaker animate">
+				<div class="col-md-9 big-block animate" id="parallax-3">
+					<div id="speakers_image" class="big-block">
+						{% for eventDate, talks in data.eventDates %}
+							{% for talk in talks %}
+								{% if talk.type == 'Talk' %}
+									{% for speaker in talk.speaker %}
+										<div style="background-image: url(/images/cms/{{ speaker.image.filename }})" class='speaker-img' data-speaker='{{ speaker.friendlyURL }}' >
+											{% if speaker.video %}
+												<span data-url="{{ speaker.video }}"></span>
+											{% endif %}
+										</div>
+									{% endfor %}
+								{% endif %}
+							{% endfor %}
+						{% endfor %}
+						<span type="button" id="btn_speaker" data-toggle="modal" data-target=".modal-speakers">
+							<img src="/assets/images/video-player.png" alt="Video">
+						</span>
+						<div class="modal fade modal-speakers" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body speakers-vine" id="speakers_vine"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 small-block animate" id="parallax-1">
+					<div class="row">
+						<div id="speakers_list" class="col-sm-12">
+							{% for eventDate, talks in data.eventDates %}
+								{% for talk in talks %}
+									{% if talk.type == 'Talk' %}
+										{% for speaker in talk.speaker %}
+											<a href="javascript:void(0)" class="speaker-item" style="background-image: url(/images/cms/{{ speaker.image.filename }})" title="{{ speaker.name }}" data-speaker="{{ speaker.friendlyURL }}"></a>
+										{% endfor %}
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 animate" >
+							<div class="speaker-info">
+								<div class="info-container">
+									<div id="speakers_info">
+										{% for eventDate, talks in data.eventDates %}
+											{% for talk in talks %}
+												{% if talk.type == 'Talk' %}
+													{% for speaker in talk.speaker %}
+														<div class="speaker-info" data-speaker='{{ speaker.friendlyURL }}'>
+															<h4 class="speaker-name" data-name-length-range="{{speaker.nameSize}}"> {{ speaker.name }}</h4>
+															<div class="speaker-bio">
+																<p>{{ speaker['bio'+lang|upper] }}</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/{{ speaker.twitter }}" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/{{ speaker.github }}" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													{% endfor %}
+												{% endif %}
+											{% endfor %}
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" id="workshop-mozilla">
+				<div class="title-section animate">
+					<h3>Workshop <span class="red">Mozilla</span></h3>
+				</div>
+			</div>
+			<div class="col-sm-6 animate">
+				<img src="/assets/images/mike-taylor-workshop.jpg" class="img-workshop">
+			</div>
+			<div class="col-sm-6 animate">
+				<h4>Mike Taylor</h4>
+				<p>{{ __('conf_workshop_text') }}</p>
+				<a href="http://even.tc/workshop-mozilla-braziljs-2016" target="_blank" class="button big-button yellow-button f-24">Inscreva-se</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="title-section always-bet animate">
+					<h2 class="clip-title headline">
+						<span>Always</span>
+						<span>bet on JS</span>
+					</h2>
+					<span class="f-30">Brendan Eich</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

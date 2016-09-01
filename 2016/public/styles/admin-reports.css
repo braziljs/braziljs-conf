@@ -1,0 +1,323 @@
+html, body, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #20538D;
+    color: #fff;
+    font-family: Tahoma;
+    padding-top: 30px;
+}
+
+#shaddow-modal {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    justify-content: center;
+    z-index: 99998;
+}
+
+#modal {
+    min-width: 280px;
+    width: 80%;
+    height: 90%;
+    align-self: center;
+    /*background-color: #fff;*/
+    overflow: auto;
+    z-index: 99999;
+}
+
+#modal table {
+    box-shadow: 0 0 80px 10px black; /* TODO */
+}
+#modal table tr td {
+    background-color: #fff;
+}
+#modal table tr td:last-child {
+    background-color: #f0f00;
+}
+
+.event-info-content td:last-child {
+    text-align: left;
+}
+
+#close-modal,
+#back-modal {
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    z-index: 9;
+    cursor: pointer;
+    min-width: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#close-modal {
+
+}
+#back-modal {
+    right: 60px;
+    display: none;
+}
+#back-modal:hover, #close-modal:hover {
+    background-color: #999;
+}
+
+.header {
+    text-align: center;
+    padding-top: 10px;
+    border-bottom: solid 1px #99b;
+    box-shadow: 0 0 40px 10px black; /* TODO */
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 30px;
+    background-color: #1E3D61;
+    z-index: 999;
+}
+
+table {
+    max-width: 100%;
+    background-color: #f0f0f0;
+    color: #444;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 40px auto;
+    min-width: 90%;
+    border: solid 1px #000;
+    box-shadow: 0 0 60px 5px black; /* TODO */
+}
+
+table tr td.nothing {
+    background-color: #f0f0f0;
+    pointer-events: none;
+}
+
+td:not(:first-child), .center-it {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr:hover td {
+    background-color: wheat;
+}
+#spon-table tr:hover td:first-child:not(.center-it) {
+    background-color: inherit;
+}
+
+table tbody:first-child,
+tr td:first-child,
+tr th:first-child {
+    cursor: default;
+}
+
+tbody:hover {
+
+}
+
+tbody:first-child tr:nth-child(3) th:nth-child(3n+4),
+tbody:first-child tr:nth-child(3) th:last-child {
+    border-left: solid 1px #999;
+}
+
+table th, table td {
+    padding: 2px;
+    margin: 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+table td input[value=i],
+table th input[value=i] {
+    position: absolute;
+    right: 0;
+}
+
+table th {
+
+}
+
+table td {
+    vertical-align: top;
+    min-width: 60px;
+    border: solid 1px #999;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+table tbody:last-child tr:last-child td {
+    border-bottom: solid 1px #999;
+}
+table td:nth-child(14), .total-last-td {
+    border-right: solid 1px #999;
+    cursor: default;
+
+}
+
+.total-last-td {
+    background-color: #d0d0d0;
+}
+
+.spon-list td:first-child {
+    padding-left: 12px;
+}
+
+.spon-list,
+.fixed-value-events,
+.flexible-value-events {
+    background-color: #fff;
+}
+
+.spon-level {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+}
+.spon-level.level-gold {
+    background-color: yellow;
+    border-right: solid 1px #990;
+}
+.spon-level.level-silver {
+    background-color: silver;
+}
+.spon-level.level-bronze {
+    background-color: brown;
+}
+.spon-list td:last-child {
+    background-color: #f0f0f0;
+}
+
+#events-table .icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 14px;
+    height: 18px;
+}
+
+.flexible-value-events th,
+.fixed-value-events th {
+    text-align: left;
+}
+
+.flexible-value-events .icon {
+    background-image: url(/images/fixed-price.png);
+    background-position: bottom left;
+}
+
+.fixed-value-events .icon {
+    background-image: url(/images/fixed-price.png);
+}
+
+.has-info {
+    cursor: help;
+    /*border: solid 1px #00f;*/
+}
+
+.has-info:last-child {
+    border-right: solid 1px #999;
+}
+
+.has-info:hover {
+    background-color: #ddf;
+}
+.has-change-down:hover {
+    background-color: #ffb;
+}
+.has-change-way-down:hover {
+    background-color: #fcc;
+}
+.has-change-up:hover {
+    background-color: #cfc;
+}
+
+.has-info:before {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 3px;
+    text-align: center;
+    font-family: monospace;
+    color: #00f;
+    border: solid 1px #00f;
+    content: "i";
+    border-radius: 0 0 0 24px;
+    background-color: #ddf;
+    border-top: none;
+    border-right: none;
+}
+
+.has-change-down:after,
+.has-change-up:after,
+.has-change-way-down:after {
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 3px;
+    text-align: center;
+    font-family: monospace;
+    color: #00f;
+    border: solid 1px #660;
+    content: "!";
+    border-radius: 24px 0 0 0;
+    background-color: #ff0;
+    border-bottom: none;
+    border-right: none;
+}
+
+.has-change-up:after {
+    background-color: #afa;
+    border-color: #040;
+}
+.has-change-way-down:after {
+    background-color: #f99;
+    border-color: #400;
+}
+
+.event-name {
+    border: solid 1px #999;
+    border-right: 0;
+    border-bottom: 0;
+    font-weight: normal;
+}
+
+.fixed-value-events .event-name {
+    border-left: solid 10px #b99;
+}
+.flexible-value-events .event-name {
+    border-left: solid 10px #9b9;
+}
+
+.line-title {
+    vertical-align: middle;
+    --padding-left: 12px;
+    border-left: solid 10px #77e;
+}
+
+.event-month {
+    border: solid 1px black;
+    font-size: 13px;
+}

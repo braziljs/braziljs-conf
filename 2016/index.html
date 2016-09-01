@@ -1,114 +1,2746 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR"> <!--<![endif]-->
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--base href="https://braziljs.org/conf/" /-->
 
-    <title>BrazilJS 2016</title>
-    <base href="https://braziljs.org/conf/" />
+	<!-- Responsive Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!--  site com responsivo / comente caso contrário-->
 
-    <!-- Responsive Meta Data -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Core Meta Data -->
+	<meta name="author" content="@braziljs">
+	<meta name="description" content="No ano das olimpíadas queremos fazer um evento grandioso e único onde você será o medalhista de ouro.">
 
-    <!-- Facebook Tags -->
-    <meta property="og:description" content="Em sua 6º edição, a BrazilJS Conf faz uma homenagem as Olimpíadas, sendo o primeiro e único evento de javascript com tal temática.">
-    <meta property="og:image" content="http://braziljs.com.br/images/avatar-share-teaser.jpg">
-    <meta property="og:site_name" content="BrazilJS Conf 2016">
-    <meta property="og:title" content="BrazilJS Conf 2016">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://braziljs.com.br">
+	<!-- Facebook Tags -->
+	<meta property="og:description" content="No ano das olimpíadas queremos fazer um evento grandioso e único onde você será o medalhista de ouro.">
+	<meta property="og:image" content="https://braziljs.org/assets/images/thumb-share.jpg">
+	<meta property="og:site_name" content="BrazilJS 2016">
+	<meta property="og:title" content="BrazilJS 2016">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://braziljs.org/conf">
 
-    <!-- Twitter tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="http://braziljs.com.br">
-    <meta name="twitter:creator" content="@italowaxmanr">
-    <meta name="twitter:title" content="BrazilJS Conf 2016">
-    <meta name="twitter:description" content="Em sua 6º edição, a BrazilJS Conf faz uma homenagem as Olimpíadas, sendo o primeiro e único evento de javascript com tal temática.">
-    <meta name="twitter:image" content="http://braziljs.com.br/images/avatar-share-teaser.jpg">
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="https://braziljs.org/conf">
+	<meta name="twitter:creator" content="@braziljs">
+	<meta name="twitter:title" content="BrazilJS 2016">
+	<meta name="twitter:description" content="No ano das olimpíadas queremos fazer um evento grandioso e único onde você será o medalhista de ouro.">
+	<meta name="twitter:image" content="https://braziljs.org/public/assets/images/thumb-share.jpg">
 
-    <!-- Gplus tags -->
-    <meta itemprop="name" content="BrazilJS Conf 2016">
-    <meta itemprop="description" content="Em sua 6º edição, a BrazilJS Conf faz uma homenagem as Olimpíadas, sendo o primeiro e único evento de javascript com tal temática.">
-    <meta itemprop="image" content="http://braziljs.com.br/images/avatar-share-teaser.jpg">
+	<!-- Humans -->
+	<link rel="author" href="humans.txt" />
 
-    <!-- Humans -->
-    <link rel="author" href="humans.txt" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
+	<!-- Carregamento CSS -->
+	<link rel="stylesheet" href="public/assets/css/normalize.min.css">
+	<link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="public/assets/css/style.min.css">
+	<link rel="stylesheet" href="public/assets/css/responsive.min.css">
 
-    <!-- Core Meta Data -->
-    <meta name="description" content="Em sua 6º edição, a BrazilJS Conf faz uma homenagem as Olimpíadas, sendo o primeiro e único evento de javascript com tal temática.">
-    <meta name="author" content="@braziljs">
+	<!-- Carregamento Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic' rel='stylesheet' type='text/css'>
 
-    <!-- CSS compilado e minificado / Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Lato:300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.min.css">
-
+	<meta charset="UTF-8">
+	<title>BrazilJS 2016</title>
 </head>
 <body>
-    <div class="wrapper">
-        <section class="intro teaser-2016">
-            <div class="share hidden-sm hidden-xs">
-                <span>
-                    <div class="fb-share-button" data-href="http://braziljs.com.br/" data-layout="button_count"></div>
-                </span>
-                <span class="twitter-share-button">
-                    <a href="http://braziljs.com.br/" class="twitter-share-button" data-text="BrazilJS Conf 2015 - A maior conferência JavaScript do universo!" data-via="braziljs" data-hashtags="braziljs">Tweet</a>
-                    <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                    </script>
-                </span>
-            </div>
-            <div class="info-intro">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="logo"><img src="images/braziljs.svg" alt="braziljs logo" class="braziljs"></div>
-                            <span class="date-local">Porto Alegre, RS - <span>Agosto 2016</span> - Edição Olimpíadas</span>
-                            <h3 class="slogan">A maior conferência Javascript do Universo</h3>
-                            <span class="birthday hidden-xs">Venha fazer parte do <span>único evento de javascript</span> que homenageia as Olimpíadas.</span>
-                            <a class="button button-ticket" target="_blank" href="http://www.eventick.com.br/braziljs-2016" title="Comprar Ticket">
-                                <div>
-                                    <h4>Comprar Ticket</h4>
-                                    <span class="hidden-xs">Super early bird</span>
-                                </div>
-                            </a>
-                            <div class="bg-info-intro"><img src="images/bg-info-intro-teaser.png" alt="background intro"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="intro-bg">
-                <div></div>
-            </div>
-        </section>
-    </div>
+	<div class="wrapper">
+		<header class="animate" id="menu-nav">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="logo">
+							<a href="#intro" title="Voltar ao início">
+								<img src="public/assets/images/braziljs.svg" alt="logo braziljs">
+							</a>
+						</h1>
+						<div class="main-menu hidden-xs">
+							<nav class="menu">
+								<div class="ul">
+									<li class="item-menu">
+										<a href="#palestrantes" class="blue">Palestrantes</a>
+									</li>
+									<li class="item-menu">
+										<a href="#local" class="black">Local</a>
+									</li>
+									<li class="item-menu">
+										<a href="#programacao" class="red">Programação</a>
+									</li>
+									<li class="item-menu">
+										<a href="#manifesto" class="yellow">Manifesto</a>
+									</li>
+									<li class="item-menu">
+										<a href="#patrocinio" class="green">Patrocinadores</a>
+									</li>
+									<li class="item-menu">
+										<a href="https://twitter.com/braziljs" target="_blank">
+											<img src="public/assets/images/twitter.svg" alt="logo twitter">
+										</a>
+									</li>
+									<li class="item-menu">
+										<a href="https://www.facebook.com/braziljs" target="_blank">
+											<img src="public/assets/images/face.svg" alt="logo facebook">
+										</a>
+									</li>
+								</div>
+							</nav>
+							<div class="flags">
+								<a href="/conf?lang=pt" title="Português" class="active">PT</a> |
+								<a href="/conf?lang=en" title="Inglês">EN</a> |
+								<a href="/conf?lang=es" title="Espanhol">ES</a>
+							</div>
+						</div>
+						<div id="menu-trigger" ></div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-    <div id="fb-root"></div>
-    <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
 
-    <!-- Scripts minificados e concatenados -->
-    <script type="text/javascript" src="harmonic.js"></script>
-    <script type="text/javascript" src="js/all.min.js"></script>
-    <script type="text/javascript" src="js/bundle.js"></script>
+		<section class="intro vertical-centering animate" id="intro">
+			<div class="fixed-buttons">
+				<!--a href="javascript: window.open('https://twitter.com/intent/tweet?hashtags=braziljs,javascript&text=BrazilJS 2016, o maior evento JavaScript do mundo! Via @braziljs'); void(0);"
+				   class="twitter-btn"></a-->
+				<a href="http://www.eventick.com.br/braziljs-2016" class="fixed-ticket green-button f-24">Comprar ingresso</a>
+				<a href="https://braziljs.org/coc" class="fixed-ticket black-button f-24">Código de Conduta</a>
+				<!--a href="javascript: window.open('http://www.facebook.com/share.php?u=https://braziljs.org/conf&title=BrazilJS 2016, o maior evento JavaScript do mundo!'); void(0);"
+				   class="facebook-btn"></a-->
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="info-intro centering">
+							<div class="date">
+								<span class="red">26 e 27 de Agosto</span>
+								<span>Porto Alegre</span>
+							</div>
+							<h2 class="clip-title headline">
+								<span>A maior</span>
+								<span>conferência</span>
+								<span>JavaScript</span>
+								<span>do universo</span>
+							</h2>
+							<!--
+							<a href="http://www.eventick.com.br/braziljs-2016" class="intro-button">
+								<span class="f-60 green">Comprar ingresso</span>
+								<span class="f-24 dark-green">Último lote - R$ 300,00</span>
+							</a> 
+							-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Google Analytics: Altere UA-XXXXX-X pelo ID do seu site. -->
-    <script>
-        var _gaq=[['_setAccount','UA-32119524-1'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src='//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+
+		<section class="palestrantes" id="palestrantes">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="title-section txt-right animate">
+							<h3>Palestrantes</h3>
+							<div class="desc-title">
+								<span class="f-18">Um time incrível selecionado com o objetivo de</span>
+								<span class="f-24">tornar a sua experiência na BrazilJS algo único na sua vida.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="speaker animate">
+						<div class="col-md-9 big-block animate" id="parallax-3">
+							<div id="speakers_image" class="big-block">
+								<div style="background-image: url(public/images/cms/jake-archibald.png)" class='speaker-img' data-speaker='jake-archibald'><span data-url="lthear99Snc"></span></div>
+								<div style="background-image: url(public/images/cms/ruth-john.jpg)" class='speaker-img' data-speaker='ruth-john'></div>
+								<div style="background-image: url(public/images/cms/nolan-lawson.jpg)" class='speaker-img' data-speaker='nolan-lawson'><span data-url="qoD5vQJFnUE"></span></div>
+								<div style="background-image: url(public/images/cms/irina-shestak.jpg)" class='speaker-img' data-speaker='irina-shestak'></div>
+								<div style="background-image: url(public/images/cms/newton-calegari.jpg)" class='speaker-img' data-speaker='newton-calegari'></div>
+								<div style="background-image: url(public/images/cms/tessa-mero.jpg)" class='speaker-img' data-speaker='tessa-mero'><span data-url="f60qxhOljHQ"></span></div>
+								<div style="background-image: url(public/images/cms/willian-justen.jpg)" class='speaker-img' data-speaker='willian-justen'><span data-url="SMPvl5yilAA"></span></div>
+								<div style="background-image: url(public/images/cms/diego-eis.jpg)" class='speaker-img' data-speaker='diego-eis'></div>
+								<div style="background-image: url(public/images/cms/stepan-parunashvili.jpg)" class='speaker-img' data-speaker='stepan-parunashvili'></div>
+								<div style="background-image: url(public/images/cms/caio-vaccaro.jpg)" class='speaker-img' data-speaker='caio-vaccaro'></div>
+								<div style="background-image: url(public/images/cms/fernanda-bernardo.jpg)" class='speaker-img' data-speaker='fernanda-bernardo'><span data-url="OwL81gVOceg"></span></div>
+								<div style="background-image: url(public/images/cms/mattias-petter.jpg)" class='speaker-img' data-speaker='mpj'><span data-url="e-9ILyL_4XI"></span></div>
+								<div style="background-image: url(public/images/cms/sergio-lopes.jpeg)" class='speaker-img' data-speaker='sergio-lopes'><span data-url="UTQ_CpAlAig"></span></div>
+								<div style="background-image: url(public/images/cms/talita-pagani.jpg)" class='speaker-img' data-speaker='talita-pagani'><span data-url="VJmFp6xj4MI"></span></div>
+								<div style="background-image: url(public/images/cms/helen-holmes.jpg)" class='speaker-img' data-speaker='helen-holmes'><span data-url="DGquzuN-WMY"></span></div>
+								<div style="background-image: url(public/images/cms/chris-lilley.jpeg)" class='speaker-img' data-speaker='chris-lilley'></div>
+								<div style="background-image: url(public/images/cms/mike-taylor.jpg)" class='speaker-img' data-speaker='mike-taylor'></div>
+								<div style="background-image: url(public/images/cms/anna-lezhikova.jpg)" class='speaker-img' data-speaker='anna-lezihkova'></div>
+								<div style="background-image: url(public/images/cms/luis-leao.jpg)" class='speaker-img' data-speaker='luis-leao'></div>
+								<div style="background-image: url(public/images/cms/felipe-olivaes.jpg)" class='speaker-img' data-speaker='felipe-olivaes'><span data-url="D8_fxI4wypY"></span></div>
+								<div style="background-image: url(public/images/cms/flavio-ribeiro.jpg)" class='speaker-img' data-speaker='flavio-ribeiro'></div>
+								<div style="background-image: url(public/images/cms/lea-verou.jpg)" class='speaker-img' data-speaker='lea-verou'></div>
+								<div style="background-image: url(public/images/cms/alda-rocha.png	)" class='speaker-img' data-speaker='alda-rocha'></div>
+								<span type="button" id="btn_speaker" data-toggle="modal" data-target=".modal-speakers">
+									<img src="public/assets/images/video-player.png" alt="Video">
+								</span>
+								<div class="modal fade modal-speakers" tabindex="-1" role="dialog">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-body speakers-vine" id="speakers_vine"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 small-block animate" id="parallax-1">
+							<div class="row">
+								<div id="speakers_list" class="col-sm-12">
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/jake-archibald.png)" title="Jake Archibald" data-speaker="jake-archibald"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/ruth-john.jpg)" title="Ruth John" data-speaker="ruth-john"></a>		
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/nolan-lawson.jpg)" title="Nolan Lawson" data-speaker="nolan-lawson"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/irina-shestak.jpg)" title="Irina Shestak" data-speaker="irina-shestak"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/newton-calegari.jpg)" title="Newton Calegari" data-speaker="newton-calegari"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/tessa-mero.jpg)" title="Tessa Mero" data-speaker="tessa-mero"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/willian-justen.jpg)" title="Willian Justen de Vasconcellos" data-speaker="willian-justen"></a>	
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/diego-eis.jpg)" title="Diego Eis" data-speaker="diego-eis"></a>	
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/stepan-parunashvili.jpg)" title="Stepan Parunashvili" data-speaker="stepan-parunashvili"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/caio-vaccaro.jpg)" title="Caio Vaccaro" data-speaker="caio-vaccaro"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/fernanda-bernardo.jpg)" title="Fernanda Bernardo" data-speaker="fernanda-bernardo"></a>	
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/mattias-petter.jpg)" title="Mattias Petter Johansson" data-speaker="mpj"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/sergio-lopes.jpeg)" title="Sérgio Lopes" data-speaker="sergio-lopes"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/talita-pagani.jpg)" title="Talita Pagani" data-speaker="talita-pagani"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/helen-holmes.jpg)" title="Helen Holmes" data-speaker="helen-holmes"></a>	
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/chris-lilley.jpeg)" title="Chris Lilley" data-speaker="chris-lilley"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/mike-taylor.jpg)" title="Mike Taylor" data-speaker="mike-taylor"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/anna-lezhikova.jpg)" title="Anna Lezhikova" data-speaker="anna-lezihkova"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/luis-leao.jpg)" title=" Luis Leão" data-speaker="luis-leao"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/felipe-olivaes.jpg)" title="Felipe Olivaes" data-speaker="felipe-olivaes"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/flavio-ribeiro.jpg)" title="Flávio Ribeiro" data-speaker="flavio-ribeiro"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/lea-verou.jpg)" title="Lea Verou" data-speaker="lea-verou"></a>
+									<a href="javascript:void(0)" class="speaker-item" style="background-image: url(public/images/cms/alda-rocha.png)" title="Alda Rocha" data-speaker="alda-rocha"></a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 animate" >
+									<div class="speaker-info">
+										<div class="info-container">
+											<div id="speakers_info">
+												<div class="speaker-info" data-speaker='jake-archibald'>
+													<h4 class="speaker-name" data-name-length-range="4"> Jake Archibald</h4>
+													<div class="speaker-bio">
+														<p>Jake trabalha como developer advocate para o Google Chrome. Ele é um dos editores da especificação do Service Worker, então ele está por dentro de offline-first, push messaging e web performance.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/jaffathecake" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/jakearchibald" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='ruth-john'>
+													<h4 class="speaker-name" data-name-length-range="3"> Ruth John</h4>
+													<div class="speaker-bio">
+														<p>Ruth é uma desenvolvedora Web e uma tecnóloga criativa, que que tem desfrutado de uma carreira de mais de uma década trabalhando em sites e aplicações web. Ela gosta de educar as pessoas sobre novas tecnologias web e inspirá-las a experimentá-las, mostrando formas excitantes e interessantes de usá-las, bem como integrações interessantes em desenvolvimento do dia a dia. Como uma Google Developer Expert, ela está quase sempre falando em alguma conferência ou fazendo algum artigo. Suas coisas favoritas incluem hackear hardware, evangelizando sobre MIDI e levando seu código de áudio/visual para as ruas, (ou, mais recentemente, em conferências). Ela também sabe todos os nomes dos personagens dos Thundercats.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/rumyra" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/Rumyra" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='nolan-lawson'>
+													<h4 class="speaker-name" data-name-length-range="4"> Nolan Lawson</h4>
+													<div class="speaker-bio">
+														<p>Nolan é Program Manager para o Microsoft Edge. Ele contribuiu para diversos projetos JavaScript open-source, como <a href="http://pouchdb.com/">PouchDB</a>, <a href="https://github.com/nolanlawson/blob-util">blob-util</a>, <a href="https://github.com/nolanlawson/local-npm">local-npm</a>, e tem sido conhecido por escrever bastante sobre <a href="https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html">Promises</a>,  <a href="https://nolanlawson.com/2015/10/19/the-struggles-of-publishing-a-javascript-library/">JavaScript publishing</a> e <a href="http://www.pocketjavascript.com/blog/2015/11/23/introducing-pokedex-org">Pokémon</a>. Ele é apaixonado por performance web e offline-first.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/nolanlawson" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/nolanlawson" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>	
+												<div class="speaker-info" data-speaker='irina-shestak'>
+													<h4 class="speaker-name" data-name-length-range="4"> Irina Shestak</h4>
+													<div class="speaker-bio">
+														<p>tl;dr javascript, wombats e hot takes. Versão não tão curta: Irina é desenvolvedora de Londres/Vancouver. Passa a maior parte de seu tempo explorando o mundo, admirando trens e lendo alguns Beatniks.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/_lrlna" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/lrlna" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='newton-calegari'>
+													<h4 class="speaker-name" data-name-length-range="4"> Newton Calegari</h4>
+													<div class="speaker-bio">
+														<p>Pesquisador no Centro de Estudos sobre Tecnologias Web do NIC.br. Trabalha com padronização e recomendações para Web, atuando principalmente na área de Dados na Web; membro e editor do working group DWBP do W3C. Formado em Ciência da Computação e mestre em Tecnologias da Inteligência e Design Digital.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/newtoncalegari" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/newtoncalegari" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='tessa-mero'>
+													<h4 class="speaker-name" data-name-length-range="4"> Tessa Mero</h4>
+													<div class="speaker-bio">
+														<p>Tessa Mero é  Developer Evangelist na Cisco. Ela gasta o seu tempo extra contribuindo no time de liderança do projeto Joomla! e está envolvida neste projeto nos últimos 5 anos. Ela lidera o grupo Seattle PHP Meetup e é organizadora da Pacific Northwest PHP conference. No seu tempo livre ela gosta de jogar video game, praticar snowboard e comer comida Koreana.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/TessaMero" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='willian-justen'>
+													<h4 class="speaker-name" data-name-length-range="6"> Willian Justen de Vasconcellos</h4>
+													<div class="speaker-bio">
+														<p>Engenheiro de software que ama trabalhar com projetos criativos e desafiadores.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/Willian_justen" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/willianjusten" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>	
+												<div class="speaker-info" data-speaker='diego-eis'>
+													<h4 class="speaker-name" data-name-length-range="3"> Diego Eis</h4>
+													<div class="speaker-bio">
+														<p>Diego Eis mantém há 13 anos um website sobre desenvolvimento web chamado Tableless que ajudou a popularizar os padrões web no Brasil. É palestrante e muito ativo na comunidade de desenvolvimento front-end no Brasil. É Coordenador de Time de Produto na Locaweb.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/diegoeis" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/diegoeis" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='stepan-parunashvili'>
+													<h4 class="speaker-name" data-name-length-range="5"> Stepan Parunashvili</h4>
+													<div class="speaker-bio">
+														<p>Stepan Parunashvili é engenheiro de software na equipe Wit.ai no Facebook. Ele trabalha no M, o assistente pessoal para o Messenger. Stepan anteriormente fez a transição da arquitetura Wit.ai para React, e evoluiu um novo app em produção no Facebook depois disso.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/stopachka" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/stopachka" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>		
+												<div class="speaker-info" data-speaker='caio-vaccaro'>
+													<h4 class="speaker-name" data-name-length-range="4"> Caio Vaccaro</h4>
+													<div class="speaker-bio">
+														<p>Com 7 anos de experiência em programação, atualmente trabalha como Líder de tecnologia na Huge Inc, no Rio de Janeiro. O seu foco é dividido entre liderar grandes projetos de tecnologia, treinamento da equipe, processos de qualidade, integração contínua e desenvolvimento de front-end. Tem contribuído para a comunidade open-source com bibliotecas, palestras e artigos.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/caiovaccaro" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/caiovaccaro" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='fernanda-bernardo'>
+													<h4 class="speaker-name" data-name-length-range="5"> Fernanda Bernardo</h4>
+													<div class="speaker-bio">
+														<p>Tenho 21 anos e trabalho como front-end no Elo7. Me formei em Sistemas de Informação na USP Leste e cai na área de tecnologia meio que por sorte. Gosto tanto de back-end quanto de front-end e também de assuntos relacionados a UX. Adoro palestrar e estudar assuntos novos. Gosto de assuntos relacionados à saúde, sou diabética e tenho um blog sobre o assunto. Apesar disso, adoro doces.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/Feh_Bernardo" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/FernandaBernardo" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='mpj'>
+													<h4 class="speaker-name" data-name-length-range="5"> Mattias Petter Johansson</h4>
+													<div class="speaker-bio">
+														<p>Mattias Petter Johansson (@mpjme) é um desenvolvedor JavaScript responsável pelo FunFunFunction, um canal sobre programação no Youtube. Durante o dia, ele trabalha em uma das mais complicadas aplicações HTML5 do mundo; O cliente desktop do Spotify. Antes de trabalhar no Spotify, Mattias trabalhou em uma plataforma web de edição de vídeos e desenvolveu hotsites para a Absolut Vodka. Mattias consegue resolver um cubo mágico em menos de 2 minutos, mas nunca conseguiu fazer uma única estimativa de tempo corretamente em sua vida.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/mpjme" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/mpj" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='sergio-lopes'>
+													<h4 class="speaker-name" data-name-length-range="4"> Sérgio Lopes</h4>
+													<div class="speaker-bio">
+														<p>Sérgio Lopes é desenvolvedor e instrutor no Alura e na Caelum. Especialista front-end, foca maior parte dos dias em mobile, responsivo e performance web. É ativo participante da comunidade em eventos, fóruns e projetos open-source. Posta bastante sobre front-end em seu blog e no twitter, além de ter lançado alguns livros pela Casa do Código.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/sergio_caelum" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/sergiolopes" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>	
+												<div class="speaker-info" data-speaker='talita-pagani'>
+													<h4 class="speaker-name" data-name-length-range="4"> Talita Pagani</h4>
+													<div class="speaker-bio">
+														<p>Talita Pagani é bacharel e mestranda em Ciência da Computação, trabalhando com acessibilidade web para crianças com autismo. Trabalha há mais de 10 anos na área de TI e já atuou como designer de interfaces, desenvolvedora front-end e back-end, tester e analista de requisitos - praticamente um unicórnio -, mas sua grande paixão é a área de Experiência do Usuário. Ama JS e CSS e suas infinitas possibilidades. É líder local da Interaction Design Foundation (IDF) de Bauru/SP e membro do grupo de especialistas em acessibilidade do W3C Brasil.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/talitapagani" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/talitapagani" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+												<div class="speaker-info" data-speaker='helen-holmes'>
+													<h4 class="speaker-name" data-name-length-range="4"> Helen Holmes</h4>
+													<div class="speaker-bio">
+														<p>Helen é uma web designer que acredita que, com a ajuda certa, qualquer pessoa pode aprender a programar. Uma grande defensora de uma comunidade saudável para todos, ela ajudou a criar um chapter do Women Who Code e orientou estudantes de diferentes lugares dos Estados Unidos em hackathons. Atualmente, ela trabalha na Mozilla, ajudando a tornar as developer tools um pouco mais fáceis para todo mundo.</p>
+													</div>
+													<div class="speaker-social">
+														<a href="https://twitter.com/helenvholmes" class="button blue-button" target="_blank">Twitter</a>
+														<a href="https://github.com/helenvholmes" class="button black-button" target="_blank">Github</a>
+													</div>
+												</div>
+													
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='chris-lilley'>
+															<h4 class="speaker-name" data-name-length-range="4"> Chris Lilley</h4>
+															<div class="speaker-bio">
+																<p>Chris Lilley é Diretor técnico no World Wide Web Consortium (W3C). Considerado o "pai do SVG", ele também é co-autor do PNG, foi co-editor do CSS2, liderou o grupo que desenvolveu a @font-face e ajudou no desenvolvimento do WOFF.
+Ex Technical Architecture Group, Chris ainda tenta evoluir o gerenciamento de cores na web.
+Atualmente trabalha no CSS nível 3/4/5 (sério), Web Audio e WOFF2.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/svgeesus" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/svgeesus" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='mike-taylor'>
+															<h4 class="speaker-name" data-name-length-range="4"> Mike Taylor</h4>
+															<div class="speaker-bio">
+																<p>Mike Taylor é um Web Compatibility Engineer na Mozilla.
+Ele trabalha de casa, em Austin, Texas. Já trabalhou na Opera como Web Opened (seja lá o que isto signifique).</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/miketaylr" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/miketaylr" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='anna-lezihkova'>
+															<h4 class="speaker-name" data-name-length-range="4"> Anna Lezhikova</h4>
+															<div class="speaker-bio">
+																<p>Eu sou ex professora de música, mãe de 2 garotos e desenvolvedora de software junior.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/annavlz" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='luis-leao'>
+															<h4 class="speaker-name" data-name-length-range="4">  Luis Leão</h4>
+															<div class="speaker-bio">
+																<p>Course Manager na Udacity, co-organiza o Google Developer Group de São Paulo e atua em diversas áreas voltadas para empreendedorismo e inovação, entre eles é responsável por um grupo de estudo de Internet das Coisas (IoT) no RedBull Station e pelo programa Startup in School, projeto de formação empreendedora e programação para estudantes de escolas públicas.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/luisleao" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/luisleao" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='felipe-olivaes'>
+															<h4 class="speaker-name" data-name-length-range="4"> Felipe Olivaes</h4>
+															<div class="speaker-bio">
+																<p>Desenvolvedor com mais de 15 anos de mercado, formado em sistemas de informação. Apaixonado por tecnologia, contribui com projetos open-source nas horas vagas. Atualmente é especialista de infraestrutura de hosting na empresa KingHost, atuando na criação e evolução de produtos.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='flavio-ribeiro'>
+															<h4 class="speaker-name" data-name-length-range="4"> Flávio Ribeiro</h4>
+															<div class="speaker-bio">
+																<p>Flávio nasceu e cresceu no nordeste do Brasil. Quando trabalhava na Globo.com, ele participou da equipe de design e desenvolvimento do live streaming video, que está sendo usado nas transmissões ao vivo no portal globo.com, como aconteceu na cobertura da Copa do Mundo de 2014 e nos Jogos Olímpicos de Inverno de Sochi. Ele é o coautor do Clappr, um reprodutor de vídeos open source e também o autor do BemTV, uma plataforma peer-to-peer que auxilia na entrega de vídeos ao vivo para a web. Atualmente, Flávio trabalha como Video Software Engineer na The New York Times, contribuindo para uma melhoria de modo geral na forma como o vídeo é utilizado na empresa.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/flavioribeiro" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/flavioribeiro" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='lea-verou'>
+															<h4 class="speaker-name" data-name-length-range="3"> Lea Verou</h4>
+															<div class="speaker-bio">
+																<p>Lea está atualmente trabalhando em pesquisas com Interação Homem-máquina no <a href="http://csail.mit.edu">MIT CSAIL</a>.Ela escreveu um livro sobre CSS avançado para O’Reilly (<a href="http://shop.oreilly.com/product/0636920031123.do">CSS Secrets</a>) e trabalhou como Developer Advocate na <a href="http://w3.org">W3C</a>. Ela tem uma paixão há longo tempo por padrões Web, e é um dos poucos Experts no ;<a href="http://www.w3.org/Style/CSS/members.en.php3">CSS Working Group</a>.
+Lea iniciou também <a href="http://github.com/leaverou">diversos projetos open source e aplicações</a>, como <a href="http://prismjs.com">Prism</a>, <a href="http://dabblet.com">Dabblet</a> e <a href="http://leaverou.github.io/prefixfree/">-prefix-free</a>, e mantém um blog técnico em <a href="http://lea.verou.me">lea.verou.me</a>. Apesar de sua busca acadêmica, Lea é um dos poucos malucos que amam igualmente código e design.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/leaverou" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/leaverou" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+													
+														<div class="speaker-info" data-speaker='alda-rocha'>
+															<h4 class="speaker-name" data-name-length-range="4"> Alda Rocha</h4>
+															<div class="speaker-bio">
+																<p>Consultora e instrutora de Usabilidade, UX/UI designer, Web desenvolvedora, front-end, formada em arquitetura da informação com mais de 16 anos de experiência. Além de desenvolvedora, é engajada nas causas femininas e tecnológicas. Foi coordenadora de plataformas e soluções de TI na IOT Lab, web Designer e Designer gráfico. Desenvolveu projetos para muitas marcas consolidadas no Brasil e no mundo, agência digitais, startups e grandes empresas. Foi organizadora do Google Developers Group SP, Hackathon da FIESP e mentora do Women Techmakers no Brasil. Criou o GDG DROPS, evento que visava incentivar mais mulheres na área de tecnologia. Participou do Hackathon da Rede Globo. Já palestrou em vários eventos de tecnologia. Em seu tempo livre gosta de escrever sobre mulheres na tecnologia, design, usabilidade, experiência do usuário. Estuda Astronomia e Aquitetura Romana.</p>
+															</div>
+															<div class="speaker-social">
+																<a href="https://twitter.com/mjcoffeeholick" class="button blue-button" target="_blank">Twitter</a>
+																<a href="https://github.com/mjcoffeeholick" class="button black-button" target="_blank">Github</a>
+															</div>
+														</div>
+													
+												
+											
+												
+											
+												
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" id="workshop-mozilla">
+				<div class="title-section animate">
+					<h3>Workshop <span class="red">Mozilla</span></h3>
+				</div>
+			</div>
+			<div class="col-sm-6 animate">
+				<img src="public/assets/images/mike-taylor-workshop.jpg" class="img-workshop">
+			</div>
+			<div class="col-sm-6 animate">
+				<h4>Mike Taylor</h4>
+				<p>Mike Taylor, vindo diretamente da Mozilla, palestrante da BrazilJS 2016, ministrará este workshop sobre Ferramentas de Compatibilidade na Web e diversas técnicas. O curioso é que ele fala Português, pois viveu no Brasil por alguns anos.</p>
+				<a href="http://even.tc/workshop-mozilla-braziljs-2016" target="_blank" class="button big-button yellow-button f-24">Inscreva-se</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="title-section always-bet animate">
+					<h2 class="clip-title headline">
+						<span>Always</span>
+						<span>bet on JS</span>
+					</h2>
+					<span class="f-30">Brendan Eich</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+		<section class="edicoes" id="edicoes">
+	<div class="container-fluid carousel slide animate" id="carousel-edition" data-ride="carousel" data-interval="8000">
+		<h3 class="white animate">
+			edição <span class="white" id="edition_title"> 2015</span>
+		</h3>
+		<a href="javascript:void(0)" class="arrow-slide prev-slide" data-slide="prev" data-target="#carousel-edition">
+			<img src="public/assets/images/arrow-prev.svg" alt="seta anterior slide">
+		</a>
+		<div id="edition_list" class="content-banner">
+
+			<div class="row animate carousel-inner edition-inner ed_active" data-edition="edition-2015">
+				<div class="slide item active">
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/always-bet-cake.jpg" alt="Always bet on JS Cake">
+					</div>
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/with-brendan.jpg" alt="With Brendan Eich">
+					</div>
+				</div>
+				<div class="slide item">
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/powers-rangers.jpg" alt="Power Rangers">
+					</div>
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/speaker1.jpg" alt="Christian Heilmann">
+					</div>
+				</div>
+				<div class="slide item">
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/speaker2.jpg" alt="Rafa Amorim">
+					</div>
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/speaker3.jpg" alt="Reinaldo Ferraz">
+					</div>
+				</div>
+				<div class="slide item">
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2015/talk1.jpg" alt="Talk BrazilJS">
+					</div>
+						<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/img-mask-intro.jpg" alt="Crowd BrazilJS">
+					</div>
+				</div>
+			</div>
+
+			<div class="row animate carousel-inner edition-inner" data-edition="edition-2014">
+				<div class="slide item">
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2014/2014-1.jpg" alt="BrazilJS 2014 1">
+					</div>
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2014/2014-2.jpg" alt="BrazilJS 2014 2">
+					</div>
+				</div>
+				<div class="slide item">
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2014/2014-3.jpg" alt="BrazilJS 2014 3">
+					</div>
+					<div class="col-xs-6 img-slide">
+						<img src="public/assets/images/2014/2014-4.jpg" alt="BrazilJS 2014 4">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<a href="javascript:void(0)" class="arrow-slide next-slide" data-slide="next" data-target="#carousel-edition">
+			<img src="public/assets/images/arrow-next.svg" alt="seta próximo slide">
+		</a>
+	</div>
+	<div class="edition-bullets animate" id="edition_bullets">
+		<div>
+			<a href="javascript:void(0)" data-edition="edition-2015" class="btn-edition button white-button">2015</a>
+			<a href="javascript:void(0)" data-edition="edition-2014" class="btn-edition button white-button">2014</a>
+		</div>
+	</div>
+</section>
+
+
+		<section class="local">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12" id="local">
+				<div class="title-section txt-right animate">
+					<h3>Local</h3>
+					<div class="desc-title">
+						<span class="f-18">Shopping Center BarraShoppingSul</span>
+						<span class="f-24">Av. Diário de Notícias, 300, bairro Cristal</span>
+						<span class="f-30">Porto Alegre/RS</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="info-local">
+				<div class="col-md-6 small-block animate"  id="parallax-2">
+					<div class="iframe-local small-block">
+						<div class="hide-scroll"></div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.318359227005!2d-51.247870583814624!3d-30.085067440130082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519830ed9316ff3%3A0xa28d42fc4174690e!2sBarra+Shopping+Sul!5e0!3m2!1spt-BR!2sbr!4v1466472222770" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-md-9 big-block animate">
+					<div class="img-local big-block">
+						<img src="public/assets/images/img-teste-local.jpg" alt="imagem local">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+		<section class="programacao" id="programacao">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section animate">
+					<h3>Programação</h3>
+					<div class="desc-title">
+						<span class="f-18">Dois dias incríveis.</span>
+						<span class="f-24">Uma programação única. Uma experiência única.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			
+				<div class="col-sm-6 animate">
+					<h4>Dia 01 - <span class="red">26/08</span></h4>
+					<div class="row">
+						<div class="col-xs-12">
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">08:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Checkin</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">08:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Checkin</h5>
+												<p></p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">08:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Felipe N. Moura</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/felipe-moura.jpg)"></div>
+													</div>
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Jaydson N. Gomes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/jaydson-gomes.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Abertura</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">08:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Abertura</h5>
+												<p></p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/a281807662e89d24253265c072fb9f2b.jpg)"></div>
+													<h6>Felipe N. Moura</h6>
+												</div>
+											</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/0443f61c46a7733206b2d265f5b3768b.jpg)"></div>
+													<h6>Jaydson N. Gomes</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">09:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Jake Archibald</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/jake-archibald.png)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Keynote - Instant loading offline-first progressive web apps the next generation part II uncovered</h5>
+													<p>Nesta palestra vamos pegar um site online-only e transformá-lo em uma web app progressiva offline-first instalável totalmente resiliente de rede.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">09:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Keynote - Instant loading offline-first progressive web apps the next generation part II uncovered</h5>
+												<p>Nesta palestra vamos pegar um site online-only e transformá-lo em uma web app progressiva offline-first instalável totalmente resiliente de rede.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/9bd4eb7a2616c5a7aa70d15fc04e59ab.png)"></div>
+													<h6>Jake Archibald</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">09:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Ruth John</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/ruth-john.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Let's Talk About MIDI</h5>
+													<p>O que você pensa quando eu digo MIDI, música ruim computador? </p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">09:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Let's Talk About MIDI</h5>
+												<p>O que você pensa quando eu digo MIDI, música ruim computador? </p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/1c69d3e46380a9a3a43dc3a02d4f4d97.jpg)"></div>
+													<h6>Ruth John</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">10:10</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Nolan Lawson</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/nolan-lawson.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>We Can Work It Out: from Web Workers to Service Workers</h5>
+													<p>Web Workers e Service Workers desbloqueiam dois novos recursos interessantes para a web: paralelismo e offline.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">10:10</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>We Can Work It Out: from Web Workers to Service Workers</h5>
+												<p>Web Workers e Service Workers desbloqueiam dois novos recursos interessantes para a web: paralelismo e offline.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/1c3d086b913af8b880fa5c74b0704774.jpg)"></div>
+													<h6>Nolan Lawson</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">10:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Coffee Break</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">10:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Coffee Break</h5>
+												<p></p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">11:10</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Irina Shestak</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/irina-shestak.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Taking on Genetically Evolving Cellular Automata with JavaScript</h5>
+													<p>Geneticamente evoluindo autômatos celulares - complicado. Vamos dividir</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">11:10</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Taking on Genetically Evolving Cellular Automata with JavaScript</h5>
+												<p>Geneticamente evoluindo autômatos celulares - complicado. Vamos dividir</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/01044beb134598a885282fc515caa233.JPG)"></div>
+													<h6>Irina Shestak</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">11:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Newton Calegari</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/newton-calegari.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Vídeo na Web: indo além do elemento video</h5>
+													<p>Você deve ter notado o aumento no número de conteúdos em vídeo disponíveis na Web...</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">11:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Vídeo na Web: indo além do elemento video</h5>
+												<p>Você deve ter notado o aumento no número de conteúdos em vídeo disponíveis na Web...</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/793ee342ef5dc65a3333b8976135ec12.jpg)"></div>
+													<h6>Newton Calegari</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">12:10</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Almoço</h5>
+													<p>Almoço</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">12:10</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Almoço</h5>
+												<p>Almoço</p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">14:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Tessa Mero</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/tessa-mero.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Nom Nom: Consuming REST APIs</h5>
+													<p>Com fome de API's? Você veio ao lugar certo! </p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">14:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Nom Nom: Consuming REST APIs</h5>
+												<p>Com fome de API's? Você veio ao lugar certo! </p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/9c5b1294113affac37f331b63b7d1c0d.jpg)"></div>
+													<h6>Tessa Mero</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">14:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Willian Justen de Vasconcellos</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/willian-justen.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>JS loves Music (JS <3 Music)</h5>
+													<p>Nesta palestra eu vou mostrar algumas coisas legais que podemos construir com a WebAudio API.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">14:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>JS loves Music (JS <3 Music)</h5>
+												<p>Nesta palestra eu vou mostrar algumas coisas legais que podemos construir com a WebAudio API.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/47ac95312e535076b1373847f44ef2ce.jpg)"></div>
+													<h6>Willian Justen de Vasconcellos</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">15:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Diego Eis</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/diego-eis.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Linked Data, JSON-LD e Web Semântica</h5>
+													<p>Nessa palestra vamos tentar conhecer melhor do que se trata o Linked Data e como podemos usar o JSON para compartilhar informações sobre seu website com máquinas, robôs e sistemas de busca. </p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">15:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Linked Data, JSON-LD e Web Semântica</h5>
+												<p>Nessa palestra vamos tentar conhecer melhor do que se trata o Linked Data e como podemos usar o JSON para compartilhar informações sobre seu website com máquinas, robôs e sistemas de busca. </p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/b631c5245e35ef906630da2f506ce4cf.jpg)"></div>
+													<h6>Diego Eis</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">15:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Stepan Parunashvili</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/stepan-parunashvili.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>On Scaling React Applications</h5>
+													<p>Esta palestra irá dissecar o crescimento de uma grande aplicação React, com os erros técnicos iniciais que podem ser cometidos, para superar barreiras de desempenho e introduzindo a tecnologia necessária para manter o desenvolvimento produtivo.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">15:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>On Scaling React Applications</h5>
+												<p>Esta palestra irá dissecar o crescimento de uma grande aplicação React, com os erros técnicos iniciais que podem ser cometidos, para superar barreiras de desempenho e introduzindo a tecnologia necessária para manter o desenvolvimento produtivo.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/27d6cd22c04690ebe7fabb2b514005b6.jpg)"></div>
+													<h6>Stepan Parunashvili</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">16:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Coffee-break</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">16:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Coffee-break</h5>
+												<p></p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">16:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Caio Vaccaro</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/caio-vaccaro.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Client-side Development in 2016</h5>
+													<p>Quais são os nossos maiores desafios como Front-Enders agora?</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">16:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Client-side Development in 2016</h5>
+												<p>Quais são os nossos maiores desafios como Front-Enders agora?</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/2c35167aae6b267dd725af2ba177e1b0.jpg)"></div>
+													<h6>Caio Vaccaro</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">17:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Fernanda Bernardo</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/fernanda-bernardo.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Isomorfismo pra que?</h5>
+													<p>Novas ferramentas são criadas a todo momento e um nome está surgindo no mundo JS: ISOMORFISMO.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">17:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Isomorfismo pra que?</h5>
+												<p>Novas ferramentas são criadas a todo momento e um nome está surgindo no mundo JS: ISOMORFISMO.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/58f943a39272e99b95a126cdac5a2a91.jpg)"></div>
+													<h6>Fernanda Bernardo</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">17:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Mattias Petter Johansson</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/mattias-petter.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Keynote - If you know map, I will teach you monads</h5>
+													<p>Diz-se que o peixe será o último a descobrir água. Desenvolvedores JavaScript foram inconscientemente fazendo programação funcional por anos. Nesta palestra, vou explodir sua mente, dando-lhe uma maior perspectiva em torno das ferramentas que você já está usando hoje.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">17:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Keynote - If you know map, I will teach you monads</h5>
+												<p>Diz-se que o peixe será o último a descobrir água. Desenvolvedores JavaScript foram inconscientemente fazendo programação funcional por anos. Nesta palestra, vou explodir sua mente, dando-lhe uma maior perspectiva em torno das ferramentas que você já está usando hoje.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/4d1a9292cfc74eb964838b66e2774590.jpg)"></div>
+													<h6>Mattias Petter Johansson</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">18:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Felipe N. Moura</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/felipe-moura.jpg)"></div>
+													</div>
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Jaydson N. Gomes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/jaydson-gomes.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Encerramento</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">18:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Encerramento</h5>
+												<p></p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/a281807662e89d24253265c072fb9f2b.jpg)"></div>
+													<h6>Felipe N. Moura</h6>
+												</div>
+											</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/0443f61c46a7733206b2d265f5b3768b.jpg)"></div>
+													<h6>Jaydson N. Gomes</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-sm-6 animate">
+					<h4>Dia 02 - <span class="red">27/08</span></h4>
+					<div class="row">
+						<div class="col-xs-12">
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">09:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Felipe N. Moura</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/felipe-moura.jpg)"></div>
+													</div>
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Jaydson N. Gomes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/jaydson-gomes.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Abertura</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">09:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Abertura</h5>
+												<p></p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/a281807662e89d24253265c072fb9f2b.jpg)"></div>
+													<h6>Felipe N. Moura</h6>
+												</div>
+											</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/0443f61c46a7733206b2d265f5b3768b.jpg)"></div>
+													<h6>Jaydson N. Gomes</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">09:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Sérgio Lopes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/sergio-lopes.jpeg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Desafios práticos de Performance Web</h5>
+													<p>Nessa palestra, vamos ver alguns cenários não triviais de gargalos de performance na Web, como detectá-los e como resolvê-los.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">09:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Desafios práticos de Performance Web</h5>
+												<p>Nessa palestra, vamos ver alguns cenários não triviais de gargalos de performance na Web, como detectá-los e como resolvê-los.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/c685ca0485f509f94d8cc08dec5cb630.jpeg)"></div>
+													<h6>Sérgio Lopes</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">10:10</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Talita Pagani</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/talita-pagani.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Acessibilidade Web Cognitiva</h5>
+													<p>Nesta palestra, veremos alguns princípios de Acessibilidade Web Cognitiva para aumentar seu XP sobre acessibilidade e upar o seu char como developer.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">10:10</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Acessibilidade Web Cognitiva</h5>
+												<p>Nesta palestra, veremos alguns princípios de Acessibilidade Web Cognitiva para aumentar seu XP sobre acessibilidade e upar o seu char como developer.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/64c1fd9c14f7a2faf4dd1eacc34bcb90.jpg)"></div>
+													<h6>Talita Pagani</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">10:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Coffe-Break</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">10:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Coffe-Break</h5>
+												<p></p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">11:10</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Helen Holmes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/helen-holmes.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Type is Your Right!: Performance and Web Typography</h5>
+													<p>Como desenvolvedores web, nós devemos performance.
+Como designers, devemos tipografia. Então, como você lida com esta complicada interceção entre a beleza e a performance em páginas bonitas?
+
+Mostrarei à audiência as funcionalidades OpenType, explicando por que elas são importantes para typefaces e explicando as implicações que elas podem ter na performance.
+Passaremos por como ativar funcionalidades OpenType e como você pode otimizar seus arquivos para a web, você sendo dono deles e servindo-os por @font-face ou utilizando Typekit para que você sinta-se confidente servindo lindas tipografias para sua página.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">11:10</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Type is Your Right!: Performance and Web Typography</h5>
+												<p>Como desenvolvedores web, nós devemos performance.
+Como designers, devemos tipografia. Então, como você lida com esta complicada interceção entre a beleza e a performance em páginas bonitas?
+
+Mostrarei à audiência as funcionalidades OpenType, explicando por que elas são importantes para typefaces e explicando as implicações que elas podem ter na performance.
+Passaremos por como ativar funcionalidades OpenType e como você pode otimizar seus arquivos para a web, você sendo dono deles e servindo-os por @font-face ou utilizando Typekit para que você sinta-se confidente servindo lindas tipografias para sua página.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/e286bbfcfc077e457c6ef9f617b1079c.jpg)"></div>
+													<h6>Helen Holmes</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">11:40</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Chris Lilley</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/chris-lilley.jpeg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>WebFonts: level up!</h5>
+													<p>Claro, todos usamos WebFonts hoje. Mas estamos usando todas as capacidades da OpenType Fonts moderna? Com seu CSS? Você sabe como conseguir numerais lineares ou tabulares, como evitar smallcaps falsos?
+Que tal controlar o carregamento da font usando uma API JavaScript, para otimizar a performance no desktop e mobile?
+E o que está vindo por aí? Você está pronto para o *level up* em webfonts?</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">11:40</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>WebFonts: level up!</h5>
+												<p>Claro, todos usamos WebFonts hoje. Mas estamos usando todas as capacidades da OpenType Fonts moderna? Com seu CSS? Você sabe como conseguir numerais lineares ou tabulares, como evitar smallcaps falsos?
+Que tal controlar o carregamento da font usando uma API JavaScript, para otimizar a performance no desktop e mobile?
+E o que está vindo por aí? Você está pronto para o *level up* em webfonts?</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/06407ea670c53cff0d1a7c469a39ef9c.jpeg)"></div>
+													<h6>Chris Lilley</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">12:10</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Almoço</h5>
+													<p>Hora do Almoço</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">12:10</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Almoço</h5>
+												<p>Hora do Almoço</p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">14:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Mike Taylor</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/mike-taylor.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Doing the Unstuck: how to make browsers compatible with the Web</h5>
+													<p>O que quer dizer ser (ou não ser) compatível com a Web, para o JavaScript e CSS?</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">14:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Doing the Unstuck: how to make browsers compatible with the Web</h5>
+												<p>O que quer dizer ser (ou não ser) compatível com a Web, para o JavaScript e CSS?</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/b13d9ac2812e068811d06786ac383f1f.jpg)"></div>
+													<h6>Mike Taylor</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">14:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Anna Lezhikova</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/anna-lezhikova.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Training diverse juniors: tricks and hints</h5>
+													<p>Treinar juniores é uma das tarefas mais importantes em qualquer empresa de qualquer tamanho.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">14:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Training diverse juniors: tricks and hints</h5>
+												<p>Treinar juniores é uma das tarefas mais importantes em qualquer empresa de qualquer tamanho.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/2189e0f43817ec22bc4708c24e0e1072.jpg)"></div>
+													<h6>Anna Lezhikova</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">15:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5> Luis Leão</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/luis-leao.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Hardware Hacking com JavaScript e Firebase</h5>
+													<p>Veja como utilizar Node.JS e Firebase para construir uma vending machine conectada a internet.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">15:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Hardware Hacking com JavaScript e Firebase</h5>
+												<p>Veja como utilizar Node.JS e Firebase para construir uma vending machine conectada a internet.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/5aa6e8a9359f744849d0bddae8d5609e.jpg)"></div>
+													<h6> Luis Leão</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">15:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Felipe Olivaes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/felipe-olivaes.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>A casa dos sonhos: automatização residencial com JavaScript</h5>
+													<p>As mágicas que Arduino, Raspberry Pi, NodeJS e Socket.io podem fazer para automatizar ações residenciais como: controle de iluminação, ativação através de georreferenciamento, controle de temperaturas e muito mais.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">15:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>A casa dos sonhos: automatização residencial com JavaScript</h5>
+												<p>As mágicas que Arduino, Raspberry Pi, NodeJS e Socket.io podem fazer para automatizar ações residenciais como: controle de iluminação, ativação através de georreferenciamento, controle de temperaturas e muito mais.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/42a0b2e3f71e95f745630f2685cf789e.JPG)"></div>
+													<h6>Felipe Olivaes</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">16:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Coffee-Break</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">16:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Coffee-Break</h5>
+												<p></p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">16:30</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Flávio Ribeiro</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/flavio-ribeiro.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>The New York Times: Flash-Free Video em 2016</h5>
+													<p>Saiba como a plataforma de vídeos do New York Times se livrou do Flash em 2016.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">16:30</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>The New York Times: Flash-Free Video em 2016</h5>
+												<p>Saiba como a plataforma de vídeos do New York Times se livrou do Flash em 2016.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/222173d3daee0ab46c96751623182a82.jpg)"></div>
+													<h6>Flávio Ribeiro</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">17:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Lea Verou</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/lea-verou.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Keynote - JS UX: Writing code for humans</h5>
+													<p>Temos a tendência de pensar em interfaces de usuários e UX como uma preocupação do designer, e que não se aplica a nós. Porém, cada vez que escrevemos um código que será lido por outros — ou por nós mesmos, no futuro — estamos escrevendo uma interface de usuário.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">17:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Keynote - JS UX: Writing code for humans</h5>
+												<p>Temos a tendência de pensar em interfaces de usuários e UX como uma preocupação do designer, e que não se aplica a nós. Porém, cada vez que escrevemos um código que será lido por outros — ou por nós mesmos, no futuro — estamos escrevendo uma interface de usuário.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/cf3e89bf085fddb9298d626fe43538f2.jpg)"></div>
+													<h6>Lea Verou</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">17:45</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Alda Rocha</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/alda-rocha.png)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Empoderei, e agora?</h5>
+													<p>Pretendo falar na minha palestra como superar cada uma dessas barreiras, mostrar como é essencial o trabalho de front-end, UX e programação no mercado hoje. Vou falar também como fazer parte de tudo isso fazendo o empoderamento ser muito mais que uma palavra e sim uma realidade no dia a dia de cada mulher.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">17:45</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Empoderei, e agora?</h5>
+												<p>Pretendo falar na minha palestra como superar cada uma dessas barreiras, mostrar como é essencial o trabalho de front-end, UX e programação no mercado hoje. Vou falar também como fazer parte de tudo isso fazendo o empoderamento ser muito mais que uma palavra e sim uma realidade no dia a dia de cada mulher.</p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/088f158ee41c6c9bfed91f85ce9357d9.png)"></div>
+													<h6>Alda Rocha</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">18:15</h5>
+											</div>
+											<div class="col-sm-10">
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Jaydson N. Gomes</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/jaydson-gomes.jpg)"></div>
+													</div>
+												
+													<div class="col-sm-8 col-sm-9">
+														<h5>Felipe N. Moura</h5>
+													</div>
+													<div class="col-xs-3 hidden-xs hidden-sm">
+														<div class="speaker-min-img" style="background-image: url(public/images/cms/felipe-moura.jpg)"></div>
+													</div>
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Encerramento</h5>
+													<p></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">18:15</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Encerramento</h5>
+												<p></p>
+											</div>
+										</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/0443f61c46a7733206b2d265f5b3768b.jpg)"></div>
+													<h6>Jaydson N. Gomes</h6>
+												</div>
+											</div>
+										
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<div class="speaker-min-img" style="background-image: url(/images/cms/a281807662e89d24253265c072fb9f2b.jpg)"></div>
+													<h6>Felipe N. Moura</h6>
+												</div>
+											</div>
+										
+									</div>
+								</div> -->
+							
+								<div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-md-2 col-sm-3">
+												<h5 class="red">19:00</h5>
+											</div>
+											<div class="col-sm-10">
+												
+											</div>
+											<div class="info-item-programacao">
+												<div class="col-xs-12">
+													<h5>Festa</h5>
+													<p>Vai ter música, vai ter cerveja, vai ter DJ, vai ter palestrante VJ! A Ruth John vai fazer installations e projections durante a festa!</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+
+								<!-- <div class="item-programacao">
+									<div class="row">
+										<div class="header-item-programacao">
+											<div class="col-xs-12">
+												<h5 class="red">19:00</h5>
+											</div>
+											<div class="col-xs-12">
+												<h5>Festa</h5>
+												<p>Vai ter música, vai ter cerveja, vai ter DJ, vai ter palestrante VJ! A Ruth John vai fazer installations e projections durante a festa!</p>
+											</div>
+										</div>
+										
+									</div>
+								</div> -->
+							
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+		<section class="manifesto" id="manifesto">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section animate">
+					<h3>
+						<span>Nosso</span>
+						<span>Manifesto</span>
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 animate">
+				<p>A ideia do BrazilJS surgiu em meados do ano de <span class='blue f-24'>2008</span>. Muitos eventos de tecnologia e de diversas linguagens estavam acontecendo na época. Jaydson e Felipe sempre foram entusiastas JavaScript, e sentiram a falta de uma conferência focada na linguagem, que para eles, tinha um futuro promissor.</p>
+				<p>Pouco tempo depois, em <span class='f-24'>2009</span>, nasceu a primeira conferência JavaScript, a JSConf americana. Durante o ano de <span class='f-24 red'>2010</span> a ideia evoluiu e Christiano Milfont estava pensando no mesmo, fazer uma conferência JavaScript nacional. Unindo forças, Jaydson, Felipe e Christiano conseguiram em <span class='f-24 yellow'>2011</span> fazer a primeira conferência JavaScript do Brasil.</p>
+				<p>Na sua estréia, em maio de <span class='f-24 yellow'>2011</span>, a BrazilJS Conf se tornou uma das maiores conferências JavaScript do mundo, contando com 600 participantes e mais de 20 palestras.</p>
+			</div>
+			<div class="col-sm-6 animate">
+				<p>Em <span class='f-24 green'>2012</span>, a BrazilJS Conf contou com mais de 900 pessoas e trouxe pela primeira vez ao Brasil o lendário criador da linguagem JavaScript, Brendan Eich.</p>
+				<p>Em <span class='blue f-24'>2013</span> e <span class='f-24'>2014</span>, a conferência repetiu o sucesso. Com nomes de peso, como Douglas Crockford, Yehuda Katz, Guillermo Rauch e Mr. Doob, o número de participantes chegou a quase 1000 em ambas edições, lotando o teatro onde a conferência foi realizada.</p>
+				<p>O ano <span class='red f-24'>2015</span> foi especial. Além de ser o 20º aniversário do JavaScript, foi também  a nossa 5º edição com mais de 1300 participantes, Brendan Eich, nomes mundiais, um bolo gigante de aniversário e uma hilária entrada triunfal dos Power Rangers.</p>
+			</div>
+			<div class="col-sm-12 animate">
+				<p class="f-30"><span class='green'>2016</span> é o ano das olimpíadas e queremos fazer um evento grandioso onde você será o medalhista de ouro. Estamos preparando uma estrutura fantástica, além é claro, ótimas palestras e o encontro com toda a comunidade brasileira.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<section class="highlights">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4 highlight-block animate">
+				<div class="info-highlight highlight-block vertical-centering">
+					<h4 class="centering">
+						<span class="white">02</span>
+						<span class="white">dias</span>
+					</h4>
+					<img src="public/assets/images/img-highlight-1.jpg" alt="imagem highlight">
+				</div>
+			</div>
+			<div class="col-sm-4 highlight-block animate">
+				<div class="info-highlight highlight-block vertical-centering">
+					<h4 class="centering">
+						<span class="white">20+</span>
+						<span class="white">palestras</span>
+					</h4>
+					<img src="public/assets/images/img-highlight-2.jpg" alt="imagem highlight">
+				</div>
+			</div>
+			<div class="col-sm-4 highlight-block animate">
+				<div class="info-highlight highlight-block vertical-centering">
+					<h4 class="centering">
+						<span class="white">1500+</span>
+						<span class="white">pessoas</span>
+					</h4>
+					<img src="public/assets/images/img-highlight-3.jpg" alt="imagem highlight">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+		<section class="patrocinio" id="patrocinio">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section txt-right animate">
+					<h3>Patrocinadores</h3>
+					<div class="desc-title">
+						<span class="f-18">Um agradecimento especial aos nossos patrocinadores</span>
+						<span class="f-24">que acreditam e fazem a BrazilJS acontecer</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row animate">
+			<div class="col-sm-6 gold-block">
+				<a href="https://firefox.com/developer?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/mozilla.png" alt="Mozilla">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 gold-block">
+				<a href="http://www.locaweb.com.br/default.html?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/locaweb.jpg" alt="Locaweb">
+						</div>
+					</div>
+				</a>
+			</div>	
+			<div class="col-sm-6 gold-block">
+				<a href="http://www.uolhost.uol.com.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/uol.jpg" alt="Uol Host">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 gold-block">
+				<a href="https://www.microsoft.com/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/microsoft.png" alt="Microsoft">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 gold-block">
+				<a href="https://www.microsoft.com/en-us/windows/microsoft-edge/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/edge.png" alt="Microsoft Edge">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 gold-block">
+				<a href="http://ceweb.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/w3c.png" alt="W3C">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 gold-block">
+				<a href="mailto:eventos@nasc.io">
+					<div class="gold gold-block vertical-centering">
+						<div class="centering f-30	">
+							Seja um patrocinador
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="row animate">
+			<div class="col-sm-4 col-xs-6 silver-block">
+				<a href="https://brave.com/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="silver silver-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/brave.png" alt="Brave">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-6 silver-block">
+				<a href="http://www.kinghost.com.br/imprensa?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="silver silver-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/kinghost.jpg" alt="KingHost">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-6 silver-block">
+				<a href="http://talentos.globo.com/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="silver silver-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/globo.png" alt="Globo.com">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-6 silver-block">
+				<a href="https://br.udacity.com/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="silver silver-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/udacity-vertical-white.png" alt="Udacity">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-6 silver-block">
+				<a href="http://www.adp.com.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+					<div class="silver silver-block vertical-centering">
+						<div class="centering">
+							<img src="public/assets/images/sponsors/adp.jpg" alt="ADP">
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 bronze-container">
+				<div class="row animate">
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="https://github.com/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/github.png" alt="GitHub">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="https://www.scalablepath.com/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/scalable-path.png" alt="Scalable Path">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="https://www.alura.com.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/alura.svg" alt="Alura">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="https://www.umbler.com/br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/umbler.png" alt="Umbler">
+								</div>
+							</div>
+						</a>
+					</div>					
+				</div>
+			</div>
+			<div class="col-sm-4 bronze-container">
+				<div class="row animate	">
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="http://imasters.com.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/imasters.png" alt="iMasters">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="http://3days.com.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/3days.jpg" alt="3days">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="http://www.hugeinc.com/contactus/rio-de-janeiro?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									<img src="public/assets/images/sponsors/huge.png" alt="Huge">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-xs-3 bronze-block">
+						<a href="http://www.ecore.com.br/pt/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf">
+							<div class="bronze bronze-block vertical-centering">
+								<div class="centering">
+									Seja um patrocinador
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section content-support txt-right animate">
+					<h3>Apoio</h3>
+					<div class="desc-apoio">
+						<a href="http://www.targettrust.com.br" target="_blank" title="Targettrust">
+							<img src="public/assets/images/support/support-target.png" alt="Targettrust">
+						</a>
+						<a href="https://becode.com.br/" target="_blank" title="Becode">
+							<img src="public/assets/images/support/support-becode.png" alt="Becodes">
+						</a>
+						<a href="http://devnaestrada.com.br/?utm_source=braziljs&utm_medium=partner&utm_campaign=braziljs-conf" target="_blank" title="Dev na Estrada">
+							<img src="public/assets/images/sponsors/devnaestrada.png" alt="Dev na Estrada">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+		<section class="curadores">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="title-section animate">
+					<h3>Curadores</h3>
+					<div class="desc-title">
+						<span class="f-18">Os curadores</span>
+						<span class="f-24">da maior conferência JavaScript do universo</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="img-container">
+		<div class="vertical-centering">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="curadores-block">
+							<div class="row centering">
+								<div class="col-sm-12 col-xs-6 jay animate">
+									<h3 class="clip-title-jay">
+										<span>Jaydson</span>
+										<span>Gomes</span>
+									</h3>
+									<a href="https://twitter.com/jaydson" class="button blue-button">Twitter</a>
+									<a href="https://github.com/jaydson" class="button black-button">Github</a>
+								</div>
+								<div class="col-sm-12 col-xs-6 txt-right felipe animate">
+									<h3 class="clip-title-felipe">
+										<span>Felipe</span>
+										<span>Nascimento</span>
+									</h3>
+									<a href="https://twitter.com/felipenmoura" class="button blue-button">Twitter</a>
+									<a href="https://github.com/felipenmoura" class="button black-button">Github</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img src="public/assets/images/img-curadores.jpg" alt="imagem curadores" class="img-curadores animate">
+	</div>
+</section>
+
+
+		<footer class="animate">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<a href="https://braziljs.org/" class="button yellow-button">Braziljs Org</a>
+				<a href="https://braziljs.org/coc" target="blank" class="button black-button">Código de conduta</a>
+			</div>
+			<div class="col-sm-7">
+				<a href="/conf/2015" class="button gray-button">2015</a>
+				<a href="/conf/2014" class="button gray-button">2014</a>
+				<a href="/conf/2013" class="button gray-button">2013</a>
+				<a href="/conf/2012" class="button gray-button">2012</a>
+				<a href="/conf/2011" class="button gray-button">2011</a>
+			</div>
+			<div class="col-sm-5 txt-right credits">
+				<span class="f-18">Design e HTML feito pelo pixel lover <a class="red">Ítalo Waxman</a></span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 988297331;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988297331/?value=0&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>​
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+		fbq('init', '516306181856599');
+		fbq('track', 'PageView');
+	</script>
+</footer>
+
+
+	</div>
+
+	<!-- Scripts minificados e concatenados -->
+	<script src="public/assets/js/jquery.min.js"></script>
+	<script src="public/assets/js/modernizr-2.6.2.min.js"></script>
+	<script src="public/assets/js/bootstrap.js"></script>
+	<script src="public/assets/js/main.js"></script>
+	<script src="public/assets/js/prefixfree.min.js"></script>
+	
+
+	<!-- Scripts do Parallax -->
+	<script src="public/assets/js/TweenMax.min.js"></script>
+	<script src="public/assets/js/ScrollMagic.js"></script>
+	<script src="public/assets/js/animation.gsap.js"></script>
+
+	<script>
+		var _gaq=[['_setAccount','UA-32119524-1'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src='//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+
 </body>
 </html>

@@ -1,0 +1,177 @@
+{% extends "templates/layouts/default-new.html" %}
+
+{% block main %}
+
+<style type="text/css">
+    #coc-pt-BR {
+        display: block;
+    }
+    #coc-es {
+        display: none;
+    }
+    #coc-en-US {
+        display: none;
+    }
+</style>
+
+<div class="wrapper style1">
+	<div class="container">
+        <select id="slct-lang">
+            <option value="pt-BR">Português</option>
+            <option value="en-US">English</option>
+            <option value="es-LATAM">Español</option>
+        </select>
+        <br/><br/>
+
+        <section id="coc-pt-BR">
+
+            <h1>Termos para Palestrantes</h1>
+
+            <p>Estas informações são relevantes para aqueles que já confirmaram sua participação como palestrante, ou que pretendem submeter uma palestra para a BrazilJS Conference.</p>
+
+            <strong>Benefícios</strong>
+            <ol>
+                <li>- Antes de tudo, palestrantes são nossa principal preocupação, ao lado dos participantes. Sua segurança é de mais alta importância para nós e você pode contar conosco para tornar a BrazilJS uma experiência muito proveitosa para todos nós.</li>
+                <li>- A BrazilJS se responsabiliza pelos custos de viagem (incluindo passagens) para seus palestrantes (exceto quando negociado como parte de um patrocínio).</li>
+                <li>- A BrazilJS se responsabiliza pelos custos de hospedagem para seus palestrantes, exceto para os que são da cidade onde o evento acontece.</li>
+                <li>- A BrazilJS oferecerá translado entre local do evento, aeroporto, hotel e local de confraternização oferecidos pelo evento (como jantares ou happy hours).</li>
+                <li>- Seu almoço nos dias de evento e jantares promovidos pelo evento, serão custeados pelo mesmo. A exceção é para bebidas alcoólicas, quando assim for informado.</li>
+                <li>- Alguns palestrantes oferecem um workshop para o dia anterior ao do evento. Estes workshops tem inscrição separada e os valores (a serem repassados aos palestrantes) devem ser discutidos com a equipe organizadora do evento.</li>
+                <li>- Caso tenha alguma necessidade especial, solicitação ou limitação, por favor informe a organização do evento com antecedência.</li>
+                <li>- Sem spoilers, mas nós normalmente damos alguns brindes para nossos palestrantes :)</li>
+            </ol>
+
+            </ol>
+            <strong>Solicitações</strong>
+            <ol>
+                <li>- Esperamos poder agendar entrevistas com alguns de nossos palestrantes. Elas podem ser virtuais, escritas ou gravadas (áudio e/ou vídeo) ou até mesmo ao vivo. Claro, o palestrante pode se recusar.</li>
+                <li>- O palestrante dá a BrazilJS o direito de imagem sobre sua filmagem e fotografias durante o evento, e presença em confraternizações proporcionadas pelo mesmo.</li>
+                <li>- A palestra não deve ser de cunho publicitário (focada em divulgar ou favorecer uma empresa).</li>
+                <li>- O palestrante deve estar a par e concordar com o código de conduta da BrazilJS.</li>
+                <li>- A BrazilJS não tem uma política ou costume de pagar palestrantes pelas suas palestras (honorários).</li>
+            </ol>
+
+            <strong>Sobre a palestra</strong>
+            <ol>
+                <li>- A BrazilJS deverá disponibilizar a você um horário para testar sua palestra nos equipamentos do evento.</li>
+                <li>- Um técnico estará presente para te ajudar durante a apresentação.</li>
+                <li>- Sim, você terá acesso a internet cabeada e por wi-fi (uma rede específica para palestrantes).</li>
+                <li>- A BrazilJS terá para emprestar, adaptadores para Mac (VGA e HDMI), mas certifique-se antes, com a equipe organizadora, de que seu modelo é compatível.</li>
+                <li>- Teremos 3 tipos de microfone: lapela, de mão (com tripé disponível) ou headset, de sua escolha.</li>
+                <li>- Nós teremos um púlpito disponível para você colocar seu equipamento.</li>
+                <li>- A resolução da projeção pode variar, mas você será informado por e-mail com antecedência.</li>
+                <li>- É aconselhado levar seu próprio equipamento, mas caso tenha dificuldades, o evento pode disponibilizar um computador para sua apresentação (note que as dependências ou softwares para sua palestra podem não estar disponíveis).</li>
+                <li>- Você terá 20 minutos, ou 50 minutos, de acordo com a confirmação de sua palestra.</li>
+                <li>- A BrazilJS não disponibiliza tempo para perguntas após a palestra. No lugar disto, esperamos que o palestrante interaja com os participantes durante todo o evento.</li>
+            </ol>
+        </section>
+
+
+        <section id="coc-es">
+
+            <h1>Condiciones para los Ponentes</h1>
+
+            <p>Esta información es pertinente para los que ya han confirmado su participación como orador, o que tengan la intención de presentar una charla a la Conferencia BrazilJS.</p>
+
+            <strong>Beneficios</strong>
+            <ol>
+                <li>- En primer lugar, los ponentes son nuestra principal preocupación, junto a los participantes. Su seguridad es de extrema importancia  y pueden confiar en nosotros para hacer BrazilJS una experiencia muy provechosa para todos. :)</li>
+                <li>- BrazilJS asume la responsabilidad de los costos de viaje (incluyendo entradas) para los ponentes (excepto como parte de un patrocinio).</li>
+                <li>- BrazilJS asume la responsabilidad de los costos de alojamiento para los ponentes, a excepción de los que están en la ciudad donde se realiza el evento.</li>
+                <li>- BrazilJS ofrece servicio de transporte entre lugar sede del evento, aeropuerto, hotel y el sitio de confraternizacion ofrecido por el evento (como cenas o happy hours).</li>
+                <li>- Su almuerzo en días de eventos y cenas promovido por el evento, serán soportados por el mismo. La excepción es para el alcohol, cuando hay informado.</li>
+                <li>- Algunos ponentes ofrecen un workshop para el día anterior al evento. Estos workshops tienen la matrícula por separado y los valores (para ser transferidos a los ponentes) deben ser discutidas con el equipo organizador del evento.</li>
+                <li>- Si tiene alguna necesidad especial, solicitud o limitación, por favor informar a los organizadores de anticipación.</li>
+                <li>- Sin spoilers, pero normalmente tenemos algunos regalos a nuestros ponentes :)</li>
+            </ol>
+
+            </ol>
+            <strong>Solicitudes</strong>
+            <ol>
+                <li>- Esperamos marcar entrevistas con algunos de nuestros ponentes. Pueden ser virtual, escrito o grabado (audio y / o vídeo) o en vivo. Por supuesto, el ponente puede negarse.</li>
+                <li>- El ponente da BrazilJS el derecho de imagen en el material de archivo y fotografías durante el evento, y la presencia en reuniones previstas por lo mismo.</li>
+                <li>- La presentación no debe contener publicidad (enfocada en la difusión o la promoción de una empresa).</li>
+                <li>- El ponente debe ser consciente y estar de acuerdo con el código de conducta BrazilJS.</li>
+                <li>- BrazilJS no tiene una política ni la costumbre de pagar los ponentes por sus presentaciones (honorarios).</li>
+            </ol>
+
+            <strong>Acerca de la presentación</strong>
+            <ol>
+                <li>- BrazilJS le proporcionará un tiempo para probar el material utilizado para el evento.</li>
+                <li>- Un técnico estará presente para ayudarle durante la presentación.</li>
+                <li>- Sí, usted tendrá acceso a internet por cable y wi-fi (una red específica los oradores).</li>
+                <li>- BrazilJS proporciona (para uso exclusivo en la presentación), adaptadores para Mac (VGA y HDMI), pero se cerciora de antes con el equipo organizador, que su modelo es compatible.</li>
+                <li>- Vamos a tener 3 tipos de micrófono: de solapa, de mano (con trípode) o auricular de su elección.</li>
+                <li>- Tendremos un púlpito disponible para que usted ponga su equipamiento.</li>
+                <li>- La resolución de la proyección puede variar, pero usted será informado por e-mail con anticipación.</li>
+                <li>- Se recomienda traer su propio equipamiento, pero si usted tiene dificultades, el evento puede proporcionar una computadora para su presentación (tenga en cuenta que las dependencias o software para su discurso no estén disponibles).</li>
+                <li>- Tendrá 20 minutos o 50 minutos, de acuerdo con la confirmación de su conferencia.</li>
+                <li>- BrazilJS no proporciona tiempo para preguntas después de la conferencia. En lugar de esto, prevemos que el orador hable con los participantes durante todo el evento.</li>
+            </ol>
+        </section>
+
+
+
+
+        <section id="coc-en-US">
+            <strong>Benefits</strong>
+            <ol>
+                <li> - First of all, speakers are our main concern, alongside with the attendees. Your safety is of the upmost importance to us and you can count on to make BrazilJS a very enjoyable experience for us all.</li>
+                <li> - BrazilJS is responsible for covering the traveling costs (including flight tickets) for our speakers (except when negotiated as part of a sponsorship).</li>
+                <li> - BrazilJS is responsible for covering the hotel costs for its speakers, except for those who live in the same city as the conference.</li>
+                <li> - BrazilJS will offer a transfer between: Venue, Airport, Hotel and places for confraternizations offered by the event(such as dinners or happy hours).</li>
+                <li> - Your lunch during the days of the conference, as well as dinner when offered by the event, will be covered by BrazilJS. The exception is for alcoholic drinks(when informed by the event crew).</li>
+                <li> - Some speakers offer a workshops prior to the event. These workshops have a separate subscription and its revenue must be discussed with BrazilJS Crew.</li>
+                <li> - In case you have any special need or request, please let us know previously about it.</li>
+                <li> - No spoilers, but we usually give some gifts to our speakers :)</li>
+            </ol>
+            <strong>Demands and expectations</strong>
+            <ol>
+                <li> - We expect to schedule interviews with some speakers. They may be virtual, written, or recorded (audio and/or video), or even live. Of course, the speaker is free to say no.</li>
+                <li> - BrazilJS has the rights of image, to record both audio and video, plus take pictures of or with the speaker during the conference of confraternizations promoted by the event.</li>
+                <li> - The talk must not be an advertising (focused on disclosing a product or company).</li>
+                <li> - The speaker must be aware of, and agree to our <a href="https://braziljs.org/coc" target="blank">Code of Conduct</a>.</li>
+                <li> - BrazilJS is not used to paying honoraries for speakers.</li>
+            </ol>
+
+            <strong>About the talk</strong>
+            <ol>
+                <li> - BrazilJS will provide a schedule for you to test your talk using the equipments of the conference.</li>
+                <li> - A technitian will be available during your talk to help you with anything you might need.</li>
+                <li> - Yes, you will have internet acces via both cable and wi-fi(in an exclusive network for speakers).</li>
+                <li> - There will be adaptors available for VGA and HDMI connections for mac, but get in touch to us to be sure your model is compatible.</li>
+                <li> - We will have 3 kinds of microphones: Lapel, hand (with a trypod as option) and headset, of your choice.</li>
+                <li> - We have a pulpit for you to keep your equipment on.</li>
+                <li> - The projection resolution may vary, but you will be informed about it previously via e-mail.</li>
+                <li> - We advise you to bring your own equpment, although we will have a computer available for you to perform your talk. But keep in mind that dependencies or software you might need for your presentation, might not be available on that machine.</li>
+                <li> - You will have 20 minutes, or 50 minutes, according to the confirmation of your talk.</li>
+                <li> - BrazilJS does not provide time for Q&A after each talk. In place of that, we hope you can have a nice time talking to the attendees.</li>
+            </ol>
+        </section>
+
+        <section id="coc-es">
+        </section>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById('slct-lang').addEventListener('change', function(){
+        var el = null;
+        if(this.value == 'pt-BR') {
+            el = document.getElementById('coc-en-US').style.display = 'none';
+            el = document.getElementById('coc-es').style.display    = 'none';
+            el = document.getElementById('coc-pt-BR').style.display = 'block';
+        }else if(this.value == 'es-LATAM') {
+            el = document.getElementById('coc-en-US').style.display = 'none';
+            el = document.getElementById('coc-es').style.display    = 'block';
+            el = document.getElementById('coc-pt-BR').style.display = 'none';
+        }else{
+            el = document.getElementById('coc-en-US').style.display = 'block';
+            el = document.getElementById('coc-es').style.display    = 'none';
+            el = document.getElementById('coc-pt-BR').style.display = 'none';
+        }
+    });
+</script>
+
+{% endblock %}
