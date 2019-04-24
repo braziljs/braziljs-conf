@@ -1,0 +1,190 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lato/v14/81X-1TO5y4aMK2PPy9kFw9j00qvwa7FIWVKDOymo9DA.woff) format('woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lato/v14/VNUH7ZAcagYBWsAiBBCEYz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lato/v14/IiXlpgn5dX02VcrrQmX6hg.woff) format('woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lato/v14/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lato/v14/yUTNPmn1DyOttxIsPHkHvPY6323mHUZFJMgTvxaG2iE.woff) format('woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lato/v14/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/jN7ki8ar2diltkoVTm6BZ_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/E8wIdERH4lKi-J6JtvoKKfesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/B109zg_8wbHf_auBHzZtnfesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/El-t14RvqrjfMOD316FTKPesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/wXeMvRh7Gui36p_I04Ex6g.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/47861CGpECw31aszKPt4utj00qvwa7FIWVKDOymo9DA.woff) format('woff');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/66KG1MDzU5Zo36weZ_yx-dj00qvwa7FIWVKDOymo9DA.woff) format('woff');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/GjWw5_K_Fhq8yNDkNV_ETdj00qvwa7FIWVKDOymo9DA.woff) format('woff');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/1wR3aOJ69QwyZ9B-WDmIqdj00qvwa7FIWVKDOymo9DA.woff) format('woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/_IxjUs2lbQSu0MyFEAfa7T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/RX9FNypyKH5BXaAZUtIhQQ.woff) format('woff');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/gym5YIhc_hz1DUyvsGSZmA.woff) format('woff');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/WXMIGJPj1iaGbqcq5sDlUQ.woff) format('woff');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/EB4u6iBVtAED9LBLFoL1tg.woff) format('woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://web.archive.org/web/20171017074253im_/https://fonts.gstatic.com/s/lora/v11/5-AYViExptypIdFoLKAxTA.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/*
+     FILE ARCHIVED ON 07:42:53 Oct 17, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:21:02 Apr 24, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 66.421 (3)
+  esindex: 0.015
+  captures_list: 101.313
+  CDXLines.iter: 20.493 (3)
+  PetaboxLoader3.datanode: 67.883 (4)
+  exclusion.robots: 0.354
+  exclusion.robots.policy: 0.331
+  RedisCDXSource: 8.671
+  PetaboxLoader3.resolve: 45.241
+  load_resource: 72.978
+*/

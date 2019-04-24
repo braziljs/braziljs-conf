@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://web.archive.org/web/20180802034633im_/https://fonts.gstatic.com/s/anton/v9/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Mono Thin'), local('RobotoMono-Thin'), url(https://web.archive.org/web/20180802034633im_/https://fonts.gstatic.com/s/robotomono/v5/L0x7DF4xlVMF-BfR8bXMIjAom32WXw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Mono Light'), local('RobotoMono-Light'), url(https://web.archive.org/web/20180802034633im_/https://fonts.gstatic.com/s/robotomono/v5/L0xkDF4xlVMF-BfR8bXMIjDgiWqxf7o.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://web.archive.org/web/20180802034633im_/https://fonts.gstatic.com/s/robotomono/v5/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Mono Medium'), local('RobotoMono-Medium'), url(https://web.archive.org/web/20180802034633im_/https://fonts.gstatic.com/s/robotomono/v5/L0xkDF4xlVMF-BfR8bXMIjC4iGqxf7o.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Mono Bold'), local('RobotoMono-Bold'), url(https://web.archive.org/web/20180802034633im_/https://fonts.gstatic.com/s/robotomono/v5/L0xkDF4xlVMF-BfR8bXMIjDwjmqxf7o.ttf) format('truetype');
+}
+
+/*
+     FILE ARCHIVED ON 03:46:33 Aug 02, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:13:23 Apr 24, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 165.484 (3)
+  esindex: 0.007
+  captures_list: 232.749
+  CDXLines.iter: 32.894 (3)
+  PetaboxLoader3.datanode: 179.416 (5)
+  exclusion.robots: 0.235
+  exclusion.robots.policy: 0.218
+  RedisCDXSource: 29.273
+  PetaboxLoader3.resolve: 52.227 (2)
+  load_resource: 162.053
+*/
